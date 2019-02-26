@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/25/IOS开发-简单的加法计算器swift版本/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/26/IOS开发 - 每日一个Swift小程序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -308,10 +308,16 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/25/IOS开发-简单的加法计算器swift版本/" itemprop="url">IOS开发-简单的加法计算器swift版本</a></h1>
+                <a class="post-title-link" href="/2019/02/26/IOS开发 - 每日一个Swift小程序/" itemprop="url">IOS开发 - 每日一个Swift小程序</a></h1>
         
 
         <div class="post-meta">
+            
+                <i class="fa fa-thumb-tack"></i>
+                <font color="990033">  <b>置顶</b> </font>
+                <span class="post-meta-divider">|</span>
+            
+
           <span class="post-time">
             
               <span class="post-meta-item-icon">
@@ -320,8 +326,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-25T19:41:57+08:00">
-                2019-02-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-26T13:17:42+08:00">
+                2019-02-26
               </time>
             
 
@@ -331,6 +337,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/IOS开发/" itemprop="url" rel="index">
+                    <span itemprop="name">IOS开发</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -339,8 +367,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/02/25/IOS开发-简单的加法计算器swift版本/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/25/IOS开发-简单的加法计算器swift版本/" itemprop="commentCount"></span>
+                <a href="/2019/02/26/IOS开发 - 每日一个Swift小程序/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/26/IOS开发 - 每日一个Swift小程序/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -348,7 +376,213 @@
 
           
           
-             <span id="/2019/02/25/IOS开发-简单的加法计算器swift版本/" class="leancloud_visitors" data-flag-title="IOS开发-简单的加法计算器swift版本">
+             <span id="/2019/02/26/IOS开发 - 每日一个Swift小程序/" class="leancloud_visitors" data-flag-title="IOS开发 - 每日一个Swift小程序">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  537
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>swift学习日记——每日一个小程序</p>
+<p>名称：30DaysofSwift</p>
+<p>工具： <a href="https://developer.apple.com/xcode/" target="_blank" rel="noopener">Xcode 10.1</a>, <a href="https://developer.apple.com/swift/" target="_blank" rel="noopener">Swift 4.2</a>, <a href="https://developer.apple.com/library/ios/navigation/#section=Frameworks&amp;topic=UIKit" target="_blank" rel="noopener">UIKit</a></p>
+<p>思路来源：<a href="https://samvlu.com/index.html" target="_blank" rel="noopener">samvlu</a> ，<a href="https://www.jianshu.com/p/52032bc4cbe4" target="_blank" rel="noopener">Allen_朝辉</a>，<a href="https://juejin.im/post/5c618227518825625c270640" target="_blank" rel="noopener">nimomeng</a> </p>
+<p>用例方面：主要参考nimomeng的case，也参考了Sam Lu的40个小项目，也参考了<a href="https://link.juejin.im/?target=http%3A%2F%2Fwww.jianshu.com%2Fu%2F7211e265e765" target="_blank" rel="noopener">Allen_朝辉</a>的项目</p>
+<p>代码方面：前两个项目学习了Storyboard，然而实际上多人协作的项目中我们尽可能少用Storyboard，因为很容易出现冲突问题。况且从学习的角度，storyboard很难说清楚操作步骤是什么。因此以后的项目都尽量手写。</p>
+<p>开源项目：暂未整理完成</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/26/IOS开发 - 每日一个Swift小程序/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/26/IOS开发 - 简单的加法计算器swift版本/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/26/IOS开发 - 简单的加法计算器swift版本/" itemprop="url">IOS开发 - 简单的加法计算器swift版本</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-26T11:18:17+08:00">
+                2019-02-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/IOS开发/" itemprop="url" rel="index">
+                    <span itemprop="name">IOS开发</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/02/26/IOS开发 - 简单的加法计算器swift版本/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/26/IOS开发 - 简单的加法计算器swift版本/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/02/26/IOS开发 - 简单的加法计算器swift版本/" class="leancloud_visitors" data-flag-title="IOS开发 - 简单的加法计算器swift版本">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -418,7 +652,7 @@
 <p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1g0ir0q4815j318k0q4dm2.jpg" alt="1061D097-18CB-43D0-A701-5DF5918FB88E"></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/02/25/IOS开发-简单的加法计算器swift版本/#more" rel="contents">
+            <a class="btn" href="/2019/02/26/IOS开发 - 简单的加法计算器swift版本/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -492,6 +726,8 @@
         
 
         <div class="post-meta">
+            
+
           <span class="post-time">
             
               <span class="post-meta-item-icon">
@@ -649,207 +885,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/23/论文-类一致性DSC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/23/论文-类一致性DSC/" itemprop="url">论文-类一致性</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-23T13:50:21+08:00">
-                2019-02-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/论文/" itemprop="url" rel="index">
-                    <span itemprop="name">论文</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/02/23/论文-类一致性DSC/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/23/论文-类一致性DSC/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/02/23/论文-类一致性DSC/" class="leancloud_visitors" data-flag-title="论文-类一致性">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  788
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  3
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="文章贡献："><a href="#文章贡献：" class="headerlink" title="文章贡献："></a>文章贡献：</h2><p>• We propose class consistency as criteria for choosing good views to a class structure in n–D. Class consistency characterizes the extent to which the class neighborhood structure in n–D is preserved in a 2–D scatterplot, and thus avoids to label poor views as good views.</p>
-<p>• Since human attention is limited to inspect a small number of scatterplots, class consistency used as measure of goodness facilitates an interactive exploration of a class structure; otherwise a human analyst will be drown in the vast set of 2–D scatterplots.</p>
-<p>• We introduce and evaluate two methods for calculating class consistency, a distance based and a distribution based technique. Distribution based class consistency is more general, but more expensive to compute.</p>
-<p>• We evaluate class consistency over a range of data sets with different dimensionality. We show that the class consistency measures perform well in practice. First user experiments show that people rank consistent views better than inconsistent views.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/02/23/论文-类一致性DSC/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -920,7 +955,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -994,7 +1029,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.5k</span>
+    <span title="Site words total count">1.3k</span>
   
 </div>
 

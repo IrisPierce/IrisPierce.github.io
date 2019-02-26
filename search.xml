@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[IOS开发-简单的加法计算器swift版本]]></title>
-    <url>%2F2019%2F02%2F25%2FIOS%E5%BC%80%E5%8F%91-%E7%AE%80%E5%8D%95%E7%9A%84%E5%8A%A0%E6%B3%95%E8%AE%A1%E7%AE%97%E5%99%A8swift%E7%89%88%E6%9C%AC%2F</url>
+    <title><![CDATA[IOS开发 - 每日一个Swift小程序]]></title>
+    <url>%2F2019%2F02%2F26%2FIOS%E5%BC%80%E5%8F%91%20-%20%E6%AF%8F%E6%97%A5%E4%B8%80%E4%B8%AASwift%E5%B0%8F%E7%A8%8B%E5%BA%8F%2F</url>
+    <content type="text"><![CDATA[swift学习日记——每日一个小程序 名称：30DaysofSwift 工具： Xcode 10.1, Swift 4.2, UIKit 思路来源：samvlu ，Allen_朝辉，nimomeng 用例方面：主要参考nimomeng的case，也参考了Sam Lu的40个小项目，也参考了Allen_朝辉的项目 代码方面：前两个项目学习了Storyboard，然而实际上多人协作的项目中我们尽可能少用Storyboard，因为很容易出现冲突问题。况且从学习的角度，storyboard很难说清楚操作步骤是什么。因此以后的项目都尽量手写。 开源项目：暂未整理完成 Project 2 : Change Custom Font 改变字体 学习内容： 获取字体属性：UIFont.familyNames可以存储为数组，可以直接输出、或通过索引获取 随机获取字体：随机数arc4random()格式为UInt32，需转为Int，再对数组长度取余。获得范围随机数 字体设置：words.font=UIFont(name: “字体名称”, size: 20) 按钮边框设置：圆角cornerRadius，颜色borderColor，该颜色需要CGColor，因此需要将UIColor转为CGColor 源码： 1234567891011121314151617181920212223242526272829303132333435363738394041//// ViewController.swift// ChangeCustomFont//// Created by iris on 2019/2/25.// Copyright © 2019 iris. All rights reserved.//import UIKitclass ViewController: UIViewController &#123; @IBOutlet weak var words: UILabel! @IBOutlet weak var change: UIButton! override func viewDidLoad() &#123; super.viewDidLoad() // Do any additional setup after loading the view, typically from a nib. // 按钮的边框粗细、圆角、颜色 // 注：颜色需要CGColor，因此需要将UIColor转为CGColor change.layer.borderWidth = 1; change.layer.cornerRadius = 8; change.layer.borderColor = UIColor.blue.cgColor &#125; // 字体改变：根据随机数，随机获取系统字体的第i个 @IBAction func change(_ sender: Any) &#123; // 1.存储字体名称y为数组 let familyNames_arr = UIFont.familyNames let count:Int = familyNames_arr.count // 2.获取随机数 // 平常的随机数：0 ~ X,UInt32格式，需要转为Int let random1:Int = Int(arc4random()) // 限制长度的随机数，取余 ：0 ~ X let random2:Int = random1 % count // 3.设置字体为第 随机数 的字体 print(familyNames_arr[random2]) words.font=UIFont(name: familyNames_arr[random2], size: 20) &#125;&#125; Project 1 : Calculation of Add 简单的加法计算器 学习内容： IOS的UI布局：使用Storyboard和其辅助视图添加部件，且为部件定义，加上动作 值的转化：Option获取 -&gt; String -&gt; Float计算 -&gt; String展示]]></content>
+      <categories>
+        <category>IOS开发</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[IOS开发 - 简单的加法计算器swift版本]]></title>
+    <url>%2F2019%2F02%2F26%2FIOS%E5%BC%80%E5%8F%91%20-%20%E7%AE%80%E5%8D%95%E7%9A%84%E5%8A%A0%E6%B3%95%E8%AE%A1%E7%AE%97%E5%99%A8swift%E7%89%88%E6%9C%AC%2F</url>
     <content type="text"><![CDATA[近日开始学习IOS开发。想找一个简单版本较新的IOS开发教程都很难：（1）现在找的很多都是object-C的，不是swift的，（2）老版与最新版本swift中很多语法也不适配，（3）Xcode版本和用法也不一样。 因此，今天自己写一个最简单的教程，用于swift入门，记录自己的学习。 基础步骤基础步骤就是项目类型、项目名称、项目位置的选取。 1.创建APP 2.项目类型为 简单的view 3.项目名称：加法计算器 4.结果 界面拖拽1、打开故事版，找到UI部件框，搜索需要的部件——输入框、Label、按钮 2、拖拽部件、部件位置布局、部件更名，右边为其结果 3、选择展示设备、选择运行设备、运行程序查看结果 4、运行结果，布局已经实现 功能实现输入框定义1、左右展示storyboard与ViewController文件，用于拖拉式实现部件定义和部件功能添加。 2、方式1：text部件定义，按住control，鼠标拖拽至ViewController对应空白处，接着添加名称以及修改属性。 方式2：输入语句，将代码前的空心点拖拽左边的UITextField @IBOutlet weak var sum: UITextField! 3、定以后的结果如下。 使用方式1拖拽num1，num2定义，使用代码和空心圈绑定至左边UITextField。 按钮功能1、添加Action作为响应 生成如下的代码，我们可以将功能函数写在calculate方法的代码内 2、编写计算的代码和清空的代码 1234567891011121314151617181920212223//计算方法//sum = num1+num2@IBAction func calculate(_ sender: Any) &#123; //1.Option类型转为String：XX! //2.String类型转为Int： Int(XX)! let value1:Float = Float(num1.text!)! let value2:Float = Float(num2.text!)! //3.Int类型转为String：String（XX） let result:String = String(value1+value2) //4.改变结果框的颜色 sum.textColor = UIColor .cyan //5.sum.text 展示的类型为String sum.text = result &#125;//重置方法@IBAction func reset(_ sender: Any) &#123; //清空输入框的内容 num1.text = "" num2.text = "" sum.text = ""&#125; 3、结果，可以实现浮点数相加的功能 项目源码ViewController代码123456789101112131415161718192021222324252627282930313233343536373839404142434445//// ViewController.swift// Calculation_add//// Created by iris on 2019/2/25.// Copyright © 2019 iris. All rights reserved.//import UIKitclass ViewController: UIViewController &#123; //UITextField的定义 @IBOutlet weak var num1: UITextField! @IBOutlet weak var num2: UITextField! @IBOutlet weak var sum: UITextField! override func viewDidLoad() &#123; super.viewDidLoad() // Do any additional setup after loading the view, typically from a nib. &#125; //计算方法 //sum = num1+num2 @IBAction func calculate(_ sender: Any) &#123; //1.Option类型转为String：XX! //2.String类型转为Int： Int(XX)! let value1:Float = Float(num1.text!)! let value2:Float = Float(num2.text!)! //3.Int类型转为String：String（XX） let result:String = String(value1+value2) //4.改变结果框的颜色 sum.textColor = UIColor .cyan //5.sum.text 展示的类型为String sum.text = result &#125; //重置方法 @IBAction func reset(_ sender: Any) &#123; //清空输入框的内容 num1.text = "" num2.text = "" sum.text = "" &#125;&#125; 下载资源 CSDN资源https://download.csdn.net/user/katherine_java/uploads]]></content>
+      <categories>
+        <category>IOS开发</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Mac系统下使用Hexo在Github上搭建博客]]></title>
@@ -14,19 +31,6 @@
       </categories>
       <tags>
         <tag>博客</tag>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[论文-类一致性]]></title>
-    <url>%2F2019%2F02%2F23%2F%E8%AE%BA%E6%96%87-%E7%B1%BB%E4%B8%80%E8%87%B4%E6%80%A7DSC%2F</url>
-    <content type="text"><![CDATA[文章贡献：• We propose class consistency as criteria for choosing good views to a class structure in n–D. Class consistency characterizes the extent to which the class neighborhood structure in n–D is preserved in a 2–D scatterplot, and thus avoids to label poor views as good views. • Since human attention is limited to inspect a small number of scatterplots, class consistency used as measure of goodness facilitates an interactive exploration of a class structure; otherwise a human analyst will be drown in the vast set of 2–D scatterplots. • We introduce and evaluate two methods for calculating class consistency, a distance based and a distribution based technique. Distribution based class consistency is more general, but more expensive to compute. • We evaluate class consistency over a range of data sets with different dimensionality. We show that the class consistency measures perform well in practice. First user experiments show that people rank consistent views better than inconsistent views. •在n-D中，我们建议将类一致性作为为类结构选择良好视图的标准。类一致性描述了在二维散点图中保留n-D中的类邻域结构的程度，从而避免了将不好的视图标记为好的视图。 •由于人类的注意力被限制在检查少量的散点图上，因此类的一致性被用来衡量好坏，从而促进了对类结构的交互式探索;否则，人类分析师就会被淹没在大量的二维散点图中。 •我们介绍并评估了两种计算类一致性的方法:基于距离的方法和基于分布的方法。基于分布的类一致性更通用，但计算起来更昂贵。 •我们在不同维度的数据集范围内评估类的一致性。结果表明，该方法在实际应用中效果良好。第一个用户实验表明，人们对一致的视图的排名要高于不一致的视图。 代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990#!/usr/bin/env python# coding=utf-8from numpy import *import numpy as npimport csvfrom sklearn.datasets import load_irisimport matplotlib.pyplot as pltimport matplotlib as mplfrom sklearn.discriminant_analysis import LinearDiscriminantAnalysis# 加载数据def loadCSV(filename): dataSet = [] with open(filename, 'r') as file: csvReader = csv.reader(file) for line in csvReader: numbers = map(float, line) dataSet.append(numbers) dataSet = np.array(dataSet) X = dataSet[:, 1:len(dataSet)] y = dataSet[:, 0] y = map(int, y) return X, ydef LDA_dimensionality(X, y, k): ''' X为数据集，y为label，k为目标维数 ''' label_ = list(set(y)) X_classify = &#123;&#125; for label in label_: X1 = np.array([X[i] for i in range(len(X)) if y[i] == label]) X_classify[label] = X1 mju = np.mean(X, axis=0) mju_classify = &#123;&#125; for label in label_: mju1 = np.mean(X_classify[label], axis=0) mju_classify[label] = mju1 #St = np.dot((X - mju).T, X - mju) Sw = np.zeros((len(mju), len(mju))) # 计算类内散度矩阵 for i in label_: Sw += np.dot((X_classify[i] - mju_classify[i]).T, X_classify[i] - mju_classify[i]) # Sb=St-Sw Sb = np.zeros((len(mju), len(mju))) # 计算类内散度矩阵 for i in label_: Sb += len(X_classify[i]) * np.dot((mju_classify[i] - mju).reshape( (len(mju), 1)), (mju_classify[i] - mju).reshape((1, len(mju)))) eig_vals, eig_vecs = np.linalg.eig( np.linalg.inv(Sw).dot(Sb)) # 计算Sw-1*Sb的特征值和特征矩阵 sorted_indices = np.argsort(eig_vals) topk_eig_vecs = eig_vecs[:, sorted_indices[:-k - 1:-1]] # 提取前k个特征向量 print "eig_vecs" print eig_vecs print eig_vals print topk_eig_vecs return topk_eig_vecsif '__main__' == __name__: iris = load_iris() X = iris.data y = iris.target X, y = loadCSV('./data/ms_interleaved_40_80_3d_0.data') W = LDA_dimensionality(X, y, 2) X_new = np.dot((X), W) plt.figure(1) plt.scatter(X_new[:, 0], X_new[:, 1], marker='o', c=y) # 与sklearn中的LDA函数对比 lda = LinearDiscriminantAnalysis(n_components=2) lda.fit(X, y) X_new = lda.transform(X) # print(X_new) plt.figure(2) plt.scatter(X_new[:, 0], X_new[:, 1], marker='o', c=y) plt.show()]]></content>
-      <categories>
-        <category>论文</category>
-      </categories>
-      <tags>
-        <tag>可视分析</tag>
-        <tag>高维数据</tag>
       </tags>
   </entry>
 </search>
