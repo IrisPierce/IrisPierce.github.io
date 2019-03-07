@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[IOS12+Swift4+Xcode10开发 - 3 一站到底APP]]></title>
+    <url>%2F2019%2F03%2F06%2FIOS12%2BSwift4%2BXcode10%E5%BC%80%E5%8F%91%20-%203%20%E4%B8%80%E7%AB%99%E5%88%B0%E5%BA%95%20%2F</url>
+    <content type="text"><![CDATA[项目介绍 需求分析与项目布局需求分析1用户答题——2比对答案——3刷新页面进入下一题 面试介绍首先我来介绍第一个项目——一站到底答题类APP。 其主要业务需求是【1用户答题——2比对答案——3刷新页面进入下一题】 我是使用的是MVC模式开发，保证了项目功能之间的低耦合。 首先我们的数据就是题库，题目类属性为题干和答案。 用户在View上看到题干，选择心中的答案，Controller将获取当前问题答案的请求发送给model，model将答案返回，在Controller与其正确答案比对，正确后计得分并显示在View上，Controller再获取下一个题目的题干和答案，刷新View的题干label和进度条进行下一个题目答题。 在所有题目加载完成后，弹出框显示分数，用户可重新开始游戏。 面向对象编程 OOP类：抽象 对象：具体 初始化方法、构造方法：实例化之后创建一个对象 eg. 类：人——属性：名字、性别 对象：Iris这个人——属性：iris、女 MVC模式控制器从model取得数据，然后返回给view——MVC Model 模型：负责数据找后台数据 View 视图：用户界面Controler控制器：业务逻辑负责传递视图需要表达的信息， 拿到数据后，传到视图 需求：打开微博个人页面，想要查看多少人关注自己 首先传到控制器，发现需要准备数据——关注人数 找到模型要数据 模型准备好数据之后，将数据给Controler，Controler拿到后传给View， 分工明确，高聚合，低耦合 功能实现弹出框 谷歌关键词： alert Apple documentation 方法：UIAlertController 使用第三方库在swift项目中调用objective-C语言的包 下载源码：https://github.com/relatedcode/ProgressHUD 拖入项目中的supporting files的组中 源码12]]></content>
+      <categories>
+        <category>APP</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[IOS12+Swift4+Xcode10开发 - 0 模板]]></title>
+    <url>%2F2019%2F03%2F06%2FIOS12%2BSwift4%2BXcode10%E5%BC%80%E5%8F%91%20-%200%20%E6%A8%A1%E6%9D%BF%2F</url>
+    <content type="text"><![CDATA[项目介绍 面向对象编程 OOP 源码12]]></content>
+      <categories>
+        <category>APP</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[IOS12+Swift4+Xcode10开发 - 2 木琴APP]]></title>
     <url>%2F2019%2F03%2F05%2FIOS12%2BSwift4%2BXcode10%E5%BC%80%E5%8F%91%20-%202%20%E6%9C%A8%E7%90%B4APP%2F</url>
     <content type="text"><![CDATA[项目介绍按下不同的按键，发出不同的音调。 Tag // 3.1 通过tag获取被按下的buttonlet indexTag = sender.tag 多媒体播放器// 1.引入多媒体播放器import AVFoundation // 2.声明播放器，用于播放url的多媒体文件var player:AVAudioPlayer! // 3.4 将“音频”放入“播放器”player = try AVAudioPlayer(contentsOf: url!) // 3.5 播放音频player.play() url // Bundlez最外面(苹果为整个取得APP的名字) // main为主要同名文件夹 // 直接可以取到的原因：SoundFile是一个组，不是文件夹 let url = Bundle.main.url(forResource: “note(indexTag)”, withExtension: “wav”) 编组：可以帮助项目整理同类型，且不同使用文件，获取文件更方便 抛异常 // 抛异常: 播放器可能为空 do{}catch{print(error)} 源码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748import UIKit// 1.引入多媒体播放器import AVFoundationclass ViewController: UIViewController&#123; // 2.声明播放器，用于播放url的多媒体文件 var player:AVAudioPlayer! // 音频资源 let sounds = ["note1","note2","note3","note4","note5","note6","note7"] override func viewDidLoad() &#123; super.viewDidLoad() &#125; // 3.根据按下的button，播放不同的声音 // 用户按下这个控件sender，按钮 @IBAction func notePressed(_ sender: UIButton) &#123; // 3.1 通过tag获取被按下的button 1-5,下标需要为0-4 let indexTag:Int = sender.tag - 1 // 3.2 播放音频 play(tag:indexTag) &#125; /* 创建一个发出声音的功能函数 输入为第几个声音Int */ func play(tag:Int)&#123; // 1 根据tag不同，获得不同“音频” // Bundlez最外面(苹果为整个取得APP的名字) // main为主要同名文件夹 // 直接可以取到的原因：SoundFile是一个组，不是文件夹 let url = Bundle.main.url(forResource: sounds[tag], withExtension: "wav") // 抛异常: 播放器可能为空 do&#123; // 2 将“音频”放入“播放器” player = try AVAudioPlayer(contentsOf: url!) // 3 播放音频 player.play() &#125;catch&#123; print(error) &#125; &#125;&#125;]]></content>
@@ -122,6 +144,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[我的简历V1]]></title>
+    <url>%2F2019%2F02%2F23%2F%E7%AE%80%E5%8E%86%2F</url>
+    <content type="text"><![CDATA[教育经历2017.09 - 2020.06 硕士 中南大学 计算机科学与技术 专业排名未知研究方向：可视化与可视分析、高维数据可视分析。成果：发表专利一项、参与发表A类论文一篇、主持中南大学研究生自主探索项目一项 2013.09 - 2017.06 本科 中南大学 计算机科学与技术 专业排名1%~5%保研本校研究生；国家励志奖学金、中南大学大学生关怀奖学金、班长奖学金、学年一等学金；“优秀毕业生”；多次获“优秀学生”、“优秀团员”、“优秀学生干部”；校运会跨栏金牌 学术研究 “基于强声凝聚的PM2.5减排装置的复合式消声系统”专利 参与论文被A类会议IEEE Visualization Conference接受，现已推荐发表在《IEEE Transactions on Visualization and Computer Graphics》期刊 项目经历2019.01 - 2019.02 iOS——元气天气APP 项目负责人需求：展示当地天气、查询异地天气的时看到正能量文字，元气满满的开始新的一天。 实现：采用了MVC设计模式。获取当前位置的天气：利用 Cocoa 框架中的protocol-delegate设计模式，实现定位协议获得当前经纬度；Pod第三方库，使用Alamofire请求、SwiftJSON解析数据；将数据赋值给model，更新页面。查询页面跳转传值：使用segue导航正向传值，自定义protocol、委托代理delegate实现导航反向传值。 知识点：protocol-delegate、计算属性、第三方库的CocoaPods安装的使用、extension代码优化 2019.02 - 2019.03 iOS——去做吧！APP 项目负责人需求：Todo list 实现： 知识点： 2018.10 - 2018.12 Android——《延禧攻略》连连看、五子棋游戏、绘图板 项目负责人需求： 实现： 知识点： 2018.05 - 2018.08 Java——多线程弹球游戏、欢乐抽奖、AI五子棋、趣味画板 项目负责人需求： 实现： 趣味画板： 使用JPanel对主界面JFrame分区，绘制组件；为事件源（组件）上添加鼠标监听器； 重绘功能：定义shape类，绘制时将坐标、颜色存入对象，再对象存入数组；主函数继承JPanel，重写panit()函数时，绘制shapeArray[]数组中所有的Shape对象。 2018.01 - 2018.04 自由探索项目——面向高维时序数据的可视分析 项目负责人1、T LAMP在数据上应用一个滑动窗口方法，并为每个窗口计算一个一维LAMP。随后，一维LAMP映射的结果序列沿着时间轴进行排列：x轴表示时间，而y轴表示LAMP的相似性值。类似的事件随着时间的推移被聚合，分析人员可以通过视觉特征有效识别特定模式。2、为了分析高维数据中属性的性质，我们用一个序列的多元矩阵来揭示了各个属性贡献程度随时间变化。此外，我们还引入了一种新的算法，根据用户的选择来寻找相似的模式。3、对齐一维投影序列，现有大多数现有的时序数据投影方法都采用二维投影。TLAMP依赖于一维LAMP投影，利用图中的第二维度来显示高维数据随时间推移的变化。 2017.08 - 2017.08 前端项目——‘互联网+’走基层追寻红色文化”社会实践 策划、技术支持1、负责活动主题策划。活动亮点在于利用专业技术创建“红色信息平台”、科技普及2、龙洞红色旅游网站搭建、微信二维码语音导航助手3、项目新闻稿撰写，新媒体推送撰写，项目总结答辩工作成果：国家级、地区级别、校级网站报道13篇、新媒体微信推送13篇、电视台报道1次]]></content>
+      <categories>
+        <category>实习</category>
+      </categories>
+      <tags>
+        <tag>实习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Mac系统下使用Hexo在Github上搭建博客]]></title>
     <url>%2F2019%2F02%2F23%2FMac%E7%B3%BB%E7%BB%9F%E4%B8%8B%E4%BD%BF%E7%94%A8Hexo%E5%9C%A8Github%E4%B8%8A%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%2F</url>
     <content type="text"><![CDATA[一、安装环节二、Hexo部署三、github仓库四、git代码]]></content>
@@ -141,6 +174,17 @@
       </categories>
       <tags>
         <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[IOS12+Swift4+Xcode10开发 - 4 元气天气APP]]></title>
+    <url>%2F2019%2F01%2F06%2FIOS12%2BSwift4%2BXcode10%E5%BC%80%E5%8F%91%20-%204%20%E5%A4%A9%E6%B0%94APP%2F</url>
+    <content type="text"><![CDATA[项目介绍 需求分析让用户查看当地天气、查询异地天气的时看到正能量文字，元气满满的开始新的一天。 本程序共分为三个页面：欢迎页面，天气预览界面，城市天气查询界面。 需求天气预览界面：定位天气展示【1 获取当前经纬度位置 2 根据位置获取天气、城市信息 3将信息展示在视图】 城市天气查询界面：用户查询天气【1展示当前城市 2输入框输入查询城市的名称 3按下查询按钮-获取名称至页面1，销毁页面2 】 采用了MVC模式model部分负责数据，我们构建天气类，属性包括：温度、城市、condition，以及计算属性——icon、words，他们需要根据condition属性来确定。比如晴天对于icon为小太阳、文字对于“天晴是你的心情”。 controller负责两个页面中的业务逻辑：从model中取数据，然后返回给view。 最终在view上展示所需天气及其文字信息。 遇到的困难页面跳转传值页面跳转传值部分。【功能：按页面1右上角按钮，跳转到页面二，页面二展示当前city；用户输入目标city，按查询后跳转回页面一，展示查询city的天气信息】 segue导航正向传值较容易，3步骤。1在prepare函数部分获取segue的identifier【转换箭头】，2使用as!强制转化，实例化该segue的destination页面vc，3使用实例化的vc进行传值。这样就可以在下一个页面使用本页面中的“所在城市”的信息了。 而反向传值就不同。如果采用control+drag方式，从页面二的button到页面一加上转换箭头，这样只会再重新生成新的页面一，定位到本地天气；而不是预想的回到原先页面，重新展示所搜索城市的信息。 所以需要自定义protocol，使用delegate实现导航的反向传值。 在页面二需要：3个步骤来自定义协议portocol，实现【按下查找城市按钮，获取输入的city值】的功能。 1自定义协议，安排协议中的方法（获取输入的city，传给页面一），2 声明协议属于页面二中的delegate变量 3规定在哪里触发协议中的事件。 在页面一种需要：3个步骤来实现协议，实现【获取页面二中city的值，并展示于本页面】的功能。 1遵守协议 2 实现协议中的方法（获取city值，根据值获取温度对象的所有信息，展示与本页面）3 第二个页面vc的事件函数委托delegate给self实现。 获取当前位置的天气1 委托本页面，实现定位协议中的请求位置的方法，获得经纬度。（难点） 2 根据经纬度信息，使用Alamofire请求API来获取天气数据； 3 利用SwiftJSON解析生成数据； 4 给weather对象赋值； 5 再使用weather对象中的天气、文字信息更新页面。 – 使用了定位协议CLLocationManagerDelegate的方法。 1 遵守定位协议 2 实例化定位管理器CLLocationManager 3 实现协议中的方法（获取当前的经纬度）4locationManager委托本页面 当manager请求位置的时候，则系统自动调用manager方法，在该方法里获得经纬度。 知识点protocol-delegate：类似java中的接口与实现协议——工具间，协议中的方法——工具，实例化的对象——老板，本页面self——打工仔，委托——老板让打工仔干活 计算属性model中的计算属性——compute属性 某个属性需要根据另一个属性来确定，我们定义其为计算属性 如根据天气情况属性——晴天，得到对应的icon和words：icon为小太阳、wors为“天晴是你的心情”。 第三方库的CocoaPods安装的使用Alamofire：完成http请求天气数据 SwiftJSON：解析、生成数据 extension代码优化目的：提高代码可读性。为日后重构代码打下了良好的基础。 场景：1 私有的辅助函数 ；2 遵守协议（实现某个协议的方法放到一个 extension 中）；3 模型（Model用结构体， 使用extension 将 Model 的 属性 和 基于属性的计算计算属性分离 ） 项目布局UI设计 页面一创建项目的时候需要取消左右旋转 背景图约束： 上下左右相对于View都是0 背景图片填充方式为Aspect Fill拉伸 中间图片 Label 左边自适应 页面二StackView自适应页面的宽度： 选中StackView后control+drag至背景图 是的stackView：页面的比例为2：5 错误：该页面无法到达，需要添加跳转 需要按下按钮，跳转至新的页面：选中按钮，control+drag 至第二页面，选择show（直接跳转）/Present modally（从下往上弹出），生成连接。 启动页面同理自行设计 依赖管理工具CocoaPods介绍 什么是CocoaPods CocoaPods是OS X和iOS下的一个第三类库管理工具，通过CocoaPods工具我们可以为项目添加被称为“Pods”的依赖库（这些类库必须是CocoaPods本身所支持的），并且可以轻松管理其版本。 CocoaPods的好处 1、在引入第三方库时它可以自动为我们完成各种各样的配置，包括配置编译阶段、连接器选项、甚至是ARC环境下的-fno-objc-arc配置等。 2、使用CocoaPods可以很方便地查找新的第三方库，这些类库是比较“标准的”，而不是网上随便找到的，这样可以让我们找到真正好用的类库。 需要第三方库的时候，三个步骤： 0、安装cocoapos 1、command+N导入项目 2、自动创建podfile文件，在该文件写入pod ‘工具包名称’，点击instal下载 3、项目安装配置第三方库完成，点击r.xcworkspace文件进入项目 在CocoaPods中安装第三方库SVProgressHUD 导入 写需要的第三方库，安装 安装配置完成。安装配置过功能包之后，打开项目都是使用Weather.xcworkspace文件 获取经纬度请求用户给予权限的窗口未弹出，报如下错误 原因是：弹框弹出时，需要给到一个描述给用户，说明为什么需要该信息，在info.plist中设置 问题解决： https://swift.gg/2017/02/13/requesting-permissions-core-location-tutorial/ API 使用网络请求功能包Alamofire完成http请求获取天气数据https://study.163.com/course/courseLearn.htm?courseId=1208935831&amp;share=1&amp;shareId=1386037112#/learn/video?lessonId=1278405463&amp;courseId=1208935831 API:应用程序接口(API:Application Program Interface) https://openweathermap.org/api 选择合适的API 根据经纬度获取天气需要的信息 HTTP+字典Dictionary+JSON+第三方功能包SwiftyJSON字典类型：键值对构成 let dict:[String:Any] = [“name”:”zhangsan”,”age”:18] 创建Weather模型+把获取到的数据显示到页面+计算属性初探https://openweathermap.org/weather-conditions 代码优化-把功能块分离出来变成函数+extensionview连接controller+segue导航正向传值+三种as+delegate实现导航的反向传值view连接controller 选择cocoaTouch class，创建controller，选择页面二，建立连接。 segue导航正向传值1、选中转换箭头，设置该转换的id 2、通过在segue的函数中的segue.identifier找到究竟是哪一个【转换箭头】 3、根据转换箭头，使用 sugue.destination 找到箭头的目的地页面 4、使用as!强制转换获取页面vc（实例化的对象） 5、利用vc页面，传值 自定义protocol和delegate实现导航的反向传值页面二：selectCityController 自定义协议，安排了协议的方法 工具属于谁的——页面二中的delegate变量的 规定在哪里触发时间——按下查找城市按钮 页面一：viewController 遵守协议——领取工具 实现协议中规定的方法——去干活。原因：想要用协议的方法，获取里面的参数 委托——指导谁（vc）委托给本页面（self）的 转型——三种as as 向上转型：安全，一般直接使用Int(3.2)，所以不常用 3.2 as Int as? 向下转型：需要判断 if let，若转换不了，得到nil 1if let vc = segue.destination as? SelectCityController as! 向下转型 1let vc = segue.destination as! SelectCityController 完成用户查询天气的功能源码12]]></content>
+      <categories>
+        <category>APP</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
       </tags>
   </entry>
 </search>
