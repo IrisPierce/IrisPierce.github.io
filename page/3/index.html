@@ -289,6 +289,233 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/06/IOS12+Swift4+Xcode10开发 -  5 任务清单APP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/06/IOS12+Swift4+Xcode10开发 -  5 任务清单APP/" itemprop="url">IOS12+Swift4+Xcode10开发 - 4 元气天气APP</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-06T20:19:57+08:00">
+                2019-01-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/APP/" itemprop="url" rel="index">
+                    <span itemprop="name">APP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/06/IOS12+Swift4+Xcode10开发 -  5 任务清单APP/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/06/IOS12+Swift4+Xcode10开发 -  5 任务清单APP/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/01/06/IOS12+Swift4+Xcode10开发 -  5 任务清单APP/" class="leancloud_visitors" data-flag-title="IOS12+Swift4+Xcode10开发 - 4 元气天气APP">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  16
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g0xpdm5j2cg309c0gmglz.gif" alt="3"></p>
+<h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>iOS原生风格的极简的日程管理工具。</p>
+<p>现有的Todo工具：UI设计趋向于小清新、可爱动画等多元设计；功能为可以记录时间、地点、时间重要程度等信息，这样对于提高了增加任务的时间、精力成本。</p>
+<p>本APP主打：界面使用iOS原生风格，随时想到、随时记录。</p>
+<p>功能：用户可以对待办事项输入、修改、删除、修改顺序操作，可以标记已经完成任务。</p>
+<p>使用场景：午餐时想到了一个idea直接打开APP记录、午睡后想到这个idea的实现可直接修改，晚上实现该功能后直接打钩，第二天测试人员告知该idea可行时删除任务。</p>
+<h4 id="功能需求"><a href="#功能需求" class="headerlink" title="功能需求"></a>功能需求</h4><p>浏览任务页面：可以在tableview查看所有任务及其完成状态；可以在编辑状态下批量删除任务、移动任务顺序；按下navigation的+进入添加任务页面；按下&gt;进入修改任务页面。</p>
+<p>添加修改页面：判断当前任务是添加还是修改。使用自定义protocol和delegate反向传值，将文字传回浏览页面。</p>
+<h3 id="遇到的困难"><a href="#遇到的困难" class="headerlink" title="遇到的困难"></a>遇到的困难</h3><h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><h4 id="主线程"><a href="#主线程" class="headerlink" title="主线程"></a>主线程</h4><p><a href="https://www.jianshu.com/p/f042432e2d7d" target="_blank" rel="noopener">https://www.jianshu.com/p/f042432e2d7d</a></p>
+<h4 id="TableView的使用"><a href="#TableView的使用" class="headerlink" title="TableView的使用"></a>TableView的使用</h4><p>1.我们知道tableView是IOS中的高级视图，其继承与ScrollView，具有ScrollView的功能，还扩展了许多。</p>
+<p>2.tableView的表现格式分两种Plain和Grouped两种风格</p>
+<p>3.tableView的两种代理类delegate和dataSource.这两种代理至关重要，我们在做tableView和这些代理是分不开的。</p>
+<p>4.代理中比较常用的代理方法：</p>
+<p>(1)dataSource的两个必须使用的代理</p>
+<p>显示UITableView的Cell的个数：一共有多少个格子</p>
+<p>Cell和model的数据的交互：根据数据，获取每一个数据的值</p>
+<p>5.增删改查需要做的：第一步获取需要操作的行数（增加不需要），第二步对数据库进行处理，第三部更新视图</p>
+<p>6.更新视图的2种方式：beginUpdates、endUpdates之前操作（如一行一行的删除数据）；tableView.reloadData()刷新TableView了。</p>
+<p>在使用数据库之后，我就直接reloadData()刷新TableView了。比较方便</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 方式一：把批量对视图的操作防在两句话中间，可以提高app的性能</span><br><span class="line">tableView.beginUpdates()</span><br><span class="line">// codes</span><br><span class="line">tableView.endUpdates()</span><br><span class="line">// 方式二：从新load数据更新页面；但没有动画效果 —— 就是相当于执行 cell for row的方法，将结果取出来，再更新视图</span><br><span class="line">//tableView.reloadData()</span><br></pre></td></tr></table></figure>
+<h4 id="Navigation使用，sugue实现跳转"><a href="#Navigation使用，sugue实现跳转" class="headerlink" title="Navigation使用，sugue实现跳转"></a>Navigation使用，sugue实现跳转</h4><p>常用控件：相当于一个扑克盒子，里面的页面是出栈和入栈来实现试图切换。</p>
+<p>利用segue界面跳转一共有两种方式：</p>
+<p>第一种就是以上我的例子，利用button组件，拖拽添加segue，直接运行就可以用。</p>
+<p>第二种是利用ViewController与ViewController之间，拖拽添加segue。不过，这种方法就需要在相应需要跳转的方法内写入代码，手动去设置它的跳转。</p>
+<p>iOS 10中有几种sugue类型：</p>
+<p><strong>Show</strong>：新的view controller将被添加view controller栈的顶部。跳转的页面有Navigation bar，并且有返回原来页面的返回按钮。这是非常常用的的类型。</p>
+<p> <strong>Show detail</strong>：在view controller栈中，新的view controller将被替代原来的view controller。跳转的页面没有Navigation bar，也没有返回原来页面的返回按钮。</p>
+<p> <strong>Present modally</strong>：新页面将以动画形式从底部出现到覆盖整个手机屏幕。这种形式最常见的列子是iOS自带的日历应用：</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/01/06/IOS12+Swift4+Xcode10开发 -  5 任务清单APP/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/05/Java开发 - 老虎机/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -474,6 +701,460 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/12/数据结构 - 散列表、树/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/12/数据结构 - 散列表、树/" itemprop="url">数据结构 - 2 散列表</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-12T13:17:42+08:00">
+                2018-03-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/03/12/数据结构 - 散列表、树/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/12/数据结构 - 散列表、树/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/03/12/数据结构 - 散列表、树/" class="leancloud_visitors" data-flag-title="数据结构 - 2 散列表">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h2><p>来源于数组支持按下表访问的特性，是数组的拓展。</p>
+<p>构造：首先根据数据确定哈希函数，接着选择冲突解决方法，最后构造散列表，再写上需要的增加、查找、删除的方法。</p>
+<p>插入：根据key键值，经过哈希函数，得到哈希值，插入表中。</p>
+<p>查找：根据key值查找。</p>
+<p>三个问题：如何设计散列函数，如何根据装载因子动态扩容，以及如何选择散列冲突解决方法。</p>
+<h2 id="设计散列函数"><a href="#设计散列函数" class="headerlink" title="设计散列函数"></a>设计散列函数</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>key值通过哈希函数之后，数据散列到列表中。</p>
+<h3 id="4个要求"><a href="#4个要求" class="headerlink" title="4个要求"></a>4个要求</h3><ol>
+<li><p>哈希之后，值为大于0的整数，对应到数组的下标</p>
+</li>
+<li><p>同一个key的哈希结果相同</p>
+</li>
+<li><p>哈希之后的值均匀分布</p>
+</li>
+<li><p>哈希方法不能太复杂</p>
+</li>
+</ol>
+<h2 id="根据装载因子动态扩容-rehash"><a href="#根据装载因子动态扩容-rehash" class="headerlink" title="根据装载因子动态扩容 rehash"></a>根据装载因子动态扩容 rehash</h2><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>装载因子——给定一个能存放n个元素的、具有m个槽位的散列表T：</p>
+<p><strong>定义T的装载因子：α = n / m</strong></p>
+<p>对于动态的数据集，一开始无法知道其大小，其频繁的插入和删除，可能导致装载因子过大或者过小。此时我们需要动态扩容。</p>
+<h3 id="方式"><a href="#方式" class="headerlink" title="方式"></a>方式</h3><ul>
+<li><h4 id="一次扩容"><a href="#一次扩容" class="headerlink" title="一次扩容"></a>一次扩容</h4></li>
+</ul>
+<p>插入数据的时间复杂度O(1)，但是某次达到装载因子阈值的插入时需要重新对原来数据进行hash操作，再放入新元素。非常耗时，需要优化放入分批扩容。</p>
+<ul>
+<li><h4 id="分批扩容"><a href="#分批扩容" class="headerlink" title="分批扩容"></a>分批扩容</h4></li>
+</ul>
+<p>对于插入：获取一个新的2倍大小的哈希表，将新元素哈希之后插入，同时选择原哈希表中的一个数据插入新表，直至原哈希表为空。</p>
+<p>对于查找：现在新表中查询，再查找旧表。</p>
+<h2 id="选择冲突解决的办法"><a href="#选择冲突解决的办法" class="headerlink" title="选择冲突解决的办法"></a>选择冲突解决的办法</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>不同的key值散列之后，有可能获得同样的值，发生散列冲突</p>
+<h3 id="2个方法"><a href="#2个方法" class="headerlink" title="2个方法"></a>2个方法</h3><ul>
+<li><h4 id="空间寻值法："><a href="#空间寻值法：" class="headerlink" title="空间寻值法："></a>空间寻值法：</h4><h5 id="1-种类："><a href="#1-种类：" class="headerlink" title="1 种类："></a>1 种类：</h5><ul>
+<li>线性寻址：index + i</li>
+<li>平方寻址：index + i^2</li>
+<li>二次哈希：经过两次哈希函数得到的值</li>
+</ul>
+<h5 id="2-对应方法"><a href="#2-对应方法" class="headerlink" title="2 对应方法"></a>2 对应方法</h5><ul>
+<li><p>增加：冲突后，往后找寻空位置放置元素</p>
+</li>
+<li><p>查找：哈希之后的值不是要找寻的元素时，往后面继续寻找。找到返回true；若找到空，则说明不存在该元素。</p>
+</li>
+<li><p>删除：注意。删除后标记delete，而不知直接删除。否则查找方式受影响。</p>
+</li>
+</ul>
+<h5 id="3-缺点"><a href="#3-缺点" class="headerlink" title="3 缺点"></a>3 缺点</h5><ul>
+<li>装载因子不能过大，因此要求的空位要足够，需要较大的内存</li>
+<li>会发生一次集群、二次集群，经过哈希之后的值都分布在某一段，插入和查找的时间成本变多</li>
+</ul>
+</li>
+<li><h4 id="链接法"><a href="#链接法" class="headerlink" title="链接法"></a>链接法</h4><ul>
+<li>方法：将冲突元素装在以h(k)开头的链表</li>
+<li>查找时间：为<strong>Θ(1 + α)</strong>，查找操作最坏情况下，需要常数时间。</li>
+<li>优点：装载因子可以较大，要求的内存少</li>
+<li>优化：如果链表中元素较多的时候，我们可以使用改造为其他高效的动态数据结构（树等），及时最极端情况下也只是退化为一棵树，查找时间还是0(log n)。</li>
+</ul>
+</li>
+</ul>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><h3 id="工业散列表：Java-中的-HashMap"><a href="#工业散列表：Java-中的-HashMap" class="headerlink" title="工业散列表：Java 中的 HashMap"></a>工业散列表：Java 中的 HashMap</h3><p>1 初始大小：默认16，预先知道数据大小可以设计出适合大小避免rehash</p>
+<p>2 装载因子和动态扩容：0.75，自动扩容为2倍</p>
+<p>3 散列冲突：链接法。jdk1.8版本中，优化链表，如果链表&gt;8，则转化为红黑树，查找更快；&lt;8时，变为链表，因为树结构平衡维护。</p>
+<h3 id="word的拼写检查"><a href="#word的拼写检查" class="headerlink" title="word的拼写检查"></a>word的拼写检查</h3><p>1 数据存储的数据结构：50w个英文单词不超多10M，存储于哈希表中。</p>
+<p>2 单词比对：对于每次输入的单词，作为key值，hash之后，查找哈希表，若查找不到，则标注拼写错误。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>当数据量比较小、装载因子小的时候，适合采用开放寻寻址法。</p>
+<p>数据量大，空间不足，使用链表法。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/数据结构 - 1 数组/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/05/数据结构 - 1 数组/" itemprop="url">数据结构 - 1 数组</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T13:17:42+08:00">
+                2018-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/05/数据结构 - 1 数组/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/数据结构 - 1 数组/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/01/05/数据结构 - 1 数组/" class="leancloud_visitors" data-flag-title="数据结构 - 1 数组">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -526,7 +1207,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -537,7 +1218,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -548,7 +1229,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -622,7 +1303,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">17.6k</span>
+    <span title="Site words total count">19k</span>
   
 </div>
 
