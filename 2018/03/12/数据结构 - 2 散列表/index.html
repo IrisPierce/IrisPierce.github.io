@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Java,数据结构,">
 
 
 
@@ -77,13 +77,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="IRIS&#39;s BLOG">
-<meta property="og:url" content="http://yoursite.com/tags/Swift/page/2/index.html">
+<meta name="description" content="来源来源于数组支持按下表访问的特性，是数组的拓展。 构造：首先根据数据确定哈希函数，接着选择冲突解决方法，最后构造散列表，再写上需要的增加、查找、删除的方法。 插入：根据key键值，经过哈希函数，得到哈希值，插入表中。 查找：根据key值查找。 三个问题：如何设计散列函数，如何根据装载因子动态扩容，以及如何选择散列冲突解决方法。 设计散列函数定义key值通过哈希函数之后，数据散列到列表中。 4个要">
+<meta name="keywords" content="Java,数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构 - 2 散列表">
+<meta property="og:url" content="http://yoursite.com/2018/03/12/数据结构 - 2 散列表/index.html">
 <meta property="og:site_name" content="IRIS&#39;s BLOG">
+<meta property="og:description" content="来源来源于数组支持按下表访问的特性，是数组的拓展。 构造：首先根据数据确定哈希函数，接着选择冲突解决方法，最后构造散列表，再写上需要的增加、查找、删除的方法。 插入：根据key键值，经过哈希函数，得到哈希值，插入表中。 查找：根据key值查找。 三个问题：如何设计散列函数，如何根据装载因子动态扩容，以及如何选择散列冲突解决方法。 设计散列函数定义key值通过哈希函数之后，数据散列到列表中。 4个要">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-12T07:34:34.125Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IRIS&#39;s BLOG">
+<meta name="twitter:title" content="数据结构 - 2 散列表">
+<meta name="twitter:description" content="来源来源于数组支持按下表访问的特性，是数组的拓展。 构造：首先根据数据确定哈希函数，接着选择冲突解决方法，最后构造散列表，再写上需要的增加、查找、删除的方法。 插入：根据key键值，经过哈希函数，得到哈希值，插入表中。 查找：根据key值查找。 三个问题：如何设计散列函数，如何根据装载因子动态扩容，以及如何选择散列冲突解决方法。 设计散列函数定义key值通过哈希函数之后，数据散列到列表中。 4个要">
 
 
 
@@ -113,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/Swift/page/2/">
+  <link rel="canonical" href="http://yoursite.com/2018/03/12/数据结构 - 2 散列表/">
 
 
 
 
 
-  <title>标签: Swift | IRIS's BLOG</title>
+  <title>数据结构 - 2 散列表 | IRIS's BLOG</title>
   
 
 
@@ -138,7 +143,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -274,160 +279,291 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Swift<small>标签</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/12/数据结构 - 2 散列表/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/03/04/IOS开发 - 每日一个Swift小程序/" itemprop="url">
-              
-                <span itemprop="name">IOS开发 - 每日一个Swift小程序</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">数据结构 - 2 散列表</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-04T13:17:42+08:00" content="2019-03-04">
-          03-04
-        </time>
-      </div>
+        <div class="post-meta">
+            
 
-    </header>
-  </article>
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-12T13:17:42+08:00">
+                2018-03-12
+              </time>
+            
 
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/03/12/数据结构 - 2 散列表/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/12/数据结构 - 2 散列表/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/03/12/数据结构 - 2 散列表/" class="leancloud_visitors" data-flag-title="数据结构 - 2 散列表">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/03/用Swift开发iOS10 - 4 AutoLayout/" itemprop="url">
-              
-                <span itemprop="name">用Swift开发iOS10 - 4 AutoLayout</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-03T16:59:57+08:00" content="2019-03-03">
-          03-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/28/IOS开发 - 简单的计时器/" itemprop="url">
-              
-                <span itemprop="name">IOS开发 - 简单的计时器</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-28T16:59:57+08:00" content="2019-02-28">
-          02-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/26/IOS开发 - 简单的加法计算器swift版本/" itemprop="url">
-              
-                <span itemprop="name">IOS开发 - 简单的加法计算器swift版本</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-26T11:18:17+08:00" content="2019-02-26">
-          02-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/06/IOS12+Swift4+Xcode10开发 -  5 任务清单APP/" itemprop="url">
-              
-                <span itemprop="name">IOS12+Swift4+Xcode10开发 - 4 元气天气APP</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-06T20:19:57+08:00" content="2019-01-06">
-          01-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <h2 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h2><p>来源于数组支持按下表访问的特性，是数组的拓展。</p>
+<p>构造：首先根据数据确定哈希函数，接着选择冲突解决方法，最后构造散列表，再写上需要的增加、查找、删除的方法。</p>
+<p>插入：根据key键值，经过哈希函数，得到哈希值，插入表中。</p>
+<p>查找：根据key值查找。</p>
+<p>三个问题：如何设计散列函数，如何根据装载因子动态扩容，以及如何选择散列冲突解决方法。</p>
+<h2 id="设计散列函数"><a href="#设计散列函数" class="headerlink" title="设计散列函数"></a>设计散列函数</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>key值通过哈希函数之后，数据散列到列表中。</p>
+<h3 id="4个要求"><a href="#4个要求" class="headerlink" title="4个要求"></a>4个要求</h3><ol>
+<li><p>哈希之后，值为大于0的整数，对应到数组的下标</p>
+</li>
+<li><p>同一个key的哈希结果相同</p>
+</li>
+<li><p>哈希之后的值均匀分布</p>
+</li>
+<li><p>哈希方法不能太复杂</p>
+</li>
+</ol>
+<h2 id="根据装载因子动态扩容-rehash"><a href="#根据装载因子动态扩容-rehash" class="headerlink" title="根据装载因子动态扩容 rehash"></a>根据装载因子动态扩容 rehash</h2><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>装载因子——给定一个能存放n个元素的、具有m个槽位的散列表T：</p>
+<p><strong>定义T的装载因子：α = n / m</strong></p>
+<p>对于动态的数据集，一开始无法知道其大小，其频繁的插入和删除，可能导致装载因子过大或者过小。此时我们需要动态扩容。</p>
+<h3 id="方式"><a href="#方式" class="headerlink" title="方式"></a>方式</h3><ul>
+<li><h4 id="一次扩容"><a href="#一次扩容" class="headerlink" title="一次扩容"></a>一次扩容</h4></li>
+</ul>
+<p>插入数据的时间复杂度O(1)，但是某次达到装载因子阈值的插入时需要重新对原来数据进行hash操作，再放入新元素。非常耗时，需要优化放入分批扩容。</p>
+<ul>
+<li><h4 id="分批扩容"><a href="#分批扩容" class="headerlink" title="分批扩容"></a>分批扩容</h4></li>
+</ul>
+<p>对于插入：获取一个新的2倍大小的哈希表，将新元素哈希之后插入，同时选择原哈希表中的一个数据插入新表，直至原哈希表为空。</p>
+<p>对于查找：现在新表中查询，再查找旧表。</p>
+<h2 id="选择冲突解决的办法"><a href="#选择冲突解决的办法" class="headerlink" title="选择冲突解决的办法"></a>选择冲突解决的办法</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>不同的key值散列之后，有可能获得同样的值，发生散列冲突</p>
+<h3 id="2个方法"><a href="#2个方法" class="headerlink" title="2个方法"></a>2个方法</h3><ul>
+<li><h4 id="空间寻值法："><a href="#空间寻值法：" class="headerlink" title="空间寻值法："></a>空间寻值法：</h4><h5 id="1-种类："><a href="#1-种类：" class="headerlink" title="1 种类："></a>1 种类：</h5><ul>
+<li>线性寻址：index + i</li>
+<li>平方寻址：index + i^2</li>
+<li>二次哈希：经过两次哈希函数得到的值</li>
+</ul>
+<h5 id="2-对应方法"><a href="#2-对应方法" class="headerlink" title="2 对应方法"></a>2 对应方法</h5><ul>
+<li><p>增加：冲突后，往后找寻空位置放置元素</p>
+</li>
+<li><p>查找：哈希之后的值不是要找寻的元素时，往后面继续寻找。找到返回true；若找到空，则说明不存在该元素。</p>
+</li>
+<li><p>删除：注意。删除后标记delete，而不知直接删除。否则查找方式受影响。</p>
+</li>
+</ul>
+<h5 id="3-缺点"><a href="#3-缺点" class="headerlink" title="3 缺点"></a>3 缺点</h5><ul>
+<li>装载因子不能过大，因此要求的空位要足够，需要较大的内存</li>
+<li>会发生一次集群、二次集群，经过哈希之后的值都分布在某一段，插入和查找的时间成本变多</li>
+</ul>
+</li>
+<li><h4 id="链接法"><a href="#链接法" class="headerlink" title="链接法"></a>链接法</h4><ul>
+<li>方法：将冲突元素装在以h(k)开头的链表</li>
+<li>查找时间：为<strong>Θ(1 + α)</strong>，查找操作最坏情况下，需要常数时间。</li>
+<li>优点：装载因子可以较大，要求的内存少</li>
+<li>优化：如果链表中元素较多的时候，我们可以使用改造为其他高效的动态数据结构（树等），及时最极端情况下也只是退化为一棵树，查找时间还是0(log n)。</li>
+</ul>
+</li>
+</ul>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><h3 id="工业散列表：Java-中的-HashMap"><a href="#工业散列表：Java-中的-HashMap" class="headerlink" title="工业散列表：Java 中的 HashMap"></a>工业散列表：Java 中的 HashMap</h3><p>1 初始大小：默认16，预先知道数据大小可以设计出适合大小避免rehash</p>
+<p>2 装载因子和动态扩容：0.75，自动扩容为2倍</p>
+<p>3 散列冲突：链接法。jdk1.8版本中，优化链表，如果链表&gt;8，则转化为红黑树，查找更快；&lt;8时，变为链表，因为树结构平衡维护。</p>
+<h3 id="word的拼写检查"><a href="#word的拼写检查" class="headerlink" title="word的拼写检查"></a>word的拼写检查</h3><p>1 数据存储的数据结构：50w个英文单词不超多10M，存储于哈希表中。</p>
+<p>2 单词比对：对于每次输入的单词，作为key值，hash之后，查找哈希表，若查找不到，则标注拼写错误。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>当数据量比较小、装载因子小的时候，适合采用开放寻寻址法。</p>
+<p>数据量大，空间不足，使用链表法。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/23/简历/" rel="next" title="我的简历V1">
+                <i class="fa fa-chevron-left"></i> 我的简历V1
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/12/数据结构 - 3 二叉树 /" rel="prev" title="数据结构 - 2 散列表">
+                数据结构 - 2 散列表 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/tags/Swift/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/tags/Swift/">1</a><span class="page-number current">2</span>
-  </nav>
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -435,6 +571,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -455,8 +598,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -534,6 +686,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#来源"><span class="nav-number">1.</span> <span class="nav-text">来源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设计散列函数"><span class="nav-number">2.</span> <span class="nav-text">设计散列函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4个要求"><span class="nav-number">2.2.</span> <span class="nav-text">4个要求</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#根据装载因子动态扩容-rehash"><span class="nav-number">3.</span> <span class="nav-text">根据装载因子动态扩容 rehash</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原因"><span class="nav-number">3.1.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方式"><span class="nav-number">3.2.</span> <span class="nav-text">方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一次扩容"><span class="nav-number">3.2.1.</span> <span class="nav-text">一次扩容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分批扩容"><span class="nav-number">3.2.2.</span> <span class="nav-text">分批扩容</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择冲突解决的办法"><span class="nav-number">4.</span> <span class="nav-text">选择冲突解决的办法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-1"><span class="nav-number">4.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2个方法"><span class="nav-number">4.2.</span> <span class="nav-text">2个方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#空间寻值法："><span class="nav-number">4.2.1.</span> <span class="nav-text">空间寻值法：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-种类："><span class="nav-number">4.2.1.1.</span> <span class="nav-text">1 种类：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-对应方法"><span class="nav-number">4.2.1.2.</span> <span class="nav-text">2 对应方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-缺点"><span class="nav-number">4.2.1.3.</span> <span class="nav-text">3 缺点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链接法"><span class="nav-number">4.2.2.</span> <span class="nav-text">链接法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例子"><span class="nav-number">5.</span> <span class="nav-text">例子</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#工业散列表：Java-中的-HashMap"><span class="nav-number">5.1.</span> <span class="nav-text">工业散列表：Java 中的 HashMap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#word的拼写检查"><span class="nav-number">5.2.</span> <span class="nav-text">word的拼写检查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -686,6 +854,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
