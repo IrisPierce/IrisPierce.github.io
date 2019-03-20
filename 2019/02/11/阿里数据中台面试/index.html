@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/saturn_128.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/saturn_32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/saturn_16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="面试,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="三面准备职业规划这个问题其实我自己在选择保研到可视化方向的时候就有想过。 首先，我认为可视化并不是像别人所说只是展示数据的工具，而是帮助用户探索发现直观观察原数据的特征和模式的利器。所以我选择了数据可视分析的方向，在研究生阶段从可视化的算法和理论方面先充实自己。 我的阶段主要分为三个部分，实习之前、入职1~2年、入职2~5年。 实习之前：我会从把红宝书、等书籍看一遍，在实习之前了解所需前端技术；根">
+<meta name="keywords" content="面试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="暑期实习面试 - 阿里数据中台前端可视化">
+<meta property="og:url" content="http://yoursite.com/2019/02/11/阿里数据中台面试/index.html">
+<meta property="og:site_name" content="IRIS&#39;s BLOG">
+<meta property="og:description" content="三面准备职业规划这个问题其实我自己在选择保研到可视化方向的时候就有想过。 首先，我认为可视化并不是像别人所说只是展示数据的工具，而是帮助用户探索发现直观观察原数据的特征和模式的利器。所以我选择了数据可视分析的方向，在研究生阶段从可视化的算法和理论方面先充实自己。 我的阶段主要分为三个部分，实习之前、入职1~2年、入职2~5年。 实习之前：我会从把红宝书、等书籍看一遍，在实习之前了解所需前端技术；根">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g192a8jtstj31ga0mswjb.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g18jmn4hddj30rs0fe0ua.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g18ipg8lxxj31860gqwkt.jpg">
+<meta property="og:updated_time" content="2019-03-20T02:59:24.779Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="暑期实习面试 - 阿里数据中台前端可视化">
+<meta name="twitter:description" content="三面准备职业规划这个问题其实我自己在选择保研到可视化方向的时候就有想过。 首先，我认为可视化并不是像别人所说只是展示数据的工具，而是帮助用户探索发现直观观察原数据的特征和模式的利器。所以我选择了数据可视分析的方向，在研究生阶段从可视化的算法和理论方面先充实自己。 我的阶段主要分为三个部分，实习之前、入职1~2年、入职2~5年。 实习之前：我会从把红宝书、等书籍看一遍，在实习之前了解所需前端技术；根">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g192a8jtstj31ga0mswjb.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/02/11/阿里数据中台面试/">
+
+
+
+
+
+  <title>暑期实习面试 - 阿里数据中台前端可视化 | IRIS's BLOG</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">IRIS's BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">王圆圆的每日报告</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/11/阿里数据中台面试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">暑期实习面试 - 阿里数据中台前端可视化</h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-11T16:00:57+08:00">
+                2019-02-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面试/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/02/11/阿里数据中台面试/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/11/阿里数据中台面试/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/02/11/阿里数据中台面试/" class="leancloud_visitors" data-flag-title="暑期实习面试 - 阿里数据中台前端可视化">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.5k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  8
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="三面准备"><a href="#三面准备" class="headerlink" title="三面准备"></a>三面准备</h1><h2 id="职业规划"><a href="#职业规划" class="headerlink" title="职业规划"></a>职业规划</h2><p>这个问题其实我自己在选择保研到可视化方向的时候就有想过。</p>
+<p>首先，我认为可视化并不是像别人所说只是展示数据的工具，而是帮助用户探索发现直观观察原数据的特征和模式的利器。所以我选择了数据可视分析的方向，在研究生阶段从可视化的算法和理论方面先充实自己。</p>
+<p>我的阶段主要分为三个部分，实习之前、入职1~2年、入职2~5年。</p>
+<h3 id="实习之前："><a href="#实习之前：" class="headerlink" title="实习之前："></a>实习之前：</h3><p>我会从把红宝书、等书籍看一遍，在实习之前了解所需前端技术；根据团队的技术路线需要，自己实现一些react框架的项目。争取在实习的时候能够按时按量完成导师给的任务。</p>
+<h3 id="入职1-3年内："><a href="#入职1-3年内：" class="headerlink" title="入职1~3年内："></a>入职1~3年内：</h3><p>如果有幸前端可视化方向的顶尖团队。</p>
+<p>1工作方面：之前的面试官有说过做工程和论文是不一样的，导师对于学术研究是提出一个新的方法去解决问题，需要在短时间内做出case；而前一位面试官说的是工程需要考虑更多的东西，比如大数据渲染的效率。所以我希望能过接触接触业务，多培养工程能力和工程思维。</p>
+<p>2学习方面：非常希望学习一些框架和库。“不要重复的造轮子”这句话，我认为初学者都应该无视，不了解轮子怎么知道这个轮子好不好用呢？我们做论文分析的时候也需要做实验比较算法的优越性。</p>
+<p>所以我希望从学习熟练使用轮子开始，到看轮子，理解如何造轮子，如果够厉害的话，或许在业务的实践中自己也能成为造轮子团队的一员。</p>
+<p>3爱好方面：工作之余还希望能像字体日记APP的开发者一样，做一些自己喜欢iOS开发。之前在react论坛上看到说阿里有的iOS开发是使用前端技术rn weex，希望学习之后帮助自己的从native开发转变为混合开发——做一些Hybrid APP。</p>
+<h3 id="3-5应该算一个有经验的前端工程师了："><a href="#3-5应该算一个有经验的前端工程师了：" class="headerlink" title="3~5应该算一个有经验的前端工程师了："></a>3~5应该算一个有经验的前端工程师了：</h3><p>1这时候可以通过发表技术博客，提交和参与开源项目，参加业界会议。保持技术交流。</p>
+<p>2同时努力成为一个一专多长的人才。因为制作一个性能高、交互好、视觉美的页面，需要从前端框架选型、架构设计、构建工具，到后端通信机制、设计与交互、网络和浏览器优化等各方面的知识。</p>
+<h3 id="远期规划："><a href="#远期规划：" class="headerlink" title="远期规划："></a>远期规划：</h3><p>大致方向是成为一名像我很佩服的女神——羡辙zhe一样优秀的前端工程师，既可以在专业上做好，又可以做一些自己喜欢的iOS开发如字体日记，同时保持技术博客的更新。</p>
+<p>谢谢。</p>
+<h2 id="你理解的-Web-前端未来的发展"><a href="#你理解的-Web-前端未来的发展" class="headerlink" title="你理解的 Web 前端未来的发展"></a>你理解的 Web 前端未来的发展</h2><p>我认为随着 HTML、CSS 等的发展，网页上能做的事情越来越丰富了，包括更酷炫的前端呈现方式、音视频的处理，更趋向于能够做 Native 应用能做的事情了，可能以后 Web 和 Native 的边界会越来越模糊。</p>
+<p>比如说现在的开发中很多都是用 Hybrid APP。比如微信在钱包里面的理财就是网页，但是基础的聊天、朋友圈都是原生（Native) APP。框架是原生的，但是其他的详细内容就是网页封装。</p>
+<h2 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h2><p>自己的优势：</p>
+<h3 id="1、可视化背景："><a href="#1、可视化背景：" class="headerlink" title="1、可视化背景："></a>1、可视化背景：</h3><p>虽然我研究的是高维数据可视化，可能初期没有研究交通信息可视化、时序数据可视化的同学的项目更适合于工程。但是现如今很多数据都是高维多元数据，如商品数据、人脸图像数据等。</p>
+<p>而直接使用一些很成熟的方法可视化这些高维数据不一定是最好的，我们或许可以从可视化顶级会议IEEE VIS上面去阅读一些新的方法，来试着更新可视化流程、降维方法和交互手段。</p>
+<h3 id="2、热爱学习新事物："><a href="#2、热爱学习新事物：" class="headerlink" title="2、热爱学习新事物："></a>2、热爱学习新事物：</h3><p>在Coursera上自习Andrew ng的ML，拿了97分；在Java上面写的小游戏、也会在自学安卓、iOS的时候再写一遍；同时自己对iOS的开发很感兴趣，觉得能推出一些对受众有用的产品就会很酷。后期希望学习混合开发APP。</p>
+<h3 id="3、有坚持精神且身体好"><a href="#3、有坚持精神且身体好" class="headerlink" title="3、有坚持精神且身体好"></a>3、有坚持精神且身体好</h3><p>之前因为每次跨栏只有银牌和铜牌，最后气不过就坚持晨跑，最后终于拿下了金牌。同时坚持锻炼也让我的身体素质很好，可以接受高强度的工作。</p>
+<p>我是如何面试一位前端工程师：<a href="https://zhuanlan.zhihu.com/p/30487025" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/30487025</a></p>
+<h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><h3 id="Q1"><a href="#Q1" class="headerlink" title="Q1"></a>Q1</h3><h3 id="Q2可视化："><a href="#Q2可视化：" class="headerlink" title="Q2可视化："></a>Q2可视化：</h3><p>比如在没写过图表的前提下，怎么抽象数据与图形的映射，怎么去组合不同的图表部件。</p>
+<h4 id="要从图表类型的隐喻上进行区分"><a href="#要从图表类型的隐喻上进行区分" class="headerlink" title="要从图表类型的隐喻上进行区分"></a>要从图表类型的隐喻上进行区分</h4><p>饼图表达的是一个<em>整体</em>和<em>局部</em>的关系，也就是一个部分占据整体的多少比例。柱状图和折线图较为接近，通常前者表示不同对象数据的对比，后者更常用作表示同一对象数据在不同（时间）维度上的趋势。</p>
+<p>首先，饼图中的类目不应太多，否则信息很分散，不知道作者想表达什么信息。</p>
+<p>其次，饼图的颜色不要五颜六色，除了用以区分类目之外，颜色还可以传递更多有效信息。比如上图用绿色表示正确，灰色表示错误，是符合一般对颜色的认知的，并且绿色的类目更醒目，第一眼就能关注到；相反，如果用普通的三种颜色表示三个类目，则读者很难一眼从图中解读出有效信息。</p>
+<p>第三，区分出想表明特定意思的类目。比如上图将正确的类目和错误的类目分隔开，读者很容易抓取到关键信息。</p>
+<h4 id="南丁格尔玫瑰图："><a href="#南丁格尔玫瑰图：" class="headerlink" title="南丁格尔玫瑰图："></a>南丁格尔玫瑰图：</h4><p>误导在于，数据的比值为到底是半径比、面积比、还是角度比？</p>
+<p>第一种图将数据映射到半径；第二种图将数据映射到半径和角度；第三将图将数据映射到角度。</p>
+<p>何时使用？</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g192a8jtstj31ga0mswjb.jpg" alt="image-20190320104158163"></p>
+<h3 id="Q3前端设计："><a href="#Q3前端设计：" class="headerlink" title="Q3前端设计："></a>Q3前端设计：</h3><p>常问的一个校招问题，有一块区域要展示一组数据，但数据需要请求 3 个接口才能计算得到，请问前端是怎么做的，如何优化，前端什么情况下可以放弃合并接口的要求。这个地方至少会考察到异步，本地缓存，延展下会问下并发，竞态，协程等。</p>
+<h3 id="过去的思考和总结"><a href="#过去的思考和总结" class="headerlink" title="过去的思考和总结"></a>过去的思考和总结</h3><h4 id="最有难度的事情"><a href="#最有难度的事情" class="headerlink" title="最有难度的事情"></a>最有难度的事情</h4><h4 id="之前面试的总结"><a href="#之前面试的总结" class="headerlink" title="之前面试的总结"></a>之前面试的总结</h4><p>一面：</p>
+<p>主要是表达逻辑的不足，高维数据可视分析科研项目在没有图表支撑的情况下，是比较难描述清楚的。所以我再次整合了逻辑，从背景、目的、方法以及困难三个方面总结了自己的项目。</p>
+<p>二面：</p>
+<p>把自己项目的逻辑讲的较通顺了。</p>
+<p>发现了对图表有时候思考不够深入。</p>
+<h3 id="位图和矢量图"><a href="#位图和矢量图" class="headerlink" title="位图和矢量图"></a>位图和矢量图</h3><p>1.位图图像(bitmap)<br>亦称为点阵图像或绘制图像，是由称作<strong>像素（图片元素）的单个点组成</strong>的。这些点可以进行不同的排列和染色以构成图样。当放大位图时，可以看见赖以构成整个图像的<strong>无数单个方块</strong>。扩大位图尺寸的效果是<strong>增大单个像素</strong>，从而使线条和形状<strong>显得参差不齐</strong>。然而，如果从稍远的位置观看它，位图图像的颜色和形状又显得是连续的。</p>
+<h2 id="数据中台"><a href="#数据中台" class="headerlink" title="数据中台"></a>数据中台</h2><p>阿里中台主要由业务中台和数字中台并肩构成了双中台，并肩扛起了所有前台业务。</p>
+<p>业务中台将后台资源进行抽象包装整合，转化为前台友好的可重用共享的核心能力，实现了后端业务资源到前台易用能力的转化。</p>
+<p>数据中台从后台及业务中台将数据流入，完成海量数据的存储、计算、产品化包装过程，构成企业的核心数据能力，为前台基于数据的定制化创新和业务中台基于数据反馈的持续演进提供了强大支撑。业务中台与数据中台，相辅相成，互相支撑，一起构建起了战场强大的后方炮火群。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g18jmn4hddj30rs0fe0ua.jpg" alt="img"></p>
+<h1 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h1><h1 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h1><h3 id="可视化项目，及相关展开"><a href="#可视化项目，及相关展开" class="headerlink" title="可视化项目，及相关展开"></a>可视化项目，及相关展开</h3><h3 id="经典可视化图标的优缺点"><a href="#经典可视化图标的优缺点" class="headerlink" title="经典可视化图标的优缺点"></a>经典可视化图标的优缺点</h3><p>饼图的缺点</p>
+<p>玫瑰图的缺点，视觉干扰是什么</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g18ipg8lxxj31860gqwkt.jpg" alt="image-20190319232437932"></p>
+<h3 id="场景应用"><a href="#场景应用" class="headerlink" title="场景应用"></a>场景应用</h3><p>解决分类数据可视化中类别过多、数据量过多的遮挡问题。</p>
+<p>数据部分：</p>
+<p>可视化部分：</p>
+<p>交互部分：</p>
+<h3 id="面向对象思维"><a href="#面向对象思维" class="headerlink" title="面向对象思维"></a>面向对象思维</h3><p>绘制折线图和柱状图的代码大部分相似，可以写在一个类中。</p>
+<h3 id="一个平面n个圆有多少个相交的圆"><a href="#一个平面n个圆有多少个相交的圆" class="headerlink" title="一个平面n个圆有多少个相交的圆"></a>一个平面n个圆有多少个相交的圆</h3><p>1 遍历的方法。时间复杂度较高。</p>
+<p>2 对每一个圆计算其变上有多少个交点，交点数除以2就位改圆的相交圆的个数。将所有相交个数加起来除以2(2个圆相交会有一个相交个数，遍历后算了两遍)，结果为一共有多少个相交的圆。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/面试/" rel="tag"># 面试</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/19/简历 - 简历要点/" rel="next" title="简历 - 简历要点">
+                <i class="fa fa-chevron-left"></i> 简历 - 简历要点
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/19/工具整理 - 设计类工具/" rel="prev" title="工具整理 - 设计类工具">
+                工具整理 - 设计类工具 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/irisHeader.jpeg" alt="IRIS">
+            
+              <p class="site-author-name" itemprop="name">IRIS</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/irispierce" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:wangyusi007@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#三面准备"><span class="nav-number">1.</span> <span class="nav-text">三面准备</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#职业规划"><span class="nav-number">1.1.</span> <span class="nav-text">职业规划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实习之前："><span class="nav-number">1.1.1.</span> <span class="nav-text">实习之前：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#入职1-3年内："><span class="nav-number">1.1.2.</span> <span class="nav-text">入职1~3年内：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5应该算一个有经验的前端工程师了："><span class="nav-number">1.1.3.</span> <span class="nav-text">3~5应该算一个有经验的前端工程师了：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远期规划："><span class="nav-number">1.1.4.</span> <span class="nav-text">远期规划：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#你理解的-Web-前端未来的发展"><span class="nav-number">1.2.</span> <span class="nav-text">你理解的 Web 前端未来的发展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优势"><span class="nav-number">1.3.</span> <span class="nav-text">优势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、可视化背景："><span class="nav-number">1.3.1.</span> <span class="nav-text">1、可视化背景：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、热爱学习新事物："><span class="nav-number">1.3.2.</span> <span class="nav-text">2、热爱学习新事物：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、有坚持精神且身体好"><span class="nav-number">1.3.3.</span> <span class="nav-text">3、有坚持精神且身体好</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基础"><span class="nav-number">1.3.4.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q1"><span class="nav-number">1.3.5.</span> <span class="nav-text">Q1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q2可视化："><span class="nav-number">1.3.6.</span> <span class="nav-text">Q2可视化：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#要从图表类型的隐喻上进行区分"><span class="nav-number">1.3.6.1.</span> <span class="nav-text">要从图表类型的隐喻上进行区分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#南丁格尔玫瑰图："><span class="nav-number">1.3.6.2.</span> <span class="nav-text">南丁格尔玫瑰图：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q3前端设计："><span class="nav-number">1.3.7.</span> <span class="nav-text">Q3前端设计：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#过去的思考和总结"><span class="nav-number">1.3.8.</span> <span class="nav-text">过去的思考和总结</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#最有难度的事情"><span class="nav-number">1.3.8.1.</span> <span class="nav-text">最有难度的事情</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#之前面试的总结"><span class="nav-number">1.3.8.2.</span> <span class="nav-text">之前面试的总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#位图和矢量图"><span class="nav-number">1.3.9.</span> <span class="nav-text">位图和矢量图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据中台"><span class="nav-number">1.4.</span> <span class="nav-text">数据中台</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一面"><span class="nav-number">2.</span> <span class="nav-text">一面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二面"><span class="nav-number">3.</span> <span class="nav-text">二面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可视化项目，及相关展开"><span class="nav-number">3.0.1.</span> <span class="nav-text">可视化项目，及相关展开</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#经典可视化图标的优缺点"><span class="nav-number">3.0.2.</span> <span class="nav-text">经典可视化图标的优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#场景应用"><span class="nav-number">3.0.3.</span> <span class="nav-text">场景应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象思维"><span class="nav-number">3.0.4.</span> <span class="nav-text">面向对象思维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个平面n个圆有多少个相交的圆"><span class="nav-number">3.0.5.</span> <span class="nav-text">一个平面n个圆有多少个相交的圆</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">IRIS</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">33.9k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'K56V1wrSmQT1Y57HAlTWMY6m-gzGzoHsz',
+        appKey: '1KvpI6T94PESCJ3yikky6J1P',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("K56V1wrSmQT1Y57HAlTWMY6m-gzGzoHsz", "1KvpI6T94PESCJ3yikky6J1P");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

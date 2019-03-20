@@ -401,7 +401,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.6k
+                  2.8k
                 </span>
               
 
@@ -448,69 +448,6 @@
 <p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g13aifpljtj31c80e2gt9.jpg" alt="image-20190315105319938"></p>
 <p>非监督降维方法PCA：没有考虑类的分离程度；<br>监督降维方法LDA：事先假设数据符合高斯分布，对于复杂的类结构无效；<br>感知驱动降维PDD：单个投影可能会导致重要的类结构被忽略。</p>
 <p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g13aji6wocj314w0dyaki.jpg" alt="image-20190315105421299"></p>
-<h3 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h3><p>本文提出了一种感知驱动的线性降维方法，寻求生成具有最大视觉分离程度、最少数量的最优二维投影集合。</p>
-<p>（1）子空间表达：对于类别两两之间利用分离度量求最优分离向量，然后利用仿射空间在各个维度上找出在这个度量上能够达到分离度量阈值的范围，各个维度上的范围构成了一个包围盒。</p>
-<p>（2）子空间求交：包围盒如果有交集，则代表它们之间可以用一条向量进行区分。</p>
-<p>我们将包围盒看做点，两个包围盒有交，则在对应的点之间连边，若存在一个完全图，则代表这些包围盒所代表的点对都可以用一条向量进行区分，用最少数量的团对这张图进行覆盖，这些团就对应了最少数量的包围盒集合。</p>
-<p>（3）组合优化：我们取包围盒的中心所对应的向量作为投影的坐标轴，将坐标轴进行组合，得到最少数量的投影集合。 </p>
-<h3 id="困难1：发现单个视图降维方法的不足"><a href="#困难1：发现单个视图降维方法的不足" class="headerlink" title="困难1：发现单个视图降维方法的不足"></a>困难1：发现单个视图降维方法的不足</h3><p>一开始构建单个视图，发现类别多的时候无法构建</p>
-<p><strong>目标函数：</strong>为了最大化非线性目标函数dDSC。<strong>优化方法：</strong>使用模拟退火算法，通过比较随机生成的投影结果的costFuction，找出全局最优值。得到最优的投影结果展示分类数据。</p>
-<p>发现：真实数据中可能存在很多类，如服装数据包括：睡衣、风衣、内衣等各种内容。</p>
-<h3 id="困难2：算法不可行。子空间表达"><a href="#困难2：算法不可行。子空间表达" class="headerlink" title="困难2：算法不可行。子空间表达"></a>困难2：算法不可行。子空间表达</h3><p>目标其实就是找到：既能满足两个类别类内密集，类间最大的子空间。用于下一步两两求交。</p>
-<p>原方法：几何的方式优化。</p>
-<p>1）【保证A\B自己类内很密集】得到使方差很小的Pa、Pb两个子空间</p>
-<p>通过特征分解，已经得到了前k小的方差的向量组成的子空间，向着各个方向偏转直至度量值到达无法分离两个类。此时得到了一个可分子空间，使用矩阵表示。</p>
-<p>2）【保证同时满足A\B类内很密集】子空间相交。</p>
-<p>关于如何求解子空间的交，使得：<br>$$<br>x_1\alpha_1+x_2\alpha_2+…x_{ka}\alpha_{ka}-<br>y_1\beta_1-y_1\beta_1-…y_{kb}\beta_{kb}=0<br>$$<br>将特征子空间中的特征向量带入，联立方程组，可以解出基础解系w<br>$$<br>V_a∩V_b = w<br>$$<br>3）【满足类内密集且类间距离最大】</p>
-<p>该特征项就是两个类别中心的连线——蓝色部分，单位化后为橙色 ：v_{dist} = u_a-u_b</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g13b0lj48vj312g0u0x09.jpg" alt="image-20190111213533521"></p>
-<p>然而如何结合使得两类距离最大的向量和子空间是一个问题。</p>
-<p>此时我想到了数学中的放射空间包围盒求交方法。</p>
-<h2 id="基于-kNN-Graph的内蕴特征抽取可视分析"><a href="#基于-kNN-Graph的内蕴特征抽取可视分析" class="headerlink" title="基于 kNN Graph的内蕴特征抽取可视分析"></a>基于 kNN Graph的内蕴特征抽取可视分析</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>高维数据(High-Dimensional Data)，是指向每个数据有多个属性的数据。现实世界中的高维数据中的样本点，往往是分布在一个或者多个低维度的非线性的流形结构之中，如何找出隐藏在高维数据中的低维结构与特征是目前我们所面临的问题。</p>
-<p>特征抽取是获取数据特征的重要方式。分为线性和非线性方式，线性提取方式是简单的原始维度线性组合，用户根据自己的喜好选择正向负向的点；非线性为点选绘制自由曲线，产生一个贴合用户认知的非线性模型的内蕴特征轴。</p>
-<p>选取点对、选取点序列、画自由曲线等三种指定内蕴轴的交互式方法</p>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>图 5-3(a)表示了全球生活质量形状趋势(图中箭头方向)，按照其趋势绘制自由曲线，将在散点图中得到新的坐标轴，图 5-3(b)显示了直方图和河流图。</p>
-<p>趋势：在图中可看出从左到右,正向的指数降低,如购买力指数(蓝色)，安全指数(浅蓝色)，和医疗指数(橙色)，而负向指数增加，如交通通勤时间指数(浅绿色)和污染指数(红色)，随着X 轴增加，国家生活质量下降，该轴代表了生活质量下降的趋势。</p>
-<p>异常：卢旺达，购买力低，然而，安全与卫生保健较高，印证了它是非洲排名第一的国家，政府效率高的信息。委内瑞拉购买力低远远低于其他国家，发现其正面临经济危机的。</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g13fw9aognj31co0pcnhm.jpg" alt="image-20190315135936560"></p>
-<p>有 698 个图像和 4096 个维度，每个维度都表示为一个像素值。为了方便可视化，数据预处理，使用 PCA 将维数减少到 35 维。</p>
-<p>节点-链接布局呈现了一个圈的形状(图 5-4(a))。用户想知道圆圈的方向是否为全局模式。于是，他沿着圆的方向画了一条自由的线，但是发现有脸部姿势和光线的两个变化，同时他注意到交互绘制的草图的中心部分只呈现出左右姿势变换。他决定探索这个圈的主要部分。首先，他沿着第一个主要方向画了草图 (在图(a)的红色路径)， 生成的轴显示了从左到右脸部姿势的变化(对应图 5-4(c)中的 x 轴)。接着，他沿着第 二个主要方向 (图 5-4(a)中的绿色路径)绘制了自由曲线，所构造的轴是脸部从上到 下的姿势变化(对应图(c)中的 y 轴)。最后，他沿着其余部分绘制自由曲线(图(a))，改方向表征了光线由暗到明的变化。 </p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g13h9d2hjnj31bs0qmnp2.jpg" alt="image-20190315144646439"></p>
-<h2 id="高维数据中的低维结构的可视探索"><a href="#高维数据中的低维结构的可视探索" class="headerlink" title="高维数据中的低维结构的可视探索"></a>高维数据中的低维结构的可视探索</h2><h3 id="成绩：-1"><a href="#成绩：-1" class="headerlink" title="成绩："></a>成绩：</h3><p>并推荐可视化顶级刊 TVCG。非学生一作，负责user study和对比试验。</p>
-<h3 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h3><p>高维数据集中往往含有不同结构的低维结构，当未知数据集中的低维结构与当前的可视化方法的假设不匹配时，可视化结果将难以理解。</p>
-<h3 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h3><p>可视分析方法帮助用户有效地识别低维结构及关键特征，为进一步分析提供关键结构信息。</p>
-<h3 id="方法：-1"><a href="#方法：-1" class="headerlink" title="方法："></a>方法：</h3><p>t-SNE初步提供初始聚类信息，局部切空间-测地距离视图用来发现子空间，2个滚石图拐点为子空间维度，</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g11k6otgvnj30rc0je77a.jpg" alt="image-20190313225653964"></p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g11k9nemw0j30ti0h4n4d.jpg" alt="image-20190313225944793"></p>
-<h2 id="考勤管理系统"><a href="#考勤管理系统" class="headerlink" title="考勤管理系统"></a>考勤管理系统</h2><h3 id="成绩：-2"><a href="#成绩：-2" class="headerlink" title="成绩："></a>成绩：</h3><p>中南大学学报审稿中，EI期刊。负责需求设计：</p>
-<p>主页面：</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g13gkt4ve9j306e069wfq.jpg" alt="image-20190315142312357"></p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g13gkw1p0xj306e069wfq.jpg" alt="image-20190315142317201"></p>
-<p>细节视图：</p>
-<p>成员当日考勤部分：</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g13glq13v7j305h026dfy.jpg" alt="image-20190315142404984"></p>
-<p>个人多日考勤细节以及交互：</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g13gmqihvzj305p059dgk.jpg" alt="image-20190315142503456"></p>
-<p>考勤统计视图：</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g13gm40vkhj305r02haa9.jpg" alt="image-20190315142426892"></p>
-<h1 id="APP项目合集"><a href="#APP项目合集" class="headerlink" title="APP项目合集"></a>APP项目合集</h1><p>编码工具： <a href="https://developer.apple.com/xcode/" target="_blank" rel="noopener">Xcode 10.1</a>，<a href="https://developer.apple.com/swift/" target="_blank" rel="noopener">Swift 4.2</a>，<a href="https://developer.apple.com/library/ios/navigation/#section=Frameworks&amp;topic=UIKit" target="_blank" rel="noopener">UIKit</a></p>
-<p>设计工具：Adobe Inllustrator， <a href="https://www.canva.cn/" target="_blank" rel="noopener">设计icon</a> ， <a href="https://appicon.co/" target="_blank" rel="noopener">生成icon</a></p>
-<p>第三工具：<a href="https://realm.io/cn/docs/swift/latest/#using-the-realm-framework" target="_blank" rel="noopener">移动端火热数据库 Realm</a>，天气API等</p>
-<p>思路来源：平时喜欢在APP store里面下载一些独立开发者的APP。这些APP部分思路来自于优秀的APP（如羡辙-2019字体日历、素记 等），部分是自己生活需要的简单小功能。</p>
-<p>代码方面：大部分使用了Storyboard，UI设计需要；纯手写代码在 <a href="https://irispierce.github.io/2019/03/04/IOS%E5%BC%80%E5%8F%91%20-%20%E6%AF%8F%E6%97%A5%E4%B8%80%E4%B8%AASwift%E5%B0%8F%E7%A8%8B%E5%BA%8F/" target="_blank" rel="noopener">每日一个swift小程序内</a></p>
-<p>开源项目：暂未整理完成</p>
-<h3 id="上架中："><a href="#上架中：" class="headerlink" title="上架中："></a>上架中：</h3><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g0z6z61pm5j314g0kmwgw.jpg" alt="image-20190311214844948"></p>
-<h3 id="Project-Todos-极简事项"><a href="#Project-Todos-极简事项" class="headerlink" title="Project  : Todos 极简事项"></a>Project  : Todos 极简事项</h3><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g10e7cmt3og30af0l8noz.gif" alt="app6的副本"></p>
-<h4 id="需求分析："><a href="#需求分析：" class="headerlink" title="需求分析："></a>需求分析：</h4><p>iOS原生风格的极简的日程管理工具。</p>
-<p>现在大部分的Todo工具：UI设计趋向于小清新、可爱动画等多元设计；功能为可以记录时间、地点、时间重要程度等信息，这样对于提高了增加任务的时间、精力成本。</p>
-<p>本APP主打的就是：界面使用iOS原生峰哥，功能就是随时想到、随时记录。</p>
-<p>功能：用户可以对待办事项输入、修改、删除、修改顺序操作，可以标记已经完成任务。</p>
-<p>举例一个使用场景：午餐时想到了一个idea直接打开APP记录、午睡后想到这个idea的实现可直接修改，晚上实现该功能后直接打钩，第二天测试人员告知该idea可行时删除任务。</p>
-<h4 id="技术："><a href="#技术：" class="headerlink" title="技术："></a>技术：</h4><ul>
-<li>数据存储：先学习了userDefault，再改为时下火热的移动端数据库Realm存储数据</li>
-<li>TableView</li>
-</ul>
-<p><a href="https://irispierce.github.io/2019/03/08/IOS12+Swift4+Xcode10%E5%BC%80%E5%8F%91%20-%20/" target="_blank" rel="noopener">具体实现</a></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/03/09/开发与研究合集/#more" rel="contents">
@@ -721,7 +658,7 @@
 <p>代码方面：大部分使用了Storyboard，UI设计需要；纯手写代码在 <a href="https://irispierce.github.io/2019/03/04/IOS%E5%BC%80%E5%8F%91%20-%20%E6%AF%8F%E6%97%A5%E4%B8%80%E4%B8%AASwift%E5%B0%8F%E7%A8%8B%E5%BA%8F/" target="_blank" rel="noopener">每日一个swift小程序内</a></p>
 <p>开源项目：暂未整理完成</p>
 <h3 id="上架中："><a href="#上架中：" class="headerlink" title="上架中："></a>上架中：</h3><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g0z6z61pm5j314g0kmwgw.jpg" alt="image-20190311214844948"></p>
-<h3 id="Project-Todos-极简事项"><a href="#Project-Todos-极简事项" class="headerlink" title="Project  : Todos 极简事项"></a>Project  : Todos 极简事项</h3><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g10e7cmt3og30af0l8noz.gif" alt="app6的副本"></p>
+<h3 id="Project-Todos-极简事项"><a href="#Project-Todos-极简事项" class="headerlink" title="Project  : Todos 极简事项"></a>Project  : Todos 极简事项</h3><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g170yat2okg30af0l8noz.gif" alt="app6的副本"></p>
 <h4 id="需求分析："><a href="#需求分析：" class="headerlink" title="需求分析："></a>需求分析：</h4><p>iOS原生风格的极简的日程管理工具。</p>
 <p>现在大部分的Todo工具：UI设计趋向于小清新、可爱动画等多元设计；功能为可以记录时间、地点、时间重要程度等信息，这样对于提高了增加任务的时间、精力成本。</p>
 <p>本APP主打的就是：界面使用iOS原生峰哥，功能就是随时想到、随时记录。</p>
@@ -2506,7 +2443,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">35</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2517,7 +2454,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2528,7 +2465,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2602,7 +2539,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">29.6k</span>
+    <span title="Site words total count">33.9k</span>
   
 </div>
 
