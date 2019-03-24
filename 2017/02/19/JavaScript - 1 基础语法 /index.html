@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/saturn_128.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/saturn_32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/saturn_16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JavaScript,前端,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="第一章 入门本章节主要讲解如何在HTML文件中添加JavaScript代码，掌握必备的基础语法，为以后来章学习打下基础。 第二章 请和我互动本章节主要讲解如何向网页中输入内容，如何与浏览器窗口进行交互，通过简单的对象方法就可以轻松实现。 JavaScript-警告（alert 消息对话框）12345678910111213141516&amp;lt;!DOCTYPE HTML&amp;gt;&amp;lt;html&amp;gt">
+<meta name="keywords" content="JavaScript,前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript - 1 基础语法">
+<meta property="og:url" content="http://yoursite.com/2017/02/19/JavaScript - 1 基础语法 /index.html">
+<meta property="og:site_name" content="IRIS&#39;s BLOG">
+<meta property="og:description" content="第一章 入门本章节主要讲解如何在HTML文件中添加JavaScript代码，掌握必备的基础语法，为以后来章学习打下基础。 第二章 请和我互动本章节主要讲解如何向网页中输入内容，如何与浏览器窗口进行交互，通过简单的对象方法就可以轻松实现。 JavaScript-警告（alert 消息对话框）12345678910111213141516&amp;lt;!DOCTYPE HTML&amp;gt;&amp;lt;html&amp;gt">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g19lihfmz4j30os098jry.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g19mgjr6g7j30lu0bo756.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/Library/Application%20Support/typora-user-images/image-20190320221603283.png">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g19mfrj0rqj31d60kkwhv.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g19mq9t51vj31d80q0jz7.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g19mtly02ej30dh06ddg3.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g19n17zhu9j31hy0lijwo.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g19n1uu55pj30bf02nglm.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g19n4icwazj31i40lmq8e.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g1a7aq4lvkj31ey0lswj9.jpg">
+<meta property="og:updated_time" content="2019-03-21T03:01:22.812Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript - 1 基础语法">
+<meta name="twitter:description" content="第一章 入门本章节主要讲解如何在HTML文件中添加JavaScript代码，掌握必备的基础语法，为以后来章学习打下基础。 第二章 请和我互动本章节主要讲解如何向网页中输入内容，如何与浏览器窗口进行交互，通过简单的对象方法就可以轻松实现。 JavaScript-警告（alert 消息对话框）12345678910111213141516&amp;lt;!DOCTYPE HTML&amp;gt;&amp;lt;html&amp;gt">
+<meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g19lihfmz4j30os098jry.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/02/19/JavaScript - 1 基础语法 /">
+
+
+
+
+
+  <title>JavaScript - 1 基础语法 | IRIS's BLOG</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">IRIS's BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">王圆圆的每日报告</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/19/JavaScript - 1 基础语法 /">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JavaScript - 1 基础语法</h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-19T16:00:57+08:00">
+                2017-02-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/19/JavaScript - 1 基础语法 /#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/02/19/JavaScript - 1 基础语法 /" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/02/19/JavaScript - 1 基础语法 /" class="leancloud_visitors" data-flag-title="JavaScript - 1 基础语法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.7k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="第一章-入门"><a href="#第一章-入门" class="headerlink" title="第一章 入门"></a>第一章 入门</h2><p>本章节主要讲解如何在HTML文件中添加JavaScript代码，掌握必备的基础语法，为以后来章学习打下基础。</p>
+<h2 id="第二章-请和我互动"><a href="#第二章-请和我互动" class="headerlink" title="第二章 请和我互动"></a>第二章 请和我互动</h2><p>本章节主要讲解如何向网页中输入内容，如何与浏览器窗口进行交互，通过简单的对象方法就可以轻松实现。</p>
+<h3 id="JavaScript-警告（alert-消息对话框）"><a href="#JavaScript-警告（alert-消息对话框）" class="headerlink" title="JavaScript-警告（alert 消息对话框）"></a>JavaScript-警告（alert 消息对话框）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=utf-8"</span> /&gt;</span><br><span class="line">&lt;title&gt;alert&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">  &lt;script type="text/</span>javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">  function rec()&#123;</span></span><br><span class="line"><span class="string">    var mychar="</span>I love JavaScript<span class="string">";</span></span><br><span class="line"><span class="string">    alert(mychar);</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  &lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">    &lt;input name="</span>button<span class="string">" type="</span>button<span class="string">" onClick="</span>rec()<span class="string">" value="</span>点击我，弹出对话框<span class="string">" /&gt;</span></span><br><span class="line"><span class="string">&lt;/body&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript-确认（confirm-消息对话框）"><a href="#JavaScript-确认（confirm-消息对话框）" class="headerlink" title="JavaScript-确认（confirm 消息对话框）"></a>JavaScript-确认（confirm 消息对话框）</h3><p>confirm 消息对话框通常用于允许用户做选择的动作，如：“你对吗？”等。弹出对话框(包括一个确定按钮和一个取消按钮)。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">rec</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> mymessage= confirm(<span class="string">"你是女士吗？"</span>);</span><br><span class="line">    <span class="keyword">if</span>(mymessage==<span class="literal">true</span>)</span><br><span class="line">    &#123;</span><br><span class="line">    	<span class="built_in">document</span>.write(<span class="string">"你是女士!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">document</span>.write(<span class="string">"你是男士!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript-提问（prompt-消息对话框）"><a href="#JavaScript-提问（prompt-消息对话框）" class="headerlink" title="JavaScript-提问（prompt 消息对话框）"></a>JavaScript-提问（prompt 消息对话框）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">rec</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">var</span> score; <span class="comment">//score变量，用来存储用户输入的成绩值。</span></span><br><span class="line">score = prompt(<span class="string">"同学输入成绩"</span>,<span class="literal">null</span>) ;</span><br><span class="line"><span class="keyword">if</span>(score&gt;=<span class="number">90</span>)</span><br><span class="line">&#123;</span><br><span class="line">   <span class="built_in">document</span>.write(<span class="string">"你很棒!"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(score&gt;=<span class="number">70</span>)</span><br><span class="line">   &#123;</span><br><span class="line">   <span class="built_in">document</span>.write(<span class="string">"不错吆!"</span>);</span><br><span class="line">&#125;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">      <span class="built_in">document</span>.write(<span class="string">"要努力了!"</span>);</span><br><span class="line">&#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g19lihfmz4j30os098jry.jpg" alt="image-20190320214721347"></p>
+<h3 id="JavaScript-打开新窗口（window-open）"><a href="#JavaScript-打开新窗口（window-open）" class="headerlink" title="JavaScript-打开新窗口（window.open）"></a>JavaScript-打开新窗口（window.open）</h3><p>open() 方法可以查找一个已经存在或者新建的浏览器窗口。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.open([URL], [窗口名称], [参数字符串])</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Wopen</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.open(<span class="string">'http://www.imooc.com'</span>,<span class="string">'_blank'</span>,<span class="string">'width=600,height=400,top=100,left=0'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript-关闭窗口（window-close）"><a href="#JavaScript-关闭窗口（window-close）" class="headerlink" title="JavaScript-关闭窗口（window.close）"></a>JavaScript-关闭窗口（window.close）</h3><p><strong>用法：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.close();   //关闭本窗口</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;窗口对象&gt;.close();   //关闭指定的窗口</span><br></pre></td></tr></table></figure>
+<p>例如:关闭新建的窗口。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">   <span class="keyword">var</span> mywin=<span class="built_in">window</span>.open(<span class="string">"http://www.imooc.com"</span>);</span><br><span class="line">   mywin.close()</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="综合练习"><a href="#综合练习" class="headerlink" title="综合练习"></a>综合练习</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">openWindow</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 1.新窗口打开时弹出确认框，是否打开</span></span><br><span class="line">    <span class="keyword">var</span> msg_confirm = confirm(<span class="string">"是否打开窗口？"</span>)</span><br><span class="line">    <span class="keyword">if</span>(msg_confirm==<span class="literal">true</span>)&#123;</span><br><span class="line">        <span class="comment">// 2.通过输入对话框，确定打开的网址，默认为 http：//www.imooc.com/</span></span><br><span class="line">        <span class="keyword">var</span> msg_url = <span class="string">"http://www.imooc.com/"</span></span><br><span class="line">        <span class="keyword">var</span> msg_prompt = prompt(<span class="string">"输入网址"</span>,msg_url)</span><br><span class="line">        <span class="comment">//3.打开的窗口要求，宽400像素，高500像素，无菜单栏、无工具栏。</span></span><br><span class="line">        <span class="built_in">window</span>.open(msg_url,<span class="string">"_blank"</span>,<span class="string">'width=400,height=500'</span>)</span><br><span class="line">     &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第3章-你也有控制权-DOM操作"><a href="#第3章-你也有控制权-DOM操作" class="headerlink" title="第3章 你也有控制权(DOM操作)"></a>第3章 你也有控制权(DOM操作)</h2><p>如何用JavaScript去操作HTML元素和CSS样式，实现简单的动态操作。</p>
+<h3 id="认识DOM"><a href="#认识DOM" class="headerlink" title="认识DOM"></a>认识DOM</h3><p>文档对象模型DOM（Document Object Model）定义访问和处理HTML文档的标准方法。DOM 将HTML文档呈现为带有元素、属性和文本的树结构（节点树）。</p>
+<p><strong>先来看看下面代码:</strong></p>
+<p><strong><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g19mgjr6g7j30lu0bo756.jpg" alt="img"></strong></p>
+<p><img src="../../../Library/Application Support/typora-user-images/image-20190320221603283.png" alt="image-20190320221603283"></p>
+<p><strong>HTML文档可以说由节点构成的集合，三种常见的DOM节点:</strong></p>
+<p><strong>1. 元素节点：</strong>上图中<html>、<body>、<p>等都是元素节点，即标签。</p>
+<p><strong>2. 文本节点:</strong>向用户展示的内容，如<li>…</li>中的JavaScript、DOM、CSS等文本。</p>
+<p><strong>3. 属性节点:</strong>元素属性，如<a>标签的链接属性href=”<a href="http://www.imooc.com&quot;。" target="_blank" rel="noopener">http://www.imooc.com&quot;。</a></a></p>
+<p><strong>看下面代码:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;http://www.imooc.com&quot;&gt;JavaScript DOM&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g19mfrj0rqj31d60kkwhv.jpg" alt="image-20190320221918744"></p>
+<h3 id="通过ID获取元素"><a href="#通过ID获取元素" class="headerlink" title="通过ID获取元素"></a>通过ID获取元素</h3><p>学过HTML/CSS样式，都知道，网页由标签将信息组织起来，而标签的id属性值是唯一的，就像是每人有一个身份证号一样，只要通过身份证号就可以找到相对应的人。那么在网页中，我们通过id先找到标签，然后进行操作。</p>
+<p><strong>语法:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(“id”)</span><br></pre></td></tr></table></figure>
+<p><strong>结果:</strong>null或[object HTMLParagraphElement]</p>
+<p><strong>注:获取的元素是一个对象，如想对元素进行操作，我们要通过它的属性或方法。</strong></p>
+<h3 id="innerHTML-属性：获取替换内容"><a href="#innerHTML-属性：获取替换内容" class="headerlink" title="innerHTML 属性：获取替换内容"></a>innerHTML 属性：获取替换内容</h3><p>innerHTML 属性用于获取或替换 HTML 元素的内容。</p>
+<p><strong>语法:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.innerHTML</span><br></pre></td></tr></table></figure>
+<p><strong>注意:</strong></p>
+<p>1.Object是获取的元素对象，如通过document.getElementById(“ID”)获取的元素。</p>
+<p>2.注意书写，innerHTML区分大小写。</p>
+<p><strong>我们通过id=”con”获取<p> 元素，并将元素的内容输出和改变元素内容，代码和结果如下:</p></strong></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g19mq9t51vj31d80q0jz7.jpg" alt="image-20190320222925367"></p>
+<h3 id="改变-HTML-样式"><a href="#改变-HTML-样式" class="headerlink" title="改变 HTML 样式"></a>改变 HTML 样式</h3><p>HTML DOM 允许 JavaScript 改变 HTML 元素的样式。如何改变 HTML 元素的样式呢？</p>
+<p><strong>语法:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.style.property=new style;</span><br></pre></td></tr></table></figure>
+<p><strong>注意:</strong>Object是获取的元素对象，如通过document.getElementById(“id”)获取的元素。</p>
+<p><strong>基本属性表（property）:</strong></p>
+<p><strong><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g19mtly02ej30dh06ddg3.jpg" alt="img"></strong></p>
+<p><strong>注意:</strong>该表只是一小部分CSS样式属性，其它样式也可以通过该方法设置和修改。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g19n17zhu9j31hy0lijwo.jpg" alt="image-20190320223956456"></p>
+<h3 id="显示和隐藏（display属性）"><a href="#显示和隐藏（display属性）" class="headerlink" title="显示和隐藏（display属性）"></a>显示和隐藏（display属性）</h3><p>网页中经常会看到显示和隐藏的效果，可通过display属性来设置。</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.style.display = value</span><br></pre></td></tr></table></figure>
+<p><strong>注意:</strong>Object是获取的元素对象，如通过document.getElementById(“id”)获取的元素。</p>
+<p><strong>value取值:</strong></p>
+<p><strong><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g19n1uu55pj30bf02nglm.jpg" alt="img"></strong></p>
+<p><strong>看看下面代码:</strong></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g19n4icwazj31i40lmq8e.jpg" alt="image-20190320224306526"></p>
+<h3 id="控制类名（className-属性）"><a href="#控制类名（className-属性）" class="headerlink" title="控制类名（className 属性）"></a>控制类名（className 属性）</h3><p>className 属性设置或返回元素的class 属性。</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">object.className = classname</span><br></pre></td></tr></table></figure>
+<p><strong>作用:</strong></p>
+<ol>
+<li>获取元素的class 属性</li>
+<li>为网页内的某个元素指定一个css样式来更改该元素的外观</li>
+</ol>
+<p><strong>看看下面代码，获得 <p> 元素的 class 属性和改变className：</p></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	      <span class="keyword">var</span> p1 = <span class="built_in">document</span>.getElementById(<span class="string">"p1"</span>);</span><br><span class="line">	      p1.className = <span class="string">"one"</span></span><br><span class="line">	   &#125;</span><br><span class="line">	   <span class="function"><span class="keyword">function</span> <span class="title">modify</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	      <span class="keyword">var</span> p2 = <span class="built_in">document</span>.getElementById(<span class="string">"p2"</span>);</span><br><span class="line">	      p2.className = <span class="string">"two"</span></span><br><span class="line">	   &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g1a7aq4lvkj31ey0lswj9.jpg" alt="image-20190321102104257"></p>
+<h3 id="综合练习-1"><a href="#综合练习-1" class="headerlink" title="综合练习"></a>综合练习</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=<span class="string">"Content-Type"</span> Content=<span class="string">"text/html; charset=utf-8"</span> /&gt;</span><br><span class="line">&lt;title&gt;javascript&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">&lt;style type="text/</span>css<span class="string">"&gt;</span></span><br><span class="line"><span class="string">body&#123;font-size:12px;&#125;</span></span><br><span class="line"><span class="string">#txt&#123;</span></span><br><span class="line"><span class="string">    height:400px;</span></span><br><span class="line"><span class="string">    width:600px;</span></span><br><span class="line"><span class="string">	border:#333 solid 1px;</span></span><br><span class="line"><span class="string">	padding:5px;&#125;</span></span><br><span class="line"><span class="string">p&#123;</span></span><br><span class="line"><span class="string">	line-height:18px;</span></span><br><span class="line"><span class="string">	text-indent:2em;&#125;</span></span><br><span class="line"><span class="string">&lt;/style&gt;</span></span><br><span class="line"><span class="string">&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">  &lt;h2 id="</span>con<span class="string">"&gt;JavaScript课程&lt;/H2&gt;</span></span><br><span class="line"><span class="string">  &lt;div id="</span>txt<span class="string">"&gt; </span></span><br><span class="line"><span class="string">     &lt;h5&gt;JavaScript为网页添加动态效果并实现与用户交互的功能。&lt;/h5&gt;</span></span><br><span class="line"><span class="string">        &lt;p&gt;1. JavaScript入门篇，让不懂JS的你，快速了解JS。&lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p&gt;2. JavaScript进阶篇，让你掌握JS的基础语法、函数、数组、事件、内置对象、BOM浏览器、DOM操作。&lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p&gt;3. 学完以上两门基础课后，在深入学习JavaScript的变量作用域、事件、对象、运动、cookie、正则表达式、ajax等课程。&lt;/p&gt;</span></span><br><span class="line"><span class="string">  &lt;/div&gt;</span></span><br><span class="line"><span class="string">  &lt;form&gt;</span></span><br><span class="line"><span class="string">  &lt;!--当点击相应按钮，执行相应操作，为按钮添加相应事件--&gt;</span></span><br><span class="line"><span class="string">    &lt;input type="</span>button<span class="string">" value="</span>改变颜色<span class="string">" onClick = "</span>colorChange()<span class="string">"&gt;  </span></span><br><span class="line"><span class="string">    &lt;input type="</span>button<span class="string">" value="</span>改变宽高<span class="string">" onClick="</span>sizeChange()<span class="string">"&gt;</span></span><br><span class="line"><span class="string">    &lt;input type="</span>button<span class="string">" value="</span>隐藏内容<span class="string">" onClick="</span>hide()<span class="string">"&gt;</span></span><br><span class="line"><span class="string">    &lt;input type="</span>button<span class="string">" value="</span>显示内容<span class="string">" onClick="</span>display()<span class="string">"&gt;</span></span><br><span class="line"><span class="string">    &lt;input type="</span>button<span class="string">" value="</span>取消设置<span class="string">" onClick="</span>cancel()<span class="string">"&gt;</span></span><br><span class="line"><span class="string">  &lt;/form&gt;</span></span><br><span class="line"><span class="string">  &lt;script type="</span>text/javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">//定义"</span>改变颜色<span class="string">"的函数</span></span><br><span class="line"><span class="string">    function colorChange()&#123;</span></span><br><span class="line"><span class="string">        var obj = document.getElementById("</span>txt<span class="string">");</span></span><br><span class="line"><span class="string">        obj.style.color = "</span>red<span class="string">";</span></span><br><span class="line"><span class="string">        obj.style.backgroundColor = "</span>gray<span class="string">";</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//定义"</span>改变宽高<span class="string">"的函数</span></span><br><span class="line"><span class="string">    function sizeChange()&#123;</span></span><br><span class="line"><span class="string">        var obj = document.getElementById("</span>txt<span class="string">");</span></span><br><span class="line"><span class="string">        obj.style.height = "</span><span class="number">300</span>px<span class="string">";</span></span><br><span class="line"><span class="string">        obj.style.width = "</span><span class="number">300</span>px<span class="string">";</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//定义"</span>隐藏内容<span class="string">"的函数</span></span><br><span class="line"><span class="string">    function hide()&#123;</span></span><br><span class="line"><span class="string">        var obj = document.getElementById("</span>txt<span class="string">");</span></span><br><span class="line"><span class="string">        obj.style.display = "</span>none<span class="string">";</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//定义"</span>显示内容<span class="string">"的函数</span></span><br><span class="line"><span class="string">    function display()&#123;</span></span><br><span class="line"><span class="string">        var obj = document.getElementById("</span>txt<span class="string">");</span></span><br><span class="line"><span class="string">        obj.style.display = "</span>block<span class="string">";</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//定义"</span>取消设置<span class="string">"的函数</span></span><br><span class="line"><span class="string">    function cancel()&#123;</span></span><br><span class="line"><span class="string">        var message = confirm("</span>是否还原？<span class="string">")</span></span><br><span class="line"><span class="string">        if(message==true)&#123;</span></span><br><span class="line"><span class="string">            txt.removeAttribute('style');</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/body&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+</body></html></p>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/前端/" rel="tag"># 前端</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/19/前端基础 - 1 HTML/" rel="next" title="前端基础 - 1 HTML">
+                <i class="fa fa-chevron-left"></i> 前端基础 - 1 HTML
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/19/JavaScript - 2 进阶/" rel="prev" title="JavaScript - 1 基础语法">
+                JavaScript - 1 基础语法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/irisHeader.jpeg" alt="IRIS">
+            
+              <p class="site-author-name" itemprop="name">IRIS</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/irispierce" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:wangyusi007@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章-入门"><span class="nav-number">1.</span> <span class="nav-text">第一章 入门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章-请和我互动"><span class="nav-number">2.</span> <span class="nav-text">第二章 请和我互动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript-警告（alert-消息对话框）"><span class="nav-number">2.1.</span> <span class="nav-text">JavaScript-警告（alert 消息对话框）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript-确认（confirm-消息对话框）"><span class="nav-number">2.2.</span> <span class="nav-text">JavaScript-确认（confirm 消息对话框）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript-提问（prompt-消息对话框）"><span class="nav-number">2.3.</span> <span class="nav-text">JavaScript-提问（prompt 消息对话框）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript-打开新窗口（window-open）"><span class="nav-number">2.4.</span> <span class="nav-text">JavaScript-打开新窗口（window.open）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript-关闭窗口（window-close）"><span class="nav-number">2.5.</span> <span class="nav-text">JavaScript-关闭窗口（window.close）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#综合练习"><span class="nav-number">2.6.</span> <span class="nav-text">综合练习</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第3章-你也有控制权-DOM操作"><span class="nav-number">3.</span> <span class="nav-text">第3章 你也有控制权(DOM操作)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#认识DOM"><span class="nav-number">3.1.</span> <span class="nav-text">认识DOM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过ID获取元素"><span class="nav-number">3.2.</span> <span class="nav-text">通过ID获取元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#innerHTML-属性：获取替换内容"><span class="nav-number">3.3.</span> <span class="nav-text">innerHTML 属性：获取替换内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改变-HTML-样式"><span class="nav-number">3.4.</span> <span class="nav-text">改变 HTML 样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示和隐藏（display属性）"><span class="nav-number">3.5.</span> <span class="nav-text">显示和隐藏（display属性）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制类名（className-属性）"><span class="nav-number">3.6.</span> <span class="nav-text">控制类名（className 属性）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#综合练习-1"><span class="nav-number">3.7.</span> <span class="nav-text">综合练习</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">IRIS</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">39.4k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'K56V1wrSmQT1Y57HAlTWMY6m-gzGzoHsz',
+        appKey: '1KvpI6T94PESCJ3yikky6J1P',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("K56V1wrSmQT1Y57HAlTWMY6m-gzGzoHsz", "1KvpI6T94PESCJ3yikky6J1P");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
