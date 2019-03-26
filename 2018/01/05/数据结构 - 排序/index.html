@@ -77,19 +77,19 @@
 
 
 
-<meta name="description" content="O(n^2)排序算法 冒泡排序 插入排序 选择排序  选择排序不稳定，相同元素可能会变化，因此这三种不选择选择排序。 代码中，冒泡排序需要 3 个赋值操作，而插入排序只需要 1 个。 因此三种最好的方法就是：插入排序。  O(nlogn) 排序算法归并排序 方法：利用了分治思想，用递归代码来实现归并排序。先分，再合。  时间复杂度： T(n)=Cn+nlog2n。非常稳定，所有情况都是O(nlog">
+<meta name="description" content="O(n^2)排序算法 3 冒泡排序 插入排序 选择排序  选择排序不稳定，相同元素可能会变化，因此这三种不选择选择排序。 代码中，冒泡排序需要 3 个赋值操作，而插入排序只需要 1 个。 因此三种最好的方法就是：插入排序。  O(nlogn) 排序算法 3归并排序 方法：利用了分治思想，用递归代码来实现归并排序。先分，再合。  时间复杂度： T(n)=Cn+nlog2n。非常稳定，所有情况都是O(">
 <meta name="keywords" content="Java,数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构 - 排序">
 <meta property="og:url" content="http://yoursite.com/2018/01/05/数据结构 - 排序/index.html">
 <meta property="og:site_name" content="IRIS&#39;s BLOG">
-<meta property="og:description" content="O(n^2)排序算法 冒泡排序 插入排序 选择排序  选择排序不稳定，相同元素可能会变化，因此这三种不选择选择排序。 代码中，冒泡排序需要 3 个赋值操作，而插入排序只需要 1 个。 因此三种最好的方法就是：插入排序。  O(nlogn) 排序算法归并排序 方法：利用了分治思想，用递归代码来实现归并排序。先分，再合。  时间复杂度： T(n)=Cn+nlog2n。非常稳定，所有情况都是O(nlog">
+<meta property="og:description" content="O(n^2)排序算法 3 冒泡排序 插入排序 选择排序  选择排序不稳定，相同元素可能会变化，因此这三种不选择选择排序。 代码中，冒泡排序需要 3 个赋值操作，而插入排序只需要 1 个。 因此三种最好的方法就是：插入排序。  O(nlogn) 排序算法 3归并排序 方法：利用了分治思想，用递归代码来实现归并排序。先分，再合。  时间复杂度： T(n)=Cn+nlog2n。非常稳定，所有情况都是O(">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g10g0wcas2j31mo0u07tq.jpg">
-<meta property="og:updated_time" content="2019-03-20T09:19:13.706Z">
+<meta property="og:updated_time" content="2019-03-25T05:50:14.963Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构 - 排序">
-<meta name="twitter:description" content="O(n^2)排序算法 冒泡排序 插入排序 选择排序  选择排序不稳定，相同元素可能会变化，因此这三种不选择选择排序。 代码中，冒泡排序需要 3 个赋值操作，而插入排序只需要 1 个。 因此三种最好的方法就是：插入排序。  O(nlogn) 排序算法归并排序 方法：利用了分治思想，用递归代码来实现归并排序。先分，再合。  时间复杂度： T(n)=Cn+nlog2n。非常稳定，所有情况都是O(nlog">
+<meta name="twitter:description" content="O(n^2)排序算法 3 冒泡排序 插入排序 选择排序  选择排序不稳定，相同元素可能会变化，因此这三种不选择选择排序。 代码中，冒泡排序需要 3 个赋值操作，而插入排序只需要 1 个。 因此三种最好的方法就是：插入排序。  O(nlogn) 排序算法 3归并排序 方法：利用了分治思想，用递归代码来实现归并排序。先分，再合。  时间复杂度： T(n)=Cn+nlog2n。非常稳定，所有情况都是O(">
 <meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g10g0wcas2j31mo0u07tq.jpg">
 
 
@@ -438,7 +438,7 @@
       
 
       
-        <h1 id="O-n-2-排序算法"><a href="#O-n-2-排序算法" class="headerlink" title="O(n^2)排序算法"></a>O(n^2)排序算法</h1><ul>
+        <h1 id="O-n-2-排序算法-3"><a href="#O-n-2-排序算法-3" class="headerlink" title="O(n^2)排序算法 3"></a>O(n^2)排序算法 3</h1><ul>
 <li>冒泡排序</li>
 <li>插入排序</li>
 <li>选择排序</li>
@@ -447,7 +447,7 @@
 <p>代码中，冒泡排序需要 3 个赋值操作，而插入排序只需要 1 个。</p>
 <p>因此三种最好的方法就是：插入排序。</p>
 <p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g10g0wcas2j31mo0u07tq.jpg" alt="image-20190312234718950"></p>
-<h1 id="O-nlogn-排序算法"><a href="#O-nlogn-排序算法" class="headerlink" title="O(nlogn) 排序算法"></a>O(nlogn) 排序算法</h1><h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><ul>
+<h1 id="O-nlogn-排序算法-3"><a href="#O-nlogn-排序算法-3" class="headerlink" title="O(nlogn) 排序算法 3"></a>O(nlogn) 排序算法 3</h1><h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><ul>
 <li><p>方法：利用了分治思想，用递归代码来实现归并排序。先分，再合。</p>
 </li>
 <li><p>时间复杂度： T(n)=Cn+nlog2n。非常稳定，所有情况都是O(nlogn)。</p>
@@ -466,7 +466,7 @@
 <p>将这 10 个较小的日志文件，合并为 1 个日志文件，合并之后也是从小到大排序。</p>
 <p>机器内存只有 1GB，你有什么好的解决思路，能“快速”地将这10 个日志文件合并吗？</p>
 <p>每次从各个文件中取一条数据，在内存中根据数据时间戳构建一个最小堆，然后每次把最小值给写入新文件，同时将最小值来自的那个文件再出来一个数据，加入到最小堆中。这个空间复杂度为常数，但没能很好利用1g内存，而且磁盘单个读取比较慢，所以考虑每次读取一批数据，没了再从磁盘中取，时间复杂度还是一样O(n)。</p>
-<h1 id="线性排序"><a href="#线性排序" class="headerlink" title="线性排序"></a>线性排序</h1><h2 id="桶排序（Bucket-sort）"><a href="#桶排序（Bucket-sort）" class="headerlink" title="桶排序（Bucket sort）"></a>桶排序（Bucket sort）</h2><h3 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h3><ul>
+<h1 id="线性排序-3"><a href="#线性排序-3" class="headerlink" title="线性排序 3"></a>线性排序 3</h1><h2 id="桶排序（Bucket-sort）"><a href="#桶排序（Bucket-sort）" class="headerlink" title="桶排序（Bucket sort）"></a>桶排序（Bucket sort）</h2><h3 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h3><ul>
 <li>容易划分为m个桶，且天然有序</li>
 <li>分布均匀，若分布不均匀全在一个桶里会退化为log（n/m log(n/m)) = log(n logn)</li>
 <li>外部排序。数据大，内存有限，无法将数据全部加载到内存，存放于外部磁盘中。</li>
@@ -502,7 +502,6 @@
 <li>解决非等长：把所有的单词补齐到相同长度，位数不够的可以在后面补“0”。根据ASCII 值，所有字母都大于“0”，所以补“0”不会影响排序。</li>
 <li>接着使用基数排序</li>
 </ul>
-<p>是否用过代码同步？（我说的用过github）</p>
 
       
     </div>
@@ -535,7 +534,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/05/开发与学术/" rel="next" title="学术">
+              <a href="/2018/01/05/存档/开发与学术/" rel="next" title="学术">
                 <i class="fa fa-chevron-left"></i> 学术
               </a>
             
@@ -545,8 +544,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/05/数据结构 - /" rel="prev" title="数据结构 -  数组">
-                数据结构 -  数组 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/23/存档/简历/" rel="prev" title="我的简历V1">
+                我的简历V1 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -629,7 +628,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -640,7 +639,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -651,7 +650,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -700,7 +699,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#O-n-2-排序算法"><span class="nav-number">1.</span> <span class="nav-text">O(n^2)排序算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#O-nlogn-排序算法"><span class="nav-number">2.</span> <span class="nav-text">O(nlogn) 排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#归并排序"><span class="nav-number">2.1.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速排序"><span class="nav-number">2.2.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆排序"><span class="nav-number">2.3.</span> <span class="nav-text">堆排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-亿个搜索关键词的日志文件，Top-10-最热门的搜索关键词"><span class="nav-number">2.3.1.</span> <span class="nav-text">10 亿个搜索关键词的日志文件，Top 10 最热门的搜索关键词</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">2.4.</span> <span class="nav-text">问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线性排序"><span class="nav-number">3.</span> <span class="nav-text">线性排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#桶排序（Bucket-sort）"><span class="nav-number">3.1.</span> <span class="nav-text">桶排序（Bucket sort）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求："><span class="nav-number">3.1.1.</span> <span class="nav-text">要求：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10GB数据，如何按照订单金额排序？"><span class="nav-number">3.1.2.</span> <span class="nav-text">10GB数据，如何按照订单金额排序？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计数排序（Counting-sort）"><span class="nav-number">3.2.</span> <span class="nav-text">计数排序（Counting sort）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求：-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">要求：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何根据年龄给-100-万用户排序？"><span class="nav-number">3.2.2.</span> <span class="nav-text">如何根据年龄给 100 万用户排序？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高考查分系统，省内50万名考生，分数范围为900-0。"><span class="nav-number">3.2.3.</span> <span class="nav-text">高考查分系统，省内50万名考生，分数范围为900-0。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基数排序（Radix-sort）"><span class="nav-number">3.3.</span> <span class="nav-text">基数排序（Radix sort）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求：-2"><span class="nav-number">3.3.1.</span> <span class="nav-text">要求：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10万个11位电话号码排序（等长）"><span class="nav-number">3.3.2.</span> <span class="nav-text">10万个11位电话号码排序（等长）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序牛津字典中的20-万个英文单词（非等长1-45）"><span class="nav-number">3.3.3.</span> <span class="nav-text">排序牛津字典中的20 万个英文单词（非等长1-45）</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#O-n-2-排序算法-3"><span class="nav-number">1.</span> <span class="nav-text">O(n^2)排序算法 3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#O-nlogn-排序算法-3"><span class="nav-number">2.</span> <span class="nav-text">O(nlogn) 排序算法 3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#归并排序"><span class="nav-number">2.1.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速排序"><span class="nav-number">2.2.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆排序"><span class="nav-number">2.3.</span> <span class="nav-text">堆排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-亿个搜索关键词的日志文件，Top-10-最热门的搜索关键词"><span class="nav-number">2.3.1.</span> <span class="nav-text">10 亿个搜索关键词的日志文件，Top 10 最热门的搜索关键词</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">2.4.</span> <span class="nav-text">问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线性排序-3"><span class="nav-number">3.</span> <span class="nav-text">线性排序 3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#桶排序（Bucket-sort）"><span class="nav-number">3.1.</span> <span class="nav-text">桶排序（Bucket sort）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求："><span class="nav-number">3.1.1.</span> <span class="nav-text">要求：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10GB数据，如何按照订单金额排序？"><span class="nav-number">3.1.2.</span> <span class="nav-text">10GB数据，如何按照订单金额排序？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计数排序（Counting-sort）"><span class="nav-number">3.2.</span> <span class="nav-text">计数排序（Counting sort）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求：-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">要求：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何根据年龄给-100-万用户排序？"><span class="nav-number">3.2.2.</span> <span class="nav-text">如何根据年龄给 100 万用户排序？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高考查分系统，省内50万名考生，分数范围为900-0。"><span class="nav-number">3.2.3.</span> <span class="nav-text">高考查分系统，省内50万名考生，分数范围为900-0。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基数排序（Radix-sort）"><span class="nav-number">3.3.</span> <span class="nav-text">基数排序（Radix sort）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求：-2"><span class="nav-number">3.3.1.</span> <span class="nav-text">要求：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10万个11位电话号码排序（等长）"><span class="nav-number">3.3.2.</span> <span class="nav-text">10万个11位电话号码排序（等长）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序牛津字典中的20-万个英文单词（非等长1-45）"><span class="nav-number">3.3.3.</span> <span class="nav-text">排序牛津字典中的20 万个英文单词（非等长1-45）</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -741,7 +740,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">39.4k</span>
+    <span title="Site words total count">37.8k</span>
   
 </div>
 
