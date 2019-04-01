@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/saturn_128.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/saturn_32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/saturn_16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="RunLooprunloop是一个事件循环对象。 do { //接受消息-&amp;gt;等待-&amp;gt;处理 }while(message != quit)  概念：事件循环对象，在循环过程中处理各种事件（点击、刷新等），从而保持程序持续运行；在没有事件处理的时候，会进入睡眠模式，从而节省CPU资源，提高程序性能。 为什么需要：一个线程只能执行一个任务，执行完就会退出，如果我们需要一种机制，让线程能随时处">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IRIS&#39;s BLOG">
+<meta property="og:url" content="http://yoursite.com/2019/03/26/✨iOS基础/index.html">
+<meta property="og:site_name" content="IRIS&#39;s BLOG">
+<meta property="og:description" content="RunLooprunloop是一个事件循环对象。 do { //接受消息-&amp;gt;等待-&amp;gt;处理 }while(message != quit)  概念：事件循环对象，在循环过程中处理各种事件（点击、刷新等），从而保持程序持续运行；在没有事件处理的时候，会进入睡眠模式，从而节省CPU资源，提高程序性能。 为什么需要：一个线程只能执行一个任务，执行完就会退出，如果我们需要一种机制，让线程能随时处">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g1gml59deej30yg0gv0yd.jpg">
+<meta property="og:updated_time" content="2019-03-31T05:09:37.880Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IRIS&#39;s BLOG">
+<meta name="twitter:description" content="RunLooprunloop是一个事件循环对象。 do { //接受消息-&amp;gt;等待-&amp;gt;处理 }while(message != quit)  概念：事件循环对象，在循环过程中处理各种事件（点击、刷新等），从而保持程序持续运行；在没有事件处理的时候，会进入睡眠模式，从而节省CPU资源，提高程序性能。 为什么需要：一个线程只能执行一个任务，执行完就会退出，如果我们需要一种机制，让线程能随时处">
+<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g1gml59deej30yg0gv0yd.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/26/✨iOS基础/">
+
+
+
+
+
+  <title> | IRIS's BLOG</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">IRIS's BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">王圆圆的每日报告</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/26/✨iOS基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-26T23:04:04+08:00">
+                2019-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/26/✨iOS基础/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/26/✨iOS基础/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/26/✨iOS基础/" class="leancloud_visitors" data-flag-title>
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3.7k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  14
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="RunLoop"><a href="#RunLoop" class="headerlink" title="RunLoop"></a>RunLoop</h2><p>runloop是一个<strong>事件循环对象</strong>。</p>
+<p>do {</p>
+<p>//接受消息-&gt;等待-&gt;处理</p>
+<p>}while(message != quit)</p>
+<ul>
+<li>概念：事件循环对象，在循环过程中处理各种事件（点击、刷新等），从而保持程序持续运行；在没有事件处理的时候，会进入睡眠模式，从而节省CPU资源，提高程序性能。</li>
+<li>为什么需要：一个线程只能执行一个任务，执行完就会退出，如果我们需要一种机制，让线程能随时处理时间但并不退出，那么 RunLoop 就是这样的一个机制。Runloop是事件接收和分发机制的一个实现。</li>
+<li>Runloop 和线程是绑定在一起的。每个线程（包括主线程）都有一个对应的 Runloop 对象。我们并不能自己创建 Runloop 对象，但是可以获取到系统提供的 Runloop 对象。</li>
+</ul>
+<h2 id="是否接触TableView渲染性能相关的东西？"><a href="#是否接触TableView渲染性能相关的东西？" class="headerlink" title="是否接触TableView渲染性能相关的东西？"></a>是否接触TableView渲染性能相关的东西？</h2><ul>
+<li><p>cell的数目，配置tableview数据</p>
+<p>重用单元格的形式，数据成千上万行，最终渲染个数为屏幕上显示的数目。</p>
+<p>往下拉的时候，最上面的cell到最下面来，放置重复渲染，提高手机性能。</p>
+</li>
+<li><p>刷新页面的两种方法</p>
+<ul>
+<li>无动画效果：tableView.reloadData()，就是相当于执行 cell for row的方法，将结果取出来，再更新视图</li>
+<li>将刷新语句放在View.beginUpdates()、tableView.endUpdates()中间，可以提高app的性能</li>
+</ul>
+</li>
+</ul>
+<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><p>触摸屏幕、晃动设备、通过遥控设施控制设备。对应的事件类型有以下三种：</p>
+<ol>
+<li>触屏事件（Touch Event）</li>
+<li>运动事件（Motion Event）</li>
+<li>远端控制事件（Remote-Control Event）</li>
+</ol>
+<h3 id="响应者链"><a href="#响应者链" class="headerlink" title="响应者链"></a>响应者链</h3><p>当发生事件响应时，必须知道由谁来响应事件。在 iOS 中，由响应者链来对事件进行响应。</p>
+<p>所有事件响应的类都是 UIResponder 的子类，响应者链是一个由不同对象组成的层次结构，其中的每个对象将依次获得响应事件消息的机会。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">First Responser --&gt; The Window --&gt; The Application --&gt; nil（丢弃）</span><br></pre></td></tr></table></figure>
+<p>我们可以通过 <code>[responder nextResponder]</code> 找到当前 responder 的下一个 responder，持续这个过程到最后会找到 UIApplication 对象。</p>
+<p>通常情况下，我们在 First Responder （一般也就是用户当前触控的 View ）这里就会响应请求，进入下面的事件分发机制。</p>
+<h3 id="事件分发"><a href="#事件分发" class="headerlink" title="事件分发"></a>事件分发</h3><p>第一响应者（First responder）指的是当前接受触摸的响应者对象（通常是一个 UIView 对象），即表示当前该对象正在与用户交互，它是响应者链的开端。响应者链和事件分发的使命都是找出第一响应者。</p>
+<ul>
+<li>iOS 系统检测到手指触摸 (Touch) 操作时会将其打包成一个 UIEvent 对象，并放入当前活动 Application 的事件队列，</li>
+<li>单例的 UIApplication 会从事件队列中取出触摸事件并传递给单例的 UIWindow 来处理，</li>
+<li>UIWindow 对象首先会使用 <code>hitTest:withEvent:</code>方法寻找此次 Touch 操作初始点所在的视图(View)，即需要将触摸事件传递给其处理的视图，这个过程称之为 hit-test view。</li>
+</ul>
+<h2 id="内存管理机制：ARC自动引用计数-MRC"><a href="#内存管理机制：ARC自动引用计数-MRC" class="headerlink" title="内存管理机制：ARC自动引用计数\MRC"></a>内存管理机制：ARC自动引用计数\MRC</h2><p>创建的时候为1，使用的时候+1，不需要的时候-1，为0的时候系统知道其不需要了，则release。</p>
+<h2 id="class和struct"><a href="#class和struct" class="headerlink" title="class和struct"></a>class和struct</h2><h3 id="相同点"><a href="#相同点" class="headerlink" title="相同点"></a>相同点</h3><ul>
+<li>可以定义存储属性</li>
+<li>能够定义方法</li>
+<li>通过下标操作访问实例所包含的值</li>
+<li>通过扩展来增加默认实现功能</li>
+</ul>
+<h3 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h3><ul>
+<li>类可以继承</li>
+<li>类型转换允许在运行时检查和解释一个类实例的类型</li>
+<li>析构器允许一个类实例释放任何它所被分配的资源</li>
+<li>引用计数允许一个类的多次引用</li>
+<li>class是引用类型，struct是值类型</li>
+<li>struct会自动生成一个初始化所有属性的构造器</li>
+</ul>
+<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><p>谈及 iOS 中的多线程，一般说的是 pthread，NSthread，GCD，NSOperation 这四种, 用的最多也最方便的就是 GCD 了。</p>
+<p><strong>四、线程安全问题</strong></p>
+<p>当多个线程访问同一块资源时，很容易引发数据错乱和数据安全问题。就好比几个人在同一时修改同一个表格，造成数据的错乱。</p>
+<p>解决多线程安全问题的方法</p>
+<ul>
+<li>方法一：互斥锁（同步锁）</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`@synchronized(锁对象) &#123;``    ``<span class="comment">// 需要锁定的代码``&#125;`</span></span><br></pre></td></tr></table></figure>
+<p>加了互斥做的代码，当新线程访问时，如果发现其他线程正在执行锁定的代码，新线程就会进入休眠。</p>
+<ul>
+<li>方法二：自旋锁</li>
+</ul>
+<p>加了自旋锁，当新线程访问代码时，如果发现有其他线程正在锁定代码，新线程会用死循环的方式，一直等待锁定的代码执行完成。相当于不停尝试执行代码，比较消耗性能。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g1gml59deej30yg0gv0yd.jpg" alt="3873004-d66485790959dcf5.png"></p>
+<h2 id="GCD-中两个重要重要概念-——-队列-amp-任务"><a href="#GCD-中两个重要重要概念-——-队列-amp-任务" class="headerlink" title="GCD 中两个重要重要概念 —— 队列 &amp; 任务"></a>GCD 中两个重要重要概念 —— 队列 &amp; 任务</h2><p>队列是一种特殊的线性表，采用FIFO（先进先出）的原则，队列的主要作用是用来存放任务。</p>
+<p>GCD会自动将队列中的任务取出，放到对应的线程中执行。</p>
+<p>串行队列（Serial Dispatch Queue）: 让任务一个接着一个地执行（一个任务执行完毕后，再执行下一个任务</p>
+<p>并发队列（Concurrent Dispatch Queue）: 可以让多个任务并发（同时）执行（自动开启多个线程同时执行任务）, 并发功能只有在异步（dispatch_async）函数下才有效</p>
+<p><strong>队列执行任务的方式：</strong></p>
+<ul>
+<li>同步：在当前线程中执行，当前代码不执行完，就不能够执行下一条代码。<strong>会阻塞当前线程。</strong></li>
+<li><p>异步：在另一条线程中执行（不用等待当前代码执行完，就能够执行下一条），<strong>不会阻塞当前线程。</strong></p>
+</li>
+<li><p>主队列 (串行)</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let mainQueue = DispatchQueue.main</span><br></pre></td></tr></table></figure>
+<ul>
+<li>全局队列 (并发)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let globalQueue = DispatchQueue.global()</span><br></pre></td></tr></table></figure>
+<p><strong>全局队列默认是并发队列，在不进行第三方框架或者大型的商业应用开发，全局队列基本够用。</strong></p>
+<ul>
+<li>主队列 <code>dispatch_main_queue();</code> 串行 ,更新UI</li>
+<li>全局队列 <code>dispatch_global_queue();</code> 并行,四个优先级: <code>background</code>,<code>low</code>,<code>default</code>,<code>high</code></li>
+<li>自定义队列 <code>dispatch_queue_t queue;</code> 可以自定义是并行: <code>DISPATCH_QUEUE_CONCURRENT</code> 或者串行 <code>DISPATCH_QUEUE_SERIAL</code></li>
+</ul>
+<p><strong>同步不开异步开，串行开1条，并行开多条。</strong></p>
+<p>队列中的任务同步执行，队列就不具有开启线程的能力， 队列中的任务异步执行，队列就具有开启线程的能力。<br><strong>（同步和异步执行决定的是否有开启线程的能力）</strong></p>
+<p>如果队列具 <strong>有开启线程的能力 (队列任务异步执行) </strong> 且队列是 <strong>串行队列</strong> ，那么将会 <strong>开启 1 条线程</strong> 。<br>如果队列具 <strong>有开启线程的能力 (队列任务异步执行) </strong> 且队列是 <strong>并发队列</strong> ，那么将会 <strong>开启 多 条线程</strong> 。开启线程的条数由 GCD 决定。</p>
+<h3 id="2-1-全局队列"><a href="#2-1-全局队列" class="headerlink" title="2.1 全局队列"></a>2.1 <strong>全局队列</strong></h3><p>全局队列是获取的，不是程序员创建的。<br>为了方便 GCD 的使用，apple 默认为我们提供的。<br>全局队列默认是并发队列，在不是进行第三方框架或者大型的商业应用开发，全局队列基本够用。</p>
+<p><strong>全局 ( 并发 ) 队列异步执行 ：</strong></p>
+<p>并发队列异步（不阻塞当前线程）执行（队列就具有开启线程的能力）， 队列会开启多条线程。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">任务异步执行不会阻塞当前线程， </span><br><span class="line">   befor 在最前， </span><br><span class="line">   after 在任意位置，</span><br><span class="line">   task 执行顺序不确定 —— 并发执行（index可以确认）。</span><br><span class="line">   task 并发执行 —— 并发执行（number可以确认）。</span><br><span class="line"></span><br><span class="line">异步开线程 number 可以确定开启了多条线程</span><br><span class="line">   开的线程数由 GCD 决定。 可以看到线程的 number 有重复，是 GCD 对线程进行了复用。</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">async</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().async: befor"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">    <span class="comment">// 全局队列进行 10次异步</span></span><br><span class="line">    <span class="keyword">for</span> index <span class="keyword">in</span> <span class="number">0</span>..&lt;<span class="number">10</span> &#123;</span><br><span class="line">        <span class="type">DispatchQueue</span>.global().async &#123;</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().async: task:(taskIndex:\(index)"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().async: after"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">打印：</span><br></pre></td></tr></table></figure>
+<p><strong>全局 ( 并发 ) 队列同步执行 ：</strong></p>
+<p>并发队列同步（阻塞当前线程）执行（队列就不具有开启线程的能力）， 队列不会开启线程（代码都在主线程中执行）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">任务同步执行会阻塞当前线程， </span><br><span class="line">     befor 在最前， </span><br><span class="line">     after 在最后，</span><br><span class="line">     task 执行顺序确定 —— 阻塞。</span><br><span class="line">同步没有开启线程 number 可以确定没有开启多条线程。所有的代码都在 主线程中执行。</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sync</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().sync: befor"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">    <span class="keyword">for</span> index <span class="keyword">in</span> <span class="number">0</span>..&lt;<span class="number">10</span> &#123;</span><br><span class="line">        <span class="type">DispatchQueue</span>.global().sync &#123;</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().sync: task:(taskIndex:\(index))"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().sync: after"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">打印： </span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: befor &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">0</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">1</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">2</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">3</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">4</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">5</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">6</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">7</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">8</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">9</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: after &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-主队列"><a href="#2-2-主队列" class="headerlink" title="2.2 主队列"></a>2.2 主队列</h3><p>主队列是获取的，不是程序员创建的，apple 默认为我们提供的。<br> （app 开发中，所有的 UI 更新操作都应该在主线程中进行）</p>
+<p><strong>主队列(串行)异步执行</strong></p>
+<p>主队列异步（不会阻塞当前线程）执行（队列就具有开启线程的能力）， 队列会开启线程（<strong>开启的线程就是主线程</strong>）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; 有朋友问我，异步会开启线程， 主队列异步就不会开启线程。 </span><br><span class="line">&gt; 我当时还信以为真。认为自己错误，说特殊情况特殊处理。 其实说白了就是学艺不精。</span><br><span class="line">&gt; 由于主队列是我们获取的，不是我们创建的，在某种意识中会认为主线程不是在主队列中创建的。（认为一开始就存在的。）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; 任务异步执行不会阻塞当前线程， </span><br><span class="line"> befor 在最前， </span><br><span class="line"> after 在第二，</span><br><span class="line"> task 执行顺序确定 —— 串行执行（index可以确认）。</span><br><span class="line"></span><br><span class="line">同步没有开启线程 number 可以确定没有开启多条线程。所有的代码都在 主线程中执行。</span><br></pre></td></tr></table></figure>
+<p><strong>主队列异步的操作主要用在更新 UI 操作中。</strong> 具体参考  项目开发中 GCD 代码使用。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">async</span><span class="params">()</span></span> &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"DispatchQueue.main.async: befor"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">        <span class="keyword">for</span> index <span class="keyword">in</span> <span class="number">0</span>..&lt;<span class="number">10</span> &#123;</span><br><span class="line">            <span class="type">DispatchQueue</span>.main.async &#123;</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"DispatchQueue.main.async: task:(taskIndex:\(index)"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"DispatchQueue.main.async: after"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">打印： </span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: befor &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: after &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">0</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">1</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">2</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">3</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">4</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">5</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">6</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">7</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">8</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">9</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>主队列(串行)同步执行</strong></p>
+<p>执行的效果就俩字 <strong>死锁</strong></p>
+<p>主线程同步，在 Swift 中，编译阶段就报错，在 oc  中是在运行的时候才能发现。体现的主要是界面的 “假死”。</p>
+<h1 id="UITableView"><a href="#UITableView" class="headerlink" title="UITableView"></a>UITableView</h1><p>要实现Tableview必须要签订2个协议</p>
+<p>UITableViewDelegate:数据视图的普通协议,作用是:处理数据视图事件.<br>UITableViewDataSource:数据视图的数据代理协议,作用是:处理视图的数据代理.</p>
+<p>实现签订的协议的2个协议方法：<br>返回数字，每个section有多少个row</p>
+<p>返回cell，cell就是TableView显示时候的格子内容，根据indexPath和数据决定;</p>
+<h2 id="观察者设计模式、KVO"><a href="#观察者设计模式、KVO" class="headerlink" title="观察者设计模式、KVO"></a>观察者设计模式、KVO</h2><h4 id="设计模式——观察者设计模式"><a href="#设计模式——观察者设计模式" class="headerlink" title="设计模式——观察者设计模式"></a>设计模式——观察者设计模式</h4><p>A对B的变化感兴趣，就注册为B的观察者，当B发生变化时通知A，告知B发生了变化。</p>
+<p>指定一个被观察对象(例如 A 类)，当对象某个属性(例如 A 中的字符串 name)发生更改时，对象会获得通知，并作出相应处理；</p>
+<p>在 MVC 设计架构下的项目，KVO 机制很适合实现 mode 模型和 view 视图之间的通讯。比如label中的对象为 num=0 ，我们按下按钮之后对象的num++，则label改变。</p>
+<h4 id="设计模式——通知机制"><a href="#设计模式——通知机制" class="headerlink" title="设计模式——通知机制"></a>设计模式——通知机制</h4><p>当用户从后台进入，从非活跃的状态进入活跃状态的时候，系统自动发送“becomeActive”通知，如果有注册监听者（观察者），则执行回调方法。【天气预报需要用】</p>
+<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><h3 id="浏览器进行一次网络请求都需要哪些步骤？"><a href="#浏览器进行一次网络请求都需要哪些步骤？" class="headerlink" title="浏览器进行一次网络请求都需要哪些步骤？"></a>浏览器进行一次网络请求都需要哪些步骤？</h3><ul>
+<li>1、<strong>域名解析</strong>：<ul>
+<li>浏览器查找域名的 IP 地址、</li>
+<li>没找到后发送给 DNS 服务器（本地host，电信），让它解析为 IP 地址</li>
+</ul>
+</li>
+<li><strong>2、TCP的三次握手</strong></li>
+<li>3、建立TCP连接后发起HTTP请求，浏览器向 web 服务器发送一个 HTTP 请求<ul>
+<li><strong>HTTP请求格式</strong>：是请求方法（GET/POST/DELETE/PUT/HEAD）、URI路径、HTTP版本号。</li>
+<li><strong>3. 2  服务器响应HTTP请求</strong>：状态行、响应头、空行、消息体。</li>
+</ul>
+</li>
+<li>4、<strong>浏览器解析html代码，并请求html代码中的资源</strong><ul>
+<li>服务器的永久重定向响应：“<a href="https://www.google.com/”" target="_blank" rel="noopener">https://www.google.com/”</a> 而非“<a href="http://google.com/”。" target="_blank" rel="noopener">http://google.com/”。</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h3><p>第三次握手是为了防止失效的连接请求到达服务器，让服务器错误打开连接。客户端发送的连接请求如果<strong>在网络中滞留</strong>，那么就会隔很长一段时间才能收到服务器端发回的连接确认。客户端等待一个超时重传时间之后，就会<strong>重新请求连接</strong>。但是这个滞留的连接请求最后还是会到达服务器，如果不进行三次握手，那么<strong>服务器就会打开两个连接</strong>。如果有第三次握手，客户端会忽略服务器之后发送的对滞留连接请求的连接确认，不进行第三次握手，因此就不会再次打开连接。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/23/数据可视化/数据可视化 - 经典的图表分析/" rel="next" title="数据可视化 - 经典的图表分析">
+                <i class="fa fa-chevron-left"></i> 数据可视化 - 经典的图表分析
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/irisHeader.jpeg" alt="IRIS">
+            
+              <p class="site-author-name" itemprop="name">IRIS</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/irispierce" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:wangyusi007@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#RunLoop"><span class="nav-number">1.</span> <span class="nav-text">RunLoop</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#是否接触TableView渲染性能相关的东西？"><span class="nav-number">2.</span> <span class="nav-text">是否接触TableView渲染性能相关的东西？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件处理"><span class="nav-number">3.</span> <span class="nav-text">事件处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#响应者链"><span class="nav-number">3.1.</span> <span class="nav-text">响应者链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件分发"><span class="nav-number">3.2.</span> <span class="nav-text">事件分发</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存管理机制：ARC自动引用计数-MRC"><span class="nav-number">4.</span> <span class="nav-text">内存管理机制：ARC自动引用计数\MRC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#class和struct"><span class="nav-number">5.</span> <span class="nav-text">class和struct</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#相同点"><span class="nav-number">5.1.</span> <span class="nav-text">相同点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不同点"><span class="nav-number">5.2.</span> <span class="nav-text">不同点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程"><span class="nav-number">6.</span> <span class="nav-text">多线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GCD-中两个重要重要概念-——-队列-amp-任务"><span class="nav-number">7.</span> <span class="nav-text">GCD 中两个重要重要概念 —— 队列 &amp; 任务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-全局队列"><span class="nav-number">7.1.</span> <span class="nav-text">2.1 全局队列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-主队列"><span class="nav-number">7.2.</span> <span class="nav-text">2.2 主队列</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#UITableView"><span class="nav-number"></span> <span class="nav-text">UITableView</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#观察者设计模式、KVO"><span class="nav-number">1.</span> <span class="nav-text">观察者设计模式、KVO</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#设计模式——观察者设计模式"><span class="nav-number">1.0.1.</span> <span class="nav-text">设计模式——观察者设计模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设计模式——通知机制"><span class="nav-number">1.0.2.</span> <span class="nav-text">设计模式——通知机制</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络"><span class="nav-number">2.</span> <span class="nav-text">网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器进行一次网络请求都需要哪些步骤？"><span class="nav-number">2.1.</span> <span class="nav-text">浏览器进行一次网络请求都需要哪些步骤？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三次握手"><span class="nav-number">2.2.</span> <span class="nav-text">三次握手</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">IRIS</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">49.5k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'K56V1wrSmQT1Y57HAlTWMY6m-gzGzoHsz',
+        appKey: '1KvpI6T94PESCJ3yikky6J1P',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("K56V1wrSmQT1Y57HAlTWMY6m-gzGzoHsz", "1KvpI6T94PESCJ3yikky6J1P");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

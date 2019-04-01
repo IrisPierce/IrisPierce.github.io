@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/saturn_128.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/saturn_32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/saturn_16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Swift,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="项目介绍 需求分析iOS原生风格的极简的日程管理工具。 现有的Todo工具：UI设计趋向于小清新、可爱动画等多元设计；功能为可以记录时间、地点、时间重要程度等信息，这样对于提高了增加任务的时间、精力成本。 本APP主打：界面使用iOS原生风格，随时想到、随时记录。 功能：用户可以对待办事项输入、修改、删除、修改顺序操作，可以标记已经完成任务。 使用场景：午餐时想到了一个idea直接打开APP记录、">
+<meta name="keywords" content="Swift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IOS12+Swift4+Xcode10开发 - 4 元气天气APP">
+<meta property="og:url" content="http://yoursite.com/2019/01/06/👀IOS12+Swift4+Xcode10开发 -  5 任务清单APP/index.html">
+<meta property="og:site_name" content="IRIS&#39;s BLOG">
+<meta property="og:description" content="项目介绍 需求分析iOS原生风格的极简的日程管理工具。 现有的Todo工具：UI设计趋向于小清新、可爱动画等多元设计；功能为可以记录时间、地点、时间重要程度等信息，这样对于提高了增加任务的时间、精力成本。 本APP主打：界面使用iOS原生风格，随时想到、随时记录。 功能：用户可以对待办事项输入、修改、删除、修改顺序操作，可以标记已经完成任务。 使用场景：午餐时想到了一个idea直接打开APP记录、">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g10e7u8r10g30af0l8noz.gif">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g0ve153u87j319i096jyi.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g0ve453tj4j31ay0oq134.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g0ve9w4enwj31g80fktdv.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/Library/Application%20Support/typora-user-images/image-20190308150415699.png">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g0veih8jznj30zq06075h.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g0ven1mspaj310m0dyn3r.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g0vf97jbfuj31g60c4tcr.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g0vfer08noj318y0ee7gv.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g0vi11adnwj30ow0byq5m.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g0vp0q0w0aj31dy0f00yv.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g0vp305zdxj31bm0ecdjw.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g0vp40m7c2j30ja0bggly.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g0widfpy8qj31ly0pgk5j.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g0wjqxp5kej31dg0jmai0.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g0xkx8b4scj30ti0a4wh1.jpg">
+<meta property="og:updated_time" content="2019-03-30T10:30:42.938Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IOS12+Swift4+Xcode10开发 - 4 元气天气APP">
+<meta name="twitter:description" content="项目介绍 需求分析iOS原生风格的极简的日程管理工具。 现有的Todo工具：UI设计趋向于小清新、可爱动画等多元设计；功能为可以记录时间、地点、时间重要程度等信息，这样对于提高了增加任务的时间、精力成本。 本APP主打：界面使用iOS原生风格，随时想到、随时记录。 功能：用户可以对待办事项输入、修改、删除、修改顺序操作，可以标记已经完成任务。 使用场景：午餐时想到了一个idea直接打开APP记录、">
+<meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g10e7u8r10g30af0l8noz.gif">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/01/06/👀IOS12+Swift4+Xcode10开发 -  5 任务清单APP/">
+
+
+
+
+
+  <title>IOS12+Swift4+Xcode10开发 - 4 元气天气APP | IRIS's BLOG</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">IRIS's BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">王圆圆的每日报告</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/06/👀IOS12+Swift4+Xcode10开发 -  5 任务清单APP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">IOS12+Swift4+Xcode10开发 - 4 元气天气APP</h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-06T20:19:57+08:00">
+                2019-01-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/APP/" itemprop="url" rel="index">
+                    <span itemprop="name">APP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/06/👀IOS12+Swift4+Xcode10开发 -  5 任务清单APP/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/06/👀IOS12+Swift4+Xcode10开发 -  5 任务清单APP/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/01/06/👀IOS12+Swift4+Xcode10开发 -  5 任务清单APP/" class="leancloud_visitors" data-flag-title="IOS12+Swift4+Xcode10开发 - 4 元气天气APP">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  16
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g10e7u8r10g30af0l8noz.gif" alt="app6的副本"></p>
+<h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>iOS原生风格的极简的日程管理工具。</p>
+<p>现有的Todo工具：UI设计趋向于小清新、可爱动画等多元设计；功能为可以记录时间、地点、时间重要程度等信息，这样对于提高了增加任务的时间、精力成本。</p>
+<p>本APP主打：界面使用iOS原生风格，随时想到、随时记录。</p>
+<p>功能：用户可以对待办事项输入、修改、删除、修改顺序操作，可以标记已经完成任务。</p>
+<p>使用场景：午餐时想到了一个idea直接打开APP记录、午睡后想到这个idea的实现可直接修改，晚上实现该功能后直接打钩，第二天测试人员告知该idea可行时删除任务。</p>
+<h4 id="功能需求"><a href="#功能需求" class="headerlink" title="功能需求"></a>功能需求</h4><p>浏览任务页面：可以在tableview查看所有任务及其完成状态；可以在编辑状态下批量删除任务、移动任务顺序；按下navigation的+进入添加任务页面；按下&gt;进入修改任务页面。</p>
+<p>添加修改页面：判断当前任务是添加还是修改。使用自定义protocol和delegate反向传值，将文字传回浏览页面。</p>
+<h3 id="遇到的困难"><a href="#遇到的困难" class="headerlink" title="遇到的困难"></a>遇到的困难</h3><h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><h4 id="主线程"><a href="#主线程" class="headerlink" title="主线程"></a>主线程</h4><p><a href="https://www.jianshu.com/p/f042432e2d7d" target="_blank" rel="noopener">https://www.jianshu.com/p/f042432e2d7d</a></p>
+<h4 id="TableView的使用"><a href="#TableView的使用" class="headerlink" title="TableView的使用"></a>TableView的使用</h4><p>1.我们知道tableView是IOS中的高级视图，其继承与ScrollView，具有ScrollView的功能，还扩展了许多。</p>
+<p>2.tableView的表现格式分两种Plain和Grouped两种风格</p>
+<p>3.tableView的两种代理类delegate和dataSource.这两种代理至关重要，我们在做tableView和这些代理是分不开的。</p>
+<p>4.代理中比较常用的代理方法：</p>
+<p>(1)dataSource的两个必须使用的代理</p>
+<p>显示UITableView的Cell的个数：一共有多少个格子</p>
+<p>Cell和model的数据的交互：根据数据，获取每一个数据的值</p>
+<p>5.增删改查需要做的：第一步获取需要操作的行数（增加不需要），第二步对数据库进行处理，第三部更新视图</p>
+<p>6.更新视图的2种方式：beginUpdates、endUpdates之前操作（如一行一行的删除数据）；tableView.reloadData()刷新TableView了。</p>
+<p>在使用数据库之后，我就直接reloadData()刷新TableView了。比较方便</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 方式一：把批量对视图的操作防在两句话中间，可以提高app的性能</span><br><span class="line">tableView.beginUpdates()</span><br><span class="line">// codes</span><br><span class="line">tableView.endUpdates()</span><br><span class="line">// 方式二：从新load数据更新页面；但没有动画效果 —— 就是相当于执行 cell for row的方法，将结果取出来，再更新视图</span><br><span class="line">//tableView.reloadData()</span><br></pre></td></tr></table></figure>
+<h4 id="Navigation使用，sugue实现跳转"><a href="#Navigation使用，sugue实现跳转" class="headerlink" title="Navigation使用，sugue实现跳转"></a>Navigation使用，sugue实现跳转</h4><p>常用控件：相当于一个扑克盒子，里面的页面是出栈和入栈来实现试图切换。</p>
+<p>利用segue界面跳转一共有两种方式：</p>
+<p>第一种就是以上我的例子，利用button组件，拖拽添加segue，直接运行就可以用。</p>
+<p>第二种是利用ViewController与ViewController之间，拖拽添加segue。不过，这种方法就需要在相应需要跳转的方法内写入代码，手动去设置它的跳转。</p>
+<p>iOS 10中有几种sugue类型：</p>
+<p><strong>Show</strong>：新的view controller将被添加view controller栈的顶部。跳转的页面有Navigation bar，并且有返回原来页面的返回按钮。这是非常常用的的类型。</p>
+<p> <strong>Show detail</strong>：在view controller栈中，新的view controller将被替代原来的view controller。跳转的页面没有Navigation bar，也没有返回原来页面的返回按钮。</p>
+<p> <strong>Present modally</strong>：新页面将以动画形式从底部出现到覆盖整个手机屏幕。这种形式最常见的列子是iOS自带的日历应用：</p>
+<a id="more"></a>
+<h2 id="项目布局"><a href="#项目布局" class="headerlink" title="项目布局"></a>项目布局</h2><h3 id="UI设计"><a href="#UI设计" class="headerlink" title="UI设计"></a>UI设计</h3><h4 id="页面一"><a href="#页面一" class="headerlink" title="页面一"></a>页面一</h4><h4 id="页面二"><a href="#页面二" class="headerlink" title="页面二"></a>页面二</h4><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="配置tableview数据"><a href="#配置tableview数据" class="headerlink" title="配置tableview数据"></a>配置tableview数据</h3><p>重用单元格的形式，数据成千上万行，最终渲染个数为屏幕上显示的数目。</p>
+<p>往下拉的时候，最上面的cell到最下面来，放置重复渲染，提高手机性能。</p>
+<h3 id="使用tableview-cell"><a href="#使用tableview-cell" class="headerlink" title="使用tableview cell"></a>使用tableview cell</h3><p>Cell定一个class为TodoCell，Cell使用as!强制转换为TodoCell。</p>
+<h3 id="model结构体使用Struct初探"><a href="#model结构体使用Struct初探" class="headerlink" title="model结构体使用Struct初探"></a>model结构体使用Struct初探</h3><p>结构体：不需要写初始化构造器，直接可以构造出来；轻量级的class</p>
+<h3 id="indexPath动态配置每行数据"><a href="#indexPath动态配置每行数据" class="headerlink" title="indexPath动态配置每行数据"></a>indexPath动态配置每行数据</h3><p>确定位置：第几行indexPath.row、第几段indexPath.session</p>
+<h3 id="cell切换打勾和取消"><a href="#cell切换打勾和取消" class="headerlink" title="cell切换打勾和取消"></a>cell切换打勾和取消</h3><p>使用static单元格，grouped风格。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g0ve153u87j319i096jyi.jpg" alt="image-20190308145035169"></p>
+<h3 id="navigation-controller压栈-入栈-和出栈"><a href="#navigation-controller压栈-入栈-和出栈" class="headerlink" title="navigation controller压栈(入栈)和出栈"></a>navigation controller压栈(入栈)和出栈</h3><p>navigation controller类似扑克盒子</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g0ve453tj4j31ay0oq134.jpg" alt="image-20190308145327440"></p>
+<p>跳转实现</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g0ve9w4enwj31g80fktdv.jpg" alt="image-20190308145858073"></p>
+<p><img src="../../../Library/Application Support/typora-user-images/image-20190308150415699.png" alt="image-20190308150415699"></p>
+<p>主页面标题设置为大标题，需要在选中navigation页面，设置大标题</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g0veih8jznj30zq06075h.jpg" alt="image-20190308150714710"></p>
+<p>新页面需要设置小标题，添加item当做标题，再修改名称，改为大标题为never</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g0ven1mspaj310m0dyn3r.jpg" alt="image-20190308151137906"></p>
+<p>返回按钮的名称需要在页面一的任务清单UINavigationItem中修改</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g0vf97jbfuj31g60c4tcr.jpg" alt="image-20190308153255753"></p>
+<h3 id="添加任务功能✨"><a href="#添加任务功能✨" class="headerlink" title="添加任务功能✨"></a>添加任务功能✨</h3><p>流程如下：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g0vfer08noj318y0ee7gv.jpg" alt="image-20190308153815308"></p>
+<p>使用：(自定义protocol和delegate反向传值)+出栈</p>
+<p>添加新任务：反向传值</p>
+<p>确定之后页面消失：出栈，navigation老大让他出栈</p>
+<h3 id="编辑任务✨"><a href="#编辑任务✨" class="headerlink" title="编辑任务✨"></a>编辑任务✨</h3><p>1 正向传值segue将选中的cell中的（1 任务文本todo；2选中的行数row）传到编辑页面</p>
+<p>2 编辑页面根据输入框判断是否有文本，定下title。若不为空，title为编辑任务；为空title为添加任务</p>
+<p>3 修改后按下navigate bar button确认后，将（1修改后的文字；2之前选中的行数）传回主页面</p>
+<p>4 主页面中实现协议的函数中：修改mode数组中的数据，根据行数row找到cell，再将cell的文字改为新的任务</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g0vi11adnwj30ow0byq5m.jpg" alt="image-20190308170849569"></p>
+<h3 id="左滑删除"><a href="#左滑删除" class="headerlink" title="左滑删除"></a>左滑删除</h3><p>已经预置代码，直接取消注释；</p>
+<p>添加上删除某一行的数据；</p>
+<p>更新页面已经写了，不需要添加。</p>
+<h3 id="批量选择-批量删除"><a href="#批量选择-批量删除" class="headerlink" title="批量选择+批量删除"></a>批量选择+批量删除</h3><p>navigation自带了添加编辑button的代码，取消注释，将button改到左边即可，还需要批量功能</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g0vp0q0w0aj31dy0f00yv.jpg" alt="image-20190308211044994"></p>
+<p>由于需要批量的对象是table view，选中他，找到edit选择multiple 编辑即可</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g0vp305zdxj31bm0ecdjw.jpg" alt="image-20190308211257625"></p>
+<p>实现批量选中的效果：</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g0vp40m7c2j30ja0bggly.jpg" alt="image-20190308211343078"></p>
+<p>批量删除需要重新放一个”删除“按钮；</p>
+<p>在按下按钮后：获取选中的indexPath存储于数组，通过循环删除数据对应行数indexPath.row，使用table view的delete方法删除存于数组中的行数</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取所有被选中的indexPath，若为空则不进行删除操作</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">let</span> indexPaths = tableView.indexPathsForSelectedRows&#123;</span><br><span class="line">    <span class="comment">//1 Model 数据删除</span></span><br><span class="line">    <span class="keyword">for</span> indexPath <span class="keyword">in</span> indexPaths&#123;</span><br><span class="line">        todos.remove(at: indexPath.row)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//2 View 视图更新—— table View的删除方法</span></span><br><span class="line">    <span class="comment">// 方式一：把批量对视图的操作防在两句话中间，可以提高app的性能</span></span><br><span class="line">    tableView.beginUpdates()</span><br><span class="line">    tableView.deleteRows(at: indexPaths, with: .automatic)</span><br><span class="line">    tableView.endUpdates()</span><br><span class="line">    <span class="comment">// 方式二：从新load数据更新页面；但没有动画效果 </span></span><br><span class="line">    <span class="comment">//tableView.reloadData()</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ps 更新视图</p>
+<p>// 方式一：把批量对视图的操作防在两句话中间，可以提高app的性能<br>tableView.beginUpdates()<br>// codes<br>tableView.endUpdates()<br>// 方式二：从新load数据更新页面；但没有动画效果 —— 就是相当于执行 cell for row的方法，将结果取出来，再更新视图<br>//tableView.reloadData()</p>
+<p>发现无法选择，原因是：原先的设置选择后，立即变成未选中状态，使得页面保持白色，不会保持变成灰色。需要：在原先的选择代码中，使用flag——isEditing，判断若在editing状态，则可以选中、打钩等一系列操作。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果不是在编辑的情况下，选择打勾才有用、取消选中等才有用</span></span><br><span class="line">      <span class="keyword">if</span> !isEditing&#123;</span><br><span class="line">      	<span class="comment">//选择的代码——选择后原数据状态改变、重新mark为相反的、判断mark绘制√，取消选择背景变回白色</span></span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="按钮的默认文字汉化"><a href="#按钮的默认文字汉化" class="headerlink" title="按钮的默认文字汉化"></a>按钮的默认文字汉化</h3><p>左滑时候的delete —— 变成 ”删除“的关键词：tableView、title、delete、button后出现需要重写的方法</p>
+<p>批量选择edit、done改成中文——1 通过command+点击获取方法、2通过三元运算符+isEditing确认是”编辑“还是”确定“</p>
+<h3 id="移动单元格"><a href="#移动单元格" class="headerlink" title="移动单元格"></a>移动单元格</h3><p>已有该方法，重写<em>to support rearranging the table view</em></p>
+<p>首先使用临时变量temp交换两个数据，接着更新视图moveRow（不写这一句也可以移动，即自动调用）。</p>
+<p>但是这里存在一个小bug，当编辑状态下，当选中数据，被移动后，该数据将一直处于选中状态，且无法删除。结局方法为：移动数据后，reloadData，取消选中状态，就不会导致setEditing函数自动调用该函数，导致混乱。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 移动单元格功能</span></span><br><span class="line"><span class="comment">// Override to support rearranging the table view.</span></span><br><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">tableView</span><span class="params">(<span class="number">_</span> tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath)</span></span> &#123;</span><br><span class="line">    <span class="comment">// 1 移动数据</span></span><br><span class="line">    <span class="keyword">let</span> temp = todos[fromIndexPath.row]</span><br><span class="line">    todos[fromIndexPath.row] =  todos[to.row]</span><br><span class="line">    todos[to.row] = temp</span><br><span class="line">    <span class="built_in">print</span>(todos)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 2 更新数据:自动更新,可以不用下面的代码</span></span><br><span class="line">    tableView.moveRow(at: fromIndexPath, to: to)</span><br><span class="line">    <span class="comment">// 3 移动后，刷新</span></span><br><span class="line">    tableView.reloadData()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="简单数据存储userDefaults"><a href="#简单数据存储userDefaults" class="headerlink" title="简单数据存储userDefaults"></a>简单数据存储userDefaults</h2><p>AppDelegate文件+轻量级本地存储userDefaults+编码解码</p>
+<h3 id="1-AppDelegate文件：APP的声明周期："><a href="#1-AppDelegate文件：APP的声明周期：" class="headerlink" title="1 AppDelegate文件：APP的声明周期："></a>1 AppDelegate文件：APP的声明周期：</h3><p>打开：APP启动、激活</p>
+<p>按下home健：由于某种原因被挤到后台、进入后台</p>
+<p>再次进入：即将激活、激活</p>
+<p>退出：（APPlist 中）进入后台、（退出后）完全退出</p>
+<h3 id="2-数据"><a href="#2-数据" class="headerlink" title="2 数据"></a>2 数据</h3><p>数据存储在沙盒里面，信息安全，本APP只能访问本APP的数据</p>
+<p>沙盒数据中只能存储基本的数据类型，我们的数据是存储对象的Array，无法存储进沙盒plist，因此需要写一个存储函数来编码数据为.data</p>
+<h3 id="3-使用userDefaults"><a href="#3-使用userDefaults" class="headerlink" title="3 使用userDefaults"></a>3 使用userDefaults</h3><p>写好储存数据的方法（编码为data格式+存入沙盒）和解码方法（通过forKey获取数据，解码至todos数组）：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 数据存储——编码数据</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">saveData</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">// 可能会抛出错误</span></span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">        <span class="comment">// 编码的固定格式 —— 创建一个编码器(JSONENcoder)——要在model中遵守协议使对象可编码</span></span><br><span class="line">        <span class="keyword">let</span> data = <span class="keyword">try</span> <span class="type">JSONEncoder</span>().encode(todos)</span><br><span class="line">        <span class="comment">// 得到data类型的数据，存入沙盒</span></span><br><span class="line">        <span class="type">UserDefaults</span>.standard.<span class="keyword">set</span>(data, forKey: <span class="string">"todos"</span>)</span><br><span class="line">    &#125;<span class="keyword">catch</span>&#123;</span><br><span class="line">        <span class="built_in">print</span>(error)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//取数据——解码</span></span><br><span class="line"><span class="function"><span class="keyword">func</span>  <span class="title">getData</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">// 获得data类型的数据，由于可能为空，则使用if let：不为空的时候获取本地数据，为空则不获取</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> data = <span class="type">UserDefaults</span>.standard.data(forKey: <span class="string">"todos"</span>) &#123;</span><br><span class="line">        <span class="comment">// 解码固定格式</span></span><br><span class="line">        <span class="keyword">do</span>&#123;</span><br><span class="line">            <span class="comment">// 解码的固定格式 —— 创建一个编码器(JSONENcoder)——要在model中遵守协议使对象可编码</span></span><br><span class="line">            todos = <span class="keyword">try</span> <span class="type">JSONDecoder</span>().decode([<span class="type">Todo</span>].<span class="keyword">self</span>, from: data)</span><br><span class="line">        &#125;<span class="keyword">catch</span>&#123;</span><br><span class="line">            <span class="built_in">print</span>(error)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>再把写数据的函数在所有操作数据处理调用；</p>
+<p>在程序load时候调用取数据。</p>
+<h2 id="本地存储coredata和realm"><a href="#本地存储coredata和realm" class="headerlink" title="本地存储coredata和realm"></a>本地存储coredata和realm</h2><h3 id="了解"><a href="#了解" class="headerlink" title="了解"></a>了解</h3><p>cs和bs+什么是数据库+为什么App需要本地存储</p>
+<p>cs：client-server —— QQ、微信——聊天记录存在本机</p>
+<p>bs：browser-sever —— 网页论坛——数据存储在服务器</p>
+<p>IOS本地存储数据库：</p>
+<p>userdefaults——轻量级的数据</p>
+<p>coredata——苹果自带的，学习成本高，代码多、不够快——了解</p>
+<p>realm：速度快</p>
+<h3 id="realm安装与示例使用"><a href="#realm安装与示例使用" class="headerlink" title="realm安装与示例使用"></a>realm安装与示例使用</h3><p>由于cocoapods无法pod，我选择下载安装法，自行配置：</p>
+<p>先去 <strong>Realm</strong> 的官网去下载最新框架： <a href="https://realm.io/cn/docs/swift/latest/#prerequisites" target="_blank" rel="noopener">https://realm.io/cn/docs/swift/latest/#prerequisites</a></p>
+<p>接着拖拽 <strong>RealmSwift.framework</strong> 和 <strong>Realm.framework</strong> 文件到”<strong>Embedded Binaries</strong>”选项中。选中 <strong>Copy items if needed</strong> 并点击 <strong>Finish</strong></p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g0widfpy8qj31ly0pgk5j.jpg" alt="image-20190309140620794"></p>
+<p>寻找应用的 Realm 文件：<strong>Swift using Realm Swift</strong>:<br><code>(lldb) po Realm.Configuration.defaultConfiguration.fileURL</code></p>
+<p>command+shift+g ：跳转窗口，进入沙盒</p>
+<p>在model中新建模型User.swift，import包，定义模型</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Foundation</span><br><span class="line"><span class="keyword">import</span> RealmSwift</span><br><span class="line"><span class="comment">// 定义模型的做法和定义常规 Swift 类的做法类似</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span>: <span class="title">Object</span> </span>&#123;</span><br><span class="line">    <span class="meta">@objc</span> <span class="keyword">dynamic</span> <span class="keyword">var</span> name = <span class="string">""</span></span><br><span class="line">    <span class="meta">@objc</span> <span class="keyword">dynamic</span> <span class="keyword">var</span> age = <span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>进入AppDelegate，找到启动的方法，在该方法中：</p>
+<p>1 数据实例化</p>
+<p>do - catch中 2 创建数据库、3 存储数据</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">application</span><span class="params">(<span class="number">_</span> application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: <span class="keyword">Any</span>]?)</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">    <span class="comment">// Override point for customization after application launch.</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"APP启动"</span>)</span><br><span class="line">    <span class="comment">// 0 输出沙盒地址</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="type">Realm</span>.<span class="type">Configuration</span>.defaultConfiguration.fileURL)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 1 实例化需要存储数据 —— 实例化user对象</span></span><br><span class="line">    <span class="keyword">let</span> user = <span class="type">User</span>()</span><br><span class="line">    user.name = <span class="string">"Iris"</span></span><br><span class="line">    user.age = <span class="number">18</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">        <span class="comment">// 2 创建一个数据库</span></span><br><span class="line">        <span class="keyword">let</span> realm = <span class="keyword">try</span> <span class="type">Realm</span>()</span><br><span class="line">        <span class="comment">// 3将对象存入数据库</span></span><br><span class="line">        <span class="keyword">try</span> realm.write &#123;</span><br><span class="line">            realm.add(user)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">catch</span>&#123;</span><br><span class="line">        <span class="built_in">print</span>(error)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>查看数据：print(Realm.Configuration.defaultConfiguration.fileURL)</p>
+<p>command+shift+g ：输入得到的地址，跳转窗口，进入沙盒，查看的结果</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g0wjqxp5kej31dg0jmai0.jpg" alt="image-20190309145355605"></p>
+<h3 id="realm操作"><a href="#realm操作" class="headerlink" title="realm操作"></a>realm操作</h3><h4 id="1-在主页面处实例化数据库，为全局变量"><a href="#1-在主页面处实例化数据库，为全局变量" class="headerlink" title="1 在主页面处实例化数据库，为全局变量"></a>1 在主页面处实例化数据库，为全局变量</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用数据库后，todo相当于一个中间人的角色</span></span><br><span class="line"><span class="comment">// 实例化realm数据库 —— 强制try，确定不会出异常 （一般不这样写，可能会出现网络等异常）</span></span><br><span class="line"><span class="keyword">let</span> realm = <span class="keyword">try</span>! <span class="type">Realm</span>()</span><br></pre></td></tr></table></figure>
+<h4 id="2-创建RealmSwift的类-class-Todo"><a href="#2-创建RealmSwift的类-class-Todo" class="headerlink" title="2 创建RealmSwift的类 class  Todo"></a>2 创建RealmSwift的类 class  Todo</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Foundation</span><br><span class="line"><span class="keyword">import</span> RealmSwift</span><br><span class="line"><span class="comment">//定义模型的做法和定义常规 Swift 类的做法类似</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Todo</span>: <span class="title">Object</span> </span>&#123;</span><br><span class="line">    <span class="meta">@objc</span> <span class="keyword">dynamic</span> <span class="keyword">var</span> name = <span class="string">""</span></span><br><span class="line">    <span class="meta">@objc</span> <span class="keyword">dynamic</span> <span class="keyword">var</span> checked = <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-写数据"><a href="#2-写数据" class="headerlink" title="2 写数据"></a>2 写数据</h4><p>新增数据功能：</p>
+<p>新增数据后，创建一个类Todo的todo对象，传入saveData</p>
+<h4 id="3-取数据"><a href="#3-取数据" class="headerlink" title="3 取数据"></a>3 取数据</h4><p>现在viewLoad()的时候，读取数据。发现需要results类型，所以下一步更改todos的类型</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 从Realm数据库中读取数据</span></span><br><span class="line">      todos = realm.objects(<span class="type">Todo</span>.<span class="keyword">self</span>)</span><br></pre></td></tr></table></figure>
+<p>声明todos由数组类型改为复合类型，接受取出来的 result array的数据，定义为可选性，可能为空</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义为esults类型todos -- 定义复合数据类型 -- 名字:复合类型&lt;类型&gt; ——1种方式</span></span><br><span class="line"><span class="keyword">var</span> todos: <span class="type">Results</span>&lt;<span class="type">Todo</span>&gt;?   </span><br><span class="line"><span class="comment">//定义空数组L：需要指明数组内存的类型。—— 3种方式</span></span><br><span class="line"><span class="comment">//var Todos: Array&lt;Todo&gt;=[]</span></span><br><span class="line"><span class="comment">//var todos:[Todo] = []</span></span><br><span class="line"><span class="comment">//var todos = [Todo]()</span></span><br><span class="line"><span class="comment">//定义空字典的方法：指明key和value的类型; [:]表明m空字典。—— 2 种方式</span></span><br><span class="line"><span class="comment">//var dict:[String:Any] = [:]</span></span><br><span class="line"><span class="comment">//var dict = [String:Any]()</span></span><br></pre></td></tr></table></figure>
+<p>可选性（todos为空），则初始的时候判断。</p>
+<p>为此，进行初始判断：当todos取出来为空的时候，数组的行数为0，且出现文字——请添加任务</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 二、每段有几行：第i个session的行数</span></span><br><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">tableView</span><span class="params">(<span class="number">_</span> tableView: UITableView, numberOfRowsInSection section: Int)</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="comment">// #warning Incomplete implementation, return the number of rows</span></span><br><span class="line">    <span class="comment">// todos?.count ：?表示，该符号前面为空，则不执行后面的，整个则为 nil</span></span><br><span class="line">    <span class="comment">// 空合运算符 xxx ?? ooo ,xxx为空，则执行ooo</span></span><br><span class="line">    <span class="comment">// 若tosos为空，则ession的行数 返回1</span></span><br><span class="line">    <span class="keyword">return</span> todos?.<span class="built_in">count</span> ?? <span class="number">0</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 三、每行显示什么</span></span><br><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">tableView</span><span class="params">(<span class="number">_</span> tableView: UITableView, cellForRowAt indexPath: IndexPath)</span></span> -&gt; <span class="type">UITableViewCell</span> &#123;</span><br><span class="line">    <span class="comment">// 想要用到的到TodoCell下面的属性，向下z强制转型</span></span><br><span class="line">    <span class="keyword">let</span> cell = tableView.dequeueReusableCell(withIdentifier: <span class="string">"todo"</span>, <span class="keyword">for</span>: indexPath) <span class="keyword">as</span>! <span class="type">TodoCell</span></span><br><span class="line">    <span class="comment">// 若取出的todos不为空，我们赋值给 这里的todos，可以在下面用</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> todos = todos&#123;</span><br><span class="line">        <span class="comment">//确定位置 第几行indexPath.row、第几段indexPath.session</span></span><br><span class="line">        <span class="comment">// Configure the cell...</span></span><br><span class="line">        cell.todo.text = todos[indexPath.row].name</span><br><span class="line">        cell.checkMark.text = todos[indexPath.row].checked ? <span class="string">"✓"</span> : <span class="string">" "</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>在存储数据的时候，把更新页面直接改为reload()方法。</p>
+<h4 id="修改数据"><a href="#修改数据" class="headerlink" title="修改数据"></a>修改数据</h4><p>1 修改任务部分 ：获取当前行数，修改todos![indexPath.row].name =  name；更新视图</p>
+<p>2 状态更改部分：按下，状态取反，修改todos![indexPath.row].checked =取反；更新视图</p>
+<h4 id="删数据"><a href="#删数据" class="headerlink" title="删数据"></a>删数据</h4><p>删除数据</p>
+<p>更新视图</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Override to support editing the table view.</span></span><br><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">tableView</span><span class="params">(<span class="number">_</span> tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)</span></span> &#123;</span><br><span class="line">    <span class="comment">// 数据操作</span></span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">        <span class="keyword">try</span> realm.write &#123;</span><br><span class="line">            realm.delete(todos![indexPath.row])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">catch</span>&#123;</span><br><span class="line">        <span class="built_in">print</span>(error)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 更新视图</span></span><br><span class="line">    tableView.reloadData()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Realm-搜索和排序-searchBar-收起软键盘-主线程"><a href="#Realm-搜索和排序-searchBar-收起软键盘-主线程" class="headerlink" title="Realm-搜索和排序+searchBar+收起软键盘+主线程"></a>Realm-搜索和排序+searchBar+收起软键盘+主线程</h3><p>点击search bar 搜索，发生什么事情。</p>
+<p>想到需要一个delegate协议。先遵守协议UISearchBarDelegate，再委托。告诉Todos Controller，search bar是老板（委托人），一会他有些申请会委托给controller做。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g0xkx8b4scj30ti0a4wh1.jpg" alt="image-20190310122008115"></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 实现搜索功能</span></span><br><span class="line"><span class="comment">// 实现searchBar委托给todosController干的事情</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">searchBarSearchButtonClicked</span><span class="params">(<span class="number">_</span> searchBar: UISearchBar)</span></span> &#123;</span><br><span class="line">    <span class="comment">// 1.1 从数据库获取所有的数据</span></span><br><span class="line">    <span class="keyword">let</span> todosData = realm.objects(<span class="type">Todo</span>.<span class="keyword">self</span>)</span><br><span class="line">    <span class="comment">// 1.2 从所有数据中获取查询后的数据</span></span><br><span class="line">    <span class="comment">// predicate——断言——规定怎么查询</span></span><br><span class="line">    <span class="comment">// name  中包含  %@ 占位符 _ searchBar.text!强制解包</span></span><br><span class="line">    todos = todosData.<span class="built_in">filter</span>(<span class="string">"name CONTAINS %@"</span>, searchBar.text!)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 2 更新视图</span></span><br><span class="line">    tableView.reloadData()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当searchBar内容改变的时候，查看其是否为空，若为空，则‘’‘</p>
+<p>搜索之后，根据创建时间排序。先在class 中添加时间属性为当前时间，搜索的时候按照时间倒叙：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 实现searchBar委托给todosController干的事情</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">searchBarSearchButtonClicked</span><span class="params">(<span class="number">_</span> searchBar: UISearchBar)</span></span> &#123;</span><br><span class="line">    <span class="comment">// 1.1 从数据库获取所有的数据</span></span><br><span class="line">    <span class="keyword">let</span> todosData = realm.objects(<span class="type">Todo</span>.<span class="keyword">self</span>)</span><br><span class="line">    <span class="comment">// 1.2 从所有数据中获取查询后的数据</span></span><br><span class="line">    <span class="comment">// predicate——断言——规定怎么查询</span></span><br><span class="line">    <span class="comment">// name  中包含  %@ 占位符 _ searchBar.text!强制解包</span></span><br><span class="line">    <span class="comment">// 排序：时间倒叙</span></span><br><span class="line">    todos = todosData.<span class="built_in">filter</span>(<span class="string">"name CONTAINS %@"</span>, searchBar.text!).sorted(byKeyPath: <span class="string">"createdAT"</span>, ascending: <span class="literal">false</span>)</span><br><span class="line">    <span class="comment">// 2 更新视图</span></span><br><span class="line">    tableView.reloadData()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>收起键盘：学习：<a href="https://www.jianshu.com/p/f042432e2d7d" target="_blank" rel="noopener">https://www.jianshu.com/p/f042432e2d7d</a></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 二、在搜索栏清空后，需要显示所有数据，且收起键盘</span></span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">searchBar</span><span class="params">(<span class="number">_</span> searchBar: UISearchBar, textDidChange searchText: String)</span></span> &#123;</span><br><span class="line">        <span class="comment">// 看是否为空</span></span><br><span class="line">        <span class="keyword">if</span> searchBar.text!.isEmpty&#123;</span><br><span class="line">            <span class="comment">// 1.1 从数据库获取所有的数据</span></span><br><span class="line">            <span class="keyword">let</span> todosData = realm.objects(<span class="type">Todo</span>.<span class="keyword">self</span>)</span><br><span class="line">            todos = todosData</span><br><span class="line">            <span class="comment">// 2 更新视图</span></span><br><span class="line">            tableView.reloadData()</span><br><span class="line">            <span class="comment">// 让用户界面在主线程上进行——优先执行</span></span><br><span class="line">            <span class="comment">// 经常用于使UI方面的操作提前执行，查询可以慢慢查，我们的键盘先收起来——用户体验更好</span></span><br><span class="line">            <span class="type">DispatchQueue</span>.main.async &#123;</span><br><span class="line">                <span class="comment">// 3.收起键盘 让searchBar失去焦点(光标消失+软件盘收起)</span></span><br><span class="line">                searchBar.resignFirstResponder()</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>未完成：</p>
+<p>//需求：打√之后，就放置在最后，取消打钩，放置在最前</p>
+<h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Swift/" rel="tag"># Swift</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/05/存档/Java开发 - 老虎机/" rel="next" title="Java开发 - 老虎机">
+                <i class="fa fa-chevron-left"></i> Java开发 - 老虎机
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/19/存档/简历 - 简历要点/" rel="prev" title="简历 - 简历要点">
+                简历 - 简历要点 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/irisHeader.jpeg" alt="IRIS">
+            
+              <p class="site-author-name" itemprop="name">IRIS</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/irispierce" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:wangyusi007@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目介绍"><span class="nav-number">1.</span> <span class="nav-text">项目介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#需求分析"><span class="nav-number">1.1.</span> <span class="nav-text">需求分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#功能需求"><span class="nav-number">1.1.1.</span> <span class="nav-text">功能需求</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遇到的困难"><span class="nav-number">1.2.</span> <span class="nav-text">遇到的困难</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点"><span class="nav-number">1.3.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主线程"><span class="nav-number">1.3.1.</span> <span class="nav-text">主线程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TableView的使用"><span class="nav-number">1.3.2.</span> <span class="nav-text">TableView的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Navigation使用，sugue实现跳转"><span class="nav-number">1.3.3.</span> <span class="nav-text">Navigation使用，sugue实现跳转</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目布局"><span class="nav-number">2.</span> <span class="nav-text">项目布局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#UI设计"><span class="nav-number">2.1.</span> <span class="nav-text">UI设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#页面一"><span class="nav-number">2.1.1.</span> <span class="nav-text">页面一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#页面二"><span class="nav-number">2.1.2.</span> <span class="nav-text">页面二</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤"><span class="nav-number">3.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置tableview数据"><span class="nav-number">3.1.</span> <span class="nav-text">配置tableview数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用tableview-cell"><span class="nav-number">3.2.</span> <span class="nav-text">使用tableview cell</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#model结构体使用Struct初探"><span class="nav-number">3.3.</span> <span class="nav-text">model结构体使用Struct初探</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#indexPath动态配置每行数据"><span class="nav-number">3.4.</span> <span class="nav-text">indexPath动态配置每行数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cell切换打勾和取消"><span class="nav-number">3.5.</span> <span class="nav-text">cell切换打勾和取消</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#navigation-controller压栈-入栈-和出栈"><span class="nav-number">3.6.</span> <span class="nav-text">navigation controller压栈(入栈)和出栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加任务功能✨"><span class="nav-number">3.7.</span> <span class="nav-text">添加任务功能✨</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑任务✨"><span class="nav-number">3.8.</span> <span class="nav-text">编辑任务✨</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#左滑删除"><span class="nav-number">3.9.</span> <span class="nav-text">左滑删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#批量选择-批量删除"><span class="nav-number">3.10.</span> <span class="nav-text">批量选择+批量删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#按钮的默认文字汉化"><span class="nav-number">3.11.</span> <span class="nav-text">按钮的默认文字汉化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动单元格"><span class="nav-number">3.12.</span> <span class="nav-text">移动单元格</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单数据存储userDefaults"><span class="nav-number">4.</span> <span class="nav-text">简单数据存储userDefaults</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-AppDelegate文件：APP的声明周期："><span class="nav-number">4.1.</span> <span class="nav-text">1 AppDelegate文件：APP的声明周期：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-数据"><span class="nav-number">4.2.</span> <span class="nav-text">2 数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-使用userDefaults"><span class="nav-number">4.3.</span> <span class="nav-text">3 使用userDefaults</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地存储coredata和realm"><span class="nav-number">5.</span> <span class="nav-text">本地存储coredata和realm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#了解"><span class="nav-number">5.1.</span> <span class="nav-text">了解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#realm安装与示例使用"><span class="nav-number">5.2.</span> <span class="nav-text">realm安装与示例使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#realm操作"><span class="nav-number">5.3.</span> <span class="nav-text">realm操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-在主页面处实例化数据库，为全局变量"><span class="nav-number">5.3.1.</span> <span class="nav-text">1 在主页面处实例化数据库，为全局变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-创建RealmSwift的类-class-Todo"><span class="nav-number">5.3.2.</span> <span class="nav-text">2 创建RealmSwift的类 class  Todo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-写数据"><span class="nav-number">5.3.3.</span> <span class="nav-text">2 写数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-取数据"><span class="nav-number">5.3.4.</span> <span class="nav-text">3 取数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改数据"><span class="nav-number">5.3.5.</span> <span class="nav-text">修改数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删数据"><span class="nav-number">5.3.6.</span> <span class="nav-text">删数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Realm-搜索和排序-searchBar-收起软键盘-主线程"><span class="nav-number">5.4.</span> <span class="nav-text">Realm-搜索和排序+searchBar+收起软键盘+主线程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源码"><span class="nav-number">6.</span> <span class="nav-text">源码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">IRIS</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">49.5k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'K56V1wrSmQT1Y57HAlTWMY6m-gzGzoHsz',
+        appKey: '1KvpI6T94PESCJ3yikky6J1P',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("K56V1wrSmQT1Y57HAlTWMY6m-gzGzoHsz", "1KvpI6T94PESCJ3yikky6J1P");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

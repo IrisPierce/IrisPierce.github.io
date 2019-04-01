@@ -88,9 +88,6 @@
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g13ah6fs3bj313e0fuh84.jpg">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g13aifpljtj31c80e2gt9.jpg">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g13aji6wocj314w0dyaki.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g13w6oq565j315i0osafx.jpg">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g13wanh4c9j30w00kidhc.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g13vvs5ghuj316g01iq34.jpg">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g13fw9aognj31co0pcnhm.jpg">
 <meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g13h9d2hjnj31bs0qmnp2.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g11k6otgvnj30rc0je77a.jpg">
@@ -108,7 +105,7 @@
 <meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g0sa697r7nj30m617m1kx.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g0sayw5lvdj30u01szqiw.jpg">
 <meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g0ncssbanmg309d0go75a.gif">
-<meta property="og:updated_time" content="2019-03-24T13:00:29.731Z">
+<meta property="og:updated_time" content="2019-04-01T05:44:09.146Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="开发和研究合集">
 <meta name="twitter:description" content="包括研究项目和开发的APP。（更新ing） 研究项目合集自由探索——面向分类的感知驱动的可视化监督降维方法成绩：自由探索项目，预计4月-5月投稿TVCG。（负责人） 背景：有标签的高维数据大数据时代，涌现出无数复杂的有标签的高维数据：如手写数据、汽车数据、人脸数据等。  困难：难以分析标签HD数据降维是分析有标签的高维数据的常用方法。 高维数据的低维表示可以帮助用户探索有标签数据中类的分离程度和数">
@@ -427,7 +424,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.8k
+                  2.2k
                 </span>
               
 
@@ -443,7 +440,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  9
+                  7
                 </span>
               
             </div>
@@ -474,29 +471,10 @@
 <p>非监督降维方法PCA：没有考虑类的分离程度；<br>监督降维方法LDA：事先假设数据符合高斯分布，对于复杂的类结构无效；<br>感知驱动降维PDD：单个投影可能会导致重要的类结构被忽略。</p>
 <p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g13aji6wocj314w0dyaki.jpg" alt="image-20190315105421299"></p>
 <a id="more"></a>
-<h3 id="方法：三个步骤"><a href="#方法：三个步骤" class="headerlink" title="方法：三个步骤"></a>方法：三个步骤</h3><p>本文提出了一种感知驱动的线性降维方法，寻求生成具有最大视觉分离程度、最少数量的最优二维投影集合。</p>
-<p>（1）子空间表达：对于类别两两之间利用分离度量求最优分离向量，然后利用仿射空间在各个维度上找出在这个度量上能够达到分离度量阈值的范围，各个维度上的范围构成了一个包围盒。</p>
-<p>（2）子空间求交：包围盒如果有交集，则代表它们之间可以用一条向量进行区分。</p>
-<p>我们将包围盒看做点，两个包围盒有交，则在对应的点之间连边，若存在一个完全图，则代表这些包围盒所代表的点对都可以用一条向量进行区分，用最少数量的团对这张图进行覆盖，这些团就对应了最少数量的包围盒集合。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g13w6oq565j315i0osafx.jpg" alt="image-20190315232312712"></p>
-<p>（3）组合优化：我们取包围盒的中心所对应的向量作为投影的坐标轴，将坐标轴进行组合，得到最少数量的投影集合。 </p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g13wanh4c9j30w00kidhc.jpg" alt="image-20190315232700980"></p>
+<h3 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h3><p>本文提出了一种感知驱动的线性降维方法，寻求生成具有最大视觉分离程度、最少数量的最优二维投影集合。</p>
 <h3 id="困难1：发现单个视图降维方法的不足"><a href="#困难1：发现单个视图降维方法的不足" class="headerlink" title="困难1：发现单个视图降维方法的不足"></a>困难1：发现单个视图降维方法的不足</h3><p>一开始构建单个视图，发现类别多的时候无法构建</p>
 <p><strong>目标函数：</strong>为了最大化非线性目标函数dDSC。<strong>优化方法：</strong>使用模拟退火算法，通过比较随机生成的投影结果的costFuction，找出全局最优值。得到最优的投影结果展示分类数据。</p>
 <p>发现：真实数据中可能存在很多类，如服装数据包括：睡衣、风衣、内衣等各种内容。</p>
-<h3 id="困难2：算法不可行。子空间表达"><a href="#困难2：算法不可行。子空间表达" class="headerlink" title="困难2：算法不可行。子空间表达"></a>困难2：算法不可行。子空间表达</h3><p>目标其实就是找到：既能满足两个类别类内密集，类间最大的子空间。用于下一步两两求交。</p>
-<p>原方法：几何的方式优化。</p>
-<p>1）【保证A\B自己类内很密集】得到使方差很小的Pa、Pb两个子空间</p>
-<p>通过特征分解，已经得到了前k小的方差的向量组成的子空间，向着各个方向偏转直至度量值到达无法分离两个类。此时得到了一个可分子空间，使用矩阵表示。</p>
-<p>2）【保证同时满足A\B类内很密集】子空间相交。</p>
-<p>关于如何求解子空间的交，使得：</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g13vvs5ghuj316g01iq34.jpg" alt="image-20190315231241744"></p>
-<p>将特征子空间中的特征向量带入，联立方程组，可以解出基础解系w</p>
-<p>Va ∩ Vb = w</p>
-<p>3）【满足类内密集且类间距离最大】</p>
-<p>该特征项就是两个类别中心的连线——蓝色部分，单位化后为橙色 ：v_{dist} = u_a-u_b</p>
-<p>然而，如何结合使得两类距离最大的向量vec和使A\B都满足类间距离小的子空间Sab是一个问题。</p>
-<p>此时就想到了现在的解决方法——将向量投射到n-1维的仿射空间使用包围盒求交。</p>
 <h3 id="技术："><a href="#技术：" class="headerlink" title="技术："></a>技术：</h3><p>D3是Data-Driven Document的缩写，从字面上理解就是数据驱动文本。</p>
 <h2 id="基于-kNN-Graph的内蕴特征抽取可视分析"><a href="#基于-kNN-Graph的内蕴特征抽取可视分析" class="headerlink" title="基于 kNN Graph的内蕴特征抽取可视分析"></a>基于 kNN Graph的内蕴特征抽取可视分析</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>高维数据(High-Dimensional Data)，是指向每个数据有多个属性的数据。现实世界中的高维数据中的样本点，往往是分布在一个或者多个低维度的非线性的流形结构之中，如何找出隐藏在高维数据中的低维结构与特征是目前我们所面临的问题。</p>
 <p>特征抽取是获取数据特征的重要方式。分为线性和非线性方式，线性提取方式是简单的原始维度线性组合，用户根据自己的喜好选择正向负向的点；非线性为点选绘制自由曲线，产生一个贴合用户认知的非线性模型的内蕴特征轴。</p>
@@ -511,7 +489,7 @@
 <h2 id="高维数据中的低维结构的可视探索"><a href="#高维数据中的低维结构的可视探索" class="headerlink" title="高维数据中的低维结构的可视探索"></a>高维数据中的低维结构的可视探索</h2><h3 id="成绩：-1"><a href="#成绩：-1" class="headerlink" title="成绩："></a>成绩：</h3><p>并推荐可视化顶级刊 TVCG。非学生一作，负责user study和对比试验。</p>
 <h3 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h3><p>高维数据集中往往含有不同结构的低维结构，当未知数据集中的低维结构与当前的可视化方法的假设不匹配时，可视化结果将难以理解。</p>
 <h3 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h3><p>可视分析方法帮助用户有效地识别低维结构及关键特征，为进一步分析提供关键结构信息。</p>
-<h3 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h3><p>t-SNE初步提供初始聚类信息：当我们想对高维数据集进行分类，但又不清楚这个数据集有没有很好的可分性（同类之间间隔小、异类之间间隔大）时，可以通过t-SNE将数据投影到2维或3维空间中观察一下：如果在低维空间中具有可分性，则数据是可分的；如果在低维空间中不可分，则可能是因为数据集本身不可分，或者数据集中的数据不适合投影到低维空间。</p>
+<h3 id="方法：-1"><a href="#方法：-1" class="headerlink" title="方法："></a>方法：</h3><p>t-SNE初步提供初始聚类信息：当我们想对高维数据集进行分类，但又不清楚这个数据集有没有很好的可分性（同类之间间隔小、异类之间间隔大）时，可以通过t-SNE将数据投影到2维或3维空间中观察一下：如果在低维空间中具有可分性，则数据是可分的；如果在低维空间中不可分，则可能是因为数据集本身不可分，或者数据集中的数据不适合投影到低维空间。</p>
 <p>局部切空间-测地距离视图用来发现子空间</p>
 <p>2个滚石图拐点为子空间维度</p>
 <p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g11k6otgvnj30rc0je77a.jpg" alt="image-20190313225653964"></p>
@@ -703,7 +681,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">50</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -725,7 +703,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -774,7 +752,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#研究项目合集"><span class="nav-number">1.</span> <span class="nav-text">研究项目合集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#自由探索——面向分类的感知驱动的可视化监督降维方法"><span class="nav-number">1.1.</span> <span class="nav-text">自由探索——面向分类的感知驱动的可视化监督降维方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#成绩："><span class="nav-number">1.1.1.</span> <span class="nav-text">成绩：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#背景：有标签的高维数据"><span class="nav-number">1.1.2.</span> <span class="nav-text">背景：有标签的高维数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#困难：难以分析标签HD数据"><span class="nav-number">1.1.3.</span> <span class="nav-text">困难：难以分析标签HD数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法：三个步骤"><span class="nav-number">1.1.4.</span> <span class="nav-text">方法：三个步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#困难1：发现单个视图降维方法的不足"><span class="nav-number">1.1.5.</span> <span class="nav-text">困难1：发现单个视图降维方法的不足</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#困难2：算法不可行。子空间表达"><span class="nav-number">1.1.6.</span> <span class="nav-text">困难2：算法不可行。子空间表达</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#技术："><span class="nav-number">1.1.7.</span> <span class="nav-text">技术：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基于-kNN-Graph的内蕴特征抽取可视分析"><span class="nav-number">1.2.</span> <span class="nav-text">基于 kNN Graph的内蕴特征抽取可视分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">1.2.1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子"><span class="nav-number">1.2.2.</span> <span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高维数据中的低维结构的可视探索"><span class="nav-number">1.3.</span> <span class="nav-text">高维数据中的低维结构的可视探索</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#成绩：-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">成绩：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题："><span class="nav-number">1.3.2.</span> <span class="nav-text">问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决："><span class="nav-number">1.3.3.</span> <span class="nav-text">解决：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法："><span class="nav-number">1.3.4.</span> <span class="nav-text">方法：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#考勤管理系统"><span class="nav-number">1.4.</span> <span class="nav-text">考勤管理系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#成绩：-2"><span class="nav-number">1.4.1.</span> <span class="nav-text">成绩：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#APP项目合集"><span class="nav-number">2.</span> <span class="nav-text">APP项目合集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上架中："><span class="nav-number">2.0.1.</span> <span class="nav-text">上架中：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-Todos-极简事项"><span class="nav-number">2.0.2.</span> <span class="nav-text">Project  : Todos 极简事项</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#需求分析："><span class="nav-number">2.0.2.1.</span> <span class="nav-text">需求分析：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技术：-1"><span class="nav-number">2.0.2.2.</span> <span class="nav-text">技术：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-Weather-元气天气"><span class="nav-number">2.0.3.</span> <span class="nav-text">Project  : Weather 元气天气</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#需求分析：-1"><span class="nav-number">2.0.3.1.</span> <span class="nav-text">需求分析：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技术：-2"><span class="nav-number">2.0.3.2.</span> <span class="nav-text">技术：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-3-Quizzler-奇怪问答"><span class="nav-number">2.0.4.</span> <span class="nav-text">Project 3 : Quizzler 奇怪问答</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#需求分析：-2"><span class="nav-number">2.0.4.1.</span> <span class="nav-text">需求分析：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技术：-3"><span class="nav-number">2.0.4.2.</span> <span class="nav-text">技术：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-4-Piano-木琴"><span class="nav-number">2.0.5.</span> <span class="nav-text">Project 4 : Piano 木琴</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-3-Dicee-麻将骰子模拟器"><span class="nav-number">2.0.6.</span> <span class="nav-text">Project 3 : Dicee 麻将骰子模拟器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-2-Magic-8-Ball-问答魔力球"><span class="nav-number">2.0.7.</span> <span class="nav-text">Project 2 : Magic 8 Ball 问答魔力球</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-1-计时器"><span class="nav-number">2.0.8.</span> <span class="nav-text">Project 1 : 计时器</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#研究项目合集"><span class="nav-number">1.</span> <span class="nav-text">研究项目合集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#自由探索——面向分类的感知驱动的可视化监督降维方法"><span class="nav-number">1.1.</span> <span class="nav-text">自由探索——面向分类的感知驱动的可视化监督降维方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#成绩："><span class="nav-number">1.1.1.</span> <span class="nav-text">成绩：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#背景：有标签的高维数据"><span class="nav-number">1.1.2.</span> <span class="nav-text">背景：有标签的高维数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#困难：难以分析标签HD数据"><span class="nav-number">1.1.3.</span> <span class="nav-text">困难：难以分析标签HD数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法："><span class="nav-number">1.1.4.</span> <span class="nav-text">方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#困难1：发现单个视图降维方法的不足"><span class="nav-number">1.1.5.</span> <span class="nav-text">困难1：发现单个视图降维方法的不足</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#技术："><span class="nav-number">1.1.6.</span> <span class="nav-text">技术：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基于-kNN-Graph的内蕴特征抽取可视分析"><span class="nav-number">1.2.</span> <span class="nav-text">基于 kNN Graph的内蕴特征抽取可视分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">1.2.1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子"><span class="nav-number">1.2.2.</span> <span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高维数据中的低维结构的可视探索"><span class="nav-number">1.3.</span> <span class="nav-text">高维数据中的低维结构的可视探索</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#成绩：-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">成绩：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题："><span class="nav-number">1.3.2.</span> <span class="nav-text">问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决："><span class="nav-number">1.3.3.</span> <span class="nav-text">解决：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法：-1"><span class="nav-number">1.3.4.</span> <span class="nav-text">方法：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#考勤管理系统"><span class="nav-number">1.4.</span> <span class="nav-text">考勤管理系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#成绩：-2"><span class="nav-number">1.4.1.</span> <span class="nav-text">成绩：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#APP项目合集"><span class="nav-number">2.</span> <span class="nav-text">APP项目合集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上架中："><span class="nav-number">2.0.1.</span> <span class="nav-text">上架中：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-Todos-极简事项"><span class="nav-number">2.0.2.</span> <span class="nav-text">Project  : Todos 极简事项</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#需求分析："><span class="nav-number">2.0.2.1.</span> <span class="nav-text">需求分析：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技术：-1"><span class="nav-number">2.0.2.2.</span> <span class="nav-text">技术：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-Weather-元气天气"><span class="nav-number">2.0.3.</span> <span class="nav-text">Project  : Weather 元气天气</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#需求分析：-1"><span class="nav-number">2.0.3.1.</span> <span class="nav-text">需求分析：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技术：-2"><span class="nav-number">2.0.3.2.</span> <span class="nav-text">技术：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-3-Quizzler-奇怪问答"><span class="nav-number">2.0.4.</span> <span class="nav-text">Project 3 : Quizzler 奇怪问答</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#需求分析：-2"><span class="nav-number">2.0.4.1.</span> <span class="nav-text">需求分析：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技术：-3"><span class="nav-number">2.0.4.2.</span> <span class="nav-text">技术：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-4-Piano-木琴"><span class="nav-number">2.0.5.</span> <span class="nav-text">Project 4 : Piano 木琴</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-3-Dicee-麻将骰子模拟器"><span class="nav-number">2.0.6.</span> <span class="nav-text">Project 3 : Dicee 麻将骰子模拟器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-2-Magic-8-Ball-问答魔力球"><span class="nav-number">2.0.7.</span> <span class="nav-text">Project 2 : Magic 8 Ball 问答魔力球</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-1-计时器"><span class="nav-number">2.0.8.</span> <span class="nav-text">Project 1 : 计时器</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -815,7 +793,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">37.8k</span>
+    <span title="Site words total count">49.5k</span>
   
 </div>
 

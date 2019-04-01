@@ -622,7 +622,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.8k
+                  2.2k
                 </span>
               
 
@@ -638,7 +638,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  9
+                  7
                 </span>
               
             </div>
@@ -1367,7 +1367,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/26/手写代码/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/26/✨iOS基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -1386,7 +1386,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/26/手写代码/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2019/03/26/✨iOS基础/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -1400,7 +1400,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-26T16:30:05+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-26T23:04:04+08:00">
                 2019-03-26
               </time>
             
@@ -1419,8 +1419,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/26/手写代码/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/26/手写代码/" itemprop="commentCount"></span>
+                <a href="/2019/03/26/✨iOS基础/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/26/✨iOS基础/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1428,7 +1428,7 @@
 
           
           
-             <span id="/2019/03/26/手写代码/" class="leancloud_visitors" data-flag-title>
+             <span id="/2019/03/26/✨iOS基础/" class="leancloud_visitors" data-flag-title>
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1453,7 +1453,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  18
+                  3.7k
                 </span>
               
 
@@ -1469,7 +1469,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  14
                 </span>
               
             </div>
@@ -1492,8 +1492,143 @@
       
         
           
-            <p>有序单链表合并</p>
-<p>设计模式之间的优劣对比</p>
+            <h2 id="RunLoop"><a href="#RunLoop" class="headerlink" title="RunLoop"></a>RunLoop</h2><p>runloop是一个<strong>事件循环对象</strong>。</p>
+<p>do {</p>
+<p>//接受消息-&gt;等待-&gt;处理</p>
+<p>}while(message != quit)</p>
+<ul>
+<li>概念：事件循环对象，在循环过程中处理各种事件（点击、刷新等），从而保持程序持续运行；在没有事件处理的时候，会进入睡眠模式，从而节省CPU资源，提高程序性能。</li>
+<li>为什么需要：一个线程只能执行一个任务，执行完就会退出，如果我们需要一种机制，让线程能随时处理时间但并不退出，那么 RunLoop 就是这样的一个机制。Runloop是事件接收和分发机制的一个实现。</li>
+<li>Runloop 和线程是绑定在一起的。每个线程（包括主线程）都有一个对应的 Runloop 对象。我们并不能自己创建 Runloop 对象，但是可以获取到系统提供的 Runloop 对象。</li>
+</ul>
+<h2 id="是否接触TableView渲染性能相关的东西？"><a href="#是否接触TableView渲染性能相关的东西？" class="headerlink" title="是否接触TableView渲染性能相关的东西？"></a>是否接触TableView渲染性能相关的东西？</h2><ul>
+<li><p>cell的数目，配置tableview数据</p>
+<p>重用单元格的形式，数据成千上万行，最终渲染个数为屏幕上显示的数目。</p>
+<p>往下拉的时候，最上面的cell到最下面来，放置重复渲染，提高手机性能。</p>
+</li>
+<li><p>刷新页面的两种方法</p>
+<ul>
+<li>无动画效果：tableView.reloadData()，就是相当于执行 cell for row的方法，将结果取出来，再更新视图</li>
+<li>将刷新语句放在View.beginUpdates()、tableView.endUpdates()中间，可以提高app的性能</li>
+</ul>
+</li>
+</ul>
+<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><p>触摸屏幕、晃动设备、通过遥控设施控制设备。对应的事件类型有以下三种：</p>
+<ol>
+<li>触屏事件（Touch Event）</li>
+<li>运动事件（Motion Event）</li>
+<li>远端控制事件（Remote-Control Event）</li>
+</ol>
+<h3 id="响应者链"><a href="#响应者链" class="headerlink" title="响应者链"></a>响应者链</h3><p>当发生事件响应时，必须知道由谁来响应事件。在 iOS 中，由响应者链来对事件进行响应。</p>
+<p>所有事件响应的类都是 UIResponder 的子类，响应者链是一个由不同对象组成的层次结构，其中的每个对象将依次获得响应事件消息的机会。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">First Responser --&gt; The Window --&gt; The Application --&gt; nil（丢弃）</span><br></pre></td></tr></table></figure>
+<p>我们可以通过 <code>[responder nextResponder]</code> 找到当前 responder 的下一个 responder，持续这个过程到最后会找到 UIApplication 对象。</p>
+<p>通常情况下，我们在 First Responder （一般也就是用户当前触控的 View ）这里就会响应请求，进入下面的事件分发机制。</p>
+<h3 id="事件分发"><a href="#事件分发" class="headerlink" title="事件分发"></a>事件分发</h3><p>第一响应者（First responder）指的是当前接受触摸的响应者对象（通常是一个 UIView 对象），即表示当前该对象正在与用户交互，它是响应者链的开端。响应者链和事件分发的使命都是找出第一响应者。</p>
+<ul>
+<li>iOS 系统检测到手指触摸 (Touch) 操作时会将其打包成一个 UIEvent 对象，并放入当前活动 Application 的事件队列，</li>
+<li>单例的 UIApplication 会从事件队列中取出触摸事件并传递给单例的 UIWindow 来处理，</li>
+<li>UIWindow 对象首先会使用 <code>hitTest:withEvent:</code>方法寻找此次 Touch 操作初始点所在的视图(View)，即需要将触摸事件传递给其处理的视图，这个过程称之为 hit-test view。</li>
+</ul>
+<h2 id="内存管理机制：ARC自动引用计数-MRC"><a href="#内存管理机制：ARC自动引用计数-MRC" class="headerlink" title="内存管理机制：ARC自动引用计数\MRC"></a>内存管理机制：ARC自动引用计数\MRC</h2><p>创建的时候为1，使用的时候+1，不需要的时候-1，为0的时候系统知道其不需要了，则release。</p>
+<h2 id="class和struct"><a href="#class和struct" class="headerlink" title="class和struct"></a>class和struct</h2><h3 id="相同点"><a href="#相同点" class="headerlink" title="相同点"></a>相同点</h3><ul>
+<li>可以定义存储属性</li>
+<li>能够定义方法</li>
+<li>通过下标操作访问实例所包含的值</li>
+<li>通过扩展来增加默认实现功能</li>
+</ul>
+<h3 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h3><ul>
+<li>类可以继承</li>
+<li>类型转换允许在运行时检查和解释一个类实例的类型</li>
+<li>析构器允许一个类实例释放任何它所被分配的资源</li>
+<li>引用计数允许一个类的多次引用</li>
+<li>class是引用类型，struct是值类型</li>
+<li>struct会自动生成一个初始化所有属性的构造器</li>
+</ul>
+<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><p>谈及 iOS 中的多线程，一般说的是 pthread，NSthread，GCD，NSOperation 这四种, 用的最多也最方便的就是 GCD 了。</p>
+<p><strong>四、线程安全问题</strong></p>
+<p>当多个线程访问同一块资源时，很容易引发数据错乱和数据安全问题。就好比几个人在同一时修改同一个表格，造成数据的错乱。</p>
+<p>解决多线程安全问题的方法</p>
+<ul>
+<li>方法一：互斥锁（同步锁）</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`@synchronized(锁对象) &#123;``    ``<span class="comment">// 需要锁定的代码``&#125;`</span></span><br></pre></td></tr></table></figure>
+<p>加了互斥做的代码，当新线程访问时，如果发现其他线程正在执行锁定的代码，新线程就会进入休眠。</p>
+<ul>
+<li>方法二：自旋锁</li>
+</ul>
+<p>加了自旋锁，当新线程访问代码时，如果发现有其他线程正在锁定代码，新线程会用死循环的方式，一直等待锁定的代码执行完成。相当于不停尝试执行代码，比较消耗性能。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g1gml59deej30yg0gv0yd.jpg" alt="3873004-d66485790959dcf5.png"></p>
+<h2 id="GCD-中两个重要重要概念-——-队列-amp-任务"><a href="#GCD-中两个重要重要概念-——-队列-amp-任务" class="headerlink" title="GCD 中两个重要重要概念 —— 队列 &amp; 任务"></a>GCD 中两个重要重要概念 —— 队列 &amp; 任务</h2><p>队列是一种特殊的线性表，采用FIFO（先进先出）的原则，队列的主要作用是用来存放任务。</p>
+<p>GCD会自动将队列中的任务取出，放到对应的线程中执行。</p>
+<p>串行队列（Serial Dispatch Queue）: 让任务一个接着一个地执行（一个任务执行完毕后，再执行下一个任务</p>
+<p>并发队列（Concurrent Dispatch Queue）: 可以让多个任务并发（同时）执行（自动开启多个线程同时执行任务）, 并发功能只有在异步（dispatch_async）函数下才有效</p>
+<p><strong>队列执行任务的方式：</strong></p>
+<ul>
+<li>同步：在当前线程中执行，当前代码不执行完，就不能够执行下一条代码。<strong>会阻塞当前线程。</strong></li>
+<li><p>异步：在另一条线程中执行（不用等待当前代码执行完，就能够执行下一条），<strong>不会阻塞当前线程。</strong></p>
+</li>
+<li><p>主队列 (串行)</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let mainQueue = DispatchQueue.main</span><br></pre></td></tr></table></figure>
+<ul>
+<li>全局队列 (并发)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let globalQueue = DispatchQueue.global()</span><br></pre></td></tr></table></figure>
+<p><strong>全局队列默认是并发队列，在不进行第三方框架或者大型的商业应用开发，全局队列基本够用。</strong></p>
+<ul>
+<li>主队列 <code>dispatch_main_queue();</code> 串行 ,更新UI</li>
+<li>全局队列 <code>dispatch_global_queue();</code> 并行,四个优先级: <code>background</code>,<code>low</code>,<code>default</code>,<code>high</code></li>
+<li>自定义队列 <code>dispatch_queue_t queue;</code> 可以自定义是并行: <code>DISPATCH_QUEUE_CONCURRENT</code> 或者串行 <code>DISPATCH_QUEUE_SERIAL</code></li>
+</ul>
+<p><strong>同步不开异步开，串行开1条，并行开多条。</strong></p>
+<p>队列中的任务同步执行，队列就不具有开启线程的能力， 队列中的任务异步执行，队列就具有开启线程的能力。<br><strong>（同步和异步执行决定的是否有开启线程的能力）</strong></p>
+<p>如果队列具 <strong>有开启线程的能力 (队列任务异步执行) </strong> 且队列是 <strong>串行队列</strong> ，那么将会 <strong>开启 1 条线程</strong> 。<br>如果队列具 <strong>有开启线程的能力 (队列任务异步执行) </strong> 且队列是 <strong>并发队列</strong> ，那么将会 <strong>开启 多 条线程</strong> 。开启线程的条数由 GCD 决定。</p>
+<h3 id="2-1-全局队列"><a href="#2-1-全局队列" class="headerlink" title="2.1 全局队列"></a>2.1 <strong>全局队列</strong></h3><p>全局队列是获取的，不是程序员创建的。<br>为了方便 GCD 的使用，apple 默认为我们提供的。<br>全局队列默认是并发队列，在不是进行第三方框架或者大型的商业应用开发，全局队列基本够用。</p>
+<p><strong>全局 ( 并发 ) 队列异步执行 ：</strong></p>
+<p>并发队列异步（不阻塞当前线程）执行（队列就具有开启线程的能力）， 队列会开启多条线程。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">任务异步执行不会阻塞当前线程， </span><br><span class="line">   befor 在最前， </span><br><span class="line">   after 在任意位置，</span><br><span class="line">   task 执行顺序不确定 —— 并发执行（index可以确认）。</span><br><span class="line">   task 并发执行 —— 并发执行（number可以确认）。</span><br><span class="line"></span><br><span class="line">异步开线程 number 可以确定开启了多条线程</span><br><span class="line">   开的线程数由 GCD 决定。 可以看到线程的 number 有重复，是 GCD 对线程进行了复用。</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">async</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().async: befor"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">    <span class="comment">// 全局队列进行 10次异步</span></span><br><span class="line">    <span class="keyword">for</span> index <span class="keyword">in</span> <span class="number">0</span>..&lt;<span class="number">10</span> &#123;</span><br><span class="line">        <span class="type">DispatchQueue</span>.global().async &#123;</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().async: task:(taskIndex:\(index)"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().async: after"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">打印：</span><br></pre></td></tr></table></figure>
+<p><strong>全局 ( 并发 ) 队列同步执行 ：</strong></p>
+<p>并发队列同步（阻塞当前线程）执行（队列就不具有开启线程的能力）， 队列不会开启线程（代码都在主线程中执行）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">任务同步执行会阻塞当前线程， </span><br><span class="line">     befor 在最前， </span><br><span class="line">     after 在最后，</span><br><span class="line">     task 执行顺序确定 —— 阻塞。</span><br><span class="line">同步没有开启线程 number 可以确定没有开启多条线程。所有的代码都在 主线程中执行。</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sync</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().sync: befor"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">    <span class="keyword">for</span> index <span class="keyword">in</span> <span class="number">0</span>..&lt;<span class="number">10</span> &#123;</span><br><span class="line">        <span class="type">DispatchQueue</span>.global().sync &#123;</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().sync: task:(taskIndex:\(index))"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().sync: after"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">打印： </span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: befor &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">0</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">1</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">2</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">3</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">4</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">5</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">6</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">7</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">8</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">9</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: after &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-主队列"><a href="#2-2-主队列" class="headerlink" title="2.2 主队列"></a>2.2 主队列</h3><p>主队列是获取的，不是程序员创建的，apple 默认为我们提供的。<br> （app 开发中，所有的 UI 更新操作都应该在主线程中进行）</p>
+<p><strong>主队列(串行)异步执行</strong></p>
+<p>主队列异步（不会阻塞当前线程）执行（队列就具有开启线程的能力）， 队列会开启线程（<strong>开启的线程就是主线程</strong>）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; 有朋友问我，异步会开启线程， 主队列异步就不会开启线程。 </span><br><span class="line">&gt; 我当时还信以为真。认为自己错误，说特殊情况特殊处理。 其实说白了就是学艺不精。</span><br><span class="line">&gt; 由于主队列是我们获取的，不是我们创建的，在某种意识中会认为主线程不是在主队列中创建的。（认为一开始就存在的。）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; 任务异步执行不会阻塞当前线程， </span><br><span class="line"> befor 在最前， </span><br><span class="line"> after 在第二，</span><br><span class="line"> task 执行顺序确定 —— 串行执行（index可以确认）。</span><br><span class="line"></span><br><span class="line">同步没有开启线程 number 可以确定没有开启多条线程。所有的代码都在 主线程中执行。</span><br></pre></td></tr></table></figure>
+<p><strong>主队列异步的操作主要用在更新 UI 操作中。</strong> 具体参考  项目开发中 GCD 代码使用。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">async</span><span class="params">()</span></span> &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"DispatchQueue.main.async: befor"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">        <span class="keyword">for</span> index <span class="keyword">in</span> <span class="number">0</span>..&lt;<span class="number">10</span> &#123;</span><br><span class="line">            <span class="type">DispatchQueue</span>.main.async &#123;</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"DispatchQueue.main.async: task:(taskIndex:\(index)"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"DispatchQueue.main.async: after"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">打印： </span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: befor &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: after &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">0</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">1</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">2</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">3</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">4</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">5</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">6</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">7</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">8</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">9</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>主队列(串行)同步执行</strong></p>
+<p>执行的效果就俩字 <strong>死锁</strong></p>
+<p>主线程同步，在 Swift 中，编译阶段就报错，在 oc  中是在运行的时候才能发现。体现的主要是界面的 “假死”。</p>
+<h1 id="UITableView"><a href="#UITableView" class="headerlink" title="UITableView"></a>UITableView</h1><p>要实现Tableview必须要签订2个协议</p>
+<p>UITableViewDelegate:数据视图的普通协议,作用是:处理数据视图事件.<br>UITableViewDataSource:数据视图的数据代理协议,作用是:处理视图的数据代理.</p>
+<p>实现签订的协议的2个协议方法：<br>返回数字，每个section有多少个row</p>
+<p>返回cell，cell就是TableView显示时候的格子内容，根据indexPath和数据决定;</p>
+<h2 id="观察者设计模式、KVO"><a href="#观察者设计模式、KVO" class="headerlink" title="观察者设计模式、KVO"></a>观察者设计模式、KVO</h2><h4 id="设计模式——观察者设计模式"><a href="#设计模式——观察者设计模式" class="headerlink" title="设计模式——观察者设计模式"></a>设计模式——观察者设计模式</h4><p>A对B的变化感兴趣，就注册为B的观察者，当B发生变化时通知A，告知B发生了变化。</p>
+<p>指定一个被观察对象(例如 A 类)，当对象某个属性(例如 A 中的字符串 name)发生更改时，对象会获得通知，并作出相应处理；</p>
+<p>在 MVC 设计架构下的项目，KVO 机制很适合实现 mode 模型和 view 视图之间的通讯。比如label中的对象为 num=0 ，我们按下按钮之后对象的num++，则label改变。</p>
+<h4 id="设计模式——通知机制"><a href="#设计模式——通知机制" class="headerlink" title="设计模式——通知机制"></a>设计模式——通知机制</h4><p>当用户从后台进入，从非活跃的状态进入活跃状态的时候，系统自动发送“becomeActive”通知，如果有注册监听者（观察者），则执行回调方法。【天气预报需要用】</p>
+<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><h3 id="浏览器进行一次网络请求都需要哪些步骤？"><a href="#浏览器进行一次网络请求都需要哪些步骤？" class="headerlink" title="浏览器进行一次网络请求都需要哪些步骤？"></a>浏览器进行一次网络请求都需要哪些步骤？</h3><ul>
+<li>1、<strong>域名解析</strong>：<ul>
+<li>浏览器查找域名的 IP 地址、</li>
+<li>没找到后发送给 DNS 服务器（本地host，电信），让它解析为 IP 地址</li>
+</ul>
+</li>
+<li><strong>2、TCP的三次握手</strong></li>
+<li>3、建立TCP连接后发起HTTP请求，浏览器向 web 服务器发送一个 HTTP 请求<ul>
+<li><strong>HTTP请求格式</strong>：是请求方法（GET/POST/DELETE/PUT/HEAD）、URI路径、HTTP版本号。</li>
+<li><strong>3. 2  服务器响应HTTP请求</strong>：状态行、响应头、空行、消息体。</li>
+</ul>
+</li>
+<li>4、<strong>浏览器解析html代码，并请求html代码中的资源</strong><ul>
+<li>服务器的永久重定向响应：“<a href="https://www.google.com/”" target="_blank" rel="noopener">https://www.google.com/”</a> 而非“<a href="http://google.com/”。" target="_blank" rel="noopener">http://google.com/”。</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h3><p>第三次握手是为了防止失效的连接请求到达服务器，让服务器错误打开连接。客户端发送的连接请求如果<strong>在网络中滞留</strong>，那么就会隔很长一段时间才能收到服务器端发回的连接确认。客户端等待一个超时重传时间之后，就会<strong>重新请求连接</strong>。但是这个滞留的连接请求最后还是会到达服务器，如果不进行三次握手，那么<strong>服务器就会打开两个连接</strong>。如果有第三次握手，客户端会忽略服务器之后发送的对滞留连接请求的连接确认，不进行第三次握手，因此就不会再次打开连接。</p>
 
           
         
@@ -1542,7 +1677,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/23/数据可视化 - 经典的图表分析/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/23/数据可视化/数据可视化 - 经典的图表分析/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -1561,7 +1696,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/23/数据可视化 - 经典的图表分析/" itemprop="url">数据可视化 - 经典的图表分析</a></h1>
+                <a class="post-title-link" href="/2019/03/23/数据可视化/数据可视化 - 经典的图表分析/" itemprop="url">数据可视化 - 经典的图表分析</a></h1>
         
 
         <div class="post-meta">
@@ -1616,8 +1751,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/23/数据可视化 - 经典的图表分析/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/23/数据可视化 - 经典的图表分析/" itemprop="commentCount"></span>
+                <a href="/2019/03/23/数据可视化/数据可视化 - 经典的图表分析/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/23/数据可视化/数据可视化 - 经典的图表分析/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1625,7 +1760,7 @@
 
           
           
-             <span id="/2019/03/23/数据可视化 - 经典的图表分析/" class="leancloud_visitors" data-flag-title="数据可视化 - 经典的图表分析">
+             <span id="/2019/03/23/数据可视化/数据可视化 - 经典的图表分析/" class="leancloud_visitors" data-flag-title="数据可视化 - 经典的图表分析">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -2202,7 +2337,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/07/IOS12+Swift4+Xcode10开发 - 4 元气天气APP/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/07/👀IOS12+Swift4+Xcode10开发 - 4 元气天气APP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -2221,7 +2356,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/07/IOS12+Swift4+Xcode10开发 - 4 元气天气APP/" itemprop="url">IOS12+Swift4+Xcode10开发 - 4 元气天气APP</a></h1>
+                <a class="post-title-link" href="/2019/03/07/👀IOS12+Swift4+Xcode10开发 - 4 元气天气APP/" itemprop="url">IOS12+Swift4+Xcode10开发 - 4 元气天气APP</a></h1>
         
 
         <div class="post-meta">
@@ -2276,8 +2411,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/07/IOS12+Swift4+Xcode10开发 - 4 元气天气APP/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/07/IOS12+Swift4+Xcode10开发 - 4 元气天气APP/" itemprop="commentCount"></span>
+                <a href="/2019/03/07/👀IOS12+Swift4+Xcode10开发 - 4 元气天气APP/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/07/👀IOS12+Swift4+Xcode10开发 - 4 元气天气APP/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -2285,7 +2420,7 @@
 
           
           
-             <span id="/2019/03/07/IOS12+Swift4+Xcode10开发 - 4 元气天气APP/" class="leancloud_visitors" data-flag-title="IOS12+Swift4+Xcode10开发 - 4 元气天气APP">
+             <span id="/2019/03/07/👀IOS12+Swift4+Xcode10开发 - 4 元气天气APP/" class="leancloud_visitors" data-flag-title="IOS12+Swift4+Xcode10开发 - 4 元气天气APP">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -2360,19 +2495,23 @@
 <p>segue导航正向传值较容易，3步骤。1在prepare函数部分获取segue的identifier【转换箭头】，2使用as!强制转化，实例化该segue的destination页面vc，3使用实例化的vc进行传值。这样就可以在下一个页面使用本页面中的“所在城市”的信息了。</p>
 <p>而反向传值就不同。如果采用control+drag方式，从页面二的button到页面一加上转换箭头，这样只会再重新生成新的页面一，定位到本地天气；而不是预想的回到原先页面，重新展示所搜索城市的信息。</p>
 <p>所以需要自定义protocol，使用delegate实现导航的反向传值。</p>
-<p>在页面二需要：3个步骤来自定义协议portocol，实现【按下查找城市按钮，获取输入的city值】的功能。</p>
+<ul>
+<li>在页面二需要：3个步骤来自定义协议portocol，实现【按下查找城市按钮，获取输入的city值】的功能。</li>
+</ul>
 <p>1自定义协议，安排协议中的方法（获取输入的city，传给页面一），2 声明协议属于页面二中的delegate变量 3规定在哪里触发协议中的事件。</p>
-<p>在页面一种需要：3个步骤来实现协议，实现【获取页面二中city的值，并展示于本页面】的功能。</p>
+<ul>
+<li>在页面一种需要：3个步骤来实现协议，实现【获取页面二中city的值，并展示于本页面】的功能。</li>
+</ul>
 <p>1遵守协议 2 实现协议中的方法（获取city值，根据值获取温度对象的所有信息，展示与本页面）3 第二个页面vc的事件函数委托delegate给self实现。</p>
 <h4 id="获取当前位置的天气"><a href="#获取当前位置的天气" class="headerlink" title="获取当前位置的天气"></a>获取当前位置的天气</h4><p>1 委托本页面，实现定位协议中的请求位置的方法，获得经纬度。（难点）</p>
 <p>2 根据经纬度信息，使用Alamofire请求API来获取天气数据；</p>
 <p>3 利用SwiftJSON解析生成数据；</p>
 <p>4 给weather对象赋值；</p>
 <p>5 再使用weather对象中的天气、文字信息更新页面。</p>
-<p>–</p>
-<p>使用了定位协议CLLocationManagerDelegate的方法。</p>
-<p>1 遵守定位协议 2 实例化定位管理器CLLocationManager 3 实现协议中的方法（获取当前的经纬度）4locationManager委托本页面</p>
-<p>当manager请求位置的时候，则系统自动调用manager方法，在该方法里获得经纬度。</p>
+<hr>
+<p><strong>✨使用了定位协议CLLocationManagerDelegate的方法。</strong></p>
+<p><strong>1 遵守定位协议 2 实例化定位管理器CLLocationManager 3 实现协议中的方法（获取当前的经纬度）4locationManager委托本页面</strong></p>
+<p><strong>当manager请求位置的时候，则系统自动调用manager方法，在该方法里获得经纬度。</strong></p>
 <h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><h4 id="protocol-delegate：类似java中的接口与实现"><a href="#protocol-delegate：类似java中的接口与实现" class="headerlink" title="protocol-delegate：类似java中的接口与实现"></a>protocol-delegate：类似java中的接口与实现</h4><p>协议——工具间，协议中的方法——工具，实例化的对象——老板，本页面self——打工仔，委托——老板让打工仔干活</p>
 <h4 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h4><p>model中的计算属性——compute属性 某个属性需要根据另一个属性来确定，我们定义其为计算属性</p>
 <p>如根据天气情况属性——晴天，得到对应的icon和words：icon为小太阳、wors为“天晴是你的心情”。</p>
@@ -2382,7 +2521,7 @@
 <p>场景：1 私有的辅助函数 ；2 遵守协议（实现某个协议的方法放到一个 extension 中）；3 模型（Model用结构体， 使用extension 将 Model 的 属性 和 基于属性的计算计算属性分离 ）</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/03/07/IOS12+Swift4+Xcode10开发 - 4 元气天气APP/#more" rel="contents">
+            <a class="btn" href="/2019/03/07/👀IOS12+Swift4+Xcode10开发 - 4 元气天气APP/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -2472,7 +2611,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">50</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2494,7 +2633,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2568,7 +2707,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">37.8k</span>
+    <span title="Site words total count">49.5k</span>
   
 </div>
 

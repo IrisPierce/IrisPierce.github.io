@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/saturn_128.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/saturn_32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/saturn_16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="合集,实习,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="题目合集一、TCP和UDP的区别1.为什么握手需要三次，而挥手却需要四次？握手的时候，A和B打个招呼，B可以直接把自己的SYN信息和对A的回应ACK信息一起带上，但是挥手的时候，A说我要断开了，B还没发完最后的数据，因此需要先回应一下A，我收到你的断开的请求了，但是你要等我把最后的内容给你，所以这里分开了2步： （1）回应A； （2）发送自己的最后一个数据 2.为什么A进入TIME_WAIT需要等">
+<meta name="keywords" content="合集,实习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机基础 - 1 计算机网络">
+<meta property="og:url" content="http://yoursite.com/2019/03/03/✨计算机基础 - 1 计算机网络/index.html">
+<meta property="og:site_name" content="IRIS&#39;s BLOG">
+<meta property="og:description" content="题目合集一、TCP和UDP的区别1.为什么握手需要三次，而挥手却需要四次？握手的时候，A和B打个招呼，B可以直接把自己的SYN信息和对A的回应ACK信息一起带上，但是挥手的时候，A说我要断开了，B还没发完最后的数据，因此需要先回应一下A，我收到你的断开的请求了，但是你要等我把最后的内容给你，所以这里分开了2步： （1）回应A； （2）发送自己的最后一个数据 2.为什么A进入TIME_WAIT需要等">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g10hnq0hk7j31mx0u0juy.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g1e5wqlkavj31dm0p04b8.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g1e6ebmf4oj31aw0qak8z.jpg">
+<meta property="og:updated_time" content="2019-03-30T11:04:14.916Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="计算机基础 - 1 计算机网络">
+<meta name="twitter:description" content="题目合集一、TCP和UDP的区别1.为什么握手需要三次，而挥手却需要四次？握手的时候，A和B打个招呼，B可以直接把自己的SYN信息和对A的回应ACK信息一起带上，但是挥手的时候，A说我要断开了，B还没发完最后的数据，因此需要先回应一下A，我收到你的断开的请求了，但是你要等我把最后的内容给你，所以这里分开了2步： （1）回应A； （2）发送自己的最后一个数据 2.为什么A进入TIME_WAIT需要等">
+<meta name="twitter:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g10hnq0hk7j31mx0u0juy.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/03/✨计算机基础 - 1 计算机网络/">
+
+
+
+
+
+  <title>计算机基础 - 1 计算机网络 | IRIS's BLOG</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">IRIS's BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">王圆圆的每日报告</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/03/✨计算机基础 - 1 计算机网络/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">计算机基础 - 1 计算机网络</h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-03T16:00:57+08:00">
+                2019-03-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/实习/" itemprop="url" rel="index">
+                    <span itemprop="name">实习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/03/✨计算机基础 - 1 计算机网络/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/03/✨计算机基础 - 1 计算机网络/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/03/✨计算机基础 - 1 计算机网络/" class="leancloud_visitors" data-flag-title="计算机基础 - 1 计算机网络">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  14
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="题目合集"><a href="#题目合集" class="headerlink" title="题目合集"></a>题目合集</h1><h3 id="一、TCP和UDP的区别"><a href="#一、TCP和UDP的区别" class="headerlink" title="一、TCP和UDP的区别"></a>一、TCP和UDP的区别</h3><h4 id="1-为什么握手需要三次，而挥手却需要四次？"><a href="#1-为什么握手需要三次，而挥手却需要四次？" class="headerlink" title="1.为什么握手需要三次，而挥手却需要四次？"></a>1.为什么握手需要三次，而挥手却需要四次？</h4><p>握手的时候，A和B打个招呼，B可以直接把自己的SYN信息和对A的回应ACK信息一起带上，但是挥手的时候，A说我要断开了，B还没发完最后的数据，因此需要先回应一下A，我收到你的断开的请求了，但是你要等我把最后的内容给你，所以这里分开了2步： （1）回应A； （2）发送自己的最后一个数据</p>
+<h4 id="2-为什么A进入TIME-WAIT需要等待最大报文段生存的时间后，才能关闭？"><a href="#2-为什么A进入TIME-WAIT需要等待最大报文段生存的时间后，才能关闭？" class="headerlink" title="2.为什么A进入TIME_WAIT需要等待最大报文段生存的时间后，才能关闭？"></a>2.为什么A进入TIME_WAIT需要等待最大报文段生存的时间后，才能关闭？</h4><p>原因是，担心网络不可靠而导致的丢包，最后一个回应B的ACK万一丢了怎么办，在这个时间内，A是可以重新发包的，但是超过了最大等待时间的话，就算收不到也没用了，所以就可以关闭了。</p>
+<h3 id="二、HTTP-1-1是什么？"><a href="#二、HTTP-1-1是什么？" class="headerlink" title="二、HTTP 1.1是什么？"></a>二、HTTP 1.1是什么？</h3><ul>
+<li>定义：<strong>HTTP就是一个在TCP基础上实现的，客户机与服务器之间的，请求-响应模式的双向通信协议。</strong></li>
+<li>目的：超文本传输协议（HTTP）的设计目的是保证客户机与服务器之间的通信。</li>
+</ul>
+<p>HTTP 协议构建于 TCP/IP 协议之上，是一个应用层协议，默认端口号是 80。</p>
+<p>通过HTTP协议请求的资源由统一资源标识符<strong>URI</strong>来标识。</p>
+<p>报文：HTTP 的报文大概分为三大部分：第一部分是请求行，第二部分是请求的首部，第三部分才是请求的正文实体。</p>
+<ul>
+<li><p>常用的HTTP方法有哪些？</p>
+<ul>
+<li>GET： 用于请求访问已经被URI（统一资源标识符）识别的资源，可以通过URL传参给服务器</li>
+<li>POST：用于传输信息给服务器，主要功能与GET方法类似，但一般推荐使用POST方式。</li>
+<li>PUT： 传输文件，报文主体中包含文件内容，保存到对应URI位置。</li>
+<li>HEAD： 获得报文首部，与GET方法类似，只是不返回报文主体，一般用于验证URI是否有效。</li>
+<li>DELETE：删除文件，与PUT方法相反，删除对应URI位置的文件。</li>
+<li>OPTIONS：查询相应URI支持的HTTP方法。</li>
+</ul>
+</li>
+<li><p>HTTP 状态消息</p>
+<ul>
+<li>1xx: 信息。100收到部分请求。</li>
+<li>2xx：成果。200 请求成功（其后是对get、post请求的应答文档）</li>
+<li>3xx：重定向。301永久重定向，302 转移至临时url（临时重定向）</li>
+<li>4xx：客户端错误。403禁止访问，404无法找到被请求页面</li>
+<li>5xx：服务器错误</li>
+</ul>
+</li>
+</ul>
+<h3 id="三、HTTPS是什么？SSL过程。"><a href="#三、HTTPS是什么？SSL过程。" class="headerlink" title="三、HTTPS是什么？SSL过程。"></a>三、HTTPS是什么？SSL过程。</h3><p>HTTPS并不是一个新协议，HTTPS就是HTTP加上加密处理（一般是SSL安全通信线路，TLS）+认证+完整性保护</p>
+<p>原本HTTP先和TCP（假定传输层是TCP协议）直接通信，而加了SSL后，就变成HTTP先和SSL通信，再由SSL和TCP通信，相当于SSL被嵌在了HTTP和TCP之间。</p>
+<p>HTTPS 在传输数据之前需要客户端（浏览器）与服务端（网站）之间进行一次握手，在握手过程中将确立双方加密传输数据的密码信息。TLS/SSL中使用了非对称加密，对称加密以及HASH算法。握手过程的简单描述如下：</p>
+<p>一、首先HTTP请求<strong>服务端生成证书，客户端对证书</strong>的有效期、合法性、域名是否与请求的域名一致、证书的公钥（RSA加密）等进行校验；</p>
+<p>二、客户端如果校验通过后，<strong>生成随机数，随机数使用公钥进行加密（RSA加密）</strong>；</p>
+<p>三、<strong>消息体的摘要进行MD5算法加密</strong>，此时就得到了<strong>RSA签名</strong>；</p>
+<p>四、消息发送给服务端，只有<strong>服务端（RSA私钥）能解密</strong>。</p>
+<p>五、<strong>解密得到的随机数，再用AES加密，作为密钥</strong>（此时的密钥只有客户端和服务端知道）。</p>
+<h3 id="四、GET和POST的区别"><a href="#四、GET和POST的区别" class="headerlink" title="四、GET和POST的区别"></a>四、GET和POST的区别</h3><p>本质：get和post就是TCP连接，并无差别。但是由于HTTP的规定和浏览器/服务器的限制，导致他们在应用过程中体现出一些不同。</p>
+<ul>
+<li>1使用：get参数通过url传递，post参数放在request body中</li>
+<li>2限制：<ul>
+<li>get参数是有长度限制的，而post没有</li>
+<li>get请求支持支持ASCII字符，而post支持标准字符集，可以传递中文字符</li>
+</ul>
+</li>
+<li>3安全性：<ul>
+<li>get参数直接暴露在url中，较为不安全，不能传递敏感信息</li>
+<li>get请求参数会被完整保留在浏览历史记录里，而post中的参数不会被保留</li>
+</ul>
+</li>
+<li>4数据包：✨get产生一个TCP数据包，post产生两个TCP数据包：<ul>
+<li>GET ：浏览器会把http header和data一并发送出去，服务器响应200（返回数据）；</li>
+<li>POST：浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。</li>
+<li>（据研究，在网络环境好的情况下，发一次包的时间和发两次包的时间差别基本可以无视。而在网络环境差的情况下，两次包的TCP在验证数据包完整性上，有非常大的优点。）</li>
+</ul>
+</li>
+</ul>
+<p>总结：对于get和post的区别，get传递数据如同是写在脸上，post传递数据如同放在肚子里，脸上不能放太多东西，也不能放隐私东西，肚子里就无所谓啦~</p>
+<h3 id="五、浏览器进行一次网络请求都需要哪些步骤？"><a href="#五、浏览器进行一次网络请求都需要哪些步骤？" class="headerlink" title="五、浏览器进行一次网络请求都需要哪些步骤？"></a>五、浏览器进行一次网络请求都需要哪些步骤？</h3><p>建立TCP连接-&gt;发送请求行-&gt;发送请求头-&gt;（到达服务器）发送状态行-&gt;发送响应头-&gt;发送响应数据-&gt;断TCP连接</p>
+<ul>
+<li>1、<strong>域名解析</strong>：<ul>
+<li>包含com的时候浏览器认为其不是关键字而是URL，未指明协议的时候开头加上HTTP</li>
+<li>浏览器查找是否存有域名的 IP 地址，没找到后发送给 DNS 服务器（本地host，电信），让它解析为 IP 地址</li>
+</ul>
+</li>
+<li><strong>2、TCP的三次握手：建立连接</strong></li>
+<li>3、web浏览器向 web 服务器发送一个 HTTP 请求<ul>
+<li><strong>HTTP请求格式</strong>：GET(请求) /sample/hello.jsp(URI) HTTP/1.1(版本)</li>
+<li>过程：请求行+请求头，最后发送一行空白行通知服务器结束信息发送</li>
+</ul>
+</li>
+<li>4、Web服务器应答 <ul>
+<li>到达负载均衡器的IP地址之后，如果是GTTPS，则返回307告诉需要重定向，然后会发送TLS握手</li>
+<li>HTTP/1.1 200 OK ，应答的第一部分是协议的版本号和应答状态码</li>
+<li>过程：应答行+应答头+发送数据</li>
+</ul>
+</li>
+<li>4、<strong>浏览器解析html代码，并请求html代码中的资源</strong><ul>
+<li>服务器的永久重定向响应：“<a href="https://www.google.com/”" target="_blank" rel="noopener">https://www.google.com/”</a> 而非“<a href="http://google.com/”。" target="_blank" rel="noopener">http://google.com/”。</a></li>
+<li>解析 —— HTML，CSS，JS</li>
+<li>渲染 —— 构建 DOM 树 -&gt; 渲染 -&gt; 布局 -&gt; 绘制</li>
+</ul>
+</li>
+</ul>
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><ul>
+<li><p>讲述一下计算机网络的七层</p>
+<ul>
+<li><strong>应用层：发起请求的逻辑</strong></li>
+<li>表示层</li>
+<li>会话层 TLS</li>
+<li><strong>传输层——TCP</strong></li>
+<li><strong>网络层——数据路由包IP——路由器</strong></li>
+<li>数据链路层——帧，数据包的容器——交换机</li>
+<li>物理层——比特流——网卡、集线器</li>
+</ul>
+</li>
+<li><p>网际层协议：IP协议、ICMP协议、ARP协议、RARP协议<br>传输层协议：TCP协议、UDP协议<br>应用层协议：FTP、Telnet、SMTP、HTTP、RIP、NFS、DNS</p>
+</li>
+</ul>
+<p>如果将 TCP 比作成熟的社会人，UDP 则是头脑简单的小朋友。</p>
+<h2 id="UDP用户数据报协议：-面向无连接"><a href="#UDP用户数据报协议：-面向无连接" class="headerlink" title="UDP用户数据报协议： 面向无连接"></a>UDP用户数据报协议： 面向无连接</h2><p>包：源端口号和目标端口号+数据</p>
+<p>UDP 是一个简单的传输层协议。和 TCP 相比，UDP 有下面几个显著特性：</p>
+<ul>
+<li>UDP 缺乏可靠性。UDP 本身不提供确认，序列号，超时重传等机制。UDP 数据报可能在网络中被复制，被重新排序。即 UDP 不保证数据报会到达其最终目的地，也不保证各个数据报的先后顺序，也不保证每个数据报只到达一次</li>
+<li>UDP 数据报是有长度的。每个 UDP 数据报都有长度，如果一个数据报正确地到达目的地，那么该数据报的长度将随数据一起传递给接收方。而 TCP 是一个字节流协议，没有任何（协议上的）记录边界。</li>
+<li>UDP 是无连接的。UDP 客户和服务器之前不必存在长期的关系。UDP 发送数据报之前也不需要经过握手创建连接的过程。</li>
+<li>UDP 支持多播和广播。</li>
+</ul>
+<p>适合情况：</p>
+<ul>
+<li>流媒体的协议：直播</li>
+<li><p>实时游戏</p>
+</li>
+<li><p>移动通信领域</p>
+</li>
+</ul>
+<h2 id="TCP传输控制协议：-面向连接"><a href="#TCP传输控制协议：-面向连接" class="headerlink" title="TCP传输控制协议： 面向连接"></a>TCP传输控制协议： 面向连接</h2><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g10hnq0hk7j31mx0u0juy.jpg" alt="image-20190313004353741"></p>
+<p>分析：</p>
+<p>源端口号和目标端口号：数据知道发给哪个应用。</p>
+<p>包的序号：那个包先来，那个后来</p>
+<p>确认序号：发出去的包应该有确认，无确认再发一次。</p>
+<p>状态位：SYN 是发起一个连接，ACK 是回复，RST 是重新连接，FIN 是结束连接等。是面向连接的，因而双方要维护连接的状态，这些带状态位的包的的发送，会引起双方的状态变更。</p>
+<p>窗口大小：标识自己当前能够的处理能力，让对方根据自己窗口来确定发送速度。</p>
+<p>拥塞控制：控制自己发送的快慢。</p>
+<h3 id="TCP-的三次握手"><a href="#TCP-的三次握手" class="headerlink" title="TCP 的三次握手"></a>TCP 的三次握手</h3><ul>
+<li>TCP 提供一种<strong>面向连接的、可靠的</strong>字节流服务。 TCP 也不是 100% 可靠的协议，它所能提供的是数据的可靠递送或故障的可靠通知。</li>
+<li></li>
+</ul>
+<p>作用：三次握手除了双方建立连接外，还获取TCP包的序号。</p>
+<h4 id="“请求-gt-应答-gt-应答之应答”"><a href="#“请求-gt-应答-gt-应答之应答”" class="headerlink" title="“请求 -&gt; 应答 -&gt; 应答之应答”"></a>“请求 -&gt; 应答 -&gt; 应答之应答”</h4><p>A：您好，我是 A。 </p>
+<p>B：您好 A，我是 B。 </p>
+<p>A：您好 B。</p>
+<h4 id="状态时序图："><a href="#状态时序图：" class="headerlink" title="状态时序图："></a>状态时序图：</h4><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g1e5wqlkavj31dm0p04b8.jpg" alt="image-20190324203513867"></p>
+<p>三次握手的目的是连接服务器指定端口，建立 TCP 连接，并同步连接双方的序列号和确认号，交换 TCP 窗口大小信息。在 socket 编程中，客户端执行 <code>connect()</code> 时。将触发三次握手。</p>
+<ul>
+<li><p>第一次握手(SYN=1, seq=x):</p>
+<p>客户端发送一个 TCP 的 SYN 标志位置1的包，指明客户端打算连接的服务器的端口，以及初始序号 X,保存在包头的序列号(Sequence Number)字段里。</p>
+<p>发送完毕后，客户端进入 <code>SYN_SEND</code> 状态。</p>
+</li>
+<li><p>第二次握手(SYN=1, ACK=1, seq=y, ACKnum=x+1):</p>
+<p>服务器发回确认包(ACK)应答。即 SYN 标志位和 ACK 标志位均为1。服务器端选择自己 ISN 序列号，放到 Seq 域里，同时将确认序号(Acknowledgement Number)设置为客户的 ISN 加1，即X+1。 </p>
+<p>发送完毕后，服务器端进入 <code>SYN_RCVD</code> 状态。</p>
+</li>
+<li><p>第三次握手(ACK=1，ACKnum=y+1)</p>
+<p>客户端再次发送确认包(ACK)，SYN 标志位为0，ACK 标志位为1，并且把服务器发来 ACK 的序号字段+1，放在确定字段中发送给对方，并且在数据段放写ISN的+1</p>
+<p>发送完毕后，客户端进入 <code>ESTABLISHED</code> 状态，当服务器端接收到这个包时，也进入 <code>ESTABLISHED</code> 状态，TCP 握手结束。</p>
+</li>
+</ul>
+<p>以上就是TCP建立连接的三次握手过程，以上流程还需要补充的是：</p>
+<ul>
+<li>对于建链接的3次握手，主要是要初始化Sequence Number 的初始值。通信的双方要互相通知对方自己的初始化的Sequence Number（缩写为ISN：Inital Sequence Number）——所以叫SYN，全称（同步seq号）Synchronize Sequence Numbers。也就上图中的 x 和 y。这个号要作为以后的数据通信的序号，以保证应用层接收到的数据不会因为网络上的传输的问题而乱序（TCP会用这个序号来拼接数据）。</li>
+<li>第三次握手是为了防止失效的连接请求到达服务器，让服务器错误打开连接。客户端发送的连接请求如果<strong>在网络中滞留</strong>，那么就会隔很长一段时间才能收到服务器端发回的连接确认。客户端等待一个超时重传时间之后，就会<strong>重新请求连接</strong>。但是这个滞留的连接请求最后还是会到达服务器，如果不进行三次握手，那么<strong>服务器就会打开两个连接</strong>。如果有第三次握手，客户端会忽略服务器之后发送的对滞留连接请求的连接确认，不进行第三次握手，因此就不会再次打开连接。</li>
+</ul>
+<h3 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h3><p>A：B 啊，我不想玩了。</p>
+<p><strong>B：哦，你不想玩了啊，我知道了。（半关闭）</strong></p>
+<p><strong>B：A 啊，好吧，我也不玩了，拜拜。</strong></p>
+<p> A：好的，拜拜。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g1e6ebmf4oj31aw0qak8z.jpg" alt="image-20190324205210107"></p>
+<p>客户端或服务器均可主动发起挥手动作，在 socket 编程中，任何一方执行 <code>close()</code> 操作即可产生挥手操作。过程：</p>
+<ul>
+<li><p>第一次挥手(FIN=1，seq=x)</p>
+<p>假设客户端想要关闭连接，客户端发送一个 FIN 标志位置为1的包，表示自己已经没有数据可以发送了，但是仍然可以接受数据。</p>
+<p>发送后，客户端进入 <code>FIN_WAIT_1</code> 状态。</p>
+</li>
+<li><p>第二次挥手(ACK=1，ACKnum=x+1)</p>
+<p>服务器收到 FIN 包，发送一个确认包，表明自己接受到了客户端关闭连接的请求，但还没有准备好关闭连接。</p>
+<p>发送后，服务器端进入 <code>CLOSE_WAIT</code> 状态，客户端接收到这个确认包之后，进入 <code>FIN_WAIT_2</code> 状态，等待服务器端关闭连接。</p>
+</li>
+<li><p>第三次挥手(FIN=1，seq=y)</p>
+<p>服务器端准备好关闭连接时，向客户端发送结束连接请求，FIN 置为1。</p>
+<p>发送完毕后，服务器端进入 <code>LAST_ACK</code> 状态，等待来自客户端的最后一个ACK。</p>
+</li>
+<li><p>第四次挥手(ACK=1，ACKnum=y+1)</p>
+<p>客户端接收到服务器端的关闭请求，发送确认包，进入 <code>TIME_WAIT</code>状态，等待可能需要重传的 ACK 包。</p>
+<p>服务器端接收到这个确认包之后，关闭连接，进入 <code>CLOSED</code> 状态。</p>
+<p>客户端等待了某个固定时间（两个最大段生命周期，2MSL）之后，没有收到服务器端的 ACK ，认为服务器端已经正常关闭连接，于是自己也关闭连接，进入 <code>CLOSED</code> 状态。</p>
+</li>
+</ul>
+<p>四次挥手的原因：</p>
+<ul>
+<li>TCP连接是全双工的，即一端接收到FIN报时，对端虽然不再能发送数据，但是可以接收数据，所以需要两边都关闭连接才算完全关闭了这条TCP连接。</li>
+</ul>
+<h3 id="DDOS攻击"><a href="#DDOS攻击" class="headerlink" title="DDOS攻击"></a>DDOS攻击</h3><p>典型的场景是DDOS攻击，也可以说是tcp的SYN Flood攻击，又叫洪水攻击； 根据上面的分析，我们知道tcp的握手环节是比较耗时的，当client端发起连接请求的时候，server端会回应，然后等待client的最终确认信息，默认情况下的linux会等待1到63s这样(如果有特殊的设置，这个时间可以到1-2min这样)，默认最长是63s之后才会断开，之前这段时间内属于半连接的状态，服务器不会丢弃掉这些连接，而是会等，试想如果有一个人突然想你的server瞬间之内发送了几千万个连接请求，但是对服务端的响应不做理睬，这样很容易就导致我们正常的tcp连接进不去，从而出现服务拒绝的情况，而他只需要一个简简单单的脚本去给你丢包就可以了，这种情况就会导致服务器对正常的客户端表现为宕机。。此种攻击的成本比较低，但是防护却特别麻烦，因为你必须要保证正常的不能因为访问次数的提高而出现拒绝。</p>
+<h2 id="http协议"><a href="#http协议" class="headerlink" title="http协议"></a>http协议</h2>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/合集/" rel="tag"># 合集</a>
+          
+            <a href="/tags/实习/" rel="tag"># 实习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/03/✨计算机基础 - 0 操作系统/" rel="next" title="计算机基础 - 0 操作系统">
+                <i class="fa fa-chevron-left"></i> 计算机基础 - 0 操作系统
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/03/存档/合集 - 优秀iOS开发者博客/" rel="prev" title="合集 - 优秀iOS开发者博客">
+                合集 - 优秀iOS开发者博客 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/irisHeader.jpeg" alt="IRIS">
+            
+              <p class="site-author-name" itemprop="name">IRIS</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/irispierce" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:wangyusi007@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目合集"><span class="nav-number">1.</span> <span class="nav-text">题目合集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、TCP和UDP的区别"><span class="nav-number">1.0.1.</span> <span class="nav-text">一、TCP和UDP的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-为什么握手需要三次，而挥手却需要四次？"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">1.为什么握手需要三次，而挥手却需要四次？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-为什么A进入TIME-WAIT需要等待最大报文段生存的时间后，才能关闭？"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">2.为什么A进入TIME_WAIT需要等待最大报文段生存的时间后，才能关闭？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、HTTP-1-1是什么？"><span class="nav-number">1.0.2.</span> <span class="nav-text">二、HTTP 1.1是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、HTTPS是什么？SSL过程。"><span class="nav-number">1.0.3.</span> <span class="nav-text">三、HTTPS是什么？SSL过程。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、GET和POST的区别"><span class="nav-number">1.0.4.</span> <span class="nav-text">四、GET和POST的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、浏览器进行一次网络请求都需要哪些步骤？"><span class="nav-number">1.0.5.</span> <span class="nav-text">五、浏览器进行一次网络请求都需要哪些步骤？</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#基础知识"><span class="nav-number">2.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#UDP用户数据报协议：-面向无连接"><span class="nav-number">2.1.</span> <span class="nav-text">UDP用户数据报协议： 面向无连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP传输控制协议：-面向连接"><span class="nav-number">2.2.</span> <span class="nav-text">TCP传输控制协议： 面向连接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-的三次握手"><span class="nav-number">2.2.1.</span> <span class="nav-text">TCP 的三次握手</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#“请求-gt-应答-gt-应答之应答”"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">“请求 -&gt; 应答 -&gt; 应答之应答”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#状态时序图："><span class="nav-number">2.2.1.2.</span> <span class="nav-text">状态时序图：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四次挥手"><span class="nav-number">2.2.2.</span> <span class="nav-text">四次挥手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DDOS攻击"><span class="nav-number">2.2.3.</span> <span class="nav-text">DDOS攻击</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http协议"><span class="nav-number">2.3.</span> <span class="nav-text">http协议</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">IRIS</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">49.5k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'K56V1wrSmQT1Y57HAlTWMY6m-gzGzoHsz',
+        appKey: '1KvpI6T94PESCJ3yikky6J1P',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("K56V1wrSmQT1Y57HAlTWMY6m-gzGzoHsz", "1KvpI6T94PESCJ3yikky6J1P");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
