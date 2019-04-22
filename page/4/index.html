@@ -289,224 +289,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/28/iOS基础/IOS开发 - 简单的计时器/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/28/iOS基础/IOS开发 - 简单的计时器/" itemprop="url">IOS开发 - 简单的计时器</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-28T16:59:57+08:00">
-                2019-02-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/IOS开发/" itemprop="url" rel="index">
-                    <span itemprop="name">IOS开发</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/02/28/iOS基础/IOS开发 - 简单的计时器/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/28/iOS基础/IOS开发 - 简单的计时器/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/02/28/iOS基础/IOS开发 - 简单的计时器/" class="leancloud_visitors" data-flag-title="IOS开发 - 简单的计时器">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1.3k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  6
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g0ncssbanmg309d0go75a.gif" alt="4"></p>
-<p>项目完全由代码所写，没有使用storyboard，代码更具有复现性。</p>
-<p>手动部分：需要将图片拖入assets</p>
-<h2 id="项目知识"><a href="#项目知识" class="headerlink" title="项目知识"></a>项目知识</h2><h3 id="SnapKit-布局"><a href="#SnapKit-布局" class="headerlink" title="SnapKit 布局"></a>SnapKit 布局</h3><p>经典的<strong>Swift</strong>版的第三方库，专门用于项目的自动布局，目前在github上的<strong>stars</strong>就高达9340颗星。</p>
-<p>作者仍然是写Objective-C的第三方库Masonry的大牛 - <strong>@Robert Payne</strong>。</p>
-<h4 id="SnapKit配置"><a href="#SnapKit配置" class="headerlink" title="SnapKit配置"></a>SnapKit配置</h4><p>1.github下载：<a href="https://github.com/SnapKit/SnapKit" target="_blank" rel="noopener">https://github.com/SnapKit/SnapKit</a></p>
-<p>2.将下载下来的SnapKit项目的 <strong>SnapKit.xcodeproj</strong> 拖进自己的项目目录最外层中</p>
-<p>3.工程文件 -&gt; <strong>General</strong> -&gt; <strong>Embedded Binaries</strong> 中点击加号，添加SnapKit库到项目中来 </p>
-<p>4.command+B 重新编译项目</p>
-<h4 id="SnapKit使用"><a href="#SnapKit使用" class="headerlink" title="SnapKit使用"></a>SnapKit使用</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"><span class="keyword">import</span> SnapKit</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ViewController</span>: <span class="title">UIViewController</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 1.定义box</span></span><br><span class="line">    <span class="keyword">var</span> box = <span class="type">UIView</span>()</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.viewDidLoad()</span><br><span class="line">        </span><br><span class="line">        box.backgroundColor = <span class="type">UIColor</span>.orange</span><br><span class="line">        <span class="comment">// 2.将box加入父视图，之后的布局是相对于父视图布局的</span></span><br><span class="line">        <span class="keyword">self</span>.view.addSubview(box)</span><br><span class="line">        <span class="comment">// 3. 添加布局的约束：上下左右、中心、</span></span><br><span class="line">        box.snp.makeConstraints &#123; (make) -&gt; <span class="type">Void</span> <span class="keyword">in</span></span><br><span class="line">            make.width.equalTo(<span class="number">100</span>)</span><br><span class="line">            make.height.equalTo(<span class="number">100</span>)</span><br><span class="line">            make.center.equalTo(<span class="keyword">self</span>.view)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Timer-计时器"><a href="#Timer-计时器" class="headerlink" title="Timer 计时器"></a>Timer 计时器</h3><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span>.timer = <span class="type">Timer</span>.scheduledTimer(withTimeInterval: <span class="number">0.1</span>, repeats: <span class="literal">true</span> ,block:&#123; (timer) <span class="keyword">in</span></span><br><span class="line">    <span class="comment">// withTimeInterval ： 的值0.1s 时间片后，执行的代码</span></span><br><span class="line">    <span class="comment">// repeats :   withTimeInterval的时间后，是否继续重复                                                         </span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h4 id="启动：fire"><a href="#启动：fire" class="headerlink" title="启动：fire"></a>启动：fire</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span>.timer.fire()</span><br></pre></td></tr></table></figure>
-<p>您可以使用此方法来触发重复计时器，而不会中断其常规的触发计划。</p>
-<p>如果计时器不重复 repeats，则在触发后自动失效，即使其预定的触发日期尚未到达。</p>
-<h4 id="暂停：invalidate（移除计时循环）"><a href="#暂停：invalidate（移除计时循环）" class="headerlink" title="暂停：invalidate（移除计时循环）"></a>暂停：invalidate（移除计时循环）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.timer.invalidate()</span><br></pre></td></tr></table></figure>
-<p>官方的解释是：</p>
-<p>This method is the only way to remove a timer from an NSRunLoop object. The NSRunLoop object removes and releases the timer, either just before the invalidate method returns or at some later point.</p>
-<p>这是唯一一个把一个定时器从NSRunLoop object运行循环中移除的方法。</p>
-<p>NSRunLoop object这个对象移除，并且release掉这个的定时器，或者是在这个invalidate方法返回的之前或是在之后的某个时间段，再进行移除并release操作。</p>
-<h3 id="guard"><a href="#guard" class="headerlink" title="guard"></a>guard</h3><p>guard 打头只判断合理条件，保证判断条件简约</p>
-<p>guard xxx : 如果不满足gurad后面的条件xxx，则执行else的内部代码</p>
-<p>详见 <a href="https://link.juejin.im/?target=http%3A%2F%2Fwww.jianshu.com%2Fp%2F3a8e45af7fdd" target="_blank" rel="noopener">guard详解</a></p>
-<h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  ViewController.swift</span></span><br><span class="line"><span class="comment">//  WatchDemo</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  Created by iris on 2019/2/27.</span></span><br><span class="line"><span class="comment">//  Copyright © 2019 iris. All rights reserved.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 学习：</span></span><br><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"><span class="keyword">import</span> SnapKit</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ViewController</span>: <span class="title">UIViewController</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> timer:<span class="type">Timer!</span></span><br><span class="line">    <span class="keyword">var</span> resultLabel:<span class="type">UILabel!</span>    <span class="comment">//计时器：文字显示</span></span><br><span class="line">    <span class="keyword">var</span> resultNumber:<span class="type">Double</span> = <span class="number">0</span> <span class="comment">//计时器：时间记录</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.viewDidLoad()</span><br><span class="line">        <span class="comment">// Do any additional setup after loading the view, typically from a nib.</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 1.计时器的数字显示</span></span><br><span class="line">        <span class="comment">// 1.1 数字的背景</span></span><br><span class="line">        <span class="keyword">let</span> resultView = <span class="type">UIView</span>()</span><br><span class="line">        resultView.backgroundColor = <span class="type">UIColor</span>.<span class="keyword">init</span>(red: <span class="number">0.0</span>, green: <span class="number">0.0</span>, blue: <span class="number">0.1</span>, alpha: <span class="number">1</span>)</span><br><span class="line">        <span class="comment">// 注意：使用snp.makeConstraints方法的元素必须事先添加到父元素的中，例如：self.view.addSubview(view)</span></span><br><span class="line">        <span class="keyword">self</span>.view.addSubview(resultView)</span><br><span class="line">        resultView.snp.makeConstraints&#123; (make) <span class="keyword">in</span></span><br><span class="line">            make.top.equalTo(<span class="number">0</span>)</span><br><span class="line">            make.<span class="keyword">left</span>.equalTo(<span class="number">0</span>)</span><br><span class="line">            make.height.equalTo(<span class="number">300</span>) <span class="comment">// 长度 300</span></span><br><span class="line">            make.width.equalTo(<span class="keyword">self</span>.view.frame.width)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 1.2 数字的显示</span></span><br><span class="line">        resultLabel = <span class="type">UILabel</span>()</span><br><span class="line">        <span class="keyword">self</span>.view.addSubview(resultLabel)</span><br><span class="line">        resultLabel.textColor = <span class="type">UIColor</span>.black</span><br><span class="line">        resultView.addSubview(resultLabel)</span><br><span class="line">        resultLabel.snp.makeConstraints&#123; (make) <span class="keyword">in</span></span><br><span class="line">            make.center.equalTo(resultView)</span><br><span class="line">            make.width.height.equalTo(<span class="number">140</span>)</span><br><span class="line">            make.width.equalTo(<span class="number">400</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        resultLabel.font = <span class="type">UIFont</span>.<span class="keyword">init</span>(name: <span class="string">"Helvetica Neue"</span>, size: <span class="number">60</span>)</span><br><span class="line">        resultLabel.text = <span class="string">"0.0"</span></span><br><span class="line">        resultLabel.textColor = <span class="type">UIColor</span> .white</span><br><span class="line">        <span class="comment">// 设置字体对齐方式</span></span><br><span class="line">        resultLabel.textAlignment = <span class="type">NSTextAlignment</span>.center</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 2.开始按钮</span></span><br><span class="line">        <span class="comment">// 2.1 开始按钮：背景</span></span><br><span class="line">        <span class="keyword">let</span> startView = <span class="type">UIView</span>()</span><br><span class="line">        startView.backgroundColor = <span class="type">UIColor</span>.<span class="keyword">init</span>(red: <span class="number">0.1</span>, green: <span class="number">0.0</span>, blue: <span class="number">0.8</span>, alpha: <span class="number">0.8</span>)</span><br><span class="line">        <span class="keyword">self</span>.view.addSubview(startView)</span><br><span class="line">        startView.snp.makeConstraints &#123; (make) <span class="keyword">in</span></span><br><span class="line">            make.top.equalTo(<span class="number">300</span>)</span><br><span class="line">            make.<span class="keyword">left</span>.equalTo(<span class="number">0</span>)</span><br><span class="line">            make.bottom.equalTo(<span class="number">0</span>)</span><br><span class="line">            make.width.equalTo(<span class="keyword">self</span>.view.frame.width / <span class="number">2</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 2.2 开始按钮：布局</span></span><br><span class="line">        <span class="keyword">let</span> startButton:<span class="type">UIButton</span> = <span class="type">UIButton</span>()</span><br><span class="line">        <span class="comment">//        startButton.setTitle("Start", for: UIControl.State.normal)</span></span><br><span class="line">        startButton.setImage(<span class="type">UIImage</span> (imageLiteralResourceName: <span class="string">"start"</span>), <span class="keyword">for</span>: <span class="type">UIControl</span>.<span class="type">State</span>.normal)</span><br><span class="line">        startView.addSubview(startButton)</span><br><span class="line">        startButton.snp.makeConstraints &#123; (make) <span class="keyword">in</span></span><br><span class="line">            make.center.equalTo(startView)</span><br><span class="line">            make.width.height.equalTo(<span class="number">50</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 2.3 开始按钮：点击事件添加</span></span><br><span class="line">        startButton.addTarget(<span class="keyword">self</span>, action: #selector(startHander), <span class="keyword">for</span>: <span class="type">UIControl</span>.<span class="type">Event</span>.touchUpInside)</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 3 停止按钮</span></span><br><span class="line">        <span class="comment">// 3.1 停止：背景</span></span><br><span class="line">        <span class="keyword">let</span> stopView:<span class="type">UIView</span> = <span class="type">UIView</span>()</span><br><span class="line">        stopView.backgroundColor = <span class="type">UIColor</span>.<span class="keyword">init</span>(red: <span class="number">0.1</span>, green: <span class="number">0.8</span>, blue: <span class="number">0.0</span>, alpha: <span class="number">0.8</span>)</span><br><span class="line">        <span class="keyword">self</span>.view.addSubview(stopView)</span><br><span class="line">        stopView.snp.makeConstraints &#123; (make) <span class="keyword">in</span></span><br><span class="line">            make.top.equalTo(<span class="number">300</span>)</span><br><span class="line">            make.bottom.equalTo(<span class="number">0</span>)</span><br><span class="line">            make.<span class="keyword">right</span>.equalTo(<span class="number">0</span>)</span><br><span class="line">            make.width.equalTo(<span class="keyword">self</span>.view.frame.width / <span class="number">2</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 3.2 停止：按钮</span></span><br><span class="line">        <span class="keyword">let</span> stopButton:<span class="type">UIButton</span> = <span class="type">UIButton</span>()</span><br><span class="line"><span class="comment">//        stopButton.setTitle("Stop", for: UIControl.State.normal)</span></span><br><span class="line">        stopButton.setImage(<span class="type">UIImage</span> (imageLiteralResourceName: <span class="string">"pause"</span>), <span class="keyword">for</span>: <span class="type">UIControl</span>.<span class="type">State</span>.normal)</span><br><span class="line">        stopView.addSubview(stopButton)</span><br><span class="line">        stopButton.snp.makeConstraints &#123; (make) <span class="keyword">in</span></span><br><span class="line">            make.center.equalTo(stopView)</span><br><span class="line">            make.width.height.equalTo(<span class="number">50</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 3.2 停止：按钮事件添加</span></span><br><span class="line">        stopButton.addTarget(<span class="keyword">self</span>, action: #selector(stopHander), <span class="keyword">for</span>: <span class="type">UIControl</span>.<span class="type">Event</span>.touchUpInside)</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 4 重置</span></span><br><span class="line">        <span class="comment">// 4.1 重置按钮</span></span><br><span class="line">        <span class="keyword">let</span> resetButton:<span class="type">UIButton</span> = <span class="type">UIButton</span>()</span><br><span class="line">        resetButton.setTitle(<span class="string">"Reset"</span>, <span class="keyword">for</span>: <span class="type">UIControl</span>.<span class="type">State</span>.normal)</span><br><span class="line">        resetButton.titleLabel?.font = <span class="type">UIFont</span>.<span class="keyword">init</span>(name:<span class="string">"Helvetica Neue"</span>,size:<span class="number">20</span>)</span><br><span class="line">        resultView.addSubview(resetButton)</span><br><span class="line">        resetButton.snp.makeConstraints &#123; (make) <span class="keyword">in</span></span><br><span class="line">            make.<span class="keyword">right</span>.equalTo(-<span class="number">10</span>)</span><br><span class="line">            make.top.equalTo(<span class="number">10</span>)</span><br><span class="line">            make.width.equalTo(<span class="number">100</span>)</span><br><span class="line">            make.height.equalTo(<span class="number">50</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 4.1 重置：事件监听</span></span><br><span class="line">        resetButton.addTarget(<span class="keyword">self</span>, action: #selector(resetHander), <span class="keyword">for</span>: <span class="type">UIControl</span>.<span class="type">Event</span>.touchUpInside)</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 3个按钮的事件函数</span></span><br><span class="line">    <span class="comment">// 1.开始计时</span></span><br><span class="line">    <span class="meta">@objc</span> <span class="function"><span class="keyword">func</span> <span class="title">startHander</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">self</span>.timer != <span class="literal">nil</span>&#123;</span><br><span class="line">            <span class="keyword">self</span>.stopHander()</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">self</span>.timer = <span class="type">Timer</span>.scheduledTimer(withTimeInterval: <span class="number">0.1</span>, repeats: <span class="literal">true</span>,block:&#123; (timer) <span class="keyword">in</span></span><br><span class="line">            <span class="keyword">self</span>.resultNumber = <span class="keyword">self</span>.resultNumber + <span class="number">0.1</span></span><br><span class="line">            <span class="keyword">self</span>.resultLabel.text = <span class="type">String</span>(format:<span class="string">"%.1f"</span>,<span class="keyword">self</span>.resultNumber)</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="keyword">self</span>.timer.fire()</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 2.暂停时间</span></span><br><span class="line">    <span class="meta">@objc</span> <span class="function"><span class="keyword">func</span> <span class="title">stopHander</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">// 2.1 不进行判断的方法，可能出现异常，内存可能泄露</span></span><br><span class="line"><span class="comment">//        var timerForDistory:Timer!</span></span><br><span class="line"><span class="comment">//        timerForDistory = self.timer</span></span><br><span class="line"><span class="comment">//        timerForDistory.invalidate()</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 2.2 进行判断的方法，可能出现异常，内存可能泄露</span></span><br><span class="line">        <span class="comment">// guard 打头只判断合理条件，保证判断条件简约</span></span><br><span class="line">        <span class="comment">// guard xxx : 如果不满足gurad后面的条件xxx，则执行else的内部代码</span></span><br><span class="line">        <span class="keyword">guard</span> <span class="keyword">let</span> timerForDistory = <span class="keyword">self</span>.timer <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        timerForDistory.invalidate()</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 3.重置计时器</span></span><br><span class="line">    <span class="meta">@objc</span> <span class="function"><span class="keyword">func</span> <span class="title">resetHander</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">self</span>.resultNumber = <span class="number">0</span></span><br><span class="line">        <span class="keyword">self</span>.resultLabel.text = <span class="string">"0.0"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/26/iOS基础/IOS开发 - 简单的加法计算器swift版本/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1568,894 +1350,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/11/数据可视化/阿里数据中台面试/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/11/数据可视化/阿里数据中台面试/" itemprop="url">暑期实习面试 - 阿里数据中台前端可视化</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-11T16:00:57+08:00">
-                2019-02-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/面试/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/02/11/数据可视化/阿里数据中台面试/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/11/数据可视化/阿里数据中台面试/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/02/11/数据可视化/阿里数据中台面试/" class="leancloud_visitors" data-flag-title="暑期实习面试 - 阿里数据中台前端可视化">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  6.6k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  22
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="三面准备"><a href="#三面准备" class="headerlink" title="三面准备"></a>三面准备</h1><h2 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h2><p>三个部分。</p>
-<ul>
-<li>基本信息，中南大学研二王雨思，研究方向是数据可视分析，项目中有专利一项、参与A类会议论文一篇、主持自由探索项目一项，该项目论文预计4月投稿，投稿完成后即可到岗实习。</li>
-<li>项目经历，可视分析项目有三项，主要是关于高维数据可视分析的。同时自己对iOS开发有些兴趣，申请了开发者账号，目前审核中APP有两款。</li>
-<li><p>详细介绍我的项目。</p>
-<ul>
-<li>首先是自由探索项目：面向分类的感知驱动的可视化监督降维方法。<ul>
-<li>1背景：大数据时代，涌现出无数复杂的有标签的高维数据：如手写数据、汽车数据、人脸数据等。</li>
-<li>2困难：难以分析标签HD数据。降维是分析有标签的高维数据的常用方法。高维数据的低维表示可以帮助用户探索有标签数据中类的分离程度和数据的空间分布。【非监督降维方法PCA：没有考虑类的分离程度；监督降维方法LDA：事先假设数据符合高斯分布，对于复杂的类结构无效；】</li>
-<li>3降维方法和直接映射法是帮助分析HD数据的方法：降维方法来源于机器学习。提出优化目标，选择优化方法。我们可以使用基于人类感知的度量DSC。 </li>
-<li>4本文方法：感知驱动降维PDD：单个投影可能会导致重要的类结构被忽略。</li>
-</ul>
-</li>
-<li>第二个是A类会议IEEE VIS项目：适用于不清楚数据内部特征与结构时候，帮助有效识别低维结构(维度和是否为线性子空间)。当我们指导数据的真实维度之后，则可以使用合适的方式去进行可视化或者数据挖掘等工作。该文章我是帮助师兄做了user study的具体case、discussion部分的对比试验，与其他工作降维方法（包括线性PCA\MDS，非线性tsne等方法）的对比。</li>
-<li>第三个是基于 kNN Graph 的内蕴特征抽取可视分析：<ul>
-<li>内蕴特征-是指底层属性的语义解释。例子：国家生活质量数据集，数据点美国到数据点古巴是如何变化的。得到其解释就特征抽取。data-view-knowledge。</li>
-<li>三步骤：初始布局，交互获取路径（点选），结构化投影（使用测地距离）。</li>
-<li>例子：国家：趋势美国到古巴、异常：赞比亚。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>适合数据中台可视化的原因：</p>
-<ul>
-<li>1研究方向是这个，找到如此契合的部门比较难；高维数据可视分析虽然听起来较理论，但是实际上大数据时代，这样的数据确实非常多，需要一些理论的方式去进行可视分析；</li>
-<li>2身体素质好，有恒心。为了拿到校运会跨栏金牌，每天坚持晨跑。因此可以接受高强度的工作。</li>
-</ul>
-</li>
-</ul>
-<h2 id="职业规划"><a href="#职业规划" class="headerlink" title="职业规划"></a>职业规划</h2><p>这个问题其实我自己在选择保研到可视化方向的时候就有想过。</p>
-<p>首先，我认为可视化并不是像别人所说只是展示数据的工具，他可以帮助用户探索到自动化方法分析数据无法发现的的特征和模式。</p>
-<p>所以我选择了数据可视分析的方向，在研究生阶段从可视化的算法和理论方面先充实自己。</p>
-<p>我的职业规划阶段主要分为三个部分，实习之前、入职1~2年、入职2~5年。</p>
-<h3 id="实习之前："><a href="#实习之前：" class="headerlink" title="实习之前："></a>实习之前：</h3><p>我会从把红宝书、犀牛书等书籍刷一遍，在实习之前了解所需前端技术；根据团队的技术路线需要，自己实现一些react框架的项目。争取在实习的时候能够按时按量完成导师给的任务。</p>
-<h3 id="入职1-3年内："><a href="#入职1-3年内：" class="headerlink" title="入职1~3年内："></a>入职1~3年内：</h3><p>1工作方面：之前的面试官有说过做工程和论文是不一样的，导师对于学术研究是提出一个新的方法去解决问题，需要在短时间内做出case；而前一位面试官说的是工程需要考虑更多的东西，比如大数据渲染的效率。所以我希望能过实现业务，培养工程能力和工程思维。</p>
-<p>2学习方面：非常希望学习一些框架和库。“不要重复的造轮子”这句话，我认为初学者都应该无视，不了解轮子怎么知道这个轮子好不好用呢？我们做论文分析的时候也需要做实验比较算法的优越性。</p>
-<p>所以我希望从学习熟练使用轮子开始，到看轮子，理解如何造轮子，如果够厉害的话，或许在业务的实践中自己也能成为造轮子团队的一员。</p>
-<p>3爱好方面：工作之余还希望能像字体日记APP的开发者一样，做一些自己喜欢iOS开发。之前在react论坛上看到说阿里有的iOS开发是使用前端技术rn weex，希望学习之后帮助自己的从native开发转变为混合开发——做一些Hybrid APP；或者是做一个针对没有计算机课程的县城中学生的在线教育的前端产品。</p>
-<h3 id="3-5应该算一个有经验的前端工程师了："><a href="#3-5应该算一个有经验的前端工程师了：" class="headerlink" title="3~5应该算一个有经验的前端工程师了："></a>3~5应该算一个有经验的前端工程师了：</h3><p>1 <strong>数据分析能力、交互视觉能力、研发能力</strong></p>
-<p>//3同时努力成为一个一专多长的人才。因为制作一个性能高、交互好、视觉美的页面，需要从前端框架选型、架构设计、构建工具，到后端通信机制、设计与交互、网络和浏览器优化等各方面的知识。</p>
-<p>2这时候可以通过发表技术博客，提交和参与开源项目，参加业界会议。保持技术交流。</p>
-<h3 id="远期规划："><a href="#远期规划：" class="headerlink" title="远期规划："></a>远期规划：</h3><p>这时候的方向其实很难预估。会根据自身情况去调整。</p>
-<p>//</p>
-<p>但是我有一个比较梦幻的希望，关于<strong>前端的教学产品</strong>。</p>
-<p>因为我小时候在湘西(沈从文写的边城)那边的一个小县城长大，经济和师资其实比起大城市真的有很大差距，接触计算机是在本科。而我看很多大城市长大的同学都是在高中初中就接触过这些前沿课程了。</p>
-<p>我希望能在我有一定的技术和社会资源之后，能够推出面向县城无法接触计算机的学生的，类似极客时间、慕课这类的免费的学习数据结构、编程的<strong>前端教学产品</strong>。让县城的孩子也能早早接触这个世界的前沿科技。这个除了网页端还可能需要一个安卓端，因为县城的家长大部分用的都是oppo、vivo手机。</p>
-<p>更宏大的理想就是可以帮助师资力量非常弱的村镇里面的小学生和乡村教师（我老家那种基本就几个村在一个镇上学，老师也是一个人教2、3门课），全镇购置为每个班计算机设备+投影仪，就可以利用互联网课堂学习基础课程。没有生物化学实验室，可以使用可视化技术在web端模拟实验；地理也可以用3D可视化技术帮助理解。</p>
-<p>以上的想法老师您可能觉得比较幼稚，因为这还需要考虑很多课程版权、社会实践等因素。但是这是我作为一个来自少数民族地区学生的一点想法。</p>
-<p>谢谢。</p>
-<h2 id="你理解的-Web-前端未来的发展"><a href="#你理解的-Web-前端未来的发展" class="headerlink" title="你理解的 Web 前端未来的发展"></a>你理解的 Web 前端未来的发展</h2><p>我认为随着 HTML、CSS 等的发展，网页上能做的事情越来越丰富了，包括更酷炫的前端呈现方式、音视频的处理，更趋向于能够做 Native 应用能做的事情了，可能以后 Web 和 Native 的边界会越来越模糊。</p>
-<p>比如说现在的开发中很多都是用 Hybrid APP。比如微信在钱包里面的理财就是网页，但是基础的聊天、朋友圈都是原生（Native) APP。框架是原生的，但是其他的详细内容就是网页封装。</p>
-<h2 id="优势和缺点"><a href="#优势和缺点" class="headerlink" title="优势和缺点"></a>优势和缺点</h2><p>人其实比较难正确认识自己，但是基于一些师长朋友的评价和日常总结，我觉得我的优点是：</p>
-<h3 id="1、可视化背景："><a href="#1、可视化背景：" class="headerlink" title="1、可视化背景："></a>1、可视化背景：</h3><p>虽然我研究的是高维数据可视化，可能初期没有研究交通信息可视化、时序数据可视化的同学的项目更适合于工程。但是现如今很多数据都是高维多元数据，如商品数据、人脸图像数据等。</p>
-<p>而直接使用一些很成熟的方法可视化这些高维数据不一定是最好的，我们或许可以从可视化顶级会议IEEE VIS上面去阅读一些新的方法，来试着更新可视化流程、降维方法和交互手段。</p>
-<h3 id="2、热爱学习新事物："><a href="#2、热爱学习新事物：" class="headerlink" title="2、热爱学习新事物："></a>2、热爱学习新事物：</h3><p>在Coursera上自习Andrew ng的ML，拿了97分；在Java上面写的小游戏、也会在自学安卓、iOS的时候再写一遍；同时自己对iOS的开发很感兴趣，觉得能推出一些对受众有用的产品就会很酷。后期希望学习混合开发APP。</p>
-<h3 id="3、有坚持精神且身体好"><a href="#3、有坚持精神且身体好" class="headerlink" title="3、有坚持精神且身体好"></a>3、有坚持精神且身体好</h3><p>之前因为每次跨栏只有银牌和铜牌，最后气不过就坚持晨跑，最后终于拿下了金牌。同时坚持锻炼也让我的身体素质很好，可以接受高强度的工作。</p>
-<h3 id="4、缺点是："><a href="#4、缺点是：" class="headerlink" title="4、缺点是："></a>4、缺点是：</h3><p>个人爱好有时候比较广泛，如本科时期喜欢爵士舞、话剧、乐器、运动，还喜欢去做学生干部工作，就有一些会影响自己的学习时间，成绩只保持到刚好保研的边缘。但是研究生时候算是改正了一些，只保留了每周去学爵士的兴趣。但是这个缺点我能保证，以后绝对不影响我的工作。</p>
-<p>我是如何面试一位前端工程师：<a href="https://zhuanlan.zhihu.com/p/30487025" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/30487025</a></p>
-<h2 id="Q1-过去的思考和总结"><a href="#Q1-过去的思考和总结" class="headerlink" title="Q1 过去的思考和总结"></a>Q1 过去的思考和总结</h2><h3 id="最有难度的事情：项目一"><a href="#最有难度的事情：项目一" class="headerlink" title="最有难度的事情：项目一"></a>最有难度的事情：项目一</h3><p>自己写论文比跟着导师写难度大多了。基本没两天都会有新的问题出现。然后又要去看论文想方法。</p>
-<h3 id="之前面试的总结"><a href="#之前面试的总结" class="headerlink" title="之前面试的总结"></a>之前面试的总结</h3><p>一面：</p>
-<p>主要是科研项目表达逻辑的不足。</p>
-<p>高维数据可视分析科研项目在没有图表支撑的情况下，是比较难描述清楚的。所以我再次整合了逻辑，从背景、目的、方法以及困难三个方面总结了自己的项目。在二面的时候，项目表述就比较完善了。</p>
-<p>二面：</p>
-<p>理论研究还行，包括高维数据可视分析流程和降维方法，对工业级别项目了解不足，这也是以后我会努力的方向。近期看了18年云溪大会上的企业中台架构，大中台小前台的展示；也翻阅了《阿里巴巴大数据实践》的总览第一章、和日志采集第二章。但是我觉得有的部分还是没那么容易理解。这一点希望能在工作中去实践。</p>
-<p>《大数据之路：阿里巴巴大数据实践》</p>
-<p>三面：</p>
-<p>操作系统调度</p>
-<p>进程通信方式？——几种</p>
-<p>线程</p>
-<p>数据库了解吗？——不了解</p>
-<p>操作系统：B+树</p>
-<p>判断是否为质数</p>
-<h3 id="可视分析流程"><a href="#可视分析流程" class="headerlink" title="可视分析流程"></a>可视分析流程</h3><p>数据转化、可视映射、视图转化</p>
-<p>原数据-&gt;转化后的数据-&gt;可视结构-&gt;视图</p>
-<p>如：我们选择线性投影将30维的原数据降为5维度的转化数据，再使用平行坐标视觉映射转为可视结构，然而数据有相互遮挡，则选择PCP方法视图转化至视图上。最后呈现热力图式的平行坐标。</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g16qrifmtjj31ee0lc4az.jpg" alt="image-20190318103214651"></p>
-<h3 id="D3-js源码阅读："><a href="#D3-js源码阅读：" class="headerlink" title="D3.js源码阅读："></a>D3.js源码阅读：</h3><ul>
-<li>把输入的原始数据转化成为标准的D3可接受的数据格式</li>
-<li>根据原始数据定义好x轴函数、y轴函数和定义好作图方式(如d3.line) </li>
-<li>在SVG上面画出x轴y轴、根据原始数据结合x轴及y轴函数作线状图 </li>
-<li>再画出标题等细节的东西</li>
-<li>最后，给已经完成的图形添加<strong>动画效果</strong></li>
-</ul>
-<p>D3力导向图。</p>
-<p>模块1：center.js 设置力导图点阵中心</p>
-<p>虽然每个节点的坐标都是计算得到的，但总有开始状态。开始状态下的坐标设置的是获取的随机数，这个随机数可以根据当前 View 的宽高来限定。</p>
-<p>遍历所有 FNode，给每个 FNode 设置一个随机获取的坐标。遍历所有 FLink，计算每条 FLink 的 sourceNode 和 targetNode 的距离 d，利用 α 值和 FLink 的拉力，计算 sourceNode 和 targetNode 的距离的减少量。</p>
-<p>遍历所有 FNode，使每个节点向 View 中心聚拢。</p>
-<p>模块3：jiggle.js 微小晃动随机数 </p>
-<p>模块4：collide.js 碰撞</p>
-<p><a href="https://segmentfault.com/a/1190000008578391" target="_blank" rel="noopener">https://segmentfault.com/a/1190000008578391</a></p>
-<h2 id="问面试官的问题"><a href="#问面试官的问题" class="headerlink" title="问面试官的问题"></a>问面试官的问题</h2><p>可以了解一下团队对于实习生的培养吗？如果有幸接到offer后，是否可以联系组内前辈去问一下需要学习哪些技能，因为现在距离暑期实习还有一两个月时间，是否可以预备学习一些组内的必备技能？</p>
-<p>您是我一个位BOSS面的面试官，可以了解一下作为高级前端工程师的一些工作的日常吗？之前总听说架构这些词，但是在校园里面确实没有接触过您这样的高级工程师。谢谢！</p>
-<h3 id="位图和矢量图"><a href="#位图和矢量图" class="headerlink" title="位图和矢量图"></a>位图和矢量图</h3><p>1.位图图像(bitmap)<br>亦称为点阵图像或绘制图像，是由称作<strong>像素（图片元素）的单个点组成</strong>的。这些点可以进行不同的排列和染色以构成图样。当放大位图时，可以看见赖以构成整个图像的<strong>无数单个方块</strong>。扩大位图尺寸的效果是<strong>增大单个像素</strong>，从而使线条和形状<strong>显得参差不齐</strong>。然而，如果从稍远的位置观看它，位图图像的颜色和形状又显得是连续的。</p>
-<p>矢量图：矢量图使用<strong>直线和曲线来描述图形</strong>，这些图形的元素是<strong>一些点、线、矩形、多边形、圆和弧线</strong>等等，它们都是<strong>通过数学公式计算</strong>获得的。由于矢量图形<strong>可通过公式计算</strong>获得，所以矢量图形<strong>文件体积一般较小</strong>。矢量图形最大的优点是<strong>无论放大、缩小或旋转</strong>等不会失真；最大的缺点是难以表现<strong>色彩层次丰富的逼真图像效果</strong>。</p>
-<h2 id="数据中台"><a href="#数据中台" class="headerlink" title="数据中台"></a>数据中台</h2><p>阿里中台主要由业务中台和数字中台并肩构成了双中台，并肩扛起了所有前台业务。</p>
-<p>业务中台将后台资源进行抽象包装整合，转化为前台友好的可重用共享的核心能力，实现了后端业务资源到前台易用能力的转化。</p>
-<p>数据中台从后台及业务中台将数据流入，完成海量数据的存储、计算、产品化包装过程，构成企业的核心数据能力，为前台基于数据的定制化创新和业务中台基于数据反馈的持续演进提供了强大支撑。业务中台与数据中台，相辅相成，互相支撑，一起构建起了战场强大的后方炮火群。</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g18jmn4hddj30rs0fe0ua.jpg" alt="img"></p>
-<h1 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h1><h3 id="可视化项目，及相关展开"><a href="#可视化项目，及相关展开" class="headerlink" title="可视化项目，及相关展开"></a>可视化项目，及相关展开</h3><h3 id="可视化的流程"><a href="#可视化的流程" class="headerlink" title="可视化的流程"></a>可视化的流程</h3><p>data transformation、visual structure、view transformation + 交互</p>
-<p>如果类别多、数据大有遮挡该如何解决？</p>
-<ol>
-<li><p>data transformation：</p>
-<p>数据采样</p>
-</li>
-<li><p>visual structure：已有方式——散点图、三维散点图、平行坐标。我研究的方式——。</p>
-</li>
-<li><p>view transformation：如果以上方式还是会产生遮挡问题，可以采用一些通道编码，如颜色深浅、透明度、大小——表示该位置的相同类型数据的多少；</p>
-<p>热力图、透明度、汇合</p>
-</li>
-<li><p>交互： </p>
-</li>
-</ol>
-<p>在散点矩阵中使用动画来减轻重叠（Using Animation to Alleviate Overdraw in Multiclass Scatterplot Matrices）</p>
-<h3 id="数据预处理——数据缺失和异常"><a href="#数据预处理——数据缺失和异常" class="headerlink" title="数据预处理——数据缺失和异常"></a>数据预处理——数据缺失和异常</h3><h3 id="缺失值处理："><a href="#缺失值处理：" class="headerlink" title="缺失值处理："></a>缺失值处理：</h3><h4 id="造成数据缺失的原因是多方面的，主要可能有以下几种："><a href="#造成数据缺失的原因是多方面的，主要可能有以下几种：" class="headerlink" title="造成数据缺失的原因是多方面的，主要可能有以下几种："></a>造成<strong>数据缺失的原因</strong>是多方面的，主要可能有以下几种：</h4><ol>
-<li>有些信息暂时无法获取，致使一部分属性值空缺出来。</li>
-<li>有些信息因为一些人为因素而丢失了。</li>
-<li>有些对象的某个或某些属性是不可用的。如一个未婚者的配偶姓名。</li>
-<li>获取这些信息的代价太大，从而未获取数据。</li>
-</ol>
-<h4 id="空值处理的重要性："><a href="#空值处理的重要性：" class="headerlink" title="空值处理的重要性："></a>空值处理的重要性：</h4><p>空值的存在，造成了以下影响：</p>
-<ol>
-<li>系统丢失了大量的有用信息；</li>
-<li>系统的不确定性更加显著，系统中的确定性成分更难把握；</li>
-<li>包含空值的数据会使挖掘过程陷入混乱，导致不可靠的输出。</li>
-</ol>
-<h4 id="空值处理的方法："><a href="#空值处理的方法：" class="headerlink" title="空值处理的方法："></a>空值处理的方法：</h4><h5 id="一、删除元组"><a href="#一、删除元组" class="headerlink" title="一、删除元组"></a>一、删除元组</h5><p>将存在遗漏信息属性值的对象（记录）删除，从而得到一个完备的信息表。这种方法在对象有多个属性缺失值、被删除的含缺失值的对象与信息表中的数据量相比非常小的情况下是非常有效的。然而这种方法丢弃了大量隐藏在这些对象中的信息。在信息表中对象很少的情况下会影响到结果的正确性，可能导致数据发生偏离，从而引出错误的结论。</p>
-<h5 id="二、数据补齐"><a href="#二、数据补齐" class="headerlink" title="二、数据补齐"></a>二、数据补齐</h5><p>这类方法是基于统计学原理用一定的值去填充空值，从而使信息表完备化。数据挖掘中常用的有以下几种补齐方法：</p>
-<ol>
-<li><strong>人工填写</strong><br>这个方法产生数据偏离最小，是填充效果最好的一种。当数据规模很大、空值很多的时候，该方法是不可行的。</li>
-<li><strong>特殊值填充</strong><br>将空值作为一种特殊的属性值来处理，它不同于其他的任何属性值。如所有的空值都用“unknown”填充。这样将形成另一个概念，可能导致严重的数据偏离，一般不使用。</li>
-<li><strong>平均值填充</strong><br>如果空值是<strong>数值属性</strong>，就使用该属性在<strong>其他所有对象的取值的平均值</strong>来填充该缺失的属性值.<br>如果空值是<strong>非数值属性</strong>，就根据统计学中的<strong>众数原理</strong>，用该属性在其他所有对象<strong>出现频率最高的值</strong>来补齐该缺失的属性值。</li>
-<li><strong>热卡填充（就近补齐）</strong><br>对于一个包含空值的对象，热卡填充法在完整数据中找到一个与它最相似的对象，然后用这个相似对象的值来进行填充。不同的问题选用不同的标准来对相似进行判定。</li>
-<li><strong>K最近邻法</strong><br>先根据欧式距离或相关分析来确定距离具有缺失数据样本最近的K个样本，将这K个值加权平均来估计该样本的缺失数据。</li>
-<li><strong>使用所有可能的值填充</strong><br>这种方法是用空缺属性值的所有可能的属性取值来填充，能够得到较好的补齐效果。但是当数据量很大或者遗漏的属性值较多时，其计算的代价很大，可能的测试方案很多。</li>
-<li><strong>回归</strong><br>基于完整的数据集，建立回归方程（模型）。对于包含空值的对象，将已知属性值代入方程来估计未知属性值，以此估计值来进行填充。</li>
-<li><strong>期望值最大化方法（EM）</strong><br>在缺失类型为随机缺失的条件下，假设模型对于完整的样本是正确的，通过观测数据的边际分布可以对未知参数进行极大似然估计。它一个重要前提：适用于大样本。有效样本的数量足够以保证ML估计值是渐近无偏的并服从正态分布。但是这种方法可能会陷入局部极值，收敛速度也不是很快，并且计算很复杂。</li>
-</ol>
-<h5 id="三、不处理——使用深度学习、数据挖掘方式填补"><a href="#三、不处理——使用深度学习、数据挖掘方式填补" class="headerlink" title="三、不处理——使用深度学习、数据挖掘方式填补"></a>三、不处理——使用深度学习、数据挖掘方式填补</h5><p>直接在包含空值的数据上进行数据挖掘。这类方法包括贝叶斯网络和人工神经网络等。</p>
-<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><h5 id="异常值的判别方法："><a href="#异常值的判别方法：" class="headerlink" title="异常值的判别方法："></a>异常值的判别方法：</h5><ol>
-<li>简单统计分析<br>对属性值进行一个描述性的统计（规定范围），从而查看哪些值是不合理的（范围以外的值）。</li>
-<li>3δ原则<br>若数据服从正态分布：根据正态分布的定义可知，距离平均值3δ之外的概率为 P(|x-μ|&gt;3δ) &lt;= 0.003 ，这属于极[小概率事件]，在默认情况下我们可以认定，距离超过平均值3δ的样本是不存在的。因此，当样本距离平均值大于3δ，认为该样本为异常值。 </li>
-<li>使用距离检测多元离群点<br>当数据不服从正态分布时，可以通过远离平均距离多少倍的标准差来判定，多少倍的取值需要根据经验和实际情况来决定。</li>
-<li>可视化结果后的判定</li>
-</ol>
-<h5 id="异常值的处理方法："><a href="#异常值的处理方法：" class="headerlink" title="异常值的处理方法："></a>异常值的处理方法：</h5><ol>
-<li>删除含有异常值的记录</li>
-<li>将异常值视为缺失值，使用缺失值处理方法来处理</li>
-<li>用平均值来修正</li>
-<li>不处理</li>
-</ol>
-<h3 id="经典可视化图标的优缺点"><a href="#经典可视化图标的优缺点" class="headerlink" title="经典可视化图标的优缺点"></a>经典可视化图标的优缺点</h3><p>饼图的缺点</p>
-<p>玫瑰图的缺点，视觉干扰是什么</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g18ipg8lxxj31860gqwkt.jpg" alt="image-20190319232437932"></p>
-<h3 id="场景应用"><a href="#场景应用" class="headerlink" title="场景应用"></a>场景应用</h3><p>解决分类数据可视化中类别过多、数据量过多的遮挡问题。</p>
-<p>数据部分：</p>
-<p>可视化部分：</p>
-<p>交互部分：</p>
-<h3 id="面向对象思维"><a href="#面向对象思维" class="headerlink" title="面向对象思维"></a>面向对象思维</h3><p>绘制折线图和柱状图的代码大部分相似，可以写在一个类中。</p>
-<h3 id="一个平面n个圆有多少个相交的圆"><a href="#一个平面n个圆有多少个相交的圆" class="headerlink" title="一个平面n个圆有多少个相交的圆"></a>一个平面n个圆有多少个相交的圆</h3><p>1 遍历的方法。时间复杂度较高。</p>
-<p>2 对每一个圆计算其变上有多少个交点，交点数除以2就位改圆的相交圆的个数。将所有相交个数加起来除以2(2个圆相交会有一个相交个数，遍历后算了两遍)，结果为一共有多少个相交的圆。</p>
-<h1 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h1><p>t-SNE没回答完整。</p>
-<p>高维数据可视分析研究有哪些？</p>
-<p>子空间聚类？</p>
-<h1 id="常问问题"><a href="#常问问题" class="headerlink" title="常问问题"></a>常问问题</h1><h3 id="Q1：基础知识"><a href="#Q1：基础知识" class="headerlink" title="Q1：基础知识"></a>Q1：基础知识</h3><h3 id="Q2可视化图表："><a href="#Q2可视化图表：" class="headerlink" title="Q2可视化图表："></a>Q2可视化图表：</h3><p>比如在没写过图表的前提下，怎么抽象数据与图形的映射，怎么去组合不同的图表部件。</p>
-<h4 id="要从图表类型的隐喻上进行区分"><a href="#要从图表类型的隐喻上进行区分" class="headerlink" title="要从图表类型的隐喻上进行区分"></a>要从图表类型的隐喻上进行区分</h4><p>饼图表达的是一个<em>整体</em>和<em>局部</em>的关系，也就是一个部分占据整体的多少比例。柱状图和折线图较为接近，通常前者表示不同对象数据的对比，后者更常用作表示同一对象数据在不同（时间）维度上的趋势。</p>
-<p>首先，饼图中的类目不应太多，否则信息很分散，不知道作者想表达什么信息。</p>
-<p>其次，饼图的颜色不要五颜六色，除了用以区分类目之外，颜色还可以传递更多有效信息。比如上图用绿色表示正确，灰色表示错误，是符合一般对颜色的认知的，并且绿色的类目更醒目，第一眼就能关注到；相反，如果用普通的三种颜色表示三个类目，则读者很难一眼从图中解读出有效信息。</p>
-<p>第三，区分出想表明特定意思的类目。比如上图将正确的类目和错误的类目分隔开，读者很容易抓取到关键信息。</p>
-<h4 id="南丁格尔玫瑰图："><a href="#南丁格尔玫瑰图：" class="headerlink" title="南丁格尔玫瑰图："></a>南丁格尔玫瑰图：</h4><p>误导在于，数据的比值为到底是半径比、面积比、还是角度比？</p>
-<p>第一种图将数据映射到半径；第二种图将数据映射到半径和角度；第三将图将数据映射到角度。</p>
-<p>何时使用？</p>
-<h3 id="Q3前端设计："><a href="#Q3前端设计：" class="headerlink" title="Q3前端设计："></a>Q3前端设计：</h3><p>常问的一个校招问题，有一块区域要展示一组数据，但数据需要请求 3 个接口才能计算得到，请问前端是怎么做的，如何优化，前端什么情况下可以放弃合并接口的要求。这个地方至少会考察到异步，本地缓存，延展下会问下并发，竞态，协程等。</p>
-<h1 id="HR面试准备"><a href="#HR面试准备" class="headerlink" title="HR面试准备"></a>HR面试准备</h1><p>1、为什么想加入这家公司？你需要了解下这家公司的文化和氛围。<br> 2、为什么离开上一家公司？钱少，不能实现梦想，还是有哪些不爽的地方。如果是换工作为了实现梦想，那么你的梦想是什么。不爽的地方如果在新公司再遇到怎么处理。<br> 3、你的职业规划是什么？<br> 4、当你遇到瓶颈的时候你怎么办？<br> 5、这些年你每年的成长是什么？怎么能体现你的进步？</p>
-<p>6、谈谈你对阿里的企业文化理解？<br> 7、你的期望薪资？<br> 8、项目中遇到的最大挑战是什么？怎么解决的？<br> 9、最有成就感的事情是？<br> 10、怎么看待加班（你能接受996、997、007吗）？</p>
-<p>11、说说自己性格上的优缺点（描述一下自己的性格）<br> 12、自己觉得自己工作上的短板/优点是什么？<br> 13、可以接受降薪吗？</p>
-<p>作者：阅跑影财者</p>
-<p>链接：<a href="https://www.jianshu.com/p/a1863ef1610f" target="_blank" rel="noopener">https://www.jianshu.com/p/a1863ef1610f</a></p>
-<p>来源：简书</p>
-<p>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/11/数据可视化/阿里天猫超市面试/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/11/数据可视化/阿里天猫超市面试/" itemprop="url">阿里天猫超市面试.md</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-11T16:00:57+08:00">
-                2019-02-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/面试/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/02/11/数据可视化/阿里天猫超市面试/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/11/数据可视化/阿里天猫超市面试/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/02/11/数据可视化/阿里天猫超市面试/" class="leancloud_visitors" data-flag-title="阿里天猫超市面试.md">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  300
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>2018年11月，阿里巴巴天猫和新零售相关战略调整，成立了「天猫超市事业群」，与「天猫事业群」并驾齐驱，是升级版「大天猫」的一大重要板块。 </p>
-<p>新启航的「天猫超市事业群」，将重回零售本质，致力于创造消费者可感知的价值。新的天猫超市，将超越过往线上的工作方式，融入线下的“新蓝海”， </p>
-<p>强化商品、消费者、线下伙伴、供应链的各项能力，整合原有天猫超市和淘鲜达业务，并和阿里大生态内的大卖场、超市等合作伙伴紧密合作， 推进线上线下一体化的超市新零售模式，共同实现“天下超市”的理想。 </p>
-<p>  附相关PR网址：<br> - 阿里巴巴组织架构调整：天猫升级为“大天猫”_事业群 - 搜狐<br> <a href="http://www.sohu.com/a/277841560_561670" target="_blank" rel="noopener">http://www.sohu.com/a/277841560_561670</a><br> - 天猫超市模式生变：架构一划为三代销、采销并行<br> <a href="https://tech.sina.com.cn/i/2019-01-13/doc-ihqfskcn6611066.shtml" target="_blank" rel="noopener">https://tech.sina.com.cn/i/2019-01-13/doc-ihqfskcn6611066.shtml</a></p>
-<h2 id="三面"><a href="#三面" class="headerlink" title="三面"></a>三面</h2><p>4月22日 晚上</p>
-<h2 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h2><p>react：基于事件 event的，组件通信</p>
-<p>上传图片</p>
-<p>1.如何跨域？</p>
-<h2 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h2><h2 id="部门基本信息"><a href="#部门基本信息" class="headerlink" title="部门基本信息"></a>部门基本信息</h2>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/11/数据可视化/阿里数据中台面试总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/11/数据可视化/阿里数据中台面试总结/" itemprop="url">暑期实习面试 - 阿里数据中台前端可视化总结</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-11T16:00:57+08:00">
-                2019-02-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/面试/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/02/11/数据可视化/阿里数据中台面试总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/11/数据可视化/阿里数据中台面试总结/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/02/11/数据可视化/阿里数据中台面试总结/" class="leancloud_visitors" data-flag-title="暑期实习面试 - 阿里数据中台前端可视化总结">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  3.7k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  12
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="三面"><a href="#三面" class="headerlink" title="三面"></a>三面</h1><h3 id="数据结构："><a href="#数据结构：" class="headerlink" title="数据结构："></a>数据结构：</h3><p>为什么需要二叉树？</p>
-<p>B+树？</p>
-<p>跳表？</p>
-<h3 id="操作系统："><a href="#操作系统：" class="headerlink" title="操作系统："></a>操作系统：</h3><p>进程通信方式？</p>
-<p>拥塞</p>
-<h3 id="数据库："><a href="#数据库：" class="headerlink" title="数据库："></a>数据库：</h3><p>数据库了解吗？</p>
-<h3 id="算法："><a href="#算法：" class="headerlink" title="算法："></a>算法：</h3><p>找出小于k的所有质数</p>
-<h3 id="可视分析流程"><a href="#可视分析流程" class="headerlink" title="可视分析流程"></a>可视分析流程</h3><p>数据转化、可视映射、视图转化</p>
-<p>原数据-&gt;转化后的数据-&gt;可视结构-&gt;视图</p>
-<p>如：我们选择线性投影将30维的原数据降为5维度的转化数据，再使用平行坐标视觉映射转为可视结构，然而数据有相互遮挡，则选择PCP方法视图转化至视图上。最后呈现热力图式的平行坐标。</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g16qrifmtjj31ee0lc4az.jpg" alt="image-20190318103214651"></p>
-<h3 id="D3-js源码阅读："><a href="#D3-js源码阅读：" class="headerlink" title="D3.js源码阅读："></a>D3.js源码阅读：</h3><ul>
-<li>把输入的原始数据转化成为标准的D3可接受的数据格式</li>
-<li>根据原始数据定义好x轴函数、y轴函数和定义好作图方式(如d3.line) </li>
-<li>在SVG上面画出x轴y轴、根据原始数据结合x轴及y轴函数作线状图 </li>
-<li>再画出标题等细节的东西</li>
-<li>最后，给已经完成的图形添加<strong>动画效果</strong></li>
-</ul>
-<p>D3力导向图。</p>
-<p>模块1：center.js 设置力导图点阵中心</p>
-<p>虽然每个节点的坐标都是计算得到的，但总有开始状态。开始状态下的坐标设置的是获取的随机数，这个随机数可以根据当前 View 的宽高来限定。</p>
-<p>遍历所有 FNode，给每个 FNode 设置一个随机获取的坐标。遍历所有 FLink，计算每条 FLink 的 sourceNode 和 targetNode 的距离 d，利用 α 值和 FLink 的拉力，计算 sourceNode 和 targetNode 的距离的减少量。</p>
-<p>遍历所有 FNode，使每个节点向 View 中心聚拢。</p>
-<p>模块3：jiggle.js 微小晃动随机数 </p>
-<p>模块4：collide.js 碰撞</p>
-<p><a href="https://segmentfault.com/a/1190000008578391" target="_blank" rel="noopener">https://segmentfault.com/a/1190000008578391</a></p>
-<h2 id="问面试官的问题"><a href="#问面试官的问题" class="headerlink" title="问面试官的问题"></a>问面试官的问题</h2><p>可以了解一下团队对于实习生的培养吗？如果有幸接到offer后，是否可以联系组内前辈去问一下需要学习哪些技能，因为现在距离暑期实习还有一两个月时间，是否可以预备学习一些组内的必备技能？</p>
-<p>您是我一个位BOSS面的面试官，可以了解一下作为高级前端工程师的一些工作的日常吗？之前总听说架构这些词，但是在校园里面确实没有接触过您这样的高级工程师。谢谢！</p>
-<h3 id="位图和矢量图"><a href="#位图和矢量图" class="headerlink" title="位图和矢量图"></a>位图和矢量图</h3><p>1.位图图像(bitmap)<br>亦称为点阵图像或绘制图像，是由称作<strong>像素（图片元素）的单个点组成</strong>的。这些点可以进行不同的排列和染色以构成图样。当放大位图时，可以看见赖以构成整个图像的<strong>无数单个方块</strong>。扩大位图尺寸的效果是<strong>增大单个像素</strong>，从而使线条和形状<strong>显得参差不齐</strong>。然而，如果从稍远的位置观看它，位图图像的颜色和形状又显得是连续的。</p>
-<p>矢量图：矢量图使用<strong>直线和曲线来描述图形</strong>，这些图形的元素是<strong>一些点、线、矩形、多边形、圆和弧线</strong>等等，它们都是<strong>通过数学公式计算</strong>获得的。由于矢量图形<strong>可通过公式计算</strong>获得，所以矢量图形<strong>文件体积一般较小</strong>。矢量图形最大的优点是<strong>无论放大、缩小或旋转</strong>等不会失真；最大的缺点是难以表现<strong>色彩层次丰富的逼真图像效果</strong>。</p>
-<h2 id="数据中台"><a href="#数据中台" class="headerlink" title="数据中台"></a>数据中台</h2><p>阿里中台主要由业务中台和数字中台并肩构成了双中台，并肩扛起了所有前台业务。</p>
-<p>业务中台将后台资源进行抽象包装整合，转化为前台友好的可重用共享的核心能力，实现了后端业务资源到前台易用能力的转化。</p>
-<p>数据中台从后台及业务中台将数据流入，完成海量数据的存储、计算、产品化包装过程，构成企业的核心数据能力，为前台基于数据的定制化创新和业务中台基于数据反馈的持续演进提供了强大支撑。业务中台与数据中台，相辅相成，互相支撑，一起构建起了战场强大的后方炮火群。</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g18jmn4hddj30rs0fe0ua.jpg" alt="img"></p>
-<h1 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h1><h3 id="可视化项目，及相关展开"><a href="#可视化项目，及相关展开" class="headerlink" title="可视化项目，及相关展开"></a>可视化项目，及相关展开</h3><h3 id="可视化的流程"><a href="#可视化的流程" class="headerlink" title="可视化的流程"></a>可视化的流程</h3><p>data transformation、visual structure、view transformation + 交互</p>
-<p>如果类别多、数据大有遮挡该如何解决？</p>
-<ol>
-<li><p>data transformation：</p>
-<p>数据采样</p>
-</li>
-<li><p>visual structure：已有方式——散点图、三维散点图、平行坐标。我研究的方式——。</p>
-</li>
-<li><p>view transformation：如果以上方式还是会产生遮挡问题，可以采用一些通道编码，如颜色深浅、透明度、大小——表示该位置的相同类型数据的多少；</p>
-<p>热力图、透明度、汇合</p>
-</li>
-<li><p>交互：</p>
-</li>
-</ol>
-<p>在散点矩阵中使用动画来减轻重叠（Using Animation to Alleviate Overdraw in Multiclass Scatterplot Matrices）</p>
-<h3 id="数据预处理——数据缺失和异常"><a href="#数据预处理——数据缺失和异常" class="headerlink" title="数据预处理——数据缺失和异常"></a>数据预处理——数据缺失和异常</h3><h3 id="缺失值处理："><a href="#缺失值处理：" class="headerlink" title="缺失值处理："></a>缺失值处理：</h3><h4 id="造成数据缺失的原因是多方面的，主要可能有以下几种："><a href="#造成数据缺失的原因是多方面的，主要可能有以下几种：" class="headerlink" title="造成数据缺失的原因是多方面的，主要可能有以下几种："></a>造成<strong>数据缺失的原因</strong>是多方面的，主要可能有以下几种：</h4><ol>
-<li>有些信息暂时无法获取，致使一部分属性值空缺出来。</li>
-<li>有些信息因为一些人为因素而丢失了。</li>
-<li>有些对象的某个或某些属性是不可用的。如一个未婚者的配偶姓名。</li>
-<li>获取这些信息的代价太大，从而未获取数据。</li>
-</ol>
-<h4 id="空值处理的重要性："><a href="#空值处理的重要性：" class="headerlink" title="空值处理的重要性："></a>空值处理的重要性：</h4><p>空值的存在，造成了以下影响：</p>
-<ol>
-<li>系统丢失了大量的有用信息；</li>
-<li>系统的不确定性更加显著，系统中的确定性成分更难把握；</li>
-<li>包含空值的数据会使挖掘过程陷入混乱，导致不可靠的输出。</li>
-</ol>
-<h4 id="空值处理的方法："><a href="#空值处理的方法：" class="headerlink" title="空值处理的方法："></a>空值处理的方法：</h4><h5 id="一、删除元组"><a href="#一、删除元组" class="headerlink" title="一、删除元组"></a>一、删除元组</h5><p>将存在遗漏信息属性值的对象（记录）删除，从而得到一个完备的信息表。这种方法在对象有多个属性缺失值、被删除的含缺失值的对象与信息表中的数据量相比非常小的情况下是非常有效的。然而这种方法丢弃了大量隐藏在这些对象中的信息。在信息表中对象很少的情况下会影响到结果的正确性，可能导致数据发生偏离，从而引出错误的结论。</p>
-<h5 id="二、数据补齐"><a href="#二、数据补齐" class="headerlink" title="二、数据补齐"></a>二、数据补齐</h5><p>这类方法是基于统计学原理用一定的值去填充空值，从而使信息表完备化。数据挖掘中常用的有以下几种补齐方法：</p>
-<ol>
-<li><strong>人工填写</strong><br>这个方法产生数据偏离最小，是填充效果最好的一种。当数据规模很大、空值很多的时候，该方法是不可行的。</li>
-<li><strong>特殊值填充</strong><br>将空值作为一种特殊的属性值来处理，它不同于其他的任何属性值。如所有的空值都用“unknown”填充。这样将形成另一个概念，可能导致严重的数据偏离，一般不使用。</li>
-<li><strong>平均值填充</strong><br>如果空值是<strong>数值属性</strong>，就使用该属性在<strong>其他所有对象的取值的平均值</strong>来填充该缺失的属性值.<br>如果空值是<strong>非数值属性</strong>，就根据统计学中的<strong>众数原理</strong>，用该属性在其他所有对象<strong>出现频率最高的值</strong>来补齐该缺失的属性值。</li>
-<li><strong>热卡填充（就近补齐）</strong><br>对于一个包含空值的对象，热卡填充法在完整数据中找到一个与它最相似的对象，然后用这个相似对象的值来进行填充。不同的问题选用不同的标准来对相似进行判定。</li>
-<li><strong>K最近邻法</strong><br>先根据欧式距离或相关分析来确定距离具有缺失数据样本最近的K个样本，将这K个值加权平均来估计该样本的缺失数据。</li>
-<li><strong>使用所有可能的值填充</strong><br>这种方法是用空缺属性值的所有可能的属性取值来填充，能够得到较好的补齐效果。但是当数据量很大或者遗漏的属性值较多时，其计算的代价很大，可能的测试方案很多。</li>
-<li><strong>回归</strong><br>基于完整的数据集，建立回归方程（模型）。对于包含空值的对象，将已知属性值代入方程来估计未知属性值，以此估计值来进行填充。</li>
-<li><strong>期望值最大化方法（EM）</strong><br>在缺失类型为随机缺失的条件下，假设模型对于完整的样本是正确的，通过观测数据的边际分布可以对未知参数进行极大似然估计。它一个重要前提：适用于大样本。有效样本的数量足够以保证ML估计值是渐近无偏的并服从正态分布。但是这种方法可能会陷入局部极值，收敛速度也不是很快，并且计算很复杂。</li>
-</ol>
-<h5 id="三、不处理——使用深度学习、数据挖掘方式填补"><a href="#三、不处理——使用深度学习、数据挖掘方式填补" class="headerlink" title="三、不处理——使用深度学习、数据挖掘方式填补"></a>三、不处理——使用深度学习、数据挖掘方式填补</h5><p>直接在包含空值的数据上进行数据挖掘。这类方法包括贝叶斯网络和人工神经网络等。</p>
-<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><h5 id="异常值的判别方法："><a href="#异常值的判别方法：" class="headerlink" title="异常值的判别方法："></a>异常值的判别方法：</h5><ol>
-<li>简单统计分析<br>对属性值进行一个描述性的统计（规定范围），从而查看哪些值是不合理的（范围以外的值）。</li>
-<li>3δ原则<br>若数据服从正态分布：根据正态分布的定义可知，距离平均值3δ之外的概率为 P(|x-μ|&gt;3δ) &lt;= 0.003 ，这属于极[小概率事件]，在默认情况下我们可以认定，距离超过平均值3δ的样本是不存在的。因此，当样本距离平均值大于3δ，认为该样本为异常值。 </li>
-<li>使用距离检测多元离群点<br>当数据不服从正态分布时，可以通过远离平均距离多少倍的标准差来判定，多少倍的取值需要根据经验和实际情况来决定。</li>
-<li>可视化结果后的判定</li>
-</ol>
-<h5 id="异常值的处理方法："><a href="#异常值的处理方法：" class="headerlink" title="异常值的处理方法："></a>异常值的处理方法：</h5><ol>
-<li>删除含有异常值的记录</li>
-<li>将异常值视为缺失值，使用缺失值处理方法来处理</li>
-<li>用平均值来修正</li>
-<li>不处理</li>
-</ol>
-<h3 id="经典可视化图标的优缺点"><a href="#经典可视化图标的优缺点" class="headerlink" title="经典可视化图标的优缺点"></a>经典可视化图标的优缺点</h3><p>饼图的缺点</p>
-<p>玫瑰图的缺点，视觉干扰是什么</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g18ipg8lxxj31860gqwkt.jpg" alt="image-20190319232437932"></p>
-<h3 id="场景应用"><a href="#场景应用" class="headerlink" title="场景应用"></a>场景应用</h3><p>解决分类数据可视化中类别过多、数据量过多的遮挡问题。</p>
-<p>数据部分：</p>
-<p>可视化部分：</p>
-<p>交互部分：</p>
-<h3 id="面向对象思维"><a href="#面向对象思维" class="headerlink" title="面向对象思维"></a>面向对象思维</h3><p>绘制折线图和柱状图的代码大部分相似，可以写在一个类中。</p>
-<h3 id="一个平面n个圆有多少个相交的圆"><a href="#一个平面n个圆有多少个相交的圆" class="headerlink" title="一个平面n个圆有多少个相交的圆"></a>一个平面n个圆有多少个相交的圆</h3><p>1 遍历的方法。时间复杂度较高。</p>
-<p>2 对每一个圆计算其变上有多少个交点，交点数除以2就位改圆的相交圆的个数。将所有相交个数加起来除以2(2个圆相交会有一个相交个数，遍历后算了两遍)，结果为一共有多少个相交的圆。</p>
-<h1 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h1><p>t-SNE没回答完整。</p>
-<p>高维数据可视分析研究有哪些？</p>
-<p>子空间聚类？</p>
-<h1 id="常问问题"><a href="#常问问题" class="headerlink" title="常问问题"></a>常问问题</h1><h3 id="Q1：基础知识"><a href="#Q1：基础知识" class="headerlink" title="Q1：基础知识"></a>Q1：基础知识</h3><h3 id="Q2可视化图表："><a href="#Q2可视化图表：" class="headerlink" title="Q2可视化图表："></a>Q2可视化图表：</h3><p>比如在没写过图表的前提下，怎么抽象数据与图形的映射，怎么去组合不同的图表部件。</p>
-<h4 id="要从图表类型的隐喻上进行区分"><a href="#要从图表类型的隐喻上进行区分" class="headerlink" title="要从图表类型的隐喻上进行区分"></a>要从图表类型的隐喻上进行区分</h4><p>饼图表达的是一个<em>整体</em>和<em>局部</em>的关系，也就是一个部分占据整体的多少比例。柱状图和折线图较为接近，通常前者表示不同对象数据的对比，后者更常用作表示同一对象数据在不同（时间）维度上的趋势。</p>
-<p>首先，饼图中的类目不应太多，否则信息很分散，不知道作者想表达什么信息。</p>
-<p>其次，饼图的颜色不要五颜六色，除了用以区分类目之外，颜色还可以传递更多有效信息。比如上图用绿色表示正确，灰色表示错误，是符合一般对颜色的认知的，并且绿色的类目更醒目，第一眼就能关注到；相反，如果用普通的三种颜色表示三个类目，则读者很难一眼从图中解读出有效信息。</p>
-<p>第三，区分出想表明特定意思的类目。比如上图将正确的类目和错误的类目分隔开，读者很容易抓取到关键信息。</p>
-<h4 id="南丁格尔玫瑰图："><a href="#南丁格尔玫瑰图：" class="headerlink" title="南丁格尔玫瑰图："></a>南丁格尔玫瑰图：</h4><p>误导在于，数据的比值为到底是半径比、面积比、还是角度比？</p>
-<p>第一种图将数据映射到半径；第二种图将数据映射到半径和角度；第三将图将数据映射到角度。</p>
-<p>何时使用？</p>
-<h3 id="Q3前端设计："><a href="#Q3前端设计：" class="headerlink" title="Q3前端设计："></a>Q3前端设计：</h3><p>常问的一个校招问题，有一块区域要展示一组数据，但数据需要请求 3 个接口才能计算得到，请问前端是怎么做的，如何优化，前端什么情况下可以放弃合并接口的要求。这个地方至少会考察到异步，本地缓存，延展下会问下并发，竞态，协程等。</p>
-<h1 id="HR面试准备"><a href="#HR面试准备" class="headerlink" title="HR面试准备"></a>HR面试准备</h1><p>1、为什么想加入这家公司？你需要了解下这家公司的文化和氛围。<br> 2、为什么离开上一家公司？钱少，不能实现梦想，还是有哪些不爽的地方。如果是换工作为了实现梦想，那么你的梦想是什么。不爽的地方如果在新公司再遇到怎么处理。<br> 3、你的职业规划是什么？<br> 4、当你遇到瓶颈的时候你怎么办？<br> 5、这些年你每年的成长是什么？怎么能体现你的进步？</p>
-<p>6、谈谈你对阿里的企业文化理解？<br> 7、你的期望薪资？<br> 8、项目中遇到的最大挑战是什么？怎么解决的？<br> 9、最有成就感的事情是？<br> 10、怎么看待加班（你能接受996、997、007吗）？</p>
-<p>11、说说自己性格上的优缺点（描述一下自己的性格）<br> 12、自己觉得自己工作上的短板/优点是什么？<br> 13、可以接受降薪吗？</p>
-<p>作者：阅跑影财者</p>
-<p>链接：<a href="https://www.jianshu.com/p/a1863ef1610f" target="_blank" rel="noopener">https://www.jianshu.com/p/a1863ef1610f</a></p>
-<p>来源：简书</p>
-<p>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/19/存档/简历 - 简历要点/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2651,6 +1545,969 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/06/👀IOS12+Swift4+Xcode10开发 -  5 任务清单APP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/06/👀IOS12+Swift4+Xcode10开发 -  5 任务清单APP/" itemprop="url">IOS12+Swift4+Xcode10开发 - 4 元气天气APP</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-06T20:19:57+08:00">
+                2019-01-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/APP/" itemprop="url" rel="index">
+                    <span itemprop="name">APP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/06/👀IOS12+Swift4+Xcode10开发 -  5 任务清单APP/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/06/👀IOS12+Swift4+Xcode10开发 -  5 任务清单APP/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/01/06/👀IOS12+Swift4+Xcode10开发 -  5 任务清单APP/" class="leancloud_visitors" data-flag-title="IOS12+Swift4+Xcode10开发 - 4 元气天气APP">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  16
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g10e7u8r10g30af0l8noz.gif" alt="app6的副本"></p>
+<h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>iOS原生风格的极简的日程管理工具。</p>
+<p>现有的Todo工具：UI设计趋向于小清新、可爱动画等多元设计；功能为可以记录时间、地点、时间重要程度等信息，这样对于提高了增加任务的时间、精力成本。</p>
+<p>本APP主打：界面使用iOS原生风格，随时想到、随时记录。</p>
+<p>功能：用户可以对待办事项输入、修改、删除、修改顺序操作，可以标记已经完成任务。</p>
+<p>使用场景：午餐时想到了一个idea直接打开APP记录、午睡后想到这个idea的实现可直接修改，晚上实现该功能后直接打钩，第二天测试人员告知该idea可行时删除任务。</p>
+<h4 id="功能需求"><a href="#功能需求" class="headerlink" title="功能需求"></a>功能需求</h4><p>浏览任务页面：可以在tableview查看所有任务及其完成状态；可以在编辑状态下批量删除任务、移动任务顺序；按下navigation的+进入添加任务页面；按下&gt;进入修改任务页面。</p>
+<p>添加修改页面：判断当前任务是添加还是修改。使用自定义protocol和delegate反向传值，将文字传回浏览页面。</p>
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><h4 id="主线程"><a href="#主线程" class="headerlink" title="主线程"></a>主线程</h4><p><a href="https://www.jianshu.com/p/f042432e2d7d" target="_blank" rel="noopener">https://www.jianshu.com/p/f042432e2d7d</a></p>
+<h4 id="TableView的使用"><a href="#TableView的使用" class="headerlink" title="TableView的使用"></a>TableView的使用</h4><p>1.我们知道tableView是IOS中的高级视图，其继承与ScrollView，具有ScrollView的功能，还扩展了许多。</p>
+<p>2.tableView的表现格式分两种Plain和Grouped两种风格</p>
+<p>3.tableView的两种代理类delegate和dataSource.这两种代理至关重要，我们在做tableView和这些代理是分不开的。</p>
+<p>4.代理中比较常用的代理方法：</p>
+<p>(1)dataSource的两个必须使用的代理</p>
+<p>显示UITableView的Cell的个数：一共有多少个格子</p>
+<p>Cell和model的数据的交互：根据数据，获取每一个数据的值</p>
+<p>5.增删改查需要做的：第一步获取需要操作的行数（增加不需要），第二步对数据库进行处理，第三部更新视图</p>
+<p>6.更新视图的2种方式：beginUpdates、endUpdates之前操作（如一行一行的删除数据）；tableView.reloadData()刷新TableView了。</p>
+<p>在使用数据库之后，我就直接reloadData()刷新TableView了。比较方便</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 方式一：把批量对视图的操作防在两句话中间，可以提高app的性能</span><br><span class="line">tableView.beginUpdates()</span><br><span class="line">// codes</span><br><span class="line">tableView.endUpdates()</span><br><span class="line">// 方式二：从新load数据更新页面；但没有动画效果 —— 就是相当于执行 cell for row的方法，将结果取出来，再更新视图</span><br><span class="line">//tableView.reloadData()</span><br></pre></td></tr></table></figure>
+<h4 id="Navigation使用，sugue实现跳转"><a href="#Navigation使用，sugue实现跳转" class="headerlink" title="Navigation使用，sugue实现跳转"></a>Navigation使用，sugue实现跳转</h4><p>常用控件：相当于一个扑克盒子，里面的页面是出栈和入栈来实现试图切换。</p>
+<p>利用segue界面跳转一共有两种方式：</p>
+<p>第一种就是以上我的例子，利用button组件，拖拽添加segue，直接运行就可以用。</p>
+<p>第二种是利用ViewController与ViewController之间，拖拽添加segue。不过，这种方法就需要在相应需要跳转的方法内写入代码，手动去设置它的跳转。</p>
+<p>iOS 10中有几种sugue类型：</p>
+<p><strong>Show</strong>：新的view controller将被添加view controller栈的顶部。跳转的页面有Navigation bar，并且有返回原来页面的返回按钮。这是非常常用的的类型。</p>
+<p> <strong>Show detail</strong>：在view controller栈中，新的view controller将被替代原来的view controller。跳转的页面没有Navigation bar，也没有返回原来页面的返回按钮。</p>
+<p> <strong>Present modally</strong>：新页面将以动画形式从底部出现到覆盖整个手机屏幕。这种形式最常见的列子是iOS自带的日历应用：</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/01/06/👀IOS12+Swift4+Xcode10开发 -  5 任务清单APP/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/06/✨iOS基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/06/✨iOS基础/" itemprop="url">iOS基础</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-06T20:19:57+08:00">
+                2019-01-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/iOS开发/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS开发</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/06/✨iOS基础/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/06/✨iOS基础/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/01/06/✨iOS基础/" class="leancloud_visitors" data-flag-title="iOS基础">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3.7k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  14
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="RunLoop"><a href="#RunLoop" class="headerlink" title="RunLoop"></a>RunLoop</h2><p>runloop是一个<strong>事件循环对象</strong>。</p>
+<p>do {</p>
+<p>//接受消息-&gt;等待-&gt;处理</p>
+<p>}while(message != quit)</p>
+<ul>
+<li>概念：事件循环对象，在循环过程中处理各种事件（点击、刷新等），从而保持程序持续运行；在没有事件处理的时候，会进入睡眠模式，从而节省CPU资源，提高程序性能。</li>
+<li>为什么需要：一个线程只能执行一个任务，执行完就会退出，如果我们需要一种机制，让线程能随时处理时间但并不退出，那么 RunLoop 就是这样的一个机制。Runloop是事件接收和分发机制的一个实现。</li>
+<li>Runloop 和线程是绑定在一起的。每个线程（包括主线程）都有一个对应的 Runloop 对象。我们并不能自己创建 Runloop 对象，但是可以获取到系统提供的 Runloop 对象。</li>
+</ul>
+<h2 id="是否接触TableView渲染性能相关的东西？"><a href="#是否接触TableView渲染性能相关的东西？" class="headerlink" title="是否接触TableView渲染性能相关的东西？"></a>是否接触TableView渲染性能相关的东西？</h2><ul>
+<li><p>cell的数目，配置tableview数据</p>
+<p>重用单元格的形式，数据成千上万行，最终渲染个数为屏幕上显示的数目。</p>
+<p>往下拉的时候，最上面的cell到最下面来，放置重复渲染，提高手机性能。</p>
+</li>
+<li><p>刷新页面的两种方法</p>
+<ul>
+<li>无动画效果：tableView.reloadData()，就是相当于执行 cell for row的方法，将结果取出来，再更新视图</li>
+<li>将刷新语句放在View.beginUpdates()、tableView.endUpdates()中间，可以提高app的性能</li>
+</ul>
+</li>
+</ul>
+<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><p>触摸屏幕、晃动设备、通过遥控设施控制设备。对应的事件类型有以下三种：</p>
+<ol>
+<li>触屏事件（Touch Event）</li>
+<li>运动事件（Motion Event）</li>
+<li>远端控制事件（Remote-Control Event）</li>
+</ol>
+<h3 id="响应者链"><a href="#响应者链" class="headerlink" title="响应者链"></a>响应者链</h3><p>当发生事件响应时，必须知道由谁来响应事件。在 iOS 中，由响应者链来对事件进行响应。</p>
+<p>所有事件响应的类都是 UIResponder 的子类，响应者链是一个由不同对象组成的层次结构，其中的每个对象将依次获得响应事件消息的机会。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">First Responser --&gt; The Window --&gt; The Application --&gt; nil（丢弃）</span><br></pre></td></tr></table></figure>
+<p>我们可以通过 <code>[responder nextResponder]</code> 找到当前 responder 的下一个 responder，持续这个过程到最后会找到 UIApplication 对象。</p>
+<p>通常情况下，我们在 First Responder （一般也就是用户当前触控的 View ）这里就会响应请求，进入下面的事件分发机制。</p>
+<h3 id="事件分发"><a href="#事件分发" class="headerlink" title="事件分发"></a>事件分发</h3><p>第一响应者（First responder）指的是当前接受触摸的响应者对象（通常是一个 UIView 对象），即表示当前该对象正在与用户交互，它是响应者链的开端。响应者链和事件分发的使命都是找出第一响应者。</p>
+<ul>
+<li>iOS 系统检测到手指触摸 (Touch) 操作时会将其打包成一个 UIEvent 对象，并放入当前活动 Application 的事件队列，</li>
+<li>单例的 UIApplication 会从事件队列中取出触摸事件并传递给单例的 UIWindow 来处理，</li>
+<li>UIWindow 对象首先会使用 <code>hitTest:withEvent:</code>方法寻找此次 Touch 操作初始点所在的视图(View)，即需要将触摸事件传递给其处理的视图，这个过程称之为 hit-test view。</li>
+</ul>
+<h2 id="内存管理机制：ARC自动引用计数-MRC"><a href="#内存管理机制：ARC自动引用计数-MRC" class="headerlink" title="内存管理机制：ARC自动引用计数\MRC"></a>内存管理机制：ARC自动引用计数\MRC</h2><p>创建的时候为1，使用的时候+1，不需要的时候-1，为0的时候系统知道其不需要了，则release。</p>
+<h2 id="class和struct"><a href="#class和struct" class="headerlink" title="class和struct"></a>class和struct</h2><h3 id="相同点"><a href="#相同点" class="headerlink" title="相同点"></a>相同点</h3><ul>
+<li>可以定义存储属性</li>
+<li>能够定义方法</li>
+<li>通过下标操作访问实例所包含的值</li>
+<li>通过扩展来增加默认实现功能</li>
+</ul>
+<h3 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h3><ul>
+<li>类可以继承</li>
+<li>类型转换允许在运行时检查和解释一个类实例的类型</li>
+<li>析构器允许一个类实例释放任何它所被分配的资源</li>
+<li>引用计数允许一个类的多次引用</li>
+<li>class是引用类型，struct是值类型</li>
+<li>struct会自动生成一个初始化所有属性的构造器</li>
+</ul>
+<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><p>谈及 iOS 中的多线程，一般说的是 pthread，NSthread，GCD，NSOperation 这四种, 用的最多也最方便的就是 GCD 了。</p>
+<p><strong>四、线程安全问题</strong></p>
+<p>当多个线程访问同一块资源时，很容易引发数据错乱和数据安全问题。就好比几个人在同一时修改同一个表格，造成数据的错乱。</p>
+<p>解决多线程安全问题的方法</p>
+<ul>
+<li>方法一：互斥锁（同步锁）</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`@synchronized(锁对象) &#123;``    ``<span class="comment">// 需要锁定的代码``&#125;`</span></span><br></pre></td></tr></table></figure>
+<p>加了互斥做的代码，当新线程访问时，如果发现其他线程正在执行锁定的代码，新线程就会进入休眠。</p>
+<ul>
+<li>方法二：自旋锁</li>
+</ul>
+<p>加了自旋锁，当新线程访问代码时，如果发现有其他线程正在锁定代码，新线程会用死循环的方式，一直等待锁定的代码执行完成。相当于不停尝试执行代码，比较消耗性能。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g1gml59deej30yg0gv0yd.jpg" alt="3873004-d66485790959dcf5.png"></p>
+<h2 id="GCD-中两个重要重要概念-——-队列-amp-任务"><a href="#GCD-中两个重要重要概念-——-队列-amp-任务" class="headerlink" title="GCD 中两个重要重要概念 —— 队列 &amp; 任务"></a>GCD 中两个重要重要概念 —— 队列 &amp; 任务</h2><p>队列是一种特殊的线性表，采用FIFO（先进先出）的原则，队列的主要作用是用来存放任务。</p>
+<p>GCD会自动将队列中的任务取出，放到对应的线程中执行。</p>
+<p>串行队列（Serial Dispatch Queue）: 让任务一个接着一个地执行（一个任务执行完毕后，再执行下一个任务</p>
+<p>并发队列（Concurrent Dispatch Queue）: 可以让多个任务并发（同时）执行（自动开启多个线程同时执行任务）, 并发功能只有在异步（dispatch_async）函数下才有效</p>
+<p><strong>队列执行任务的方式：</strong></p>
+<ul>
+<li>同步：在当前线程中执行，当前代码不执行完，就不能够执行下一条代码。<strong>会阻塞当前线程。</strong></li>
+<li><p>异步：在另一条线程中执行（不用等待当前代码执行完，就能够执行下一条），<strong>不会阻塞当前线程。</strong></p>
+</li>
+<li><p>主队列 (串行)</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let mainQueue = DispatchQueue.main</span><br></pre></td></tr></table></figure>
+<ul>
+<li>全局队列 (并发)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let globalQueue = DispatchQueue.global()</span><br></pre></td></tr></table></figure>
+<p><strong>全局队列默认是并发队列，在不进行第三方框架或者大型的商业应用开发，全局队列基本够用。</strong></p>
+<ul>
+<li>主队列 <code>dispatch_main_queue();</code> 串行 ,更新UI</li>
+<li>全局队列 <code>dispatch_global_queue();</code> 并行,四个优先级: <code>background</code>,<code>low</code>,<code>default</code>,<code>high</code></li>
+<li>自定义队列 <code>dispatch_queue_t queue;</code> 可以自定义是并行: <code>DISPATCH_QUEUE_CONCURRENT</code> 或者串行 <code>DISPATCH_QUEUE_SERIAL</code></li>
+</ul>
+<p><strong>同步不开异步开，串行开1条，并行开多条。</strong></p>
+<p>队列中的任务同步执行，队列就不具有开启线程的能力， 队列中的任务异步执行，队列就具有开启线程的能力。<br><strong>（同步和异步执行决定的是否有开启线程的能力）</strong></p>
+<p>如果队列具 <strong>有开启线程的能力 (队列任务异步执行) </strong> 且队列是 <strong>串行队列</strong> ，那么将会 <strong>开启 1 条线程</strong> 。<br>如果队列具 <strong>有开启线程的能力 (队列任务异步执行) </strong> 且队列是 <strong>并发队列</strong> ，那么将会 <strong>开启 多 条线程</strong> 。开启线程的条数由 GCD 决定。</p>
+<h3 id="2-1-全局队列"><a href="#2-1-全局队列" class="headerlink" title="2.1 全局队列"></a>2.1 <strong>全局队列</strong></h3><p>全局队列是获取的，不是程序员创建的。<br>为了方便 GCD 的使用，apple 默认为我们提供的。<br>全局队列默认是并发队列，在不是进行第三方框架或者大型的商业应用开发，全局队列基本够用。</p>
+<p><strong>全局 ( 并发 ) 队列异步执行 ：</strong></p>
+<p>并发队列异步（不阻塞当前线程）执行（队列就具有开启线程的能力）， 队列会开启多条线程。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">任务异步执行不会阻塞当前线程， </span><br><span class="line">   befor 在最前， </span><br><span class="line">   after 在任意位置，</span><br><span class="line">   task 执行顺序不确定 —— 并发执行（index可以确认）。</span><br><span class="line">   task 并发执行 —— 并发执行（number可以确认）。</span><br><span class="line"></span><br><span class="line">异步开线程 number 可以确定开启了多条线程</span><br><span class="line">   开的线程数由 GCD 决定。 可以看到线程的 number 有重复，是 GCD 对线程进行了复用。</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">async</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().async: befor"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">    <span class="comment">// 全局队列进行 10次异步</span></span><br><span class="line">    <span class="keyword">for</span> index <span class="keyword">in</span> <span class="number">0</span>..&lt;<span class="number">10</span> &#123;</span><br><span class="line">        <span class="type">DispatchQueue</span>.global().async &#123;</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().async: task:(taskIndex:\(index)"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().async: after"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">打印：</span><br></pre></td></tr></table></figure>
+<p><strong>全局 ( 并发 ) 队列同步执行 ：</strong></p>
+<p>并发队列同步（阻塞当前线程）执行（队列就不具有开启线程的能力）， 队列不会开启线程（代码都在主线程中执行）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">任务同步执行会阻塞当前线程， </span><br><span class="line">     befor 在最前， </span><br><span class="line">     after 在最后，</span><br><span class="line">     task 执行顺序确定 —— 阻塞。</span><br><span class="line">同步没有开启线程 number 可以确定没有开启多条线程。所有的代码都在 主线程中执行。</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sync</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().sync: befor"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">    <span class="keyword">for</span> index <span class="keyword">in</span> <span class="number">0</span>..&lt;<span class="number">10</span> &#123;</span><br><span class="line">        <span class="type">DispatchQueue</span>.global().sync &#123;</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().sync: task:(taskIndex:\(index))"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().sync: after"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">打印： </span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: befor &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">0</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">1</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">2</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">3</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">4</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">5</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">6</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">7</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">8</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">9</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: after &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-主队列"><a href="#2-2-主队列" class="headerlink" title="2.2 主队列"></a>2.2 主队列</h3><p>主队列是获取的，不是程序员创建的，apple 默认为我们提供的。<br> （app 开发中，所有的 UI 更新操作都应该在主线程中进行）</p>
+<p><strong>主队列(串行)异步执行</strong></p>
+<p>主队列异步（不会阻塞当前线程）执行（队列就具有开启线程的能力）， 队列会开启线程（<strong>开启的线程就是主线程</strong>）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; 有朋友问我，异步会开启线程， 主队列异步就不会开启线程。 </span><br><span class="line">&gt; 我当时还信以为真。认为自己错误，说特殊情况特殊处理。 其实说白了就是学艺不精。</span><br><span class="line">&gt; 由于主队列是我们获取的，不是我们创建的，在某种意识中会认为主线程不是在主队列中创建的。（认为一开始就存在的。）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; 任务异步执行不会阻塞当前线程， </span><br><span class="line"> befor 在最前， </span><br><span class="line"> after 在第二，</span><br><span class="line"> task 执行顺序确定 —— 串行执行（index可以确认）。</span><br><span class="line"></span><br><span class="line">同步没有开启线程 number 可以确定没有开启多条线程。所有的代码都在 主线程中执行。</span><br></pre></td></tr></table></figure>
+<p><strong>主队列异步的操作主要用在更新 UI 操作中。</strong> 具体参考  项目开发中 GCD 代码使用。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">async</span><span class="params">()</span></span> &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"DispatchQueue.main.async: befor"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">        <span class="keyword">for</span> index <span class="keyword">in</span> <span class="number">0</span>..&lt;<span class="number">10</span> &#123;</span><br><span class="line">            <span class="type">DispatchQueue</span>.main.async &#123;</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"DispatchQueue.main.async: task:(taskIndex:\(index)"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"DispatchQueue.main.async: after"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">打印： </span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: befor &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: after &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">0</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">1</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">2</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">3</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">4</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">5</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">6</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">7</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">8</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">9</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>主队列(串行)同步执行</strong></p>
+<p>执行的效果就俩字 <strong>死锁</strong></p>
+<p>主线程同步，在 Swift 中，编译阶段就报错，在 oc  中是在运行的时候才能发现。体现的主要是界面的 “假死”。</p>
+<h1 id="UITableView"><a href="#UITableView" class="headerlink" title="UITableView"></a>UITableView</h1><p>要实现Tableview必须要签订2个协议</p>
+<p>UITableViewDelegate:数据视图的普通协议,作用是:处理数据视图事件.<br>UITableViewDataSource:数据视图的数据代理协议,作用是:处理视图的数据代理.</p>
+<p>实现签订的协议的2个协议方法：<br>返回数字，每个section有多少个row</p>
+<p>返回cell，cell就是TableView显示时候的格子内容，根据indexPath和数据决定;</p>
+<h2 id="观察者设计模式、KVO"><a href="#观察者设计模式、KVO" class="headerlink" title="观察者设计模式、KVO"></a>观察者设计模式、KVO</h2><h4 id="设计模式——观察者设计模式"><a href="#设计模式——观察者设计模式" class="headerlink" title="设计模式——观察者设计模式"></a>设计模式——观察者设计模式</h4><p>A对B的变化感兴趣，就注册为B的观察者，当B发生变化时通知A，告知B发生了变化。</p>
+<p>指定一个被观察对象(例如 A 类)，当对象某个属性(例如 A 中的字符串 name)发生更改时，对象会获得通知，并作出相应处理；</p>
+<p>在 MVC 设计架构下的项目，KVO 机制很适合实现 mode 模型和 view 视图之间的通讯。比如label中的对象为 num=0 ，我们按下按钮之后对象的num++，则label改变。</p>
+<h4 id="设计模式——通知机制"><a href="#设计模式——通知机制" class="headerlink" title="设计模式——通知机制"></a>设计模式——通知机制</h4><p>当用户从后台进入，从非活跃的状态进入活跃状态的时候，系统自动发送“becomeActive”通知，如果有注册监听者（观察者），则执行回调方法。【天气预报需要用】</p>
+<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><h3 id="浏览器进行一次网络请求都需要哪些步骤？"><a href="#浏览器进行一次网络请求都需要哪些步骤？" class="headerlink" title="浏览器进行一次网络请求都需要哪些步骤？"></a>浏览器进行一次网络请求都需要哪些步骤？</h3><ul>
+<li>1、<strong>域名解析</strong>：<ul>
+<li>浏览器查找域名的 IP 地址、</li>
+<li>没找到后发送给 DNS 服务器（本地host，电信），让它解析为 IP 地址</li>
+</ul>
+</li>
+<li><strong>2、TCP的三次握手</strong></li>
+<li>3、建立TCP连接后发起HTTP请求，浏览器向 web 服务器发送一个 HTTP 请求<ul>
+<li><strong>HTTP请求格式</strong>：是请求方法（GET/POST/DELETE/PUT/HEAD）、URI路径、HTTP版本号。</li>
+<li><strong>3. 2  服务器响应HTTP请求</strong>：状态行、响应头、空行、消息体。</li>
+</ul>
+</li>
+<li>4、<strong>浏览器解析html代码，并请求html代码中的资源</strong><ul>
+<li>服务器的永久重定向响应：“<a href="https://www.google.com/”" target="_blank" rel="noopener">https://www.google.com/”</a> 而非“<a href="http://google.com/”。" target="_blank" rel="noopener">http://google.com/”。</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h3><p>第三次握手是为了防止失效的连接请求到达服务器，让服务器错误打开连接。客户端发送的连接请求如果<strong>在网络中滞留</strong>，那么就会隔很长一段时间才能收到服务器端发回的连接确认。客户端等待一个超时重传时间之后，就会<strong>重新请求连接</strong>。但是这个滞留的连接请求最后还是会到达服务器，如果不进行三次握手，那么<strong>服务器就会打开两个连接</strong>。如果有第三次握手，客户端会忽略服务器之后发送的对滞留连接请求的连接确认，不进行第三次握手，因此就不会再次打开连接。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/05/存档/Java开发 - 老虎机/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/05/存档/Java开发 - 老虎机/" itemprop="url">Java开发 - 老虎机</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-05T13:17:42+08:00">
+                2019-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java开发/" itemprop="url" rel="index">
+                    <span itemprop="name">Java开发</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/05/存档/Java开发 - 老虎机/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/05/存档/Java开发 - 老虎机/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/01/05/存档/Java开发 - 老虎机/" class="leancloud_visitors" data-flag-title="Java开发 - 老虎机">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  678
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>老虎机</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g0um98ayy9j30qw0rcgqj.jpg" alt="image-20190307224935020"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> test.iris;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> java.awt.Color;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> java.awt.FlowLayout;</span><br><span class="line"><span class="keyword">import</span> java.awt.Font;</span><br><span class="line"><span class="keyword">import</span> java.awt.GridLayout;</span><br><span class="line"><span class="keyword">import</span> java.awt.event.ActionEvent;</span><br><span class="line"><span class="keyword">import</span> java.awt.event.ActionListener;</span><br><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> javax.swing.BorderFactory;</span><br><span class="line"><span class="keyword">import</span> javax.swing.ImageIcon;</span><br><span class="line"><span class="keyword">import</span> javax.swing.JButton;</span><br><span class="line"><span class="keyword">import</span> javax.swing.JFrame;</span><br><span class="line"><span class="keyword">import</span> javax.swing.JLabel;</span><br><span class="line"><span class="keyword">import</span> javax.swing.JPanel;</span><br><span class="line"><span class="keyword">import</span> javax.swing.SwingConstants;</span><br><span class="line"><span class="keyword">import</span> javax.swing.border.EmptyBorder;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UI</span> <span class="keyword">extends</span> <span class="title">JFrame</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> UI ui = <span class="keyword">null</span>;</span><br><span class="line">	<span class="keyword">static</span> String[] paths =</span><br><span class="line">	&#123; <span class="string">"1.png"</span>, <span class="string">"2.png"</span>, <span class="string">"3.png"</span> &#125;;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">private</span> MyLabel labelLeft = <span class="keyword">new</span> MyLabel(paths[<span class="number">0</span>], <span class="number">0</span>);<span class="comment">// 左图</span></span><br><span class="line">	<span class="keyword">private</span> MyLabel labelCenter = <span class="keyword">new</span> MyLabel(paths[<span class="number">1</span>], <span class="number">1</span>);<span class="comment">// 中图</span></span><br><span class="line">	<span class="keyword">private</span> MyLabel labelRight = <span class="keyword">new</span> MyLabel(paths[<span class="number">2</span>], <span class="number">2</span>);<span class="comment">// 右图</span></span><br><span class="line"> </span><br><span class="line">	<span class="keyword">private</span> JButton button = <span class="keyword">new</span> JButton(<span class="string">"开始"</span>);<span class="comment">// 开始按钮</span></span><br><span class="line"> </span><br><span class="line">	<span class="keyword">private</span> JLabel labelMessage = <span class="keyword">new</span> JLabel(<span class="string">""</span>);<span class="comment">// 结果标签</span></span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">UI</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		setTitle(<span class="string">"老虎机"</span>);</span><br><span class="line">		setBounds(<span class="number">200</span>, <span class="number">200</span>, <span class="number">500</span>, <span class="number">500</span>);</span><br><span class="line">		JPanel panel = <span class="keyword">new</span> JPanel();</span><br><span class="line">		setContentPane(panel);</span><br><span class="line">		panel.setLayout(<span class="keyword">new</span> GridLayout(<span class="number">3</span>, <span class="number">1</span>));</span><br><span class="line">		panel.setBorder(<span class="keyword">new</span> EmptyBorder(<span class="number">50</span>, <span class="number">50</span>, <span class="number">50</span>, <span class="number">50</span>));</span><br><span class="line"> </span><br><span class="line">		<span class="comment">// 上中下三块面板</span></span><br><span class="line">		JPanel panelTop = <span class="keyword">new</span> JPanel();</span><br><span class="line">		JPanel panelCenter = <span class="keyword">new</span> JPanel();</span><br><span class="line">		JPanel panelBottom = <span class="keyword">new</span> JPanel();</span><br><span class="line"> </span><br><span class="line">		panel.add(panelTop);</span><br><span class="line">		panel.add(panelCenter);</span><br><span class="line">		panel.add(panelBottom);</span><br><span class="line"> </span><br><span class="line">		<span class="comment">// 三张图片显示区域</span></span><br><span class="line">		panelTop.setLayout(<span class="keyword">new</span> FlowLayout());</span><br><span class="line">		panelTop.add(labelLeft);</span><br><span class="line">		panelTop.add(labelCenter);</span><br><span class="line">		panelTop.add(labelRight);</span><br><span class="line"> </span><br><span class="line">		<span class="comment">// 开始按钮面板</span></span><br><span class="line">		panelCenter.setLayout(<span class="keyword">new</span> GridLayout(<span class="number">1</span>, <span class="number">1</span>));</span><br><span class="line">		panelCenter.setBorder(<span class="keyword">new</span> EmptyBorder(<span class="number">30</span>, <span class="number">100</span>, <span class="number">30</span>, <span class="number">100</span>));</span><br><span class="line">		button.addActionListener(<span class="keyword">new</span> MyListener());</span><br><span class="line">		panelCenter.add(button);</span><br><span class="line"> </span><br><span class="line">		<span class="comment">// 抽奖结果面板</span></span><br><span class="line">		panelBottom.setLayout(<span class="keyword">new</span> GridLayout(<span class="number">1</span>, <span class="number">1</span>));</span><br><span class="line">		labelMessage.setBorder(BorderFactory.createLineBorder(Color.BLACK));</span><br><span class="line">		labelMessage.setFont(<span class="keyword">new</span> Font(<span class="string">"微软雅黑"</span>,<span class="number">0</span> , <span class="number">40</span>));</span><br><span class="line">		labelMessage.setForeground(Color.red);</span><br><span class="line">		labelMessage.setHorizontalAlignment(SwingConstants.CENTER);</span><br><span class="line">		</span><br><span class="line">		panelBottom.add(labelMessage);</span><br><span class="line"> </span><br><span class="line">		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span><br><span class="line">		setVisible(<span class="keyword">true</span>);</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> UI <span class="title">getInstance</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> UI.ui;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String[] getPaths()</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> paths;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">public</span> MyLabel <span class="title">getLabelLeft</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> labelLeft;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">public</span> MyLabel <span class="title">getLabelCenter</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> labelCenter;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">public</span> MyLabel <span class="title">getLabelRight</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> labelRight;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">public</span> JButton <span class="title">getButton</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> button;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">public</span> JLabel <span class="title">getLabelMessage</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> labelMessage;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		UI.ui = <span class="keyword">new</span> UI();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyListener</span> <span class="keyword">implements</span> <span class="title">ActionListener</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">boolean</span> buttonFlag = <span class="keyword">false</span>;<span class="comment">// 按钮点击状态，默认未点击</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> threadFlag = <span class="keyword">true</span>;<span class="comment">//线程中断标志</span></span><br><span class="line"> </span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent e)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line"> </span><br><span class="line">		UI ui = UI.getInstance();</span><br><span class="line">		JButton button = ui.getButton();</span><br><span class="line">		JLabel labelMessage = ui.getLabelMessage();</span><br><span class="line"> </span><br><span class="line">		MyLabel labelLeft = ui.getLabelLeft();</span><br><span class="line">		MyLabel labelCenter = ui.getLabelCenter();</span><br><span class="line">		MyLabel labelRight = ui.getLabelRight();</span><br><span class="line">		<span class="keyword">if</span> (buttonFlag)</span><br><span class="line">		&#123;</span><br><span class="line">			threadFlag = <span class="keyword">false</span>;</span><br><span class="line">			buttonFlag = <span class="keyword">false</span>;</span><br><span class="line">			button.setText(<span class="string">"开始"</span>);</span><br><span class="line"> </span><br><span class="line">			<span class="keyword">synchronized</span> (labelLeft) <span class="comment">//等待三个线程释放锁</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">synchronized</span> (labelCenter)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">synchronized</span> (labelRight)</span><br><span class="line">					&#123;</span><br><span class="line">						<span class="keyword">int</span> leftId = labelLeft.getId();</span><br><span class="line">						<span class="keyword">int</span> centerId = labelCenter.getId();</span><br><span class="line">						<span class="keyword">int</span> rightId = labelRight.getId();</span><br><span class="line">						String result = getResult(leftId, centerId, rightId);</span><br><span class="line">						labelMessage.setText(result);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			threadFlag = <span class="keyword">true</span>;</span><br><span class="line">			buttonFlag = <span class="keyword">true</span>;</span><br><span class="line">			<span class="keyword">new</span> MyThread(<span class="number">220</span>, labelLeft).start();</span><br><span class="line">			<span class="keyword">new</span> MyThread(<span class="number">150</span>, labelCenter).start();</span><br><span class="line">			<span class="keyword">new</span> MyThread(<span class="number">60</span>, labelRight).start();</span><br><span class="line">			labelMessage.setText(<span class="string">""</span>);</span><br><span class="line">			button.setText(<span class="string">"暂停"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getResult</span><span class="params">(<span class="keyword">int</span> leftId, <span class="keyword">int</span> centerId, <span class="keyword">int</span> rightId)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		String result = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">if</span> (leftId == centerId &amp; leftId == rightId)</span><br><span class="line">			result = <span class="string">"一等奖"</span>;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (leftId == centerId || leftId == rightId || centerId == rightId)</span><br><span class="line">			result = <span class="string">"二等奖"</span>;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			result = <span class="string">"未中奖"</span>;</span><br><span class="line">		<span class="keyword">return</span> result;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyLabel</span> <span class="keyword">extends</span> <span class="title">JLabel</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> id;<span class="comment">// 标签id</span></span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">MyLabel</span><span class="params">(String path, <span class="keyword">int</span> id)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		ImageIcon icon = <span class="keyword">new</span> ImageIcon(path);</span><br><span class="line">		setIcon(icon);</span><br><span class="line">		<span class="keyword">this</span>.id = id;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> id;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.id = id;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyThread</span> <span class="keyword">extends</span> <span class="title">Thread</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">long</span> time;</span><br><span class="line">	<span class="keyword">private</span> MyLabel label;</span><br><span class="line">	<span class="keyword">private</span> Random random = <span class="keyword">new</span> Random();</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">MyThread</span><span class="params">(<span class="keyword">long</span> time, MyLabel label)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.time = time;</span><br><span class="line">		<span class="keyword">this</span>.label = label;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">synchronized</span> (label) <span class="comment">//锁住lable对象</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">while</span> (MyListener.threadFlag)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">try</span></span><br><span class="line">				&#123;</span><br><span class="line">					Thread.sleep(time);</span><br><span class="line">					<span class="keyword">int</span> id = random.nextInt(<span class="number">3</span>);</span><br><span class="line">					label.setId(id);</span><br><span class="line">					ImageIcon icon = <span class="keyword">new</span> ImageIcon(UI.paths[id]);</span><br><span class="line">					label.setIcon(icon);</span><br><span class="line">				&#125; <span class="keyword">catch</span> (InterruptedException e)</span><br><span class="line">				&#123;</span><br><span class="line">					e.printStackTrace();</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/05/自我介绍/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/05/自我介绍/" itemprop="url">自我介绍</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-05T13:17:42+08:00">
+                2019-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面试/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/05/自我介绍/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/05/自我介绍/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/01/05/自我介绍/" class="leancloud_visitors" data-flag-title="自我介绍">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  242
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h2><h4 id="一、基本信息："><a href="#一、基本信息：" class="headerlink" title="一、基本信息："></a>一、基本信息：</h4><p>中南研二，本科中南保研本校，现研究方向为数据可视分析。</p>
+<h4 id="二、项目："><a href="#二、项目：" class="headerlink" title="二、项目："></a>二、项目：</h4><ul>
+<li>可视分析的项目：高维数据降维</li>
+<li>iOS项目：天气和</li>
+<li>以及上一个部门的，四面的面试官推荐的技术栈React-redux-antD等，来重写了iOS的小项目。</li>
+</ul>
+<h4 id="三、合适的原因："><a href="#三、合适的原因：" class="headerlink" title="三、合适的原因："></a>三、合适的原因：</h4><ul>
+<li>专业比较对口，可视分析不只是展示的工具，而是将人类的感知和知识加入到交互中，对数据进行深层次的模式分析和探索。上一面面试官介绍需要做一些数据分析的数据产品。</li>
+<li>喜欢技术。自己有申请苹果开发者账号，APP正在审核中。之前和别人做的外包Doable也有上线。</li>
+<li>有毅力，为了拿下校运会跨栏金牌，坚持晨跑。且身体健康，可以接受高强度的工作。</li>
+</ul>
+<h2 id="具体项目介绍"><a href="#具体项目介绍" class="headerlink" title="具体项目介绍"></a>具体项目介绍</h2>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -2703,7 +2560,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2714,7 +2571,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2799,7 +2656,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">74.7k</span>
+    <span title="Site words total count">74k</span>
   
 </div>
 

@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/16/😊React+Redux - 知识点/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/11/数据可视化/阿里数据中台面试总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -308,7 +308,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/04/16/😊React+Redux - 知识点/" itemprop="url">React+Redux+AntD - 0 极简事项.md</a></h1>
+                <a class="post-title-link" href="/2019/04/11/数据可视化/阿里数据中台面试总结/" itemprop="url">暑期实习面试 - 阿里数据中台前端可视化总结</a></h1>
         
 
         <div class="post-meta">
@@ -322,8 +322,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-16T20:19:57+08:00">
-                2019-04-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-11T16:00:57+08:00">
+                2019-04-11
               </time>
             
 
@@ -345,8 +345,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/APP/" itemprop="url" rel="index">
-                    <span itemprop="name">APP</span>
+                  <a href="/categories/面试/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
                   </a>
                 </span>
 
@@ -363,8 +363,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/04/16/😊React+Redux - 知识点/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/16/😊React+Redux - 知识点/" itemprop="commentCount"></span>
+                <a href="/2019/04/11/数据可视化/阿里数据中台面试总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/11/数据可视化/阿里数据中台面试总结/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -372,468 +372,7 @@
 
           
           
-             <span id="/2019/04/16/😊React+Redux - 知识点/" class="leancloud_visitors" data-flag-title="React+Redux+AntD - 0 极简事项.md">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  726
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>http和浏览器的工作原理和内部机制要巩固一下，特别是涉及到性能、进程线程、同步异步什么的</p>
-<h2 id="1-关于React特点"><a href="#1-关于React特点" class="headerlink" title="1 关于React特点"></a>1 关于React特点</h2><h3 id="声明式开发"><a href="#声明式开发" class="headerlink" title="声明式开发"></a>声明式开发</h3><p>减少大量dom操作代码量</p>
-<h3 id="可以和其他框架并存"><a href="#可以和其他框架并存" class="headerlink" title="可以和其他框架并存"></a>可以和其他框架并存</h3><p>react只去管理id=”root”的div的渲染。jQuery可以管理其他div操作。</p>
-<h3 id="组件化"><a href="#组件化" class="headerlink" title="组件化"></a>组件化</h3><ul>
-<li>区分组件<todoitem>和标签<div> xxx </div></todoitem></li>
-<li>组件之间通信：父向子：属性，接收用props。子向父：调用父组件的方法</li>
-</ul>
-<h3 id="单向数据流"><a href="#单向数据流" class="headerlink" title="单向数据流"></a>单向数据流</h3><p>父组件可以向子组件传值（只读），子组件不能去改变这个值。</p>
-<p>why单项数据流：防止其中一个改变时出现bug，难以定位是哪一个组件改变导致的错误。</p>
-<h3 id="视图层框架"><a href="#视图层框架" class="headerlink" title="视图层框架"></a>视图层框架</h3><p>只解决数据和渲染的问题，不解决react复杂传值问题，可以借助其他redux等数据传递框架</p>
-<h3 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h3><p>代码逻辑清晰：拆分函数，各司其职；</p>
-<p>前端自动化测试便捷：只需要给函数一个数值，查看输出是否符合预期。</p>
-<h2 id="3-Redux知识点"><a href="#3-Redux知识点" class="headerlink" title="3 Redux知识点"></a>3 Redux知识点</h2><h3 id="Redux设计和使用的三大原则"><a href="#Redux设计和使用的三大原则" class="headerlink" title="Redux设计和使用的三大原则"></a>Redux设计和使用的三大原则</h3><ul>
-<li>store是唯一的</li>
-<li>只有store只有自己能够改变自己的内容</li>
-</ul>
-<h3 id="Redux的核心API"><a href="#Redux的核心API" class="headerlink" title="Redux的核心API"></a>Redux的核心API</h3><ul>
-<li>createStore 创建store</li>
-<li>store.dispatch 派发action，传递给store</li>
-<li>store.getState 获取store中所有数据内容</li>
-<li>store.subscribe 订阅store的改变。只要store改变，其接收的回调函数就会被执行</li>
-</ul>
-<h3 id="Redux中间件"><a href="#Redux中间件" class="headerlink" title="Redux中间件"></a>Redux中间件</h3><p><img src="../../../Library/Application%20Support/typora-user-images/image-20190419101024985.png" alt="image-20190419101024985"></p>
-<p>在action和store之间。</p>
-<p>对store的dispatch方法的封装、升级。根据参数不同，执行不同的操作。</p>
-<ul>
-<li>原始：接收对象后，将对象直接传递给store。</li>
-<li>升级后：传递对象和之前一样；传递函数，不会直接传递，而是先执行，执行完后，若需要调用store，该函数内再调用store。</li>
-<li>例子：<ul>
-<li>redux-logger中间件，在传递过程中，将action打印。</li>
-<li>redux-thunk异步问题：将异步放在actionCreator中</li>
-<li>redux-saga异步问题：将异步单独放在文件中</li>
-</ul>
-</li>
-</ul>
-<h3 id="React-Redux"><a href="#React-Redux" class="headerlink" title="React-Redux"></a>React-Redux</h3><p>Redux的官方React绑定库</p>
-<p>使react组件从redux store中读取数据，并且向store分发actions来更新数据。</p>
-<h4 id="提供：Provider组件：核心组件，把store提供给每一个内部组件，也叫提供器"><a href="#提供：Provider组件：核心组件，把store提供给每一个内部组件，也叫提供器" class="headerlink" title="提供：Provider组件：核心组件，把store提供给每一个内部组件，也叫提供器"></a>提供：Provider组件：核心组件，把store提供给每一个内部组件，也叫提供器</h4><p>功能：从最外部封装了整个应用，并向connect模块传递store。</p>
-<h4 id="连接：-connect方法，前两个参数为连接的规则，最后的参数为本组件TodoList。"><a href="#连接：-connect方法，前两个参数为连接的规则，最后的参数为本组件TodoList。" class="headerlink" title="连接： connect方法，前两个参数为连接的规则，最后的参数为本组件TodoList。"></a>连接： connect方法，前两个参数为连接的规则，最后的参数为本组件TodoList。</h4><p>mapStateToProps：store里的数据、和组件里的数据关系关联(组件获取store数据)</p>
-<p>mapDispatchToProps：组件里props如何对store里的数据做修改、和store里的dispatch方法做关联。(组件通过dispatch修改store)</p>
-<p>// 实际上：todoList是一个UI组件，connect把UI组件和业务逻辑（数据、派发）结合，返回的结果为一个容器组件。<br>// 导出的内容就是connect的执行结果：容器组件</p>
-<h2 id="前端知识"><a href="#前端知识" class="headerlink" title="前端知识"></a>前端知识</h2><h3 id="构建工具"><a href="#构建工具" class="headerlink" title="构建工具"></a>构建工具</h3><p>webpack</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/16/前端基础学习/React  -  4 Redux/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/16/前端基础学习/React  -  4 Redux/" itemprop="url">React - 4 Redux</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-16T13:17:42+08:00">
-                2019-04-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/04/16/前端基础学习/React  -  4 Redux/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/16/前端基础学习/React  -  4 Redux/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/04/16/前端基础学习/React  -  4 Redux/" class="leancloud_visitors" data-flag-title="React - 4 Redux">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  547
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Redux：数据层框架"><a href="#Redux：数据层框架" class="headerlink" title="Redux：数据层框架"></a>Redux：数据层框架</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p><img src="../../../../Library/Application Support/typora-user-images/image-20190417125714838.png" alt="image-20190417125714838"></p>
-<p>Redux = Reducer + Flux(数据存储框架，过时了)</p>
-<p>将组件中的数据放在一个公用存储区域去存储，组件改变数据，其他组件会感知Redux的改变，再去取数据更新组件。</p>
-<h3 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h3><p><img src="../../../../Library/Application Support/typora-user-images/image-20190417130023080.png" alt="image-20190417130023080"></p>
-<p>react component：借书的用户</p>
-<p>action creators：那句话”我要借什么书”</p>
-<p>store：图书馆管理员</p>
-<p>reducers：管理员的记录本</p>
-<p>借书的人说”要借什么书”，图书馆管理员去查阅记录本，记录本上显示这本书在哪里，根据书的位置找到书，并给借书人。</p>
-<h3 id="Store的创建"><a href="#Store的创建" class="headerlink" title="Store的创建"></a>Store的创建</h3><p>引入：yarn add redux</p>
-<ul>
-<li>创建reducer，把reducer传递给创建store的函数</li>
-<li>使用reducer作为参数，创建store的时候，(创建管理员的时候要把记录本给他 )</li>
-</ul>
-<h3 id="Action和reducer的编写"><a href="#Action和reducer的编写" class="headerlink" title="Action和reducer的编写"></a>Action和reducer的编写</h3><p>主动改变：</p>
-<ul>
-<li><p>方法内现写action要做什么的那句话(对象)</p>
-</li>
-<li><p>将action传递给store</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">store.dispatch(action);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>store不操作，将action传递给reducer，</p>
-<ul>
-<li>reducer中判断type</li>
-<li>深拷贝原来的state为newState，更新newState</li>
-<li>返回newState给store</li>
-</ul>
-</li>
-<li><p>store接受后会替换之前的state</p>
-</li>
-</ul>
-<p>Store数据发生改变的时候，组件会感知改变，重新取数据，更新组件内容</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 组件去订阅store</span></span><br><span class="line"><span class="keyword">this</span>.handleBtnClick = <span class="keyword">this</span>.handleBtnClick.bind(<span class="keyword">this</span>);</span><br><span class="line">store.subscribe(<span class="keyword">this</span>.hanleStoreChange);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//store同步：感知到变化的时候，调用store.getState()重新取数据，再用setState更新组件内容</span></span><br><span class="line">    hanleStoreChange()&#123;</span><br><span class="line">        <span class="keyword">this</span>.setState(store.getState());</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="删除功能"><a href="#删除功能" class="headerlink" title="删除功能"></a>删除功能</h3><h3 id="ActionTypes的拆分"><a href="#ActionTypes的拆分" class="headerlink" title="ActionTypes的拆分"></a>ActionTypes的拆分</h3><p>常量写错了会报异常，字符串不会报异常。方便找出bug</p>
-<h3 id="使用actionCreators统一创建action"><a href="#使用actionCreators统一创建action" class="headerlink" title="使用actionCreators统一创建action"></a>使用actionCreators统一创建action</h3><p>自动化测试，有利于代码维护</p>
-<h3 id="AntD的css"><a href="#AntD的css" class="headerlink" title="AntD的css"></a>AntD的css</h3><h2 id="Redux知识点"><a href="#Redux知识点" class="headerlink" title="Redux知识点"></a>Redux知识点</h2><h3 id="Redux设计和使用的三大原则"><a href="#Redux设计和使用的三大原则" class="headerlink" title="Redux设计和使用的三大原则"></a>Redux设计和使用的三大原则</h3><ul>
-<li>store是唯一的</li>
-<li>只有store只有自己能够改变自己的内容</li>
-<li>Reducer必须是个纯函数：<ul>
-<li>给定固定的输入，</li>
-<li>会有固定的输出，(不能有异步操作、不能有和时间相关的操作)</li>
-<li>且不会有任何副作用(不能修改参数)</li>
-</ul>
-</li>
-</ul>
-<h3 id="Redux的核心API"><a href="#Redux的核心API" class="headerlink" title="Redux的核心API"></a>Redux的核心API</h3><ul>
-<li>createStore 创建store</li>
-<li>store.dispatch 派发action，传递给store</li>
-<li>store.getState 获取store中所有数据内容</li>
-<li>store.subscribe 订阅store的改变。只要store改变，其接收的回调函数就会被执行</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/26/✨iOS基础/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/26/✨iOS基础/" itemprop="url">未命名</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-26T23:04:04+08:00">
-                2019-03-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/26/✨iOS基础/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/26/✨iOS基础/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/03/26/✨iOS基础/" class="leancloud_visitors" data-flag-title>
+             <span id="/2019/04/11/数据可视化/阿里数据中台面试总结/" class="leancloud_visitors" data-flag-title="暑期实习面试 - 阿里数据中台前端可视化总结">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -874,7 +413,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  14
+                  12
                 </span>
               
             </div>
@@ -897,398 +436,121 @@
       
         
           
-            <h2 id="RunLoop"><a href="#RunLoop" class="headerlink" title="RunLoop"></a>RunLoop</h2><p>runloop是一个<strong>事件循环对象</strong>。</p>
-<p>do {</p>
-<p>//接受消息-&gt;等待-&gt;处理</p>
-<p>}while(message != quit)</p>
-<ul>
-<li>概念：事件循环对象，在循环过程中处理各种事件（点击、刷新等），从而保持程序持续运行；在没有事件处理的时候，会进入睡眠模式，从而节省CPU资源，提高程序性能。</li>
-<li>为什么需要：一个线程只能执行一个任务，执行完就会退出，如果我们需要一种机制，让线程能随时处理时间但并不退出，那么 RunLoop 就是这样的一个机制。Runloop是事件接收和分发机制的一个实现。</li>
-<li>Runloop 和线程是绑定在一起的。每个线程（包括主线程）都有一个对应的 Runloop 对象。我们并不能自己创建 Runloop 对象，但是可以获取到系统提供的 Runloop 对象。</li>
+            <h1 id="三面"><a href="#三面" class="headerlink" title="三面"></a>三面</h1><h3 id="数据结构："><a href="#数据结构：" class="headerlink" title="数据结构："></a>数据结构：</h3><p>为什么需要二叉树？</p>
+<p>B+树？</p>
+<p>跳表？</p>
+<h3 id="操作系统："><a href="#操作系统：" class="headerlink" title="操作系统："></a>操作系统：</h3><p>进程通信方式？</p>
+<p>拥塞</p>
+<h3 id="数据库："><a href="#数据库：" class="headerlink" title="数据库："></a>数据库：</h3><p>数据库了解吗？</p>
+<h3 id="算法："><a href="#算法：" class="headerlink" title="算法："></a>算法：</h3><p>找出小于k的所有质数</p>
+<h3 id="可视分析流程"><a href="#可视分析流程" class="headerlink" title="可视分析流程"></a>可视分析流程</h3><p>数据转化、可视映射、视图转化</p>
+<p>原数据-&gt;转化后的数据-&gt;可视结构-&gt;视图</p>
+<p>如：我们选择线性投影将30维的原数据降为5维度的转化数据，再使用平行坐标视觉映射转为可视结构，然而数据有相互遮挡，则选择PCP方法视图转化至视图上。最后呈现热力图式的平行坐标。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g16qrifmtjj31ee0lc4az.jpg" alt="image-20190318103214651"></p>
+<h3 id="D3-js源码阅读："><a href="#D3-js源码阅读：" class="headerlink" title="D3.js源码阅读："></a>D3.js源码阅读：</h3><ul>
+<li>把输入的原始数据转化成为标准的D3可接受的数据格式</li>
+<li>根据原始数据定义好x轴函数、y轴函数和定义好作图方式(如d3.line) </li>
+<li>在SVG上面画出x轴y轴、根据原始数据结合x轴及y轴函数作线状图 </li>
+<li>再画出标题等细节的东西</li>
+<li>最后，给已经完成的图形添加<strong>动画效果</strong></li>
 </ul>
-<h2 id="是否接触TableView渲染性能相关的东西？"><a href="#是否接触TableView渲染性能相关的东西？" class="headerlink" title="是否接触TableView渲染性能相关的东西？"></a>是否接触TableView渲染性能相关的东西？</h2><ul>
-<li><p>cell的数目，配置tableview数据</p>
-<p>重用单元格的形式，数据成千上万行，最终渲染个数为屏幕上显示的数目。</p>
-<p>往下拉的时候，最上面的cell到最下面来，放置重复渲染，提高手机性能。</p>
-</li>
-<li><p>刷新页面的两种方法</p>
-<ul>
-<li>无动画效果：tableView.reloadData()，就是相当于执行 cell for row的方法，将结果取出来，再更新视图</li>
-<li>将刷新语句放在View.beginUpdates()、tableView.endUpdates()中间，可以提高app的性能</li>
-</ul>
-</li>
-</ul>
-<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><p>触摸屏幕、晃动设备、通过遥控设施控制设备。对应的事件类型有以下三种：</p>
+<p>D3力导向图。</p>
+<p>模块1：center.js 设置力导图点阵中心</p>
+<p>虽然每个节点的坐标都是计算得到的，但总有开始状态。开始状态下的坐标设置的是获取的随机数，这个随机数可以根据当前 View 的宽高来限定。</p>
+<p>遍历所有 FNode，给每个 FNode 设置一个随机获取的坐标。遍历所有 FLink，计算每条 FLink 的 sourceNode 和 targetNode 的距离 d，利用 α 值和 FLink 的拉力，计算 sourceNode 和 targetNode 的距离的减少量。</p>
+<p>遍历所有 FNode，使每个节点向 View 中心聚拢。</p>
+<p>模块3：jiggle.js 微小晃动随机数 </p>
+<p>模块4：collide.js 碰撞</p>
+<p><a href="https://segmentfault.com/a/1190000008578391" target="_blank" rel="noopener">https://segmentfault.com/a/1190000008578391</a></p>
+<h2 id="问面试官的问题"><a href="#问面试官的问题" class="headerlink" title="问面试官的问题"></a>问面试官的问题</h2><p>可以了解一下团队对于实习生的培养吗？如果有幸接到offer后，是否可以联系组内前辈去问一下需要学习哪些技能，因为现在距离暑期实习还有一两个月时间，是否可以预备学习一些组内的必备技能？</p>
+<p>您是我一个位BOSS面的面试官，可以了解一下作为高级前端工程师的一些工作的日常吗？之前总听说架构这些词，但是在校园里面确实没有接触过您这样的高级工程师。谢谢！</p>
+<h3 id="位图和矢量图"><a href="#位图和矢量图" class="headerlink" title="位图和矢量图"></a>位图和矢量图</h3><p>1.位图图像(bitmap)<br>亦称为点阵图像或绘制图像，是由称作<strong>像素（图片元素）的单个点组成</strong>的。这些点可以进行不同的排列和染色以构成图样。当放大位图时，可以看见赖以构成整个图像的<strong>无数单个方块</strong>。扩大位图尺寸的效果是<strong>增大单个像素</strong>，从而使线条和形状<strong>显得参差不齐</strong>。然而，如果从稍远的位置观看它，位图图像的颜色和形状又显得是连续的。</p>
+<p>矢量图：矢量图使用<strong>直线和曲线来描述图形</strong>，这些图形的元素是<strong>一些点、线、矩形、多边形、圆和弧线</strong>等等，它们都是<strong>通过数学公式计算</strong>获得的。由于矢量图形<strong>可通过公式计算</strong>获得，所以矢量图形<strong>文件体积一般较小</strong>。矢量图形最大的优点是<strong>无论放大、缩小或旋转</strong>等不会失真；最大的缺点是难以表现<strong>色彩层次丰富的逼真图像效果</strong>。</p>
+<h2 id="数据中台"><a href="#数据中台" class="headerlink" title="数据中台"></a>数据中台</h2><p>阿里中台主要由业务中台和数字中台并肩构成了双中台，并肩扛起了所有前台业务。</p>
+<p>业务中台将后台资源进行抽象包装整合，转化为前台友好的可重用共享的核心能力，实现了后端业务资源到前台易用能力的转化。</p>
+<p>数据中台从后台及业务中台将数据流入，完成海量数据的存储、计算、产品化包装过程，构成企业的核心数据能力，为前台基于数据的定制化创新和业务中台基于数据反馈的持续演进提供了强大支撑。业务中台与数据中台，相辅相成，互相支撑，一起构建起了战场强大的后方炮火群。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g18jmn4hddj30rs0fe0ua.jpg" alt="img"></p>
+<h1 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h1><h3 id="可视化项目，及相关展开"><a href="#可视化项目，及相关展开" class="headerlink" title="可视化项目，及相关展开"></a>可视化项目，及相关展开</h3><h3 id="可视化的流程"><a href="#可视化的流程" class="headerlink" title="可视化的流程"></a>可视化的流程</h3><p>data transformation、visual structure、view transformation + 交互</p>
+<p>如果类别多、数据大有遮挡该如何解决？</p>
 <ol>
-<li>触屏事件（Touch Event）</li>
-<li>运动事件（Motion Event）</li>
-<li>远端控制事件（Remote-Control Event）</li>
+<li><p>data transformation：</p>
+<p>数据采样</p>
+</li>
+<li><p>visual structure：已有方式——散点图、三维散点图、平行坐标。我研究的方式——。</p>
+</li>
+<li><p>view transformation：如果以上方式还是会产生遮挡问题，可以采用一些通道编码，如颜色深浅、透明度、大小——表示该位置的相同类型数据的多少；</p>
+<p>热力图、透明度、汇合</p>
+</li>
+<li><p>交互：</p>
+</li>
 </ol>
-<h3 id="响应者链"><a href="#响应者链" class="headerlink" title="响应者链"></a>响应者链</h3><p>当发生事件响应时，必须知道由谁来响应事件。在 iOS 中，由响应者链来对事件进行响应。</p>
-<p>所有事件响应的类都是 UIResponder 的子类，响应者链是一个由不同对象组成的层次结构，其中的每个对象将依次获得响应事件消息的机会。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">First Responser --&gt; The Window --&gt; The Application --&gt; nil（丢弃）</span><br></pre></td></tr></table></figure>
-<p>我们可以通过 <code>[responder nextResponder]</code> 找到当前 responder 的下一个 responder，持续这个过程到最后会找到 UIApplication 对象。</p>
-<p>通常情况下，我们在 First Responder （一般也就是用户当前触控的 View ）这里就会响应请求，进入下面的事件分发机制。</p>
-<h3 id="事件分发"><a href="#事件分发" class="headerlink" title="事件分发"></a>事件分发</h3><p>第一响应者（First responder）指的是当前接受触摸的响应者对象（通常是一个 UIView 对象），即表示当前该对象正在与用户交互，它是响应者链的开端。响应者链和事件分发的使命都是找出第一响应者。</p>
-<ul>
-<li>iOS 系统检测到手指触摸 (Touch) 操作时会将其打包成一个 UIEvent 对象，并放入当前活动 Application 的事件队列，</li>
-<li>单例的 UIApplication 会从事件队列中取出触摸事件并传递给单例的 UIWindow 来处理，</li>
-<li>UIWindow 对象首先会使用 <code>hitTest:withEvent:</code>方法寻找此次 Touch 操作初始点所在的视图(View)，即需要将触摸事件传递给其处理的视图，这个过程称之为 hit-test view。</li>
-</ul>
-<h2 id="内存管理机制：ARC自动引用计数-MRC"><a href="#内存管理机制：ARC自动引用计数-MRC" class="headerlink" title="内存管理机制：ARC自动引用计数\MRC"></a>内存管理机制：ARC自动引用计数\MRC</h2><p>创建的时候为1，使用的时候+1，不需要的时候-1，为0的时候系统知道其不需要了，则release。</p>
-<h2 id="class和struct"><a href="#class和struct" class="headerlink" title="class和struct"></a>class和struct</h2><h3 id="相同点"><a href="#相同点" class="headerlink" title="相同点"></a>相同点</h3><ul>
-<li>可以定义存储属性</li>
-<li>能够定义方法</li>
-<li>通过下标操作访问实例所包含的值</li>
-<li>通过扩展来增加默认实现功能</li>
-</ul>
-<h3 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h3><ul>
-<li>类可以继承</li>
-<li>类型转换允许在运行时检查和解释一个类实例的类型</li>
-<li>析构器允许一个类实例释放任何它所被分配的资源</li>
-<li>引用计数允许一个类的多次引用</li>
-<li>class是引用类型，struct是值类型</li>
-<li>struct会自动生成一个初始化所有属性的构造器</li>
-</ul>
-<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><p>谈及 iOS 中的多线程，一般说的是 pthread，NSthread，GCD，NSOperation 这四种, 用的最多也最方便的就是 GCD 了。</p>
-<p><strong>四、线程安全问题</strong></p>
-<p>当多个线程访问同一块资源时，很容易引发数据错乱和数据安全问题。就好比几个人在同一时修改同一个表格，造成数据的错乱。</p>
-<p>解决多线程安全问题的方法</p>
-<ul>
-<li>方法一：互斥锁（同步锁）</li>
-</ul>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`@synchronized(锁对象) &#123;``    ``<span class="comment">// 需要锁定的代码``&#125;`</span></span><br></pre></td></tr></table></figure>
-<p>加了互斥做的代码，当新线程访问时，如果发现其他线程正在执行锁定的代码，新线程就会进入休眠。</p>
-<ul>
-<li>方法二：自旋锁</li>
-</ul>
-<p>加了自旋锁，当新线程访问代码时，如果发现有其他线程正在锁定代码，新线程会用死循环的方式，一直等待锁定的代码执行完成。相当于不停尝试执行代码，比较消耗性能。</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g1gml59deej30yg0gv0yd.jpg" alt="3873004-d66485790959dcf5.png"></p>
-<h2 id="GCD-中两个重要重要概念-——-队列-amp-任务"><a href="#GCD-中两个重要重要概念-——-队列-amp-任务" class="headerlink" title="GCD 中两个重要重要概念 —— 队列 &amp; 任务"></a>GCD 中两个重要重要概念 —— 队列 &amp; 任务</h2><p>队列是一种特殊的线性表，采用FIFO（先进先出）的原则，队列的主要作用是用来存放任务。</p>
-<p>GCD会自动将队列中的任务取出，放到对应的线程中执行。</p>
-<p>串行队列（Serial Dispatch Queue）: 让任务一个接着一个地执行（一个任务执行完毕后，再执行下一个任务</p>
-<p>并发队列（Concurrent Dispatch Queue）: 可以让多个任务并发（同时）执行（自动开启多个线程同时执行任务）, 并发功能只有在异步（dispatch_async）函数下才有效</p>
-<p><strong>队列执行任务的方式：</strong></p>
-<ul>
-<li>同步：在当前线程中执行，当前代码不执行完，就不能够执行下一条代码。<strong>会阻塞当前线程。</strong></li>
-<li><p>异步：在另一条线程中执行（不用等待当前代码执行完，就能够执行下一条），<strong>不会阻塞当前线程。</strong></p>
-</li>
-<li><p>主队列 (串行)</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let mainQueue = DispatchQueue.main</span><br></pre></td></tr></table></figure>
-<ul>
-<li>全局队列 (并发)</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let globalQueue = DispatchQueue.global()</span><br></pre></td></tr></table></figure>
-<p><strong>全局队列默认是并发队列，在不进行第三方框架或者大型的商业应用开发，全局队列基本够用。</strong></p>
-<ul>
-<li>主队列 <code>dispatch_main_queue();</code> 串行 ,更新UI</li>
-<li>全局队列 <code>dispatch_global_queue();</code> 并行,四个优先级: <code>background</code>,<code>low</code>,<code>default</code>,<code>high</code></li>
-<li>自定义队列 <code>dispatch_queue_t queue;</code> 可以自定义是并行: <code>DISPATCH_QUEUE_CONCURRENT</code> 或者串行 <code>DISPATCH_QUEUE_SERIAL</code></li>
-</ul>
-<p><strong>同步不开异步开，串行开1条，并行开多条。</strong></p>
-<p>队列中的任务同步执行，队列就不具有开启线程的能力， 队列中的任务异步执行，队列就具有开启线程的能力。<br><strong>（同步和异步执行决定的是否有开启线程的能力）</strong></p>
-<p>如果队列具 <strong>有开启线程的能力 (队列任务异步执行) </strong> 且队列是 <strong>串行队列</strong> ，那么将会 <strong>开启 1 条线程</strong> 。<br>如果队列具 <strong>有开启线程的能力 (队列任务异步执行) </strong> 且队列是 <strong>并发队列</strong> ，那么将会 <strong>开启 多 条线程</strong> 。开启线程的条数由 GCD 决定。</p>
-<h3 id="2-1-全局队列"><a href="#2-1-全局队列" class="headerlink" title="2.1 全局队列"></a>2.1 <strong>全局队列</strong></h3><p>全局队列是获取的，不是程序员创建的。<br>为了方便 GCD 的使用，apple 默认为我们提供的。<br>全局队列默认是并发队列，在不是进行第三方框架或者大型的商业应用开发，全局队列基本够用。</p>
-<p><strong>全局 ( 并发 ) 队列异步执行 ：</strong></p>
-<p>并发队列异步（不阻塞当前线程）执行（队列就具有开启线程的能力）， 队列会开启多条线程。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">任务异步执行不会阻塞当前线程， </span><br><span class="line">   befor 在最前， </span><br><span class="line">   after 在任意位置，</span><br><span class="line">   task 执行顺序不确定 —— 并发执行（index可以确认）。</span><br><span class="line">   task 并发执行 —— 并发执行（number可以确认）。</span><br><span class="line"></span><br><span class="line">异步开线程 number 可以确定开启了多条线程</span><br><span class="line">   开的线程数由 GCD 决定。 可以看到线程的 number 有重复，是 GCD 对线程进行了复用。</span><br></pre></td></tr></table></figure>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">async</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().async: befor"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">    <span class="comment">// 全局队列进行 10次异步</span></span><br><span class="line">    <span class="keyword">for</span> index <span class="keyword">in</span> <span class="number">0</span>..&lt;<span class="number">10</span> &#123;</span><br><span class="line">        <span class="type">DispatchQueue</span>.global().async &#123;</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().async: task:(taskIndex:\(index)"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().async: after"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">打印：</span><br></pre></td></tr></table></figure>
-<p><strong>全局 ( 并发 ) 队列同步执行 ：</strong></p>
-<p>并发队列同步（阻塞当前线程）执行（队列就不具有开启线程的能力）， 队列不会开启线程（代码都在主线程中执行）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">任务同步执行会阻塞当前线程， </span><br><span class="line">     befor 在最前， </span><br><span class="line">     after 在最后，</span><br><span class="line">     task 执行顺序确定 —— 阻塞。</span><br><span class="line">同步没有开启线程 number 可以确定没有开启多条线程。所有的代码都在 主线程中执行。</span><br></pre></td></tr></table></figure>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sync</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().sync: befor"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">    <span class="keyword">for</span> index <span class="keyword">in</span> <span class="number">0</span>..&lt;<span class="number">10</span> &#123;</span><br><span class="line">        <span class="type">DispatchQueue</span>.global().sync &#123;</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().sync: task:(taskIndex:\(index))"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().sync: after"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">打印： </span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: befor &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">0</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">1</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">2</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">3</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">4</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">5</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">6</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">7</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">8</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">9</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: after &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2-2-主队列"><a href="#2-2-主队列" class="headerlink" title="2.2 主队列"></a>2.2 主队列</h3><p>主队列是获取的，不是程序员创建的，apple 默认为我们提供的。<br> （app 开发中，所有的 UI 更新操作都应该在主线程中进行）</p>
-<p><strong>主队列(串行)异步执行</strong></p>
-<p>主队列异步（不会阻塞当前线程）执行（队列就具有开启线程的能力）， 队列会开启线程（<strong>开启的线程就是主线程</strong>）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; 有朋友问我，异步会开启线程， 主队列异步就不会开启线程。 </span><br><span class="line">&gt; 我当时还信以为真。认为自己错误，说特殊情况特殊处理。 其实说白了就是学艺不精。</span><br><span class="line">&gt; 由于主队列是我们获取的，不是我们创建的，在某种意识中会认为主线程不是在主队列中创建的。（认为一开始就存在的。）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; 任务异步执行不会阻塞当前线程， </span><br><span class="line"> befor 在最前， </span><br><span class="line"> after 在第二，</span><br><span class="line"> task 执行顺序确定 —— 串行执行（index可以确认）。</span><br><span class="line"></span><br><span class="line">同步没有开启线程 number 可以确定没有开启多条线程。所有的代码都在 主线程中执行。</span><br></pre></td></tr></table></figure>
-<p><strong>主队列异步的操作主要用在更新 UI 操作中。</strong> 具体参考  项目开发中 GCD 代码使用。</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">async</span><span class="params">()</span></span> &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"DispatchQueue.main.async: befor"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">        <span class="keyword">for</span> index <span class="keyword">in</span> <span class="number">0</span>..&lt;<span class="number">10</span> &#123;</span><br><span class="line">            <span class="type">DispatchQueue</span>.main.async &#123;</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"DispatchQueue.main.async: task:(taskIndex:\(index)"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"DispatchQueue.main.async: after"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">打印： </span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: befor &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: after &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">0</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">1</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">2</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">3</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">4</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">5</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">6</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">7</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">8</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">9</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>主队列(串行)同步执行</strong></p>
-<p>执行的效果就俩字 <strong>死锁</strong></p>
-<p>主线程同步，在 Swift 中，编译阶段就报错，在 oc  中是在运行的时候才能发现。体现的主要是界面的 “假死”。</p>
-<h1 id="UITableView"><a href="#UITableView" class="headerlink" title="UITableView"></a>UITableView</h1><p>要实现Tableview必须要签订2个协议</p>
-<p>UITableViewDelegate:数据视图的普通协议,作用是:处理数据视图事件.<br>UITableViewDataSource:数据视图的数据代理协议,作用是:处理视图的数据代理.</p>
-<p>实现签订的协议的2个协议方法：<br>返回数字，每个section有多少个row</p>
-<p>返回cell，cell就是TableView显示时候的格子内容，根据indexPath和数据决定;</p>
-<h2 id="观察者设计模式、KVO"><a href="#观察者设计模式、KVO" class="headerlink" title="观察者设计模式、KVO"></a>观察者设计模式、KVO</h2><h4 id="设计模式——观察者设计模式"><a href="#设计模式——观察者设计模式" class="headerlink" title="设计模式——观察者设计模式"></a>设计模式——观察者设计模式</h4><p>A对B的变化感兴趣，就注册为B的观察者，当B发生变化时通知A，告知B发生了变化。</p>
-<p>指定一个被观察对象(例如 A 类)，当对象某个属性(例如 A 中的字符串 name)发生更改时，对象会获得通知，并作出相应处理；</p>
-<p>在 MVC 设计架构下的项目，KVO 机制很适合实现 mode 模型和 view 视图之间的通讯。比如label中的对象为 num=0 ，我们按下按钮之后对象的num++，则label改变。</p>
-<h4 id="设计模式——通知机制"><a href="#设计模式——通知机制" class="headerlink" title="设计模式——通知机制"></a>设计模式——通知机制</h4><p>当用户从后台进入，从非活跃的状态进入活跃状态的时候，系统自动发送“becomeActive”通知，如果有注册监听者（观察者），则执行回调方法。【天气预报需要用】</p>
-<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><h3 id="浏览器进行一次网络请求都需要哪些步骤？"><a href="#浏览器进行一次网络请求都需要哪些步骤？" class="headerlink" title="浏览器进行一次网络请求都需要哪些步骤？"></a>浏览器进行一次网络请求都需要哪些步骤？</h3><ul>
-<li>1、<strong>域名解析</strong>：<ul>
-<li>浏览器查找域名的 IP 地址、</li>
-<li>没找到后发送给 DNS 服务器（本地host，电信），让它解析为 IP 地址</li>
-</ul>
-</li>
-<li><strong>2、TCP的三次握手</strong></li>
-<li>3、建立TCP连接后发起HTTP请求，浏览器向 web 服务器发送一个 HTTP 请求<ul>
-<li><strong>HTTP请求格式</strong>：是请求方法（GET/POST/DELETE/PUT/HEAD）、URI路径、HTTP版本号。</li>
-<li><strong>3. 2  服务器响应HTTP请求</strong>：状态行、响应头、空行、消息体。</li>
-</ul>
-</li>
-<li>4、<strong>浏览器解析html代码，并请求html代码中的资源</strong><ul>
-<li>服务器的永久重定向响应：“<a href="https://www.google.com/”" target="_blank" rel="noopener">https://www.google.com/”</a> 而非“<a href="http://google.com/”。" target="_blank" rel="noopener">http://google.com/”。</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h3><p>第三次握手是为了防止失效的连接请求到达服务器，让服务器错误打开连接。客户端发送的连接请求如果<strong>在网络中滞留</strong>，那么就会隔很长一段时间才能收到服务器端发回的连接确认。客户端等待一个超时重传时间之后，就会<strong>重新请求连接</strong>。但是这个滞留的连接请求最后还是会到达服务器，如果不进行三次握手，那么<strong>服务器就会打开两个连接</strong>。如果有第三次握手，客户端会忽略服务器之后发送的对滞留连接请求的连接确认，不进行第三次握手，因此就不会再次打开连接。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/23/前端基础学习/React  -  3 高级内容/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/23/前端基础学习/React  -  3 高级内容/" itemprop="url">React - 3 高级内容</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-23T13:17:42+08:00">
-                2019-03-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/23/前端基础学习/React  -  3 高级内容/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/23/前端基础学习/React  -  3 高级内容/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/03/23/前端基础学习/React  -  3 高级内容/" class="leancloud_visitors" data-flag-title="React - 3 高级内容">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  2.1k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  8
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="React高级"><a href="#React高级" class="headerlink" title="React高级"></a>React高级</h2><h3 id="propTypes和DefaultProps"><a href="#propTypes和DefaultProps" class="headerlink" title="propTypes和DefaultProps"></a>propTypes和DefaultProps</h3><p>propTypes:组件要接受外部传过来的值，进行类型校验。验证传值</p>
-<p>DefaultProps:若父组件未向子组件传值，定义属性默认值。设置默认值</p>
-<p><a href="https://reactjs.org/docs/typechecking-with-proptypes.html" target="_blank" rel="noopener">https://reactjs.org/docs/typechecking-with-proptypes.html</a></p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">'prop-types'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 组件要接受外部传过来的值，进行类型校验。验证传值</span></span><br><span class="line">TodoItem.propTypes = &#123;</span><br><span class="line">    test: PropTypes.string.isRequired,</span><br><span class="line">    content: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),</span><br><span class="line">    deleteItem: PropTypes.func,</span><br><span class="line">    index: PropTypes.number</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 若父组件未向子组件传值，定义属性默认值。设置默认值</span></span><br><span class="line">TodoItem.defaultProps = &#123;</span><br><span class="line">    test: <span class="string">'-'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="props、state、render函数关系"><a href="#props、state、render函数关系" class="headerlink" title="props、state、render函数关系"></a>props、state、render函数关系</h3><p><strong>当组件的state或者props发生改变的时候，render函数就会重新执行</strong></p>
-<p>当父组件的render函数被运行时，他的子组件的render都被重新运行一次</p>
-<h3 id="虚拟DOM"><a href="#虚拟DOM" class="headerlink" title="虚拟DOM"></a>虚拟DOM</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//真实DOM - 全部替换</span></span><br><span class="line">缺陷：第一次生成DOM片段，第二次生成DOM。第二次DOM地带第一次DOM，非常耗费性能</span><br><span class="line"><span class="number">1.</span>state 数据</span><br><span class="line"><span class="number">2.</span>JSX 模板 </span><br><span class="line"><span class="number">3.</span>数据+模板 结合，生成真实的DOM显示</span><br><span class="line"><span class="number">4.</span>state 发生改变</span><br><span class="line"><span class="number">5.</span>数据+模板 结合，生成真实的DOM，替换原始的DOM</span><br><span class="line"></span><br><span class="line"><span class="comment">//真实DOM - DOM比对后替换</span></span><br><span class="line">缺陷：性能提升并不明显。替换内容变性能变少，比对性能增加</span><br><span class="line"><span class="number">1.</span>state 数据</span><br><span class="line"><span class="number">2.</span>JSX 模板 </span><br><span class="line"><span class="number">3.</span>数据+模板 结合，生成真实的DOM显示</span><br><span class="line"><span class="number">4.</span>state 发生改变</span><br><span class="line"><span class="number">5.</span>数据+模板 结合，生成真实的DOM，不直接替换原始的DOM</span><br><span class="line"><span class="number">6.</span>新的DOM和原始的DOM做比对，找差异</span><br><span class="line"><span class="number">7.</span>找出input框发生改变</span><br><span class="line"><span class="number">8.</span>只用新的DOM中input元素，替换DOM中的input元素</span><br><span class="line"></span><br><span class="line"><span class="comment">//虚拟DOM - JS比对</span></span><br><span class="line"><span class="comment">// 优点：</span></span><br><span class="line"><span class="comment">//1.性能提升了：减少了对真实DOM的1 创建和2 对比的性能</span></span><br><span class="line"><span class="comment">//2.跨端应用得以实现：React Native，虚拟DOM转化为原生应用的组件。</span></span><br><span class="line"><span class="number">1.</span>state 数据</span><br><span class="line"><span class="number">2.</span>JSX 模板 </span><br><span class="line"><span class="number">3.</span>数据+模板 结合，生成虚拟DOM(虚拟DOM是一个JS对象，用它来描述真实DOM)</span><br><span class="line">[<span class="string">'div'</span>,&#123;<span class="attr">id</span>:<span class="string">'123'</span>&#125;,[<span class="string">'span'</span>,&#123;&#125;,<span class="string">'hello world'</span>]]<span class="comment">//本身+属性+内容</span></span><br><span class="line"><span class="number">4.</span>用虚拟DOM的结构生成真实的DOM显示</span><br><span class="line">&lt;div id=<span class="string">'123'</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span>hello world <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="number">5.</span>state 发生变化</span><br><span class="line"><span class="number">6.</span>数据+模板 结合，生成新的虚拟DOM</span><br><span class="line">[<span class="string">'div'</span>,&#123;<span class="attr">id</span>:<span class="string">'123'</span>&#125;,[<span class="string">'span'</span>,&#123;&#125;,<span class="string">'bye bye'</span>]]<span class="comment">//本身+属性+内容</span></span><br><span class="line"><span class="number">7.</span>比较原始虚拟DOM和新的虚拟DOM的区别</span><br><span class="line"><span class="number">8.</span>直接操作DOM，改变span中的内容</span><br><span class="line"></span><br><span class="line">- 极大提升性能</span><br><span class="line">- 性能损耗极小，JS生成JS对象消耗小</span><br><span class="line">- JS生成DOM对象消耗极大,调用web application的API</span><br></pre></td></tr></table></figure>
-<p><strong>流程</strong>：JSX —&gt; createElement—&gt;虚拟DOM(JS对象) —&gt;  真实的DOM</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">return &lt;div&gt;item&lt;/div&gt;</span><br><span class="line">return React.createElement(&apos;div&apos;,&#123;&#125;,&apos;item&apos;)</span><br></pre></td></tr></table></figure>
-<h3 id="虚拟DOM的diff算法"><a href="#虚拟DOM的diff算法" class="headerlink" title="虚拟DOM的diff算法"></a>虚拟DOM的diff算法</h3><p>diff算法：比对原始虚拟DOM和新的虚拟DOM的差异</p>
-<p>虚拟DOM时候会被比对 —&gt; 什么时候数据改变 —&gt; 调用setState</p>
-<p>1.setState设计成异步函数的原因？</p>
-<p>假设连续调用三次setState，且三次调用的时间间隔非常小。react把三次，合并为一次，只做一次虚拟DOM比对，更新一次DOM。节省了两次DOM比对和更新的时间，性能提升。</p>
-<p>diff算法：</p>
-<ul>
-<li>同级比对：算法简单，比对算法的速度快。同层比较，若有差异，本层及下层重新渲染，</li>
-<li>key值比对：提高了比对的性能。<ul>
-<li>需要保证：原虚拟DOM树和新虚拟DOM树上的key值一致。</li>
-<li>因此不能使用index做key值，删除之后index会改变，key值不稳定</li>
-<li>key值要稳定，用item做key值</li>
-</ul>
-</li>
-</ul>
-<h3 id="React中ref的使用"><a href="#React中ref的使用" class="headerlink" title="React中ref的使用"></a>React中ref的使用</h3><p>用处：帮助我们直接获取 DOM元素</p>
-<p>一般情况：然而并不推荐直接操作DOM元素，因为react是操纵数据</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="comment">/*构建ref的引用；引用名为：this.input；指向input对应的dom节点*/</span>&#125;</span><br><span class="line">&lt;input</span><br><span class="line">  id=<span class="string">"insertArea"</span></span><br><span class="line">  className=<span class="string">'input'</span></span><br><span class="line">  value=&#123;<span class="keyword">this</span>.state.inputValue&#125;</span><br><span class="line">  onChange=&#123;<span class="keyword">this</span>.handleInputChange&#125;</span><br><span class="line">  ref=&#123;(input)=&gt;&#123;<span class="keyword">this</span>.input = input&#125;&#125;</span><br><span class="line">/&gt;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1.1输入框改变，保存输入框内容</span></span><br><span class="line">    handleInputChange() &#123;</span><br><span class="line">        <span class="comment">// const value = e.target.value;</span></span><br><span class="line">        <span class="keyword">const</span> value = <span class="keyword">this</span>.input.value;</span><br><span class="line">        <span class="keyword">this</span>.setState(<span class="function"><span class="params">()</span> =&gt;</span> (&#123;</span><br><span class="line">            inputValue: value</span><br><span class="line">        &#125;));</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p><strong>ref和setState使用需要注意的地方：</strong></p>
-<p>DOM的获取并不及时，因为setState是异步的。如果希望页面更新后获取DOM，将获取DOM的语法放在setState第二个参数中，他是一个回调函数。</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.2点击add，增加一项数据</span></span><br><span class="line">handleBtnClick() &#123;</span><br><span class="line">    <span class="comment">// setState异步，第一个参数需要执行的函数，第二个参数回调函数</span></span><br><span class="line">    <span class="comment">// prevState:修改数据之前的那一次数据的状态；避免不小心改变state状态</span></span><br><span class="line">    <span class="keyword">this</span>.setState(<span class="function">(<span class="params">prevState</span>) =&gt;</span> (&#123;</span><br><span class="line">        list: [...prevState.list, prevState.inputValue],</span><br><span class="line">        inputValue: <span class="string">''</span></span><br><span class="line">    &#125;),()=&gt;&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.ul.querySelectorAll(<span class="string">'div'</span>).length);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="React生命周期函数"><a href="#React生命周期函数" class="headerlink" title="React生命周期函数"></a>React生命周期函数</h3><p>生命周期函数：在某一时刻，组件会自动调用的函数</p>
-<p>render：setState</p>
-<p><img src="../../../../Library/Application Support/typora-user-images/image-20190416215418582.png" alt="image-20190416215418582"></p>
-<h4 id="初始化initialization"><a href="#初始化initialization" class="headerlink" title="初始化initialization"></a>初始化initialization</h4><h4 id="挂载mounting"><a href="#挂载mounting" class="headerlink" title="挂载mounting"></a>挂载mounting</h4><h4 id="更新updation"><a href="#更新updation" class="headerlink" title="更新updation"></a>更新updation</h4><h4 id="去除unmounting"><a href="#去除unmounting" class="headerlink" title="去除unmounting"></a>去除unmounting</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//2组件即将被挂载到页面的时刻执行</span></span><br><span class="line">componentWillMount()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'2 组件即将被挂载到页面：componentWillMount'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//2组件即将被挂载到页面的时刻执行</span></span><br><span class="line">componentDidMount()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'2 组件被挂载到页面之后：componentDidMount'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//3组件需要更新吗？true or false</span></span><br><span class="line">shouldComponentUpdate()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'3 组件是否更新？：shouldComponentUpdate'</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//3组件即将更新</span></span><br><span class="line">componentWillUpdate()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'3 组件更新之前：componentWillUpdate'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//3组件更新完成</span></span><br><span class="line">componentDidUpdate()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'3 组组件更新完成：componentDidUpdate'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 3（1）当组件从父组件接收参数；（2）父组件的render执行了，该生命周期函数会执行</span></span><br><span class="line"><span class="comment">// 如果这个组件第一次存在于父组件中，不会执行</span></span><br><span class="line"><span class="comment">// 如果这个组件已经存在与父组件中，会执行</span></span><br><span class="line">componentWillReceiveProps() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'3 ! 组件即将获取父组件：componentWillReceiveProps'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//4 子组件即将被去除</span></span><br><span class="line">componentWillUnmount()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'4 组件即将被去除：child componentWillUnmout'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="React生命周期函数使用场景"><a href="#React生命周期函数使用场景" class="headerlink" title="React生命周期函数使用场景"></a>React生命周期函数使用场景</h3><p><strong>性能优化</strong>：借助shouldComponentUpdate</p>
-<p>原因：提高react组件性能，避免无谓的组件render渲染</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 避免一个组件做无谓的render操作</span></span><br><span class="line"><span class="comment">// 利用shouldComponentUpdate提升性能：若更新后的content和更新前的content一致，则不刷新渲染</span></span><br><span class="line">shouldComponentUpdate(nextProps,nextState)&#123;</span><br><span class="line">    <span class="comment">//nextProps指更新后Props会变成什么样，nextState指的是State会变化成什么样</span></span><br><span class="line">    <span class="keyword">if</span>(nextProps.content !== <span class="keyword">this</span>.props.content)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>发送ajax请求</strong>：默认放在componentDidMount</p>
-<p>原因：ajax只需要请求1次，需要在渲染前获取数据</p>
-<p>场景：使用ajax异步请求的方式，从我的一个接口上，请求一个远程的todolist数据，将远程数据加载到本地，渲染到页面上。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// npm、或者初始化脚本方法安装yarn </span><br><span class="line">npm install -g yarn </span><br><span class="line">curl -o- -L https://yarnpkg.com/install.sh | bash </span><br><span class="line">// yarn安装axios</span><br><span class="line">yarn add axios</span><br></pre></td></tr></table></figure>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 约定：ajax放在componentDidMount中</span></span><br><span class="line"><span class="comment">// ajax只需要请求1次</span></span><br><span class="line">componentDidMount()&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="使用Charles实现本地数据mock"><a href="#使用Charles实现本地数据mock" class="headerlink" title="使用Charles实现本地数据mock"></a>使用Charles实现本地数据mock</h3><p>Charles：中间代理服务器，可以抓取浏览器的请求，可以使用map local模拟本地前端接口。</p>
-<p>模拟一个接口，ajax请求获取接口中真正的结果，改变页面的内容。</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">componentDidMount()&#123;</span><br><span class="line">    <span class="comment">// axios.get('/api/todolist')</span></span><br><span class="line">    axios.get(<span class="string">'http://localhost.charlesproxy...:3000'</span>)</span><br><span class="line">        .then(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.setSate(<span class="function"><span class="params">()</span>=&gt;</span>(&#123;</span><br><span class="line">            list: [...res.data]</span><br><span class="line">            &#125;)</span><br><span class="line">        );</span><br><span class="line">    &#125;)</span><br><span class="line">        .catch(<span class="function"><span class="params">()</span>=&gt;</span>&#123;alert(<span class="string">'错误'</span>)&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="CSS3的过渡动画和动画"><a href="#CSS3的过渡动画和动画" class="headerlink" title="CSS3的过渡动画和动画"></a>CSS3的过渡动画和动画</h3><p>监听state里show的值，根据值在div元素中动态添加css样式className </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&#123;this.state.show?</span>'<span class="attr">show</span>'<span class="attr">:</span>'<span class="attr">hide</span>'&#125;&gt;</span>hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*过渡动画*/</span></span><br><span class="line"><span class="selector-class">.show</span>&#123;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">transition</span>: all <span class="number">1s</span> ease-in;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*动画*/</span></span><br><span class="line"><span class="selector-class">.hide</span>&#123;</span><br><span class="line">    <span class="attribute">animation</span>: hide-item <span class="number">2s</span> ease-in forwards;</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">keyframes</span> hide-item&#123;</span><br><span class="line">    0%&#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">        <span class="attribute">color</span>: red;</span><br><span class="line">    &#125;</span><br><span class="line">    50%&#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0.5</span>;</span><br><span class="line">        <span class="attribute">color</span>: green;</span><br><span class="line">    &#125;</span><br><span class="line">    100%&#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">        <span class="attribute">color</span>: blue;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="react-transition-group实现动画"><a href="#react-transition-group实现动画" class="headerlink" title="react-transition-group实现动画"></a>react-transition-group实现动画</h3><p>文档：<a href="https://reactcommunity.org/react-transition-group/css-transition" target="_blank" rel="noopener">https://reactcommunity.org/react-transition-group/css-transition</a></p>
-<p>安装：yarn add react-transition-group</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//不需要样式的添加和删除</span></span><br><span class="line">&lt;CSSTransition&gt;</span><br><span class="line">    &lt;div&gt;hello world&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>CSSTransition&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h3><ul>
-<li><p>作用域修改放在constructor构造函数内，保证作用域绑定操作只执行一次 + 避免子组件的无谓渲染。</p>
-<p>this.handleClick = this.handleClick.bind(this);</p>
-</li>
-<li><p>react底层setState性能提升机制，使用异步函数：多次数据改变结合成一次来做，降低虚拟DOM频率</p>
-</li>
-<li>react底层虚拟DOM，同层比对+使用key值比对，提升虚拟DOM比对速度</li>
-<li>借助shouldComponentUpdate，提高react组件性能，避免无谓的组件render渲染</li>
-</ul>
+<p>在散点矩阵中使用动画来减轻重叠（Using Animation to Alleviate Overdraw in Multiclass Scatterplot Matrices）</p>
+<h3 id="数据预处理——数据缺失和异常"><a href="#数据预处理——数据缺失和异常" class="headerlink" title="数据预处理——数据缺失和异常"></a>数据预处理——数据缺失和异常</h3><h3 id="缺失值处理："><a href="#缺失值处理：" class="headerlink" title="缺失值处理："></a>缺失值处理：</h3><h4 id="造成数据缺失的原因是多方面的，主要可能有以下几种："><a href="#造成数据缺失的原因是多方面的，主要可能有以下几种：" class="headerlink" title="造成数据缺失的原因是多方面的，主要可能有以下几种："></a>造成<strong>数据缺失的原因</strong>是多方面的，主要可能有以下几种：</h4><ol>
+<li>有些信息暂时无法获取，致使一部分属性值空缺出来。</li>
+<li>有些信息因为一些人为因素而丢失了。</li>
+<li>有些对象的某个或某些属性是不可用的。如一个未婚者的配偶姓名。</li>
+<li>获取这些信息的代价太大，从而未获取数据。</li>
+</ol>
+<h4 id="空值处理的重要性："><a href="#空值处理的重要性：" class="headerlink" title="空值处理的重要性："></a>空值处理的重要性：</h4><p>空值的存在，造成了以下影响：</p>
+<ol>
+<li>系统丢失了大量的有用信息；</li>
+<li>系统的不确定性更加显著，系统中的确定性成分更难把握；</li>
+<li>包含空值的数据会使挖掘过程陷入混乱，导致不可靠的输出。</li>
+</ol>
+<h4 id="空值处理的方法："><a href="#空值处理的方法：" class="headerlink" title="空值处理的方法："></a>空值处理的方法：</h4><h5 id="一、删除元组"><a href="#一、删除元组" class="headerlink" title="一、删除元组"></a>一、删除元组</h5><p>将存在遗漏信息属性值的对象（记录）删除，从而得到一个完备的信息表。这种方法在对象有多个属性缺失值、被删除的含缺失值的对象与信息表中的数据量相比非常小的情况下是非常有效的。然而这种方法丢弃了大量隐藏在这些对象中的信息。在信息表中对象很少的情况下会影响到结果的正确性，可能导致数据发生偏离，从而引出错误的结论。</p>
+<h5 id="二、数据补齐"><a href="#二、数据补齐" class="headerlink" title="二、数据补齐"></a>二、数据补齐</h5><p>这类方法是基于统计学原理用一定的值去填充空值，从而使信息表完备化。数据挖掘中常用的有以下几种补齐方法：</p>
+<ol>
+<li><strong>人工填写</strong><br>这个方法产生数据偏离最小，是填充效果最好的一种。当数据规模很大、空值很多的时候，该方法是不可行的。</li>
+<li><strong>特殊值填充</strong><br>将空值作为一种特殊的属性值来处理，它不同于其他的任何属性值。如所有的空值都用“unknown”填充。这样将形成另一个概念，可能导致严重的数据偏离，一般不使用。</li>
+<li><strong>平均值填充</strong><br>如果空值是<strong>数值属性</strong>，就使用该属性在<strong>其他所有对象的取值的平均值</strong>来填充该缺失的属性值.<br>如果空值是<strong>非数值属性</strong>，就根据统计学中的<strong>众数原理</strong>，用该属性在其他所有对象<strong>出现频率最高的值</strong>来补齐该缺失的属性值。</li>
+<li><strong>热卡填充（就近补齐）</strong><br>对于一个包含空值的对象，热卡填充法在完整数据中找到一个与它最相似的对象，然后用这个相似对象的值来进行填充。不同的问题选用不同的标准来对相似进行判定。</li>
+<li><strong>K最近邻法</strong><br>先根据欧式距离或相关分析来确定距离具有缺失数据样本最近的K个样本，将这K个值加权平均来估计该样本的缺失数据。</li>
+<li><strong>使用所有可能的值填充</strong><br>这种方法是用空缺属性值的所有可能的属性取值来填充，能够得到较好的补齐效果。但是当数据量很大或者遗漏的属性值较多时，其计算的代价很大，可能的测试方案很多。</li>
+<li><strong>回归</strong><br>基于完整的数据集，建立回归方程（模型）。对于包含空值的对象，将已知属性值代入方程来估计未知属性值，以此估计值来进行填充。</li>
+<li><strong>期望值最大化方法（EM）</strong><br>在缺失类型为随机缺失的条件下，假设模型对于完整的样本是正确的，通过观测数据的边际分布可以对未知参数进行极大似然估计。它一个重要前提：适用于大样本。有效样本的数量足够以保证ML估计值是渐近无偏的并服从正态分布。但是这种方法可能会陷入局部极值，收敛速度也不是很快，并且计算很复杂。</li>
+</ol>
+<h5 id="三、不处理——使用深度学习、数据挖掘方式填补"><a href="#三、不处理——使用深度学习、数据挖掘方式填补" class="headerlink" title="三、不处理——使用深度学习、数据挖掘方式填补"></a>三、不处理——使用深度学习、数据挖掘方式填补</h5><p>直接在包含空值的数据上进行数据挖掘。这类方法包括贝叶斯网络和人工神经网络等。</p>
+<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><h5 id="异常值的判别方法："><a href="#异常值的判别方法：" class="headerlink" title="异常值的判别方法："></a>异常值的判别方法：</h5><ol>
+<li>简单统计分析<br>对属性值进行一个描述性的统计（规定范围），从而查看哪些值是不合理的（范围以外的值）。</li>
+<li>3δ原则<br>若数据服从正态分布：根据正态分布的定义可知，距离平均值3δ之外的概率为 P(|x-μ|&gt;3δ) &lt;= 0.003 ，这属于极[小概率事件]，在默认情况下我们可以认定，距离超过平均值3δ的样本是不存在的。因此，当样本距离平均值大于3δ，认为该样本为异常值。 </li>
+<li>使用距离检测多元离群点<br>当数据不服从正态分布时，可以通过远离平均距离多少倍的标准差来判定，多少倍的取值需要根据经验和实际情况来决定。</li>
+<li>可视化结果后的判定</li>
+</ol>
+<h5 id="异常值的处理方法："><a href="#异常值的处理方法：" class="headerlink" title="异常值的处理方法："></a>异常值的处理方法：</h5><ol>
+<li>删除含有异常值的记录</li>
+<li>将异常值视为缺失值，使用缺失值处理方法来处理</li>
+<li>用平均值来修正</li>
+<li>不处理</li>
+</ol>
+<h3 id="经典可视化图标的优缺点"><a href="#经典可视化图标的优缺点" class="headerlink" title="经典可视化图标的优缺点"></a>经典可视化图标的优缺点</h3><p>饼图的缺点</p>
+<p>玫瑰图的缺点，视觉干扰是什么</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g18ipg8lxxj31860gqwkt.jpg" alt="image-20190319232437932"></p>
+<h3 id="场景应用"><a href="#场景应用" class="headerlink" title="场景应用"></a>场景应用</h3><p>解决分类数据可视化中类别过多、数据量过多的遮挡问题。</p>
+<p>数据部分：</p>
+<p>可视化部分：</p>
+<p>交互部分：</p>
+<h3 id="面向对象思维"><a href="#面向对象思维" class="headerlink" title="面向对象思维"></a>面向对象思维</h3><p>绘制折线图和柱状图的代码大部分相似，可以写在一个类中。</p>
+<h3 id="一个平面n个圆有多少个相交的圆"><a href="#一个平面n个圆有多少个相交的圆" class="headerlink" title="一个平面n个圆有多少个相交的圆"></a>一个平面n个圆有多少个相交的圆</h3><p>1 遍历的方法。时间复杂度较高。</p>
+<p>2 对每一个圆计算其变上有多少个交点，交点数除以2就位改圆的相交圆的个数。将所有相交个数加起来除以2(2个圆相交会有一个相交个数，遍历后算了两遍)，结果为一共有多少个相交的圆。</p>
+<h1 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h1><p>t-SNE没回答完整。</p>
+<p>高维数据可视分析研究有哪些？</p>
+<p>子空间聚类？</p>
+<h1 id="常问问题"><a href="#常问问题" class="headerlink" title="常问问题"></a>常问问题</h1><h3 id="Q1：基础知识"><a href="#Q1：基础知识" class="headerlink" title="Q1：基础知识"></a>Q1：基础知识</h3><h3 id="Q2可视化图表："><a href="#Q2可视化图表：" class="headerlink" title="Q2可视化图表："></a>Q2可视化图表：</h3><p>比如在没写过图表的前提下，怎么抽象数据与图形的映射，怎么去组合不同的图表部件。</p>
+<h4 id="要从图表类型的隐喻上进行区分"><a href="#要从图表类型的隐喻上进行区分" class="headerlink" title="要从图表类型的隐喻上进行区分"></a>要从图表类型的隐喻上进行区分</h4><p>饼图表达的是一个<em>整体</em>和<em>局部</em>的关系，也就是一个部分占据整体的多少比例。柱状图和折线图较为接近，通常前者表示不同对象数据的对比，后者更常用作表示同一对象数据在不同（时间）维度上的趋势。</p>
+<p>首先，饼图中的类目不应太多，否则信息很分散，不知道作者想表达什么信息。</p>
+<p>其次，饼图的颜色不要五颜六色，除了用以区分类目之外，颜色还可以传递更多有效信息。比如上图用绿色表示正确，灰色表示错误，是符合一般对颜色的认知的，并且绿色的类目更醒目，第一眼就能关注到；相反，如果用普通的三种颜色表示三个类目，则读者很难一眼从图中解读出有效信息。</p>
+<p>第三，区分出想表明特定意思的类目。比如上图将正确的类目和错误的类目分隔开，读者很容易抓取到关键信息。</p>
+<h4 id="南丁格尔玫瑰图："><a href="#南丁格尔玫瑰图：" class="headerlink" title="南丁格尔玫瑰图："></a>南丁格尔玫瑰图：</h4><p>误导在于，数据的比值为到底是半径比、面积比、还是角度比？</p>
+<p>第一种图将数据映射到半径；第二种图将数据映射到半径和角度；第三将图将数据映射到角度。</p>
+<p>何时使用？</p>
+<h3 id="Q3前端设计："><a href="#Q3前端设计：" class="headerlink" title="Q3前端设计："></a>Q3前端设计：</h3><p>常问的一个校招问题，有一块区域要展示一组数据，但数据需要请求 3 个接口才能计算得到，请问前端是怎么做的，如何优化，前端什么情况下可以放弃合并接口的要求。这个地方至少会考察到异步，本地缓存，延展下会问下并发，竞态，协程等。</p>
+<h1 id="HR面试准备"><a href="#HR面试准备" class="headerlink" title="HR面试准备"></a>HR面试准备</h1><p>1、为什么想加入这家公司？你需要了解下这家公司的文化和氛围。<br> 2、为什么离开上一家公司？钱少，不能实现梦想，还是有哪些不爽的地方。如果是换工作为了实现梦想，那么你的梦想是什么。不爽的地方如果在新公司再遇到怎么处理。<br> 3、你的职业规划是什么？<br> 4、当你遇到瓶颈的时候你怎么办？<br> 5、这些年你每年的成长是什么？怎么能体现你的进步？</p>
+<p>6、谈谈你对阿里的企业文化理解？<br> 7、你的期望薪资？<br> 8、项目中遇到的最大挑战是什么？怎么解决的？<br> 9、最有成就感的事情是？<br> 10、怎么看待加班（你能接受996、997、007吗）？</p>
+<p>11、说说自己性格上的优缺点（描述一下自己的性格）<br> 12、自己觉得自己工作上的短板/优点是什么？<br> 13、可以接受降薪吗？</p>
+<p>作者：阅跑影财者</p>
+<p>链接：<a href="https://www.jianshu.com/p/a1863ef1610f" target="_blank" rel="noopener">https://www.jianshu.com/p/a1863ef1610f</a></p>
+<p>来源：简书</p>
+<p>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。</p>
 
           
         
@@ -1550,6 +812,261 @@
 <h3 id="视图层框架"><a href="#视图层框架" class="headerlink" title="视图层框架"></a>视图层框架</h3><p>只解决数据和渲染的问题，不解决react复杂传值问题，可以借助其他redux等数据传递框架</p>
 <h3 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h3><p>代码逻辑清晰：拆分函数，各司其职；</p>
 <p>前端自动化测试便捷：只需要给函数一个数值，查看输出是否符合预期。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/23/前端基础学习/React  -  3 高级内容/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/23/前端基础学习/React  -  3 高级内容/" itemprop="url">React - 3 高级内容</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-23T13:17:42+08:00">
+                2019-03-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/23/前端基础学习/React  -  3 高级内容/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/23/前端基础学习/React  -  3 高级内容/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/23/前端基础学习/React  -  3 高级内容/" class="leancloud_visitors" data-flag-title="React - 3 高级内容">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  8
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="React高级"><a href="#React高级" class="headerlink" title="React高级"></a>React高级</h2><h3 id="propTypes和DefaultProps"><a href="#propTypes和DefaultProps" class="headerlink" title="propTypes和DefaultProps"></a>propTypes和DefaultProps</h3><p>propTypes:组件要接受外部传过来的值，进行类型校验。验证传值</p>
+<p>DefaultProps:若父组件未向子组件传值，定义属性默认值。设置默认值</p>
+<p><a href="https://reactjs.org/docs/typechecking-with-proptypes.html" target="_blank" rel="noopener">https://reactjs.org/docs/typechecking-with-proptypes.html</a></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">'prop-types'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 组件要接受外部传过来的值，进行类型校验。验证传值</span></span><br><span class="line">TodoItem.propTypes = &#123;</span><br><span class="line">    test: PropTypes.string.isRequired,</span><br><span class="line">    content: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),</span><br><span class="line">    deleteItem: PropTypes.func,</span><br><span class="line">    index: PropTypes.number</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 若父组件未向子组件传值，定义属性默认值。设置默认值</span></span><br><span class="line">TodoItem.defaultProps = &#123;</span><br><span class="line">    test: <span class="string">'-'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="props、state、render函数关系"><a href="#props、state、render函数关系" class="headerlink" title="props、state、render函数关系"></a>props、state、render函数关系</h3><p><strong>当组件的state或者props发生改变的时候，render函数就会重新执行</strong></p>
+<p>当父组件的render函数被运行时，他的子组件的render都被重新运行一次</p>
+<h3 id="虚拟DOM"><a href="#虚拟DOM" class="headerlink" title="虚拟DOM"></a>虚拟DOM</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//真实DOM - 全部替换</span></span><br><span class="line">缺陷：第一次生成DOM片段，第二次生成DOM。第二次DOM地带第一次DOM，非常耗费性能</span><br><span class="line"><span class="number">1.</span>state 数据</span><br><span class="line"><span class="number">2.</span>JSX 模板 </span><br><span class="line"><span class="number">3.</span>数据+模板 结合，生成真实的DOM显示</span><br><span class="line"><span class="number">4.</span>state 发生改变</span><br><span class="line"><span class="number">5.</span>数据+模板 结合，生成真实的DOM，替换原始的DOM</span><br><span class="line"></span><br><span class="line"><span class="comment">//真实DOM - DOM比对后替换</span></span><br><span class="line">缺陷：性能提升并不明显。替换内容变性能变少，比对性能增加</span><br><span class="line"><span class="number">1.</span>state 数据</span><br><span class="line"><span class="number">2.</span>JSX 模板 </span><br><span class="line"><span class="number">3.</span>数据+模板 结合，生成真实的DOM显示</span><br><span class="line"><span class="number">4.</span>state 发生改变</span><br><span class="line"><span class="number">5.</span>数据+模板 结合，生成真实的DOM，不直接替换原始的DOM</span><br><span class="line"><span class="number">6.</span>新的DOM和原始的DOM做比对，找差异</span><br><span class="line"><span class="number">7.</span>找出input框发生改变</span><br><span class="line"><span class="number">8.</span>只用新的DOM中input元素，替换DOM中的input元素</span><br><span class="line"></span><br><span class="line"><span class="comment">//虚拟DOM - JS比对</span></span><br><span class="line"><span class="comment">// 优点：</span></span><br><span class="line"><span class="comment">//1.性能提升了：减少了对真实DOM的1 创建和2 对比的性能</span></span><br><span class="line"><span class="comment">//2.跨端应用得以实现：React Native，虚拟DOM转化为原生应用的组件。</span></span><br><span class="line"><span class="number">1.</span>state 数据</span><br><span class="line"><span class="number">2.</span>JSX 模板 </span><br><span class="line"><span class="number">3.</span>数据+模板 结合，生成虚拟DOM(虚拟DOM是一个JS对象，用它来描述真实DOM)</span><br><span class="line">[<span class="string">'div'</span>,&#123;<span class="attr">id</span>:<span class="string">'123'</span>&#125;,[<span class="string">'span'</span>,&#123;&#125;,<span class="string">'hello world'</span>]]<span class="comment">//本身+属性+内容</span></span><br><span class="line"><span class="number">4.</span>用虚拟DOM的结构生成真实的DOM显示</span><br><span class="line">&lt;div id=<span class="string">'123'</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span>hello world <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="number">5.</span>state 发生变化</span><br><span class="line"><span class="number">6.</span>数据+模板 结合，生成新的虚拟DOM</span><br><span class="line">[<span class="string">'div'</span>,&#123;<span class="attr">id</span>:<span class="string">'123'</span>&#125;,[<span class="string">'span'</span>,&#123;&#125;,<span class="string">'bye bye'</span>]]<span class="comment">//本身+属性+内容</span></span><br><span class="line"><span class="number">7.</span>比较原始虚拟DOM和新的虚拟DOM的区别</span><br><span class="line"><span class="number">8.</span>直接操作DOM，改变span中的内容</span><br><span class="line"></span><br><span class="line">- 极大提升性能</span><br><span class="line">- 性能损耗极小，JS生成JS对象消耗小</span><br><span class="line">- JS生成DOM对象消耗极大,调用web application的API</span><br></pre></td></tr></table></figure>
+<p><strong>流程</strong>：JSX —&gt; createElement—&gt;虚拟DOM(JS对象) —&gt;  真实的DOM</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">return &lt;div&gt;item&lt;/div&gt;</span><br><span class="line">return React.createElement(&apos;div&apos;,&#123;&#125;,&apos;item&apos;)</span><br></pre></td></tr></table></figure>
+<h3 id="虚拟DOM的diff算法"><a href="#虚拟DOM的diff算法" class="headerlink" title="虚拟DOM的diff算法"></a>虚拟DOM的diff算法</h3><p>diff算法：比对原始虚拟DOM和新的虚拟DOM的差异</p>
+<p>虚拟DOM时候会被比对 —&gt; 什么时候数据改变 —&gt; 调用setState</p>
+<p>1.setState设计成异步函数的原因？</p>
+<p>假设连续调用三次setState，且三次调用的时间间隔非常小。react把三次，合并为一次，只做一次虚拟DOM比对，更新一次DOM。节省了两次DOM比对和更新的时间，性能提升。</p>
+<p>diff算法：</p>
+<ul>
+<li>同级比对：算法简单，比对算法的速度快。同层比较，若有差异，本层及下层重新渲染，</li>
+<li>key值比对：提高了比对的性能。<ul>
+<li>需要保证：原虚拟DOM树和新虚拟DOM树上的key值一致。</li>
+<li>因此不能使用index做key值，删除之后index会改变，key值不稳定</li>
+<li>key值要稳定，用item做key值</li>
+</ul>
+</li>
+</ul>
+<h3 id="React中ref的使用"><a href="#React中ref的使用" class="headerlink" title="React中ref的使用"></a>React中ref的使用</h3><p>用处：帮助我们直接获取 DOM元素</p>
+<p>一般情况：然而并不推荐直接操作DOM元素，因为react是操纵数据</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="comment">/*构建ref的引用；引用名为：this.input；指向input对应的dom节点*/</span>&#125;</span><br><span class="line">&lt;input</span><br><span class="line">  id=<span class="string">"insertArea"</span></span><br><span class="line">  className=<span class="string">'input'</span></span><br><span class="line">  value=&#123;<span class="keyword">this</span>.state.inputValue&#125;</span><br><span class="line">  onChange=&#123;<span class="keyword">this</span>.handleInputChange&#125;</span><br><span class="line">  ref=&#123;(input)=&gt;&#123;<span class="keyword">this</span>.input = input&#125;&#125;</span><br><span class="line">/&gt;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1.1输入框改变，保存输入框内容</span></span><br><span class="line">    handleInputChange() &#123;</span><br><span class="line">        <span class="comment">// const value = e.target.value;</span></span><br><span class="line">        <span class="keyword">const</span> value = <span class="keyword">this</span>.input.value;</span><br><span class="line">        <span class="keyword">this</span>.setState(<span class="function"><span class="params">()</span> =&gt;</span> (&#123;</span><br><span class="line">            inputValue: value</span><br><span class="line">        &#125;));</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p><strong>ref和setState使用需要注意的地方：</strong></p>
+<p>DOM的获取并不及时，因为setState是异步的。如果希望页面更新后获取DOM，将获取DOM的语法放在setState第二个参数中，他是一个回调函数。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.2点击add，增加一项数据</span></span><br><span class="line">handleBtnClick() &#123;</span><br><span class="line">    <span class="comment">// setState异步，第一个参数需要执行的函数，第二个参数回调函数</span></span><br><span class="line">    <span class="comment">// prevState:修改数据之前的那一次数据的状态；避免不小心改变state状态</span></span><br><span class="line">    <span class="keyword">this</span>.setState(<span class="function">(<span class="params">prevState</span>) =&gt;</span> (&#123;</span><br><span class="line">        list: [...prevState.list, prevState.inputValue],</span><br><span class="line">        inputValue: <span class="string">''</span></span><br><span class="line">    &#125;),()=&gt;&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.ul.querySelectorAll(<span class="string">'div'</span>).length);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="React生命周期函数"><a href="#React生命周期函数" class="headerlink" title="React生命周期函数"></a>React生命周期函数</h3><p>生命周期函数：在某一时刻，组件会自动调用的函数</p>
+<p>render：setState</p>
+<p><img src="../../../../Library/Application Support/typora-user-images/image-20190416215418582.png" alt="image-20190416215418582"></p>
+<h4 id="初始化initialization"><a href="#初始化initialization" class="headerlink" title="初始化initialization"></a>初始化initialization</h4><h4 id="挂载mounting"><a href="#挂载mounting" class="headerlink" title="挂载mounting"></a>挂载mounting</h4><h4 id="更新updation"><a href="#更新updation" class="headerlink" title="更新updation"></a>更新updation</h4><h4 id="去除unmounting"><a href="#去除unmounting" class="headerlink" title="去除unmounting"></a>去除unmounting</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//2组件即将被挂载到页面的时刻执行</span></span><br><span class="line">componentWillMount()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'2 组件即将被挂载到页面：componentWillMount'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//2组件即将被挂载到页面的时刻执行</span></span><br><span class="line">componentDidMount()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'2 组件被挂载到页面之后：componentDidMount'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//3组件需要更新吗？true or false</span></span><br><span class="line">shouldComponentUpdate()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'3 组件是否更新？：shouldComponentUpdate'</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//3组件即将更新</span></span><br><span class="line">componentWillUpdate()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'3 组件更新之前：componentWillUpdate'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//3组件更新完成</span></span><br><span class="line">componentDidUpdate()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'3 组组件更新完成：componentDidUpdate'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 3（1）当组件从父组件接收参数；（2）父组件的render执行了，该生命周期函数会执行</span></span><br><span class="line"><span class="comment">// 如果这个组件第一次存在于父组件中，不会执行</span></span><br><span class="line"><span class="comment">// 如果这个组件已经存在与父组件中，会执行</span></span><br><span class="line">componentWillReceiveProps() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'3 ! 组件即将获取父组件：componentWillReceiveProps'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//4 子组件即将被去除</span></span><br><span class="line">componentWillUnmount()&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'4 组件即将被去除：child componentWillUnmout'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="React生命周期函数使用场景"><a href="#React生命周期函数使用场景" class="headerlink" title="React生命周期函数使用场景"></a>React生命周期函数使用场景</h3><p><strong>性能优化</strong>：借助shouldComponentUpdate</p>
+<p>原因：提高react组件性能，避免无谓的组件render渲染</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 避免一个组件做无谓的render操作</span></span><br><span class="line"><span class="comment">// 利用shouldComponentUpdate提升性能：若更新后的content和更新前的content一致，则不刷新渲染</span></span><br><span class="line">shouldComponentUpdate(nextProps,nextState)&#123;</span><br><span class="line">    <span class="comment">//nextProps指更新后Props会变成什么样，nextState指的是State会变化成什么样</span></span><br><span class="line">    <span class="keyword">if</span>(nextProps.content !== <span class="keyword">this</span>.props.content)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>发送ajax请求</strong>：默认放在componentDidMount</p>
+<p>原因：ajax只需要请求1次，需要在渲染前获取数据</p>
+<p>场景：使用ajax异步请求的方式，从我的一个接口上，请求一个远程的todolist数据，将远程数据加载到本地，渲染到页面上。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// npm、或者初始化脚本方法安装yarn </span><br><span class="line">npm install -g yarn </span><br><span class="line">curl -o- -L https://yarnpkg.com/install.sh | bash </span><br><span class="line">// yarn安装axios</span><br><span class="line">yarn add axios</span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 约定：ajax放在componentDidMount中</span></span><br><span class="line"><span class="comment">// ajax只需要请求1次</span></span><br><span class="line">componentDidMount()&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="使用Charles实现本地数据mock"><a href="#使用Charles实现本地数据mock" class="headerlink" title="使用Charles实现本地数据mock"></a>使用Charles实现本地数据mock</h3><p>Charles：中间代理服务器，可以抓取浏览器的请求，可以使用map local模拟本地前端接口。</p>
+<p>模拟一个接口，ajax请求获取接口中真正的结果，改变页面的内容。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">componentDidMount()&#123;</span><br><span class="line">    <span class="comment">// axios.get('/api/todolist')</span></span><br><span class="line">    axios.get(<span class="string">'http://localhost.charlesproxy...:3000'</span>)</span><br><span class="line">        .then(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.setSate(<span class="function"><span class="params">()</span>=&gt;</span>(&#123;</span><br><span class="line">            list: [...res.data]</span><br><span class="line">            &#125;)</span><br><span class="line">        );</span><br><span class="line">    &#125;)</span><br><span class="line">        .catch(<span class="function"><span class="params">()</span>=&gt;</span>&#123;alert(<span class="string">'错误'</span>)&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="CSS3的过渡动画和动画"><a href="#CSS3的过渡动画和动画" class="headerlink" title="CSS3的过渡动画和动画"></a>CSS3的过渡动画和动画</h3><p>监听state里show的值，根据值在div元素中动态添加css样式className </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&#123;this.state.show?</span>'<span class="attr">show</span>'<span class="attr">:</span>'<span class="attr">hide</span>'&#125;&gt;</span>hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*过渡动画*/</span></span><br><span class="line"><span class="selector-class">.show</span>&#123;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">transition</span>: all <span class="number">1s</span> ease-in;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*动画*/</span></span><br><span class="line"><span class="selector-class">.hide</span>&#123;</span><br><span class="line">    <span class="attribute">animation</span>: hide-item <span class="number">2s</span> ease-in forwards;</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">keyframes</span> hide-item&#123;</span><br><span class="line">    0%&#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">        <span class="attribute">color</span>: red;</span><br><span class="line">    &#125;</span><br><span class="line">    50%&#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0.5</span>;</span><br><span class="line">        <span class="attribute">color</span>: green;</span><br><span class="line">    &#125;</span><br><span class="line">    100%&#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">        <span class="attribute">color</span>: blue;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="react-transition-group实现动画"><a href="#react-transition-group实现动画" class="headerlink" title="react-transition-group实现动画"></a>react-transition-group实现动画</h3><p>文档：<a href="https://reactcommunity.org/react-transition-group/css-transition" target="_blank" rel="noopener">https://reactcommunity.org/react-transition-group/css-transition</a></p>
+<p>安装：yarn add react-transition-group</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//不需要样式的添加和删除</span></span><br><span class="line">&lt;CSSTransition&gt;</span><br><span class="line">    &lt;div&gt;hello world&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>CSSTransition&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h3><ul>
+<li><p>作用域修改放在constructor构造函数内，保证作用域绑定操作只执行一次 + 避免子组件的无谓渲染。</p>
+<p>this.handleClick = this.handleClick.bind(this);</p>
+</li>
+<li><p>react底层setState性能提升机制，使用异步函数：多次数据改变结合成一次来做，降低虚拟DOM频率</p>
+</li>
+<li>react底层虚拟DOM，同层比对+使用key值比对，提升虚拟DOM比对速度</li>
+<li>借助shouldComponentUpdate，提高react组件性能，避免无谓的组件render渲染</li>
+</ul>
 
           
         
@@ -2686,6 +2203,412 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/05/iOS基础/IOS12+Swift4+Xcode10开发 - 1 摇色子APP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/05/iOS基础/IOS12+Swift4+Xcode10开发 - 1 摇色子APP/" itemprop="url">IOS12+Swift4+Xcode10开发 - 1 摇色子APP</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-05T17:59:57+08:00">
+                2019-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/APP/" itemprop="url" rel="index">
+                    <span itemprop="name">APP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/05/iOS基础/IOS12+Swift4+Xcode10开发 - 1 摇色子APP/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/05/iOS基础/IOS12+Swift4+Xcode10开发 - 1 摇色子APP/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/05/iOS基础/IOS12+Swift4+Xcode10开发 - 1 摇色子APP/" class="leancloud_visitors" data-flag-title="IOS12+Swift4+Xcode10开发 - 1 摇色子APP">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  412
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p>点击按钮或者摇晃手机，两个骰子摇晃改变。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g0sa697r7nj30m617m1kx.jpg" alt="image-20190305161340845"></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/05/iOS基础/IOS12+Swift4+Xcode10开发 - 1 摇色子APP/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/05/iOS基础/用Swift开发iOS10 - 7 定制Table Views/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/05/iOS基础/用Swift开发iOS10 - 7 定制Table Views/" itemprop="url">用Swift开发iOS10 - 7 定制Table Views</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-05T10:59:57+08:00">
+                2019-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/IOS学习/" itemprop="url" rel="index">
+                    <span itemprop="name">IOS学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/05/iOS基础/用Swift开发iOS10 - 7 定制Table Views/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/05/iOS基础/用Swift开发iOS10 - 7 定制Table Views/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/05/iOS基础/用Swift开发iOS10 - 7 定制Table Views/" class="leancloud_visitors" data-flag-title="用Swift开发iOS10 - 7 定制Table Views">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="项目简介"><a href="#项目简介" class="headerlink" title="项目简介"></a>项目简介</h2><p><a href>开始用Swift开发iOS 10 - 6 创建简单的Table Based App</a>是basic风格的Table，这一部分将：</p>
+<ol>
+<li>使用<code>UITableViewController</code> 代替 <code>UITableView</code> </li>
+<li>展示table view cell中不同的图片显示方式</li>
+<li>设计定制的table view cell来替代basic的table view cell</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/05/iOS基础/用Swift开发iOS10 - 7 定制Table Views/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -2738,7 +2661,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2749,7 +2672,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2834,7 +2757,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">74.7k</span>
+    <span title="Site words total count">74k</span>
   
 </div>
 

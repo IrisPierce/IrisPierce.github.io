@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/saturn_128.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/saturn_32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/saturn_16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="合集,可视分析,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="包括研究项目和开发的APP。（更新ing） 研究项目合集自由探索——面向分类的感知驱动的可视化监督降维方法成绩：自由探索项目，预计4月-5月投稿TVCG。（负责人） 背景：有标签的高维数据大数据时代，涌现出无数复杂的有标签的高维数据：如手写数据、汽车数据、人脸数据等。  困难：难以分析标签HD数据降维是分析有标签的高维数据的常用方法。 高维数据的低维表示可以帮助用户探索有标签数据中类的分离程度和数">
+<meta name="keywords" content="合集,可视分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开发和研究合集">
+<meta property="og:url" content="http://yoursite.com/2019/04/09/开发与研究合集/index.html">
+<meta property="og:site_name" content="IRIS&#39;s BLOG">
+<meta property="og:description" content="包括研究项目和开发的APP。（更新ing） 研究项目合集自由探索——面向分类的感知驱动的可视化监督降维方法成绩：自由探索项目，预计4月-5月投稿TVCG。（负责人） 背景：有标签的高维数据大数据时代，涌现出无数复杂的有标签的高维数据：如手写数据、汽车数据、人脸数据等。  困难：难以分析标签HD数据降维是分析有标签的高维数据的常用方法。 高维数据的低维表示可以帮助用户探索有标签数据中类的分离程度和数">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g13ah6fs3bj313e0fuh84.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g13aifpljtj31c80e2gt9.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g13aji6wocj314w0dyaki.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g13fw9aognj31co0pcnhm.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g13h9d2hjnj31bs0qmnp2.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g11k6otgvnj30rc0je77a.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g11k9nemw0j30ti0h4n4d.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g13gkt4ve9j306e069wfq.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g13gkw1p0xj306e069wfq.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g13glq13v7j305h026dfy.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g13gmqihvzj305p059dgk.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g13gm40vkhj305r02haa9.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g0z6z61pm5j314g0kmwgw.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g10e7cmt3og30af0l8noz.gif">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g10e7mbs9mg30c90qob2d.gif">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g0wmillwucg30ca0qo7wi.gif">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g0sacsomeqj30m617mq4r.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g0sa697r7nj30m617m1kx.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g0sayw5lvdj30u01szqiw.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g0ncssbanmg309d0go75a.gif">
+<meta property="og:updated_time" content="2019-04-22T15:10:41.963Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="开发和研究合集">
+<meta name="twitter:description" content="包括研究项目和开发的APP。（更新ing） 研究项目合集自由探索——面向分类的感知驱动的可视化监督降维方法成绩：自由探索项目，预计4月-5月投稿TVCG。（负责人） 背景：有标签的高维数据大数据时代，涌现出无数复杂的有标签的高维数据：如手写数据、汽车数据、人脸数据等。  困难：难以分析标签HD数据降维是分析有标签的高维数据的常用方法。 高维数据的低维表示可以帮助用户探索有标签数据中类的分离程度和数">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g13ah6fs3bj313e0fuh84.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/04/09/开发与研究合集/">
+
+
+
+
+
+  <title>开发和研究合集 | IRIS's BLOG</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">IRIS's BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">王圆圆的每日报告</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/09/开发与研究合集/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">开发和研究合集</h1>
+        
+
+        <div class="post-meta">
+            
+                <i class="fa fa-thumb-tack"></i>
+                <font color="990033">  <b>置顶</b> </font>
+                <span class="post-meta-divider">|</span>
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-09T13:17:42+08:00">
+                2019-04-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/可视分析/" itemprop="url" rel="index">
+                    <span itemprop="name">可视分析</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/09/开发与研究合集/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/09/开发与研究合集/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/04/09/开发与研究合集/" class="leancloud_visitors" data-flag-title="开发和研究合集">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>包括研究项目和开发的APP。（更新ing）</p>
+<h1 id="研究项目合集"><a href="#研究项目合集" class="headerlink" title="研究项目合集"></a>研究项目合集</h1><h2 id="自由探索——面向分类的感知驱动的可视化监督降维方法"><a href="#自由探索——面向分类的感知驱动的可视化监督降维方法" class="headerlink" title="自由探索——面向分类的感知驱动的可视化监督降维方法"></a>自由探索——面向分类的感知驱动的可视化监督降维方法</h2><h3 id="成绩："><a href="#成绩：" class="headerlink" title="成绩："></a>成绩：</h3><p>自由探索项目，预计4月-5月投稿TVCG。（负责人）</p>
+<h3 id="背景：有标签的高维数据"><a href="#背景：有标签的高维数据" class="headerlink" title="背景：有标签的高维数据"></a>背景：有标签的高维数据</h3><p>大数据时代，涌现出无数复杂的有标签的高维数据：如手写数据、汽车数据、人脸数据等。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g13ah6fs3bj313e0fuh84.jpg" alt="image-20190315105200060"></p>
+<h3 id="困难：难以分析标签HD数据"><a href="#困难：难以分析标签HD数据" class="headerlink" title="困难：难以分析标签HD数据"></a>困难：难以分析标签HD数据</h3><p>降维是分析有标签的高维数据的常用方法。</p>
+<p>高维数据的低维表示可以帮助用户探索有标签数据中类的分离程度和数据的空间分布。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g13aifpljtj31c80e2gt9.jpg" alt="image-20190315105319938"></p>
+<p>非监督降维方法PCA：没有考虑类的分离程度；<br>监督降维方法LDA：事先假设数据符合高斯分布，对于复杂的类结构无效；<br>感知驱动降维PDD：单个投影可能会导致重要的类结构被忽略。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g13aji6wocj314w0dyaki.jpg" alt="image-20190315105421299"></p>
+<a id="more"></a>
+<h3 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h3><p>本文提出了一种感知驱动的线性降维方法，寻求生成具有最大视觉分离程度、最少数量的最优二维投影集合。</p>
+<h3 id="困难1：发现单个视图降维方法的不足"><a href="#困难1：发现单个视图降维方法的不足" class="headerlink" title="困难1：发现单个视图降维方法的不足"></a>困难1：发现单个视图降维方法的不足</h3><p>一开始构建单个视图，发现类别多的时候无法构建</p>
+<p><strong>目标函数：</strong>为了最大化非线性目标函数dDSC。<strong>优化方法：</strong>使用模拟退火算法，通过比较随机生成的投影结果的costFuction，找出全局最优值。得到最优的投影结果展示分类数据。</p>
+<p>发现：真实数据中可能存在很多类，如服装数据包括：睡衣、风衣、内衣等各种内容。</p>
+<h3 id="技术："><a href="#技术：" class="headerlink" title="技术："></a>技术：</h3><p>D3是Data-Driven Document的缩写，从字面上理解就是数据驱动文本。</p>
+<h2 id="基于-kNN-Graph的内蕴特征抽取可视分析"><a href="#基于-kNN-Graph的内蕴特征抽取可视分析" class="headerlink" title="基于 kNN Graph的内蕴特征抽取可视分析"></a>基于 kNN Graph的内蕴特征抽取可视分析</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>高维数据(High-Dimensional Data)，是指向每个数据有多个属性的数据。现实世界中的高维数据中的样本点，往往是分布在一个或者多个低维度的非线性的流形结构之中，如何找出隐藏在高维数据中的低维结构与特征是目前我们所面临的问题。</p>
+<p>特征抽取是获取数据特征的重要方式。分为线性和非线性方式，线性提取方式是简单的原始维度线性组合，用户根据自己的喜好选择正向负向的点；非线性为点选绘制自由曲线，产生一个贴合用户认知的非线性模型的内蕴特征轴。</p>
+<p>选取点对、选取点序列、画自由曲线等三种指定内蕴轴的交互式方法</p>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>图 5-3(a)表示了全球生活质量形状趋势(图中箭头方向)，按照其趋势绘制自由曲线，将在散点图中得到新的坐标轴，图 5-3(b)显示了直方图和河流图。</p>
+<p>趋势：在图中可看出从左到右,正向的指数降低,如购买力指数(蓝色)，安全指数(浅蓝色)，和医疗指数(橙色)，而负向指数增加，如交通通勤时间指数(浅绿色)和污染指数(红色)，随着X 轴增加，国家生活质量下降，该轴代表了生活质量下降的趋势。</p>
+<p>异常：卢旺达，购买力低，然而，安全与卫生保健较高，印证了它是非洲排名第一的国家，政府效率高的信息。委内瑞拉购买力低远远低于其他国家，发现其正面临经济危机的。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g13fw9aognj31co0pcnhm.jpg" alt="image-20190315135936560"></p>
+<p>有 698 个图像和 4096 个维度，每个维度都表示为一个像素值。为了方便可视化，数据预处理，使用 PCA 将维数减少到 35 维。</p>
+<p>节点-链接布局呈现了一个圈的形状(图 5-4(a))。用户想知道圆圈的方向是否为全局模式。于是，他沿着圆的方向画了一条自由的线，但是发现有脸部姿势和光线的两个变化，同时他注意到交互绘制的草图的中心部分只呈现出左右姿势变换。他决定探索这个圈的主要部分。首先，他沿着第一个主要方向画了草图 (在图(a)的红色路径)， 生成的轴显示了从左到右脸部姿势的变化(对应图 5-4(c)中的 x 轴)。接着，他沿着第 二个主要方向 (图 5-4(a)中的绿色路径)绘制了自由曲线，所构造的轴是脸部从上到 下的姿势变化(对应图(c)中的 y 轴)。最后，他沿着其余部分绘制自由曲线(图(a))，改方向表征了光线由暗到明的变化。 </p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g13h9d2hjnj31bs0qmnp2.jpg" alt="image-20190315144646439"></p>
+<h2 id="高维数据中的低维结构的可视探索"><a href="#高维数据中的低维结构的可视探索" class="headerlink" title="高维数据中的低维结构的可视探索"></a>高维数据中的低维结构的可视探索</h2><h3 id="成绩：-1"><a href="#成绩：-1" class="headerlink" title="成绩："></a>成绩：</h3><p>并推荐可视化顶级刊 TVCG。非学生一作，负责user study和对比试验。</p>
+<h3 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h3><p>高维数据集中往往含有不同结构的低维结构，当未知数据集中的低维结构与当前的可视化方法的假设不匹配时，可视化结果将难以理解。</p>
+<h3 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h3><p>可视分析方法帮助用户有效地识别低维结构及关键特征，为进一步分析提供关键结构信息。</p>
+<h3 id="方法：-1"><a href="#方法：-1" class="headerlink" title="方法："></a>方法：</h3><p>t-SNE初步提供初始聚类信息：当我们想对高维数据集进行分类，但又不清楚这个数据集有没有很好的可分性（同类之间间隔小、异类之间间隔大）时，可以通过t-SNE将数据投影到2维或3维空间中观察一下：如果在低维空间中具有可分性，则数据是可分的；如果在低维空间中不可分，则可能是因为数据集本身不可分，或者数据集中的数据不适合投影到低维空间。</p>
+<p>局部切空间-测地距离视图用来发现子空间</p>
+<p>2个滚石图拐点为子空间维度</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g11k6otgvnj30rc0je77a.jpg" alt="image-20190313225653964"></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g11k9nemw0j30ti0h4n4d.jpg" alt="image-20190313225944793"></p>
+<h2 id="考勤管理系统"><a href="#考勤管理系统" class="headerlink" title="考勤管理系统"></a>考勤管理系统</h2><h3 id="成绩：-2"><a href="#成绩：-2" class="headerlink" title="成绩："></a>成绩：</h3><p>中南大学学报审稿中，EI期刊。负责需求设计：</p>
+<p>主页面：</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g13gkt4ve9j306e069wfq.jpg" alt="image-20190315142312357"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g13gkw1p0xj306e069wfq.jpg" alt="image-20190315142317201"></p>
+<p>细节视图：</p>
+<p>成员当日考勤部分：</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g13glq13v7j305h026dfy.jpg" alt="image-20190315142404984"></p>
+<p>个人多日考勤细节以及交互：</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g13gmqihvzj305p059dgk.jpg" alt="image-20190315142503456"></p>
+<p>考勤统计视图：</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g13gm40vkhj305r02haa9.jpg" alt="image-20190315142426892"></p>
+<h1 id="APP项目合集"><a href="#APP项目合集" class="headerlink" title="APP项目合集"></a>APP项目合集</h1><p>编码工具： <a href="https://developer.apple.com/xcode/" target="_blank" rel="noopener">Xcode 10.1</a>，<a href="https://developer.apple.com/swift/" target="_blank" rel="noopener">Swift 4.2</a>，<a href="https://developer.apple.com/library/ios/navigation/#section=Frameworks&amp;topic=UIKit" target="_blank" rel="noopener">UIKit</a></p>
+<p>设计工具：Adobe Inllustrator， <a href="https://www.canva.cn/" target="_blank" rel="noopener">设计icon</a> ， <a href="https://appicon.co/" target="_blank" rel="noopener">生成icon</a></p>
+<p>第三工具：<a href="https://realm.io/cn/docs/swift/latest/#using-the-realm-framework" target="_blank" rel="noopener">移动端火热数据库 Realm</a>，天气API等</p>
+<p>思路来源：平时喜欢在APP store里面下载一些独立开发者的APP。这些APP部分思路来自于优秀的APP（如羡辙-2019字体日历、素记 等），部分是自己生活需要的简单小功能。</p>
+<p>代码方面：大部分使用了Storyboard，UI设计需要；纯手写代码在 <a href="https://irispierce.github.io/2019/03/04/IOS%E5%BC%80%E5%8F%91%20-%20%E6%AF%8F%E6%97%A5%E4%B8%80%E4%B8%AASwift%E5%B0%8F%E7%A8%8B%E5%BA%8F/" target="_blank" rel="noopener">每日一个swift小程序内</a></p>
+<p>开源项目：暂未整理完成</p>
+<h3 id="上架中："><a href="#上架中：" class="headerlink" title="上架中："></a>上架中：</h3><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g0z6z61pm5j314g0kmwgw.jpg" alt="image-20190311214844948"></p>
+<h3 id="Project-Todos-极简事项"><a href="#Project-Todos-极简事项" class="headerlink" title="Project  : Todos 极简事项"></a>Project  : Todos 极简事项</h3><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g10e7cmt3og30af0l8noz.gif" alt="app6的副本"></p>
+<h4 id="需求分析："><a href="#需求分析：" class="headerlink" title="需求分析："></a>需求分析：</h4><p>iOS原生风格的极简的日程管理工具。</p>
+<p>现在大部分的Todo工具：UI设计趋向于小清新、可爱动画等多元设计；功能为可以记录时间、地点、时间重要程度等信息，这样对于提高了增加任务的时间、精力成本。</p>
+<p>本APP主打的就是：界面使用iOS原生峰哥，功能就是随时想到、随时记录。</p>
+<p>功能：用户可以对待办事项输入、修改、删除、修改顺序操作，可以标记已经完成任务。</p>
+<p>举例一个使用场景：午餐时想到了一个idea直接打开APP记录、午睡后想到这个idea的实现可直接修改，晚上实现该功能后直接打钩，第二天测试人员告知该idea可行时删除任务。</p>
+<h4 id="技术：-1"><a href="#技术：-1" class="headerlink" title="技术："></a>技术：</h4><ul>
+<li>数据存储：先学习了userDefault，再改为时下火热的移动端数据库Realm存储数据</li>
+<li>TableView</li>
+</ul>
+<p><a href="https://irispierce.github.io/2019/03/08/IOS12+Swift4+Xcode10%E5%BC%80%E5%8F%91%20-%20/" target="_blank" rel="noopener">具体实现</a></p>
+<h3 id="Project-Weather-元气天气"><a href="#Project-Weather-元气天气" class="headerlink" title="Project  : Weather 元气天气"></a>Project  : Weather 元气天气</h3><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g10e7mbs9mg30c90qob2d.gif" alt="weather"></p>
+<h4 id="需求分析：-1"><a href="#需求分析：-1" class="headerlink" title="需求分析："></a>需求分析：</h4><p>让用户查看当地天气、查询异地天气的时看到正能量文字，元气满满的开始新的一天。</p>
+<h4 id="技术：-2"><a href="#技术：-2" class="headerlink" title="技术："></a>技术：</h4><ul>
+<li>页面传值</li>
+<li>第三方库管理器</li>
+</ul>
+<p><a href="https://irispierce.github.io/2019/03/07/IOS12+Swift4+Xcode10%E5%BC%80%E5%8F%91%20-%204%20%E5%85%83%E6%B0%94%E5%A4%A9%E6%B0%94APP/" target="_blank" rel="noopener">具体实现</a></p>
+<h3 id="Project-3-Quizzler-奇怪问答"><a href="#Project-3-Quizzler-奇怪问答" class="headerlink" title="Project 3 : Quizzler 奇怪问答"></a>Project 3 : Quizzler 奇怪问答</h3><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g0wmillwucg30ca0qo7wi.gif" alt="quizzer"></p>
+<h4 id="需求分析：-2"><a href="#需求分析：-2" class="headerlink" title="需求分析："></a>需求分析：</h4><p>该问答APP可以修改为任意主题的答题APP。目前想法是改为数据结构基础知识的APP，因为我自己可以用该APP为了实习面试而刷题。</p>
+<h4 id="技术：-3"><a href="#技术：-3" class="headerlink" title="技术："></a>技术：</h4><ul>
+<li>SVM模式</li>
+<li>题库存储：realm移动端数据库</li>
+</ul>
+<p><a href>具体实现</a></p>
+<h3 id="Project-4-Piano-木琴"><a href="#Project-4-Piano-木琴" class="headerlink" title="Project 4 : Piano 木琴"></a>Project 4 : Piano 木琴</h3><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g0sacsomeqj30m617mq4r.jpg" alt="image-20190305222641892"></p>
+<p>按下不同的按键，发出不同的音调。</p>
+<h3 id="Project-3-Dicee-麻将骰子模拟器"><a href="#Project-3-Dicee-麻将骰子模拟器" class="headerlink" title="Project 3 : Dicee 麻将骰子模拟器"></a>Project 3 : Dicee 麻将骰子模拟器</h3><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g0sa697r7nj30m617m1kx.jpg" alt="image-20190305161340845"></p>
+<p>技术：</p>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<p><a href>具体实现</a></p>
+<h3 id="Project-2-Magic-8-Ball-问答魔力球"><a href="#Project-2-Magic-8-Ball-问答魔力球" class="headerlink" title="Project 2 : Magic 8 Ball 问答魔力球"></a>Project 2 : Magic 8 Ball 问答魔力球</h3><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g0sayw5lvdj30u01szqiw.jpg" alt="image-20190305164640770"></p>
+<h3 id="Project-1-计时器"><a href="#Project-1-计时器" class="headerlink" title="Project 1 : 计时器"></a>Project 1 : 计时器</h3><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g0ncssbanmg309d0go75a.gif" alt="4"></p>
+<p>技术：</p>
+<ul>
+<li>SnapKit：项目的自动布局</li>
+<li>Timer 计时器：fire()与invalidate()</li>
+<li>guard语句：guard 判断合理条件，保证判断条件简约。详见 <a href="https://link.juejin.im/?target=http%3A%2F%2Fwww.jianshu.com%2Fp%2F3a8e45af7fdd" target="_blank" rel="noopener">guard详解</a></li>
+</ul>
+<p><a href="https://irispierce.github.io/2019/02/28/IOS%E5%BC%80%E5%8F%91-%E7%AE%80%E5%8D%95%E7%9A%84%E8%AE%A1%E6%97%B6%E5%99%A8/" target="_blank" rel="noopener">具体实现</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/合集/" rel="tag"># 合集</a>
+          
+            <a href="/tags/可视分析/" rel="tag"># 可视分析</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/23/前端基础学习/React - 1 基础和TodoList/" rel="next" title="React - 基础和TodoList">
+                <i class="fa fa-chevron-left"></i> React - 基础和TodoList
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/11/数据可视化/阿里数据中台面试/" rel="prev" title="暑期实习面试 - 阿里数据中台前端可视化">
+                暑期实习面试 - 阿里数据中台前端可视化 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/irisHeader.jpeg" alt="IRIS">
+            
+              <p class="site-author-name" itemprop="name">IRIS</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/irispierce" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:wangyusi007@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#研究项目合集"><span class="nav-number">1.</span> <span class="nav-text">研究项目合集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#自由探索——面向分类的感知驱动的可视化监督降维方法"><span class="nav-number">1.1.</span> <span class="nav-text">自由探索——面向分类的感知驱动的可视化监督降维方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#成绩："><span class="nav-number">1.1.1.</span> <span class="nav-text">成绩：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#背景：有标签的高维数据"><span class="nav-number">1.1.2.</span> <span class="nav-text">背景：有标签的高维数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#困难：难以分析标签HD数据"><span class="nav-number">1.1.3.</span> <span class="nav-text">困难：难以分析标签HD数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法："><span class="nav-number">1.1.4.</span> <span class="nav-text">方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#困难1：发现单个视图降维方法的不足"><span class="nav-number">1.1.5.</span> <span class="nav-text">困难1：发现单个视图降维方法的不足</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#技术："><span class="nav-number">1.1.6.</span> <span class="nav-text">技术：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基于-kNN-Graph的内蕴特征抽取可视分析"><span class="nav-number">1.2.</span> <span class="nav-text">基于 kNN Graph的内蕴特征抽取可视分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">1.2.1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子"><span class="nav-number">1.2.2.</span> <span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高维数据中的低维结构的可视探索"><span class="nav-number">1.3.</span> <span class="nav-text">高维数据中的低维结构的可视探索</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#成绩：-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">成绩：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题："><span class="nav-number">1.3.2.</span> <span class="nav-text">问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决："><span class="nav-number">1.3.3.</span> <span class="nav-text">解决：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法：-1"><span class="nav-number">1.3.4.</span> <span class="nav-text">方法：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#考勤管理系统"><span class="nav-number">1.4.</span> <span class="nav-text">考勤管理系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#成绩：-2"><span class="nav-number">1.4.1.</span> <span class="nav-text">成绩：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#APP项目合集"><span class="nav-number">2.</span> <span class="nav-text">APP项目合集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上架中："><span class="nav-number">2.0.1.</span> <span class="nav-text">上架中：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-Todos-极简事项"><span class="nav-number">2.0.2.</span> <span class="nav-text">Project  : Todos 极简事项</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#需求分析："><span class="nav-number">2.0.2.1.</span> <span class="nav-text">需求分析：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技术：-1"><span class="nav-number">2.0.2.2.</span> <span class="nav-text">技术：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-Weather-元气天气"><span class="nav-number">2.0.3.</span> <span class="nav-text">Project  : Weather 元气天气</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#需求分析：-1"><span class="nav-number">2.0.3.1.</span> <span class="nav-text">需求分析：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技术：-2"><span class="nav-number">2.0.3.2.</span> <span class="nav-text">技术：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-3-Quizzler-奇怪问答"><span class="nav-number">2.0.4.</span> <span class="nav-text">Project 3 : Quizzler 奇怪问答</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#需求分析：-2"><span class="nav-number">2.0.4.1.</span> <span class="nav-text">需求分析：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技术：-3"><span class="nav-number">2.0.4.2.</span> <span class="nav-text">技术：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-4-Piano-木琴"><span class="nav-number">2.0.5.</span> <span class="nav-text">Project 4 : Piano 木琴</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-3-Dicee-麻将骰子模拟器"><span class="nav-number">2.0.6.</span> <span class="nav-text">Project 3 : Dicee 麻将骰子模拟器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-2-Magic-8-Ball-问答魔力球"><span class="nav-number">2.0.7.</span> <span class="nav-text">Project 2 : Magic 8 Ball 问答魔力球</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-1-计时器"><span class="nav-number">2.0.8.</span> <span class="nav-text">Project 1 : 计时器</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">IRIS</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">74k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'K56V1wrSmQT1Y57HAlTWMY6m-gzGzoHsz',
+        appKey: '1KvpI6T94PESCJ3yikky6J1P',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("K56V1wrSmQT1Y57HAlTWMY6m-gzGzoHsz", "1KvpI6T94PESCJ3yikky6J1P");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

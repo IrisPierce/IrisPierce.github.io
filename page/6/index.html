@@ -289,730 +289,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/存档/开发与学术/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/05/存档/开发与学术/" itemprop="url">学术</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T13:17:42+08:00">
-                2018-01-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学术/" itemprop="url" rel="index">
-                    <span itemprop="name">学术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/01/05/存档/开发与学术/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/存档/开发与学术/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/01/05/存档/开发与学术/" class="leancloud_visitors" data-flag-title="学术">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  3.7k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  12
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="自由探索项目——面向分类的感知驱动的可视化监督降维方法"><a href="#自由探索项目——面向分类的感知驱动的可视化监督降维方法" class="headerlink" title="自由探索项目——面向分类的感知驱动的可视化监督降维方法"></a>自由探索项目——面向分类的感知驱动的可视化监督降维方法</h2><h3 id="成绩："><a href="#成绩：" class="headerlink" title="成绩："></a>成绩：</h3><p>自由探索项目，预计4月-5月投稿。（负责人）</p>
-<h3 id="目标："><a href="#目标：" class="headerlink" title="目标："></a><strong>目标：</strong></h3><p>分类数据的分析。</p>
-<h3 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h3><p>本文提出了一种感知驱动的线性降维方法，寻求生成具有最大视觉分离程度、最少数量的最优二维投影集合。</p>
-<p>（1）子空间表达：对于类别两两之间利用分离度量求最优分离向量，然后在各个维度上找出在这个度量上能够达到分离度量阈值的范围，各个维度上的范围构成了一个包围盒。</p>
-<p>（2）子空间求交：包围盒如果有交集，则代表它们之间可以用一条向量进行区分。</p>
-<p>我们将包围盒看做点，两个包围盒有交，则在对应的点之间连边，若存在一个完全图，则代表这些包围盒所代表的点对都可以用一条向量进行区分，用最少数量的团对这张图进行覆盖，这些团就对应了最少数量的包围盒集合。</p>
-<p>（3）组合优化：我们取包围盒的中心所对应的向量作为投影的坐标轴，将坐标轴进行组合，得到最少数量的投影集合。 </p>
-<h3 id="困难1："><a href="#困难1：" class="headerlink" title="困难1："></a>困难1：</h3><p>一开始构建单个视图，发现类别多的时候无法构建</p>
-<p><strong>目标函数：</strong>为了最大化非线性目标函数dDSC。<strong>优化方法：</strong>使用模拟退火算法，通过比较随机生成的投影结果的costFuction，找出全局最优值。得到最优的投影结果展示分类数据。</p>
-<p>发现：真实数据中可能存在很多类，如骑车包括：</p>
-<p>困难2：</p>
-<p>方式2：几何的方式优化</p>
-<h4 id="方法：-1"><a href="#方法：-1" class="headerlink" title="方法："></a>方法：</h4><p>要得到一个最优的向量w，步骤如下：</p>
-<h5 id="1）得到使方差很小的Pa、Pb两个子空间"><a href="#1）得到使方差很小的Pa、Pb两个子空间" class="headerlink" title="1）得到使方差很小的Pa、Pb两个子空间"></a>1）得到使方差很小的Pa、Pb两个子空间</h5><p>基本功能已经完成。</p>
-<p>矩阵分解得到将得到两个特征矩阵Pa、Pb（n*k），其k个特征向量均为正交矩阵，则该矩阵为正交矩阵。</p>
-<h5 id="2）Pa、Pb两个子空间求交"><a href="#2）Pa、Pb两个子空间求交" class="headerlink" title="2）Pa、Pb两个子空间求交"></a>2）Pa、Pb两个子空间求交</h5><p>基本功能已经完成。</p>
-<p>解线性方程组得到基础解系{x,y}，Ax为基向量，再将Ax化为模等于1的单位向量。</p>
-<p>得到验证结果，类别A的数据在本空间Va的标准差和在交空间的方差标准差数值接近。</p>
-<p>类别A的data在Va、Vb、AB交空间vec的方差：<br>0.008852595341477247<br>0.011424545768485063<br>0.00896923772901887<br>类别A的data在Va、Vb、AB交空间vec的标准差：<br>0.09504346664830678<br>0.1079708282998712<br>0.09566756711110631</p>
-<p> 数据A投影到Va、Vab中的结果如下：</p>
-<h5 id="3）最大化两个类别中心点的距离的特征向量distVec"><a href="#3）最大化两个类别中心点的距离的特征向量distVec" class="headerlink" title="3）最大化两个类别中心点的距离的特征向量distVec"></a>3）最大化两个类别中心点的距离的特征向量distVec</h5><p>由于方式2为几何的方法，我们得到的该特征项就是两个类别中心的连线 </p>
-<p>v_{dist} = u_a-u_b</p>
-<p>这一步很简单，直接可以得到的为：n*1的特征向量 v_dist</p>
-<p>A、B可视化为图中绿色点，中心点为红色点、distVec则为蓝色线段的方向，我们将其化作单位向量如橙色线段。</p>
-<h5 id="4）将2）中的交空间和3）中的子空间（向量）组合，得到最终的子空间范围-V"><a href="#4）将2）中的交空间和3）中的子空间（向量）组合，得到最终的子空间范围-V" class="headerlink" title="4）将2）中的交空间和3）中的子空间（向量）组合，得到最终的子空间范围 V"></a>4）将2）中的交空间和3）中的子空间（向量）组合，得到最终的子空间范围 V</h5><p>方式1：直接看做两个子空间求交</p>
-<p>对于该方式，大概率会求出空集。</p>
-<p>方式2：线性组合。</p>
-<p>这里提出enegeFuction = distAB- Sa-Sb(A、B的方差)</p>
-<p>最大化enegeFuction，得到参数k。</p>
-<p>得到newV= {vec+k1α1，vec+k2α2，…，vec+knαn}</p>
-<p>纯代数无法得到结果。</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g11j32hh92j31b50u0gxp.jpg" alt="子空间相交"></p>
-<h3 id="D3是Data-Driven-Document的缩写，从字面上理解就是数据驱动文本"><a href="#D3是Data-Driven-Document的缩写，从字面上理解就是数据驱动文本" class="headerlink" title="D3是Data-Driven Document的缩写，从字面上理解就是数据驱动文本"></a>D3是Data-Driven Document的缩写，从字面上理解就是数据驱动文本</h3><h1 id="高维数据中的低维结构的可视探索"><a href="#高维数据中的低维结构的可视探索" class="headerlink" title="高维数据中的低维结构的可视探索"></a>高维数据中的低维结构的可视探索</h1><p>成绩：并推荐可视化顶级刊 TVCG。非学生一作</p>
-<p><strong>问题：</strong>高维数据集中往往含有不同结构的低维结构，当未知数据集中的低维结构与当前的可视化方法的假设不匹配时，可视化结果将难以理解。<strong>解决：</strong>可视分析方法帮助用户有效地识别低维结构及关键特征，为进一步分析提供关键结构信息。<strong>方法：</strong>t-SNE初步提供初始聚类信息，局部切空间-测地距离视图用来发现子空间，2个滚石图拐点为子空间维度，</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g11k6otgvnj30rc0je77a.jpg" alt="image-20190313225653964"></p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g11k9nemw0j30ti0h4n4d.jpg" alt="image-20190313225944793"></p>
-<p>高维多元数据——独立属性、相关数据</p>
-<p>可视分析——维度太高，难以提取可理解的维度关联信息</p>
-<p>高维数据低维结构</p>
-<p>P1——二维S1、一维S2、S3</p>
-<p>P2——</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g11fiug9k8j30rs08qjwb.jpg" alt="image-20190313201534472"></p>
-<p>一、选题意义和研究价值</p>
-<p>分析高维数据集的许多方法都假设数据集包含特定结构，例如聚类位于线性子空间中或位于非线性流形上。这需要反复的实验去验证适当的模型和参数。本文提出了一个探索性的界面，支持识别高维数据集中的低维结构，并有助于选择最优的数据模型和参数配置。我们的关键思想是从潜在的低维结构的邻居图表示中提取一组全局和局部特征描述符，例如点间的测地距离(GD)以及点的局部切空间(LTS)中点间的局部切空间散度(LTSD)。我们提出了一个新的LTSD-GD视图，它通过多维标度分析方法(MDS[6])分别将LTSD和GD映射到x轴和y轴。与保留点之间各种距离的传统降维方法不同，LTSD-GD视图展示了点LTS(x轴)的分布和结构中LTS的变化(x轴和y轴的组合)。我们设计并且实现了一系列可视化工具，用于探索高维数据中的内在结构</p>
-<p>二、国内外研究现状和发展动态</p>
-<p><strong>2.1可视化高维数据</strong></p>
-<p>高维数据可视化引起了广泛关注[18]。包括平行坐标图[14]，散点图矩阵和雷达图[11]等的常规可视化技术被设计去呈现数据的统计，例如维度中的数据分布或两个维度之间的相关性。然而，这些方法基本不可能去揭示潜在的聚类模式和潜在的特征。</p>
-<p>基于DR的投影方法是可视化方法中的重要组成部分。通常，将点投影到二维或三维空间，并且同时保留一定的结构。广泛使用的PCA方法尽力去保留数据的方差。经典的多维标度分析(MDS)[6]，在投影过程中保留了高维空间中数据间的欧几里德距离。这些方法假定点位于单个的低维线性子空间中。如果当点位于非线性流形中，同样也已经提出了几种流形学习方法来检测潜在流形，例如ISOMAP[34]，LLE[24]，LE[4]和LTSA[44]。然而，基于DR的投影结果可能难以理解和解释[31]。首先，这些点被盲目地减少到二维或三维空间，由于维度的限制，这些空间可能不能准确地捕捉到数据间的内在结构[13]。第二，分析者可能缺乏DR方法与内在结构之间是否合适的相关知识[13]。分析者可能对DR模型的理解有限，或者在初始阶段对数据的了解有限。</p>
-<p>在现实世界的高维数据集中，数据点通常位于多个子空间或多个流形中。子空间聚类[40]和流形聚类[8]方法被设计用于检测潜在的多个低维结构。通常的策略是首先采用DR模型，然后有序地可视化检测到的低维结构。VISA[2]系统根据全局视图中的聚类和维度的大小提出了聚类之间的相似性。它还在详细视图中显示了各个聚类的属性。Tatu等人[33]开发了一个可视化界面来探索SURFIN[3]发现的大量子空间。基于相似度函数来探索子空间，其重点在于子空间之间的拓扑和维度重叠。Liu等[19]用谱法提取子空间，并将子空间用可视化技术呈现出来。然而，子空间聚类和流形聚类模型通常强烈依赖于本质结构的假设，例如聚类的数量[7]，聚类的维度[36]和结构之间的是否相交。在不了解本质结构的情况下，很难选择合适的模型。</p>
-<p>在这些可视化方法中，<em>t-SNE</em>[39]对内在结构做了一个温和的假设。在低维嵌入中，它保留了对不同结构(如多个流形)的<em>k</em>-Nearest-Neighbors(<em>k</em>NN)图的统计数据。<em>t-SNE</em>不仅保留了局部结构而且还显示了全局信息[22]，因此我们将其作为高维数据集中内在结构的初始指标之一，并在可视化探索过程中优化它。为了计算效率，在<em>t-SNE</em>中可以采用层次化策略[21]。</p>
-<p><strong>2.2</strong> <strong>探索高维数据</strong></p>
-<p>探索高维数据比自动模型更需要含有交互功能的预处理工具[42]。传统的方法，如平行坐标图，散点图矩阵[12]和各种投影[25]已经得到了很好的研究。</p>
-<p>通常，分析者需要在探索期间以交互方式产生许多视图。为减轻手工负担，Voyager[41]提出自动生成可视化的建议。接下来，出现了大量关于质量测量[5,32]和排名[29]的可视化文献。DimScanner[42]提出构建可视化来发现不同视图之间的信息感知关系。Sarvghad等[27]可视化了维度覆盖以记录探索的历史。为了探索显著的子空间，Yuan等[43]提出了一个矩阵/树结构，以便在探索过程中组织数据和维度的子集。</p>
-<p>为了增强发现潜在结构的能力，自动化的DR模型被集成到探索界面中。因为数据的潜在结构往往是未知的，所以这些方法利用混合模型[23]来匹配潜在的结构。DimStiller[13]提出了用于维度分析和减少组合的自动化DR模型的工作流程。通常，只能选择比较容易理解的模型，如PCA和MDS。当处理包含多个低维结构的数据时，这些模型和工作流程产生可解释的结果是基本不可能的。在本文中，我们试图在构建具体模型之前对其内在结构和特征进行表征。结构的特征和可视化揭示了潜在的低维结构。</p>
-<p>三、主要研究思路、研究内容和在学术方面的创新点</p>
-<p><strong>3.1</strong> <strong>低维结构的表示</strong></p>
-<p>我们将子空间定义为一个聚类低维表示的基础[40]。给定一组线性或仿射子空间的点，子空间可以通过奇异值分解(SVD)或主成分分析(PCA)来计算得出。还有一点需要注意的是数据可以是轴对齐的，也可以是非轴对齐的。</p>
-<p>在一般情况下，点大多位于非线性流形上。我们可以把流形认为是一个“软”和“弯曲”的子空间。d维流形的每一个点都有一个与d维的欧几里得空间同胚的小邻域，在一个流形中，点的局部子空间的方向是逐渐变化的。另一方面，子空间是流形的一般情况。对于位于相同子空间中的聚类，点的局部子空间的方向是相同的。</p>
-<p>受流形学习方法的启发，我们建立了一个邻居图，一个<em>k</em>NN图，用来表示位于潜在流形或子空间中的聚类。这个表示是基于一个局部假设[16]，即每个点都有一个小的邻域，在这个邻域里，每个点都属于同一流形，近似地位于一个低维的仿射子空间中。这意味着即使在全维空间中，每个点的局部子空间也可以从局部领域中获取。给定一个不熟悉的数据集，分析者总是可以从一个统一的表示开始。</p>
-<p>在本文中，我们使用Shared-Nearest-Neighbor (SNN)图[9]，它是一个<em>k</em>NN图的子图，用来表示本质结构。在SNN图中，当且仅当p和q位于彼此的<em>k</em>NN邻域时，两者之间才存在一条边。SNN图形倾向于生成多个分区，这非常适合用于呈现聚类特征。</p>
-<h1 id="三、"><a href="#三、" class="headerlink" title="三、"></a>三、</h1><p>4.5.1  kNN Graph与SNN Graph </p>
-<p>首先我们构建出Shared-NearNeighbors(SNN) Graph，来表示高维数据的内蕴结构。SNN Graph是kNN Graph的子图，他要求两点互为k近邻时，两点之间才存在边；数据存在异常值时，与其他部分相互分隔开。与kNN Graph相比，SNN Graph中心和边界的数据分布得到了增强。接着，我们用节点链接布局SNN Graph。本文提供了两种方式来交互地从SNN Graph中提取内蕴轴：点选和自由绘制曲线。</p>
-<p>4.5.2  点选</p>
-<p>用户可以选择一系列数据点来解释他的点选的趋势。我们根据用户点选的顺序，通过Dijkstra算法得到最短路径，并连接数据点，得到原始路径。当所选点的数量超过两个时，构建的原始路径中可能存在回路。当原始路径中存在回路时，算法将会移除该回路，如图4-5-2。如果在点选列表中相继的两个点处于两个不相连接的图中部分，我们将会寻找两部分中最近的两个点，并添加一条边来连接两个部分。</p>
-<p>随着选定点的增加，解释知识从宽泛到细致。因此，路径中的回路反映了人类知识的不确定性。视觉特征，如聚类，路径趋势和异常值，往往可以作为用户交互的感知线索。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g11ji6gq7dj30cl073aat.jpg" alt="pastedGraphic.png"></p>
-<p>图4-5-2  从原始路径中移除回路（a）点选两点的最短路径（b）选择多个点时，路径不确定性增加（c）原始路径存在回路（d）从路径中移除回路</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/❤️算法 - 0 排序/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/05/❤️算法 - 0 排序/" itemprop="url">算法 - 0 排序</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T13:17:42+08:00">
-                2018-01-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/01/05/❤️算法 - 0 排序/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/❤️算法 - 0 排序/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/01/05/❤️算法 - 0 排序/" class="leancloud_visitors" data-flag-title="算法 - 0 排序">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1.5k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  5
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="O-n-2-排序算法-3"><a href="#O-n-2-排序算法-3" class="headerlink" title="O(n^2)排序算法 3"></a>O(n^2)排序算法 3</h1><ul>
-<li>冒泡排序</li>
-<li>插入排序</li>
-<li>选择排序</li>
-</ul>
-<p>选择排序不稳定，相同元素可能会变化，因此这三种不选择选择排序。</p>
-<p>代码中，把执行一个赋值语句的时间粗略地计为单位时间。冒泡排序需要 3 个赋值操作<code>temp存储临时变量</code>，而插入排序只需要 1 个 <code>a[j]=a[j+1]移动数据</code>。时间比值：1：7。</p>
-<p>最优方法：插入排序。</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g10g0wcas2j31mo0u07tq.jpg" alt="image-20190312234718950"></p>
-<h1 id="O-nlogn-排序算法-3"><a href="#O-nlogn-排序算法-3" class="headerlink" title="O(nlogn) 排序算法 3"></a>O(nlogn) 排序算法 3</h1><h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><ul>
-<li><p>方法：利用了分治思想，用递归代码来实现归并排序。先分，再合。</p>
-</li>
-<li><p>时间复杂度： T(n)=Cn+nlog2n。非常稳定，所有情况都是O(nlogn)。</p>
-</li>
-<li>空间复杂度：不是原地排序算法，每次合并操作都需要申请额外的内存空间，但在合并完成之后，临时空间释放。 O(n)。</li>
-<li>处理过程：是由下到上的，先处理子问题，然后再合并。</li>
-</ul>
-<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>方法：利用主元分区，每次分为左边小区，右边大区。直至区内只有一个元素之后，排序完成。</p>
-<p>时间复杂度：分区每次右边都没有元素。就从 O(nlogn) 退化成了 O(n2)。</p>
-<p>处理过程：是由上到下的，先分区，然后再处理子问题。</p>
-<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><h3 id="10-亿个搜索关键词的日志文件，Top-10-最热门的搜索关键词"><a href="#10-亿个搜索关键词的日志文件，Top-10-最热门的搜索关键词" class="headerlink" title="10 亿个搜索关键词的日志文件，Top 10 最热门的搜索关键词"></a>10 亿个搜索关键词的日志文件，Top 10 最热门的搜索关键词</h3><p>用户搜索的关键词，有很多可能都是重复的，散列表先记录次数。</p>
-<p>用堆求 Top K 的方法，建立一个大小为 10 的小顶堆，遍历散列表，依次取出次数，若次数多&gt;顶堆，则删除顶堆。遍历完成后得到top10。</p>
-<p>然而10亿太大了。</p>
-<p>哈希之后，将 10 亿条搜索关键词先通过哈希算法分到10个文件。在进行上述步骤，然后得到10x10个关键字。租后排序得到top10。</p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>10 个接口访问日志文件，每个日志文件大小约 300MB，日志都是按照时间戳从小到大排序的</p>
-<p>将这 10 个较小的日志文件，合并为 1 个日志文件，合并之后也是从小到大排序。</p>
-<p>机器内存只有 1GB，你有什么好的解决思路，能“快速”地将这10 个日志文件合并吗？</p>
-<p>每次从各个文件中取一条数据，在内存中根据数据时间戳构建一个最小堆，然后每次把最小值给写入新文件，同时将最小值来自的那个文件再出来一个数据，加入到最小堆中。这个空间复杂度为常数，但没能很好利用1g内存，而且磁盘单个读取比较慢，所以考虑每次读取一批数据，没了再从磁盘中取，时间复杂度还是一样O(n)。</p>
-<h1 id="线性排序-3"><a href="#线性排序-3" class="headerlink" title="线性排序 3"></a>线性排序 3</h1><h2 id="桶排序（Bucket-sort）"><a href="#桶排序（Bucket-sort）" class="headerlink" title="桶排序（Bucket sort）"></a>桶排序（Bucket sort）</h2><h3 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h3><ul>
-<li>容易划分为m个桶，且天然有序</li>
-<li>分布均匀，若分布不均匀全在一个桶里会退化为log（n/m log(n/m)) = log(n logn)</li>
-<li>外部排序。数据大，内存有限，无法将数据全部加载到内存，存放于外部磁盘中。</li>
-</ul>
-<h3 id="10GB数据，如何按照订单金额排序？"><a href="#10GB数据，如何按照订单金额排序？" class="headerlink" title="10GB数据，如何按照订单金额排序？"></a>10GB数据，如何按照订单金额排序？</h3><ul>
-<li><p>扫描一遍文件，看订单金额所处的数据范围。假设经过扫描之后我们得到，订单金额最小是 1 元，最大是 1…</p>
-</li>
-<li><p>将所有订单根据金额划分到 100 个桶里，第一个桶我们存储金额在 1 元到 1000 元之内，第二个1001-2000，类推。每个桶按照范围命名。</p>
-</li>
-<li>理想状态均匀分布，则划分为100个100M文件。按文件编号，依次将文件放入内存快排，在写入同一个文件。</li>
-<li>若部分文件很大，无法写入内存，继续划分，直到对所有文件都可读入内存为止，再依次快排。</li>
-</ul>
-<h2 id="计数排序（Counting-sort）"><a href="#计数排序（Counting-sort）" class="headerlink" title="计数排序（Counting sort）"></a>计数排序（Counting sort）</h2><h3 id="要求：-1"><a href="#要求：-1" class="headerlink" title="要求："></a>要求：</h3><ul>
-<li>数据量大，数据区间小</li>
-<li>非负整数。若为不符合该条件，则转化即可。</li>
-</ul>
-<h3 id="如何根据年龄给-100-万用户排序？"><a href="#如何根据年龄给-100-万用户排序？" class="headerlink" title="如何根据年龄给 100 万用户排序？"></a>如何根据年龄给 100 万用户排序？</h3><p>年龄的范围最小 1 岁，最大不超过 120 岁；</p>
-<p>遍历这 100 万用户，根据年龄将其划分到这 120 个桶里；</p>
-<p>依次顺序遍历这 120 个桶中的元素。</p>
-<h3 id="高考查分系统，省内50万名考生，分数范围为900-0。"><a href="#高考查分系统，省内50万名考生，分数范围为900-0。" class="headerlink" title="高考查分系统，省内50万名考生，分数范围为900-0。"></a>高考查分系统，省内50万名考生，分数范围为900-0。</h3><p>数据范围小，我们划分为901个桶，桶内为分数相同的学生。</p>
-<p>此时不需要在排序，而是只需要依次输出到数组即可，只需一次扫描操作，时间复杂度O(n)。</p>
-<p>ps. 若考生分数有小数点后一位，则需要所有分数乘10，转为整数，再放进9010个桶内。</p>
-<h2 id="基数排序（Radix-sort）"><a href="#基数排序（Radix-sort）" class="headerlink" title="基数排序（Radix sort）"></a>基数排序（Radix sort）</h2><h3 id="要求：-2"><a href="#要求：-2" class="headerlink" title="要求："></a>要求：</h3><ul>
-<li>数据可以分割出独立的“位”来比较，位之间有递进的关系（高位优先）</li>
-<li>每一位的数据范围不能太大，要可以用线性排序算法来排序</li>
-</ul>
-<h3 id="10万个11位电话号码排序（等长）"><a href="#10万个11位电话号码排序（等长）" class="headerlink" title="10万个11位电话号码排序（等长）"></a>10万个11位电话号码排序（等长）</h3><ul>
-<li>规律：比较两个号码a、b，若前几位a已经大于b，则后面不用看。</li>
-<li>方法：先按照最后一位排序，再按照倒数第二位，以此类推。最后按照第一位来排序。11排序之后，手机号码有序。</li>
-<li>时间复杂度：按照每一位排序，数字只有0-10，可以使用桶排序，时间复杂度可以做到 O(n)。排序的数据有 k 位，时间为O(k*n)。k不大的时候，近似为O(n)。</li>
-</ul>
-<h3 id="排序牛津字典中的20-万个英文单词（非等长1-45）"><a href="#排序牛津字典中的20-万个英文单词（非等长1-45）" class="headerlink" title="排序牛津字典中的20 万个英文单词（非等长1-45）"></a>排序牛津字典中的20 万个英文单词（非等长1-45）</h3><ul>
-<li>解决非等长：把所有的单词补齐到相同长度，位数不够的可以在后面补“0”。根据ASCII 值，所有字母都大于“0”，所以补“0”不会影响排序。</li>
-<li>接着使用基数排序</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/数据结构 -  5 图/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/05/数据结构 -  5 图/" itemprop="url">数据结构 -  数组</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T13:17:42+08:00">
-                2018-01-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/01/05/数据结构 -  5 图/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/数据结构 -  5 图/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/01/05/数据结构 -  5 图/" class="leancloud_visitors" data-flag-title="数据结构 -  数组">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  88
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>有向图</p>
-<p>带权图</p>
-<h3 id="邻接矩阵存储方法"><a href="#邻接矩阵存储方法" class="headerlink" title="邻接矩阵存储方法"></a>邻接矩阵存储方法</h3><p>存储费空间，使用方便</p>
-<h3 id="领结表存储方法"><a href="#领结表存储方法" class="headerlink" title="领结表存储方法"></a>领结表存储方法</h3><p>节省空间、使用耗时</p>
-<h3 id="如何存储微博、微信等社交网络中的好友关系？"><a href="#如何存储微博、微信等社交网络中的好友关系？" class="headerlink" title="如何存储微博、微信等社交网络中的好友关系？"></a>如何存储微博、微信等社交网络中的好友关系？</h3><p>判断用户A是否关注用户B</p>
-<p>判断用户A是否是用户B的粉丝</p>
-<p>邻接表</p>
-<p>逆邻接表</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/数据结构 - 2 链表/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1171,207 +447,6 @@
 <h3 id="散列表实现"><a href="#散列表实现" class="headerlink" title="散列表实现"></a>散列表实现</h3><p>1.上面所讲的几个散列表和链表组合的例子里，我们都是使用双向链表。如果把双向链表改成单链表，还能否正常工作？为什么呢？<br>2.假设猎聘网有10万名猎头，每个猎头可以通过做任务（比如发布职位）来积累积分，然后通过积分来下载简历。假设你是猎聘网的一名工程师，如何在内存中存储这10万个猎头的ID和积分信息，让它能够支持这样几个操作：<br>1）根据猎头ID查收查找、删除、更新这个猎头的积分信息；<br>2）查找积分在某个区间的猎头ID列表；<br>3）查找按照积分从小到大排名在第x位到第y位之间的猎头ID列表。</p>
 <p>以积分排序构建一个跳表，再以猎头 ID 构建一个散列表。</p>
 <p>1）ID 在散列表中所以可以 O(1) 查找到这个猎头；<br>2）积分以跳表存储，跳表支持区间查询；<br>3）这点根据目前学习的知识暂时无法实现，老师文中也提到了。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/数据结构 -  2 堆栈/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/05/数据结构 -  2 堆栈/" itemprop="url">数据结构 -  数组</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T13:17:42+08:00">
-                2018-01-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/01/05/数据结构 -  2 堆栈/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/数据结构 -  2 堆栈/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/01/05/数据结构 -  2 堆栈/" class="leancloud_visitors" data-flag-title="数据结构 -  数组">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  225
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="08-栈：如何实现浏览器的前进和后退功能？"><a href="#08-栈：如何实现浏览器的前进和后退功能？" class="headerlink" title="08 | 栈：如何实现浏览器的前进和后退功能？"></a>08 | 栈：如何实现浏览器的前进和后退功能？</h1><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g1e825e40tj30lc05iwg5.jpg" alt="image-20190324214941336"></p>
-<p>abc顺序浏览页面，回退返回a页面，前进返回b页面。</p>
-<p>若此时在进入新的页面d，则无法再回到页面c，需要清空第二个栈。</p>
-<p>ps.内存中的堆栈和数据结构堆栈不是一个概念，可以说内存中的堆栈是真实存在的物理区，数据结构中的堆栈是抽象的数据存储结构。</p>
-<h1 id="09-队列：队列在线程池等有限资源池中的应用"><a href="#09-队列：队列在线程池等有限资源池中的应用" class="headerlink" title="09 | 队列：队列在线程池等有限资源池中的应用"></a>09 | 队列：队列在线程池等有限资源池中的应用</h1><p>线程池没有空闲线程时，新的任务请求线程资源时，线程池该如何处理？</p>
-<p>第一种是非阻塞的处理方式，直接拒绝任务请求；另一种是阻塞的处理方式，将请求排队，等到有空闲线程时，取出排队的请求继续处理。</p>
 
           
         
@@ -1633,7 +708,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/19/前端基础学习/JavaScript - 2 进阶/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/数据结构 -  2 堆栈/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -1652,7 +727,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/02/19/前端基础学习/JavaScript - 2 进阶/" itemprop="url">JavaScript - 1 基础语法</a></h1>
+                <a class="post-title-link" href="/2018/01/05/数据结构 -  2 堆栈/" itemprop="url">数据结构 -  数组</a></h1>
         
 
         <div class="post-meta">
@@ -1666,8 +741,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-19T16:00:57+08:00">
-                2017-02-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T13:17:42+08:00">
+                2018-01-05
               </time>
             
 
@@ -1689,8 +764,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
 
@@ -1707,8 +782,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/19/前端基础学习/JavaScript - 2 进阶/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/02/19/前端基础学习/JavaScript - 2 进阶/" itemprop="commentCount"></span>
+                <a href="/2018/01/05/数据结构 -  2 堆栈/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/数据结构 -  2 堆栈/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1716,7 +791,7 @@
 
           
           
-             <span id="/2017/02/19/前端基础学习/JavaScript - 2 进阶/" class="leancloud_visitors" data-flag-title="JavaScript - 1 基础语法">
+             <span id="/2018/01/05/数据结构 -  2 堆栈/" class="leancloud_visitors" data-flag-title="数据结构 -  数组">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1741,7 +816,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.8k
+                  225
                 </span>
               
 
@@ -1757,7 +832,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  1
                 </span>
               
             </div>
@@ -1780,57 +855,12 @@
       
         
           
-            <h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><h3 id="创建对象有几种方法"><a href="#创建对象有几种方法" class="headerlink" title="创建对象有几种方法"></a>创建对象有几种方法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.字面量对象方式</span></span><br><span class="line"><span class="keyword">var</span> o1=&#123;<span class="attr">name</span>:<span class="string">'o1'</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> <span class="number">02</span>=<span class="keyword">new</span> <span class="built_in">Object</span>&#123;<span class="attr">name</span>:<span class="string">'o2'</span>&#125;;</span><br><span class="line"><span class="comment">// 2.通过构造函数</span></span><br><span class="line"><span class="keyword">var</span> M=<span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;<span class="keyword">this</span>.name=name&#125;;</span><br><span class="line"><span class="keyword">var</span> o3=<span class="keyword">new</span> M(<span class="string">'o3'</span>);</span><br><span class="line"><span class="comment">// 3.Onject.create</span></span><br><span class="line"><span class="keyword">var</span> p=&#123;<span class="attr">name</span>:<span class="string">'p'</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> o4=<span class="built_in">Object</span>.create(p);</span><br></pre></td></tr></table></figure>
-<h3 id="原型、构造函数、实例、原型链"><a href="#原型、构造函数、实例、原型链" class="headerlink" title="原型、构造函数、实例、原型链"></a>原型、构造函数、实例、原型链</h3><h4 id="原型、构造函数、实例"><a href="#原型、构造函数、实例" class="headerlink" title="原型、构造函数、实例"></a>原型、构造函数、实例</h4><p><img src="../../../../Library/Application Support/typora-user-images/image-20190421165005752.png" alt="image-20190421165005752"></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// M是构造函数，o3是 实例</span></span><br><span class="line"><span class="keyword">var</span> M=<span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;<span class="keyword">this</span>.name=name&#125;;</span><br><span class="line"><span class="keyword">var</span> o3=<span class="keyword">new</span> M(<span class="string">'o3'</span>);</span><br><span class="line"></span><br><span class="line">M.prototype.constructor===M 	<span class="comment">//true</span></span><br><span class="line">o3.__proto__==M.prototype			<span class="comment">//true</span></span><br><span class="line">M.__proto__==Fuction.prototype <span class="comment">//true,M为Fuction构造函数的实例，原型对象相同</span></span><br></pre></td></tr></table></figure>
-<h4 id="原型对象和原型链的作用"><a href="#原型对象和原型链的作用" class="headerlink" title="原型对象和原型链的作用"></a>原型对象和原型链的作用</h4><p>原型对象作用：构造函数中增加了很多属性和方法，实例可以共用。多个实例的时候，想使用这个方法的时候，不能每个实例都取拷贝一份。可以考虑存在一个共同的地方——原型对象。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 原型链的方式找到原型对象，原型对象的方法是被不同的实例所共有的。</span></span><br><span class="line"><span class="keyword">var</span> M=<span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;<span class="keyword">this</span>.name=name&#125;;</span><br><span class="line"><span class="keyword">var</span> o3=<span class="keyword">new</span> M(<span class="string">'o3'</span>);</span><br><span class="line">M.prototype.say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'say hi'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> o5=<span class="keyword">new</span> M(<span class="string">'o5'</span>);</span><br></pre></td></tr></table></figure>
-<p>原型链的作用：实例调用方法时没有找到方法时，如则通过 <strong> proto </strong>在上级对象去找，再没找到的时候，则继续找，直至Object.prototype根部。</p>
-<h3 id="instanceof的原理"><a href="#instanceof的原理" class="headerlink" title="instanceof的原理"></a>instanceof的原理</h3><p><img src="../../../../Library/Application Support/typora-user-images/image-20190421171830966.png" alt="image-20190421171830966"></p>
-<p>判断实例对象的 <strong> proto </strong>和生成其的构造函数的prototype是不是引用同一个地址。(ps.实例的instanceof在比较的时候，<strong>与原型链上想上找的</strong>构造函数相比都是true。)</p>
-<h3 id="new运算符"><a href="#new运算符" class="headerlink" title="new运算符"></a>new运算符</h3><h2 id="JavaScript作用域和闭包"><a href="#JavaScript作用域和闭包" class="headerlink" title="JavaScript作用域和闭包"></a>JavaScript作用域和闭包</h2><h3 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h3><p>js会把所有的声明提到前面，然后再顺序执行赋值等其它操作，因为在打印a之前已经存在a这个变量了，只是没有赋值，所以会打印出undefined，为不是报错，fn同理。</p>
-<h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><p>JavaScript是没有块级作用域的：if里的变量都可以访问</p>
-<p>js有全局作用域和函数作用域：在函数里声明的变量，在是不会影响外面的变量的，看结果</p>
-<p>作用域链：一个自由变量，js引擎在执行到console.log(x)时，会先在F2中寻找x，没找到就去当前作用域的父级作用域F1中找，还找不到就在往上找直到全局作用域。</p>
-<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p>Javascript允许使用内部函数—即函数定义和函数表达式位于另一个函数的函数体内。而且，这些内部函数可以访问它们所在的外部函数中声明的所有局部变量、参数和声明的其他内部函数。当其中一个这样的内部函数在包含它们的外部函数之外被调用时，就会形成闭包。</p>
-<h3 id="其应用"><a href="#其应用" class="headerlink" title="其应用"></a>其应用</h3><p>我们有时候需要得到函数内的局部变量。但是，前面已经说过了，正常情况下，这是办不到的，只有通过变通方法才能实现。</p>
-<p>那就是在函数的内部，再定义一个函数,然后把这个函数返回。</p>
-<p>在本例中就实现了闭包，简单的说，闭包就是能够读取其他函数内部变量的函数。 </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">F1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">100</span></span><br><span class="line">    <span class="comment">//返回一个函数 (函数作为返回值)</span></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(a)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//f1得到一个函数</span></span><br><span class="line"><span class="keyword">var</span> f1 = F1()</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">200</span></span><br><span class="line">f1()</span><br></pre></td></tr></table></figure>
-<h2 id="JS-web-API"><a href="#JS-web-API" class="headerlink" title="JS-web-API"></a>JS-web-API</h2><h3 id="6-5-Ajax跨域"><a href="#6-5-Ajax跨域" class="headerlink" title="6-5 Ajax跨域"></a>6-5 Ajax跨域</h3><p>手写ajax：使用API——XMLHttpRequest()实现ajax</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line">xhr.open(<span class="string">"GRT"</span>,<span class="string">"/api"</span>,<span class="literal">false</span>)</span><br><span class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="comment">// 异步函数执行，可以参考JS基础中的异步模块</span></span><br><span class="line">  <span class="keyword">if</span>(xhr.readyState == <span class="number">4</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(xhr.status == <span class="number">200</span>)&#123;</span><br><span class="line">      alert(xhr.responseText)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">xhr.send(<span class="literal">null</span>)</span><br></pre></td></tr></table></figure>
-<h4 id="什么是跨域？"><a href="#什么是跨域？" class="headerlink" title="什么是跨域？"></a>什么是跨域？</h4><p>浏览器的通远策略，不允许ajax访问其他域的接口。前端用JSONP，后端用http header。</p>
-<h4 id="跨域条件："><a href="#跨域条件：" class="headerlink" title="跨域条件："></a>跨域条件：</h4><p>协议、域名、端口，有一个不同就算跨域</p>
-<h4 id="三个标签允许跨域加载资源："><a href="#三个标签允许跨域加载资源：" class="headerlink" title="三个标签允许跨域加载资源："></a>三个标签允许跨域加载资源：</h4><ul>
-<li>1图片：&lt; img src=xxx&gt; 、打点统计，统计网站可能是其他域：可以跨域；兼容多个浏览器</li>
-<li>2CSS，外部样式表的位置: &lt; link href=xxx&gt;、3地址，引入外部js文件，外部脚本文件的 URL：&lt; script src=xxx&gt;：可以使用CDN，CDN也是其他域。</li>
-</ul>
-<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>所有跨域请求都必须经过信息方允许；若未经允许即可获取，就是浏览器同源策略出现了问题。eg.知乎日报的API</p>
-<h4 id="JSONP：简单"><a href="#JSONP：简单" class="headerlink" title="JSONP：简单"></a>JSONP：简单</h4><p>非官方跨域数据交互协议<br>原理：为了减轻web服务器的负载，我们把js、css，img等静态资源分离到另一台独立域名的服务器上，在html页面中再通过相应的标签从不同域名下加载静态资源，而被浏览器允许。<br>方法：可以通过动态创建script，再请求一个带参网址实现跨域通信。<br>缺点：只能实现get一种请求</p>
-<ul>
-<li>例如自己的网站需要访问一个慕课网的接口</li>
-<li>慕课给我一个地址 <a href="https://coding.imooc.com/api.js" target="_blank" rel="noopener">https://coding.imooc.com/api.js</a></li>
-<li>返回内容格式如callback({x:100,y:200}) 可动态生成：<ul>
-<li>callback相当于执行的函数</li>
-<li>函数的参数：为内容</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="built_in">window</span>.callback = <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data)<span class="comment">//输出跨域的信息</span></span><br><span class="line">&#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;script src="https:/</span><span class="regexp">/coding.imooc.com/</span>api.js<span class="string">"&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="跨域资源共享（CORS）：复杂"><a href="#跨域资源共享（CORS）：复杂" class="headerlink" title="跨域资源共享（CORS）：复杂"></a>跨域资源共享（CORS）：复杂</h4><p>主流的跨域解决方案。</p>
-<p>普通跨域请求：只服务端设置http header{Access-Control-Allow-Origin}即可，前端无须设置。</p>
-<p>若要带cookie请求：前后端都需要设置。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//前端设置 原生JS</span></span><br><span class="line">xhr.withCredentials = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
-<h4 id="窗口之间JS跨域postMessage"><a href="#窗口之间JS跨域postMessage" class="headerlink" title="窗口之间JS跨域postMessage"></a>窗口之间JS跨域postMessage</h4><p>用法：postMessage(data,origin)方法接受两个参数<br>data： html5规范支持任意基本类型或可复制的对象，但部分浏览器只支持字符串，所以传参时最好用JSON.stringify()序列化。<br>origin： 协议+主机+端口号，也可以设置为”*”，表示可以传递给任意窗口，如果要指定和当前窗口同源的话设置为”/“。</p>
-<h3 id="6-6-存储"><a href="#6-6-存储" class="headerlink" title="6-6 存储"></a>6-6 存储</h3><h4 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h4><p>本身用于客户端和服务端通信<br>本身有本地存储功能，于是被”借用”<br>document.cookie =  xxx 获取和修改即可</p>
-<p>缺点：</p>
-<p>存储量太小，4kb；所有http都会带着，影响获取资源的效率(因此仅4kb)；API简单，需要封装才能用 document.cookie</p>
-<h4 id="localStorage和sessionStorage"><a href="#localStorage和sessionStorage" class="headerlink" title="localStorage和sessionStorage"></a>localStorage和sessionStorage</h4><p>HTML5存储设计，容量5M<br>API简单易用:<code>localStorage.setItem(key,value)</code>和<code>localStorage.getItem(key)</code><br>注意：应该try-catch封装，在iOS无痕模式下，getItem(key)会报错</p>
-<h4 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h4><p>容量不同<br>是否会被携带到ajax<br>API易用性<br>清除：localStorage浏览器不主动清除数据，非登录状态都存在这里；sessionStorage每次会话结束会清清除。</p>
-<h2 id="第七章-7开发环境"><a href="#第七章-7开发环境" class="headerlink" title="第七章 7开发环境"></a>第七章 7开发环境</h2><h3 id="7-3-git常用命令"><a href="#7-3-git常用命令" class="headerlink" title="7-3 git常用命令"></a>7-3 git常用命令</h3><p>代码管理、大型项目需要多人协作开发</p>
-<p>命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add</span><br></pre></td></tr></table></figure>
-<h2 id="第1章-系好安全带-准备启航"><a href="#第1章-系好安全带-准备启航" class="headerlink" title="第1章 系好安全带,准备启航"></a>第1章 系好安全带,准备启航</h2><h2 id="第2章-你要懂的规则-JS基础语法"><a href="#第2章-你要懂的规则-JS基础语法" class="headerlink" title="第2章 你要懂的规则(JS基础语法)"></a>第2章 你要懂的规则(JS基础语法)</h2><h2 id="第3章-一起组团-数组"><a href="#第3章-一起组团-数组" class="headerlink" title="第3章 一起组团(数组)"></a>第3章 一起组团(数组)</h2><h2 id="第4章-跟着我的节奏走-流程控制语句"><a href="#第4章-跟着我的节奏走-流程控制语句" class="headerlink" title="第4章 跟着我的节奏走(流程控制语句)"></a>第4章 跟着我的节奏走(流程控制语句)</h2><h2 id="第5章-小程序，大作用（函数）"><a href="#第5章-小程序，大作用（函数）" class="headerlink" title="第5章 小程序，大作用（函数）"></a>第5章 小程序，大作用（函数）</h2><h2 id="第6章-事件响应，让网页交互"><a href="#第6章-事件响应，让网页交互" class="headerlink" title="第6章 事件响应，让网页交互"></a>第6章 事件响应，让网页交互</h2><h2 id="第7章-JavaScript内置对象"><a href="#第7章-JavaScript内置对象" class="headerlink" title="第7章 JavaScript内置对象"></a>第7章 JavaScript内置对象</h2><h2 id="第8章-浏览器对象"><a href="#第8章-浏览器对象" class="headerlink" title="第8章 浏览器对象"></a>第8章 浏览器对象</h2><h2 id="第9章-DOM对象，控制HTML元素"><a href="#第9章-DOM对象，控制HTML元素" class="headerlink" title="第9章 DOM对象，控制HTML元素"></a>第9章 DOM对象，控制HTML元素</h2><h2 id="第10章-编程挑战"><a href="#第10章-编程挑战" class="headerlink" title="第10章 编程挑战"></a>第10章 编程挑战</h2><p>### </p>
+            <h1 id="08-栈：如何实现浏览器的前进和后退功能？"><a href="#08-栈：如何实现浏览器的前进和后退功能？" class="headerlink" title="08 | 栈：如何实现浏览器的前进和后退功能？"></a>08 | 栈：如何实现浏览器的前进和后退功能？</h1><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g1e825e40tj30lc05iwg5.jpg" alt="image-20190324214941336"></p>
+<p>abc顺序浏览页面，回退返回a页面，前进返回b页面。</p>
+<p>若此时在进入新的页面d，则无法再回到页面c，需要清空第二个栈。</p>
+<p>ps.内存中的堆栈和数据结构堆栈不是一个概念，可以说内存中的堆栈是真实存在的物理区，数据结构中的堆栈是抽象的数据存储结构。</p>
+<h1 id="09-队列：队列在线程池等有限资源池中的应用"><a href="#09-队列：队列在线程池等有限资源池中的应用" class="headerlink" title="09 | 队列：队列在线程池等有限资源池中的应用"></a>09 | 队列：队列在线程池等有限资源池中的应用</h1><p>线程池没有空闲线程时，新的任务请求线程资源时，线程池该如何处理？</p>
+<p>第一种是非阻塞的处理方式，直接拒绝任务请求；另一种是阻塞的处理方式，将请求排队，等到有空闲线程时，取出排队的请求继续处理。</p>
 
           
         
@@ -1879,7 +909,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/19/前端基础学习/前端基础 - 1 HTML/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/数据可视化/数据可视化 - 可视化基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -1898,7 +928,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/02/19/前端基础学习/前端基础 - 1 HTML/" itemprop="url">前端基础 - 1 HTML</a></h1>
+                <a class="post-title-link" href="/2018/01/05/数据可视化/数据可视化 - 可视化基础/" itemprop="url">数据可视化 - 可视化基础</a></h1>
         
 
         <div class="post-meta">
@@ -1912,8 +942,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-19T16:00:57+08:00">
-                2017-02-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T13:17:42+08:00">
+                2018-01-05
               </time>
             
 
@@ -1935,8 +965,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端基础/" itemprop="url" rel="index">
-                    <span itemprop="name">前端基础</span>
+                  <a href="/categories/数据可视化/" itemprop="url" rel="index">
+                    <span itemprop="name">数据可视化</span>
                   </a>
                 </span>
 
@@ -1953,8 +983,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/19/前端基础学习/前端基础 - 1 HTML/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/02/19/前端基础学习/前端基础 - 1 HTML/" itemprop="commentCount"></span>
+                <a href="/2018/01/05/数据可视化/数据可视化 - 可视化基础/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/数据可视化/数据可视化 - 可视化基础/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1962,7 +992,7 @@
 
           
           
-             <span id="/2017/02/19/前端基础学习/前端基础 - 1 HTML/" class="leancloud_visitors" data-flag-title="前端基础 - 1 HTML">
+             <span id="/2018/01/05/数据可视化/数据可视化 - 可视化基础/" class="leancloud_visitors" data-flag-title="数据可视化 - 可视化基础">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1987,7 +1017,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  402
+                  1.2k
                 </span>
               
 
@@ -2003,7 +1033,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -2026,21 +1056,40 @@
       
         
           
-            <h2 id="第1章-Html介绍"><a href="#第1章-Html介绍" class="headerlink" title="第1章 Html介绍"></a>第1章 Html介绍</h2><p>本章节主要讲解html和css样式的关系，以及html标签、html文件结构、head标签,最后讲解了在html中的注释代码的作用。</p>
-<p>关系：</p>
-<p>学习web前端开发基础技术需要掌握：HTML、CSS、JavaScript语言。下面我们就来了解下这三门技术都是用来实现什么的：</p>
-<ol>
-<li><p><strong>HTML是网页内容的载体</strong>。内容就是网页制作者放在页面上想要让用户浏览的信息，可以包含文字、图片、视频等。</p>
-</li>
-<li><p><strong>CSS样式是表现</strong>。就像网页的外衣。比如，标题字体、颜色变化，或为标题加入背景图片、边框等。所有这些用来改变内容外观的东西称之为表现。</p>
-</li>
-<li><p><strong>JavaScript是用来实现网页上的特效效果</strong>。如：鼠标滑过弹出下拉菜单。或鼠标滑过表格的背景颜色改变。还有焦点新闻（新闻图片）的轮换。可以这么理解，有动画的，有交互的一般都是用JavaScript来实现的。</p>
-</li>
-</ol>
-<p><strong>下面给大家布置一个任务，在完成任务的时候，每输入一行代码，代码窗口就会立即显示出效果。</strong></p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1g1arlhiolgj31hq0liq6b.jpg" alt="image-20190321220320875"></p>
-<h2 id="第2章-你要懂的规则-JS基础语法"><a href="#第2章-你要懂的规则-JS基础语法" class="headerlink" title="第2章 你要懂的规则(JS基础语法)"></a>第2章 你要懂的规则(JS基础语法)</h2><h2 id="第3章-一起组团-数组"><a href="#第3章-一起组团-数组" class="headerlink" title="第3章 一起组团(数组)"></a>第3章 一起组团(数组)</h2><h2 id="第4章-跟着我的节奏走-流程控制语句"><a href="#第4章-跟着我的节奏走-流程控制语句" class="headerlink" title="第4章 跟着我的节奏走(流程控制语句)"></a>第4章 跟着我的节奏走(流程控制语句)</h2><h2 id="第5章-小程序，大作用（函数）"><a href="#第5章-小程序，大作用（函数）" class="headerlink" title="第5章 小程序，大作用（函数）"></a>第5章 小程序，大作用（函数）</h2><h2 id="第6章-事件响应，让网页交互"><a href="#第6章-事件响应，让网页交互" class="headerlink" title="第6章 事件响应，让网页交互"></a>第6章 事件响应，让网页交互</h2><h2 id="第7章-JavaScript内置对象"><a href="#第7章-JavaScript内置对象" class="headerlink" title="第7章 JavaScript内置对象"></a>第7章 JavaScript内置对象</h2><h2 id="第8章-浏览器对象"><a href="#第8章-浏览器对象" class="headerlink" title="第8章 浏览器对象"></a>第8章 浏览器对象</h2><h2 id="第9章-DOM对象，控制HTML元素"><a href="#第9章-DOM对象，控制HTML元素" class="headerlink" title="第9章 DOM对象，控制HTML元素"></a>第9章 DOM对象，控制HTML元素</h2><h2 id="第10章-编程挑战"><a href="#第10章-编程挑战" class="headerlink" title="第10章 编程挑战"></a>第10章 编程挑战</h2><p>### </p>
-
+            <p>有些人认为可视化只是把计算分析的结果图形化。</p>
+<p>实则不然，可视化是人类认识、分析复杂数据的重要途径。</p>
+<h1 id="数据可视分析"><a href="#数据可视分析" class="headerlink" title="数据可视分析"></a>数据可视分析</h1><h2 id="数据可视化的挑战"><a href="#数据可视化的挑战" class="headerlink" title="数据可视化的挑战"></a>数据可视化的挑战</h2><p>计算能力有限、感知和认知的局限、显示能力的局限</p>
+<h3 id="大数据可视化"><a href="#大数据可视化" class="headerlink" title="大数据可视化"></a>大数据可视化</h3><h3 id="以人为中心的探索式可视分析-关注"><a href="#以人为中心的探索式可视分析-关注" class="headerlink" title="以人为中心的探索式可视分析(关注)"></a>以人为中心的探索式可视分析(关注)</h3><h2 id="可视化框架"><a href="#可视化框架" class="headerlink" title="可视化框架"></a>可视化框架</h2><h3 id="可视化循环模型"><a href="#可视化循环模型" class="headerlink" title="可视化循环模型"></a>可视化循环模型</h3><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g16rj54xzwj30zo0iadi8.jpg" alt="image-20190318105853130"></p>
+<h3 id="可视分析流程"><a href="#可视分析流程" class="headerlink" title="可视分析流程"></a>可视分析流程</h3><p>数据转化、可视映射、视图转化</p>
+<p>原数据-&gt;转化后的数据-&gt;可视结构-&gt;视图</p>
+<p>如：我们选择线性投影将30维的原数据降为5维度的转化数据，再使用平行坐标视觉映射转为可视结构，然而数据有相互遮挡，则选择PCP方法视图转化至视图上。最后呈现热力图式的平行坐标。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g16qrifmtjj31ee0lc4az.jpg" alt="image-20190318103214651"></p>
+<h2 id="基本图表"><a href="#基本图表" class="headerlink" title="基本图表"></a>基本图表</h2><h3 id="原始数据"><a href="#原始数据" class="headerlink" title="原始数据"></a>原始数据</h3><p>数据轨迹、柱状图（x轴为类别型，主要用于统计值）、直方图（x轴为数据型，主要用于频率）、饼图(比例)、散点图与散点图矩阵(属性对的关系、热力图(颜色编码二维数据值的大小)</p>
+<h3 id="统计值标绘制"><a href="#统计值标绘制" class="headerlink" title="统计值标绘制"></a>统计值标绘制</h3><p>盒须图，上面最大值、下面最小值、盒子表示数据大致范围25-75%</p>
+<h3 id="多视图协调关联"><a href="#多视图协调关联" class="headerlink" title="多视图协调关联"></a>多视图协调关联</h3><p>选择后高亮</p>
+<h2 id="交互技术"><a href="#交互技术" class="headerlink" title="交互技术"></a>交互技术</h2><h3 id="选择-selection"><a href="#选择-selection" class="headerlink" title="选择 selection"></a>选择 selection</h3><p>数据过多视觉混乱：堆叠区域和对象放大<br>选择后展示提示信息：字符串在有限空间排列，不选择的时候隐藏，选择后展开</p>
+<h3 id="导航-navigation"><a href="#导航-navigation" class="headerlink" title="导航 navigation"></a>导航 navigation</h3><p>人眼观察到区域可见空间有限<br>缩放<br>平移<br>旋转</p>
+<h3 id="重配-reconfigure"><a href="#重配-reconfigure" class="headerlink" title="重配 reconfigure"></a>重配 reconfigure</h3><p>提供观察数据的不同视角<br>重组视图<br>重排列</p>
+<h3 id="编码-encode"><a href="#编码-encode" class="headerlink" title="编码 encode"></a>编码 encode</h3><p>颜色编码、大小、方向、字体、性状</p>
+<h3 id="抽象-abstraction"><a href="#抽象-abstraction" class="headerlink" title="抽象 abstraction"></a>抽象 abstraction</h3><p>不同等级的信息，交互控制获得更多或更少的细节</p>
+<h3 id="过滤-filter"><a href="#过滤-filter" class="headerlink" title="过滤 filter"></a>过滤 filter</h3><p>设置约束条件进行信息查询<br>eg.选定价格房型，地图上出现复合房子<br>动态过滤：滑动框、按钮、组合框，过滤条件之间不相关</p>
+<h3 id="关联-connection"><a href="#关联-connection" class="headerlink" title="关联 connection"></a>关联 connection</h3><p>高亮显示对象之间关系<br>链接与刷动 刷选对象，其余都可高亮</p>
+<h3 id="概览-细节-overview-details"><a href="#概览-细节-overview-details" class="headerlink" title="概览+细节 overview+details"></a>概览+细节 overview+details</h3><p>谷歌地图右下角全局，主页面当前区域</p>
+<h3 id="焦点-上下文-focus-context"><a href="#焦点-上下文-focus-context" class="headerlink" title="焦点+上下文 focus+context"></a>焦点+上下文 focus+context</h3><h1 id="高维数据可视化"><a href="#高维数据可视化" class="headerlink" title="高维数据可视化"></a>高维数据可视化</h1><p>高维多元数据——独立属性、相关数据</p>
+<p>可视分析——维度太高，难以提取可理解的维度关联信息。高于10维的数据</p>
+<h2 id="空间映射法"><a href="#空间映射法" class="headerlink" title="空间映射法"></a>空间映射法</h2><h3 id="散点图与散点图矩阵"><a href="#散点图与散点图矩阵" class="headerlink" title="散点图与散点图矩阵"></a>散点图与散点图矩阵</h3><h3 id="平行坐标"><a href="#平行坐标" class="headerlink" title="平行坐标"></a>平行坐标</h3><h3 id="降维-重要"><a href="#降维-重要" class="headerlink" title="降维(重要)"></a>降维(重要)</h3><p>线性方法和非线性方法，将高维数据投影project或嵌入embed至低维空间(通常为2、3维)，并尽量在低维空间保持多元空间中的关系和特征。</p>
+<p>最后展示的方法一般为散点图。</p>
+<h4 id="主元分析-PCA-无监督"><a href="#主元分析-PCA-无监督" class="headerlink" title="主元分析 PCA(无监督)"></a>主元分析 PCA(无监督)</h4><p>减少维度，保持数据集方差贡献最大的特征。（在低维空间找一个观察角度，以便最大限度观察多维数据的差异。）</p>
+<p>第一个新坐标轴选择的是原始数据中方差最大的方向，第二个新坐标轴选择的是与第一个新坐标轴正交且方差次大的方向。</p>
+<p>通过计算数据矩阵的协方差矩阵，然后得到协方差矩阵的特征值及特征向量，选择特征值最大（也即包含方差最大）的N个特征所对应的特征向量组成的矩阵，我们就可以将数据矩阵转换到新的空间当中，实现数据特征的降维（N维）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">去除平均值</span><br><span class="line">计算协方差矩阵</span><br><span class="line">计算协方差矩阵的特征值和特征向量</span><br><span class="line">将特征值排序</span><br><span class="line">保留前N个最大的特征值对应的特征向量</span><br><span class="line">将数据转换到上面得到的N个特征向量构建的新空间中（实现了特征压缩）</span><br></pre></td></tr></table></figure>
+<h4 id="线性判别分析-LDA-有监督"><a href="#线性判别分析-LDA-有监督" class="headerlink" title="线性判别分析 LDA(有监督)"></a>线性判别分析 LDA(有监督)</h4><p>也叫Fisher线性判别。</p>
+<p><strong>抽取分类信息和压缩特征空间维数</strong>，投影后保证模式样本在新的子空间有<strong>最大的类间距离</strong>和<strong>最小的类内距离</strong>，即模式在该空间中有最佳的可分离性。</p>
+<p>优化目标J最大，获得最优投影向量w：使用矩阵分解，得到特征值最大的特征矩阵的第一行。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g170j48070j30b8046t90.jpg" alt="image-20190318161015272"></p>
+<h4 id="多维尺度分析-MDS-multimensioanal-scaling"><a href="#多维尺度分析-MDS-multimensioanal-scaling" class="headerlink" title="多维尺度分析 MDS multimensioanal scaling"></a>多维尺度分析 MDS multimensioanal scaling</h4><p>### </p>
+<h2 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h2><p>星状图</p>
+<h2 id="基于像素的可视化方法"><a href="#基于像素的可视化方法" class="headerlink" title="基于像素的可视化方法"></a>基于像素的可视化方法</h2>
           
         
       
@@ -2556,6 +1605,864 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/19/前端基础学习/前端基础 - 1 HTML/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/02/19/前端基础学习/前端基础 - 1 HTML/" itemprop="url">前端基础 - 1 HTML</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-19T16:00:57+08:00">
+                2017-02-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端基础/" itemprop="url" rel="index">
+                    <span itemprop="name">前端基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/19/前端基础学习/前端基础 - 1 HTML/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/02/19/前端基础学习/前端基础 - 1 HTML/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/02/19/前端基础学习/前端基础 - 1 HTML/" class="leancloud_visitors" data-flag-title="前端基础 - 1 HTML">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  402
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="第1章-Html介绍"><a href="#第1章-Html介绍" class="headerlink" title="第1章 Html介绍"></a>第1章 Html介绍</h2><p>本章节主要讲解html和css样式的关系，以及html标签、html文件结构、head标签,最后讲解了在html中的注释代码的作用。</p>
+<p>关系：</p>
+<p>学习web前端开发基础技术需要掌握：HTML、CSS、JavaScript语言。下面我们就来了解下这三门技术都是用来实现什么的：</p>
+<ol>
+<li><p><strong>HTML是网页内容的载体</strong>。内容就是网页制作者放在页面上想要让用户浏览的信息，可以包含文字、图片、视频等。</p>
+</li>
+<li><p><strong>CSS样式是表现</strong>。就像网页的外衣。比如，标题字体、颜色变化，或为标题加入背景图片、边框等。所有这些用来改变内容外观的东西称之为表现。</p>
+</li>
+<li><p><strong>JavaScript是用来实现网页上的特效效果</strong>。如：鼠标滑过弹出下拉菜单。或鼠标滑过表格的背景颜色改变。还有焦点新闻（新闻图片）的轮换。可以这么理解，有动画的，有交互的一般都是用JavaScript来实现的。</p>
+</li>
+</ol>
+<p><strong>下面给大家布置一个任务，在完成任务的时候，每输入一行代码，代码窗口就会立即显示出效果。</strong></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1g1arlhiolgj31hq0liq6b.jpg" alt="image-20190321220320875"></p>
+<h2 id="第2章-你要懂的规则-JS基础语法"><a href="#第2章-你要懂的规则-JS基础语法" class="headerlink" title="第2章 你要懂的规则(JS基础语法)"></a>第2章 你要懂的规则(JS基础语法)</h2><h2 id="第3章-一起组团-数组"><a href="#第3章-一起组团-数组" class="headerlink" title="第3章 一起组团(数组)"></a>第3章 一起组团(数组)</h2><h2 id="第4章-跟着我的节奏走-流程控制语句"><a href="#第4章-跟着我的节奏走-流程控制语句" class="headerlink" title="第4章 跟着我的节奏走(流程控制语句)"></a>第4章 跟着我的节奏走(流程控制语句)</h2><h2 id="第5章-小程序，大作用（函数）"><a href="#第5章-小程序，大作用（函数）" class="headerlink" title="第5章 小程序，大作用（函数）"></a>第5章 小程序，大作用（函数）</h2><h2 id="第6章-事件响应，让网页交互"><a href="#第6章-事件响应，让网页交互" class="headerlink" title="第6章 事件响应，让网页交互"></a>第6章 事件响应，让网页交互</h2><h2 id="第7章-JavaScript内置对象"><a href="#第7章-JavaScript内置对象" class="headerlink" title="第7章 JavaScript内置对象"></a>第7章 JavaScript内置对象</h2><h2 id="第8章-浏览器对象"><a href="#第8章-浏览器对象" class="headerlink" title="第8章 浏览器对象"></a>第8章 浏览器对象</h2><h2 id="第9章-DOM对象，控制HTML元素"><a href="#第9章-DOM对象，控制HTML元素" class="headerlink" title="第9章 DOM对象，控制HTML元素"></a>第9章 DOM对象，控制HTML元素</h2><h2 id="第10章-编程挑战"><a href="#第10章-编程挑战" class="headerlink" title="第10章 编程挑战"></a>第10章 编程挑战</h2><p>### </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/19/前端基础学习/JavaScript - 2 进阶/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/02/19/前端基础学习/JavaScript - 2 进阶/" itemprop="url">JavaScript - 1 基础语法</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-19T16:00:57+08:00">
+                2017-02-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/19/前端基础学习/JavaScript - 2 进阶/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/02/19/前端基础学习/JavaScript - 2 进阶/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/02/19/前端基础学习/JavaScript - 2 进阶/" class="leancloud_visitors" data-flag-title="JavaScript - 1 基础语法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.8k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><h3 id="创建对象有几种方法"><a href="#创建对象有几种方法" class="headerlink" title="创建对象有几种方法"></a>创建对象有几种方法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.字面量对象方式</span></span><br><span class="line"><span class="keyword">var</span> o1=&#123;<span class="attr">name</span>:<span class="string">'o1'</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> <span class="number">02</span>=<span class="keyword">new</span> <span class="built_in">Object</span>&#123;<span class="attr">name</span>:<span class="string">'o2'</span>&#125;;</span><br><span class="line"><span class="comment">// 2.通过构造函数</span></span><br><span class="line"><span class="keyword">var</span> M=<span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;<span class="keyword">this</span>.name=name&#125;;</span><br><span class="line"><span class="keyword">var</span> o3=<span class="keyword">new</span> M(<span class="string">'o3'</span>);</span><br><span class="line"><span class="comment">// 3.Onject.create</span></span><br><span class="line"><span class="keyword">var</span> p=&#123;<span class="attr">name</span>:<span class="string">'p'</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> o4=<span class="built_in">Object</span>.create(p);</span><br></pre></td></tr></table></figure>
+<h3 id="原型、构造函数、实例、原型链"><a href="#原型、构造函数、实例、原型链" class="headerlink" title="原型、构造函数、实例、原型链"></a>原型、构造函数、实例、原型链</h3><h4 id="原型、构造函数、实例"><a href="#原型、构造函数、实例" class="headerlink" title="原型、构造函数、实例"></a>原型、构造函数、实例</h4><p><img src="../../../../Library/Application Support/typora-user-images/image-20190421165005752.png" alt="image-20190421165005752"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// M是构造函数，o3是 实例</span></span><br><span class="line"><span class="keyword">var</span> M=<span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;<span class="keyword">this</span>.name=name&#125;;</span><br><span class="line"><span class="keyword">var</span> o3=<span class="keyword">new</span> M(<span class="string">'o3'</span>);</span><br><span class="line"></span><br><span class="line">M.prototype.constructor===M 	<span class="comment">//true</span></span><br><span class="line">o3.__proto__==M.prototype			<span class="comment">//true</span></span><br><span class="line">M.__proto__==Fuction.prototype <span class="comment">//true,M为Fuction构造函数的实例，原型对象相同</span></span><br></pre></td></tr></table></figure>
+<h4 id="原型对象和原型链的作用"><a href="#原型对象和原型链的作用" class="headerlink" title="原型对象和原型链的作用"></a>原型对象和原型链的作用</h4><p>原型对象作用：构造函数中增加了很多属性和方法，实例可以共用。多个实例的时候，想使用这个方法的时候，不能每个实例都取拷贝一份。可以考虑存在一个共同的地方——原型对象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 原型链的方式找到原型对象，原型对象的方法是被不同的实例所共有的。</span></span><br><span class="line"><span class="keyword">var</span> M=<span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;<span class="keyword">this</span>.name=name&#125;;</span><br><span class="line"><span class="keyword">var</span> o3=<span class="keyword">new</span> M(<span class="string">'o3'</span>);</span><br><span class="line">M.prototype.say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'say hi'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> o5=<span class="keyword">new</span> M(<span class="string">'o5'</span>);</span><br></pre></td></tr></table></figure>
+<p>原型链的作用：实例调用方法时没有找到方法时，如则通过 <strong> proto </strong>在上级对象去找，再没找到的时候，则继续找，直至Object.prototype根部。</p>
+<h3 id="instanceof的原理"><a href="#instanceof的原理" class="headerlink" title="instanceof的原理"></a>instanceof的原理</h3><p><img src="../../../../Library/Application Support/typora-user-images/image-20190421171830966.png" alt="image-20190421171830966"></p>
+<p>判断实例对象的 <strong> proto </strong>和生成其的构造函数的prototype是不是引用同一个地址。(ps.实例的instanceof在比较的时候，<strong>与原型链上想上找的</strong>构造函数相比都是true。)</p>
+<h3 id="new运算符"><a href="#new运算符" class="headerlink" title="new运算符"></a>new运算符</h3><h2 id="JavaScript作用域和闭包"><a href="#JavaScript作用域和闭包" class="headerlink" title="JavaScript作用域和闭包"></a>JavaScript作用域和闭包</h2><h3 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h3><p>js会把所有的声明提到前面，然后再顺序执行赋值等其它操作，因为在打印a之前已经存在a这个变量了，只是没有赋值，所以会打印出undefined，为不是报错，fn同理。</p>
+<h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><p>JavaScript是没有块级作用域的：if里的变量都可以访问</p>
+<p>js有全局作用域和函数作用域：在函数里声明的变量，在是不会影响外面的变量的，看结果</p>
+<p>作用域链：一个自由变量，js引擎在执行到console.log(x)时，会先在F2中寻找x，没找到就去当前作用域的父级作用域F1中找，还找不到就在往上找直到全局作用域。</p>
+<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p>Javascript允许使用内部函数—即函数定义和函数表达式位于另一个函数的函数体内。而且，这些内部函数可以访问它们所在的外部函数中声明的所有局部变量、参数和声明的其他内部函数。当其中一个这样的内部函数在包含它们的外部函数之外被调用时，就会形成闭包。</p>
+<h3 id="其应用"><a href="#其应用" class="headerlink" title="其应用"></a>其应用</h3><p>我们有时候需要得到函数内的局部变量。但是，前面已经说过了，正常情况下，这是办不到的，只有通过变通方法才能实现。</p>
+<p>那就是在函数的内部，再定义一个函数,然后把这个函数返回。</p>
+<p>在本例中就实现了闭包，简单的说，闭包就是能够读取其他函数内部变量的函数。 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">F1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">100</span></span><br><span class="line">    <span class="comment">//返回一个函数 (函数作为返回值)</span></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(a)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//f1得到一个函数</span></span><br><span class="line"><span class="keyword">var</span> f1 = F1()</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">200</span></span><br><span class="line">f1()</span><br></pre></td></tr></table></figure>
+<h2 id="JS-web-API"><a href="#JS-web-API" class="headerlink" title="JS-web-API"></a>JS-web-API</h2><h3 id="6-5-Ajax跨域"><a href="#6-5-Ajax跨域" class="headerlink" title="6-5 Ajax跨域"></a>6-5 Ajax跨域</h3><p>手写ajax：使用API——XMLHttpRequest()实现ajax</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line">xhr.open(<span class="string">"GRT"</span>,<span class="string">"/api"</span>,<span class="literal">false</span>)</span><br><span class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="comment">// 异步函数执行，可以参考JS基础中的异步模块</span></span><br><span class="line">  <span class="keyword">if</span>(xhr.readyState == <span class="number">4</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(xhr.status == <span class="number">200</span>)&#123;</span><br><span class="line">      alert(xhr.responseText)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">xhr.send(<span class="literal">null</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="什么是跨域？"><a href="#什么是跨域？" class="headerlink" title="什么是跨域？"></a>什么是跨域？</h4><p>浏览器的通远策略，不允许ajax访问其他域的接口。前端用JSONP，后端用http header。</p>
+<h4 id="跨域条件："><a href="#跨域条件：" class="headerlink" title="跨域条件："></a>跨域条件：</h4><p>协议、域名、端口，有一个不同就算跨域</p>
+<h4 id="三个标签允许跨域加载资源："><a href="#三个标签允许跨域加载资源：" class="headerlink" title="三个标签允许跨域加载资源："></a>三个标签允许跨域加载资源：</h4><ul>
+<li>1图片：&lt; img src=xxx&gt; 、打点统计，统计网站可能是其他域：可以跨域；兼容多个浏览器</li>
+<li>2CSS，外部样式表的位置: &lt; link href=xxx&gt;、3地址，引入外部js文件，外部脚本文件的 URL：&lt; script src=xxx&gt;：可以使用CDN，CDN也是其他域。</li>
+</ul>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>所有跨域请求都必须经过信息方允许；若未经允许即可获取，就是浏览器同源策略出现了问题。eg.知乎日报的API</p>
+<h4 id="JSONP：简单"><a href="#JSONP：简单" class="headerlink" title="JSONP：简单"></a>JSONP：简单</h4><p>非官方跨域数据交互协议<br>原理：为了减轻web服务器的负载，我们把js、css，img等静态资源分离到另一台独立域名的服务器上，在html页面中再通过相应的标签从不同域名下加载静态资源，而被浏览器允许。<br>方法：可以通过动态创建script，再请求一个带参网址实现跨域通信。<br>缺点：只能实现get一种请求</p>
+<ul>
+<li>例如自己的网站需要访问一个慕课网的接口</li>
+<li>慕课给我一个地址 <a href="https://coding.imooc.com/api.js" target="_blank" rel="noopener">https://coding.imooc.com/api.js</a></li>
+<li>返回内容格式如callback({x:100,y:200}) 可动态生成：<ul>
+<li>callback相当于执行的函数</li>
+<li>函数的参数：为内容</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="built_in">window</span>.callback = <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data)<span class="comment">//输出跨域的信息</span></span><br><span class="line">&#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;script src="https:/</span><span class="regexp">/coding.imooc.com/</span>api.js<span class="string">"&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="跨域资源共享（CORS）：复杂"><a href="#跨域资源共享（CORS）：复杂" class="headerlink" title="跨域资源共享（CORS）：复杂"></a>跨域资源共享（CORS）：复杂</h4><p>主流的跨域解决方案。</p>
+<p>普通跨域请求：只服务端设置http header{Access-Control-Allow-Origin}即可，前端无须设置。</p>
+<p>若要带cookie请求：前后端都需要设置。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//前端设置 原生JS</span></span><br><span class="line">xhr.withCredentials = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="窗口之间JS跨域postMessage"><a href="#窗口之间JS跨域postMessage" class="headerlink" title="窗口之间JS跨域postMessage"></a>窗口之间JS跨域postMessage</h4><p>用法：postMessage(data,origin)方法接受两个参数<br>data： html5规范支持任意基本类型或可复制的对象，但部分浏览器只支持字符串，所以传参时最好用JSON.stringify()序列化。<br>origin： 协议+主机+端口号，也可以设置为”*”，表示可以传递给任意窗口，如果要指定和当前窗口同源的话设置为”/“。</p>
+<h3 id="6-6-存储"><a href="#6-6-存储" class="headerlink" title="6-6 存储"></a>6-6 存储</h3><h4 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h4><p>本身用于客户端和服务端通信<br>本身有本地存储功能，于是被”借用”<br>document.cookie =  xxx 获取和修改即可</p>
+<p>缺点：</p>
+<p>存储量太小，4kb；所有http都会带着，影响获取资源的效率(因此仅4kb)；API简单，需要封装才能用 document.cookie</p>
+<h4 id="localStorage和sessionStorage"><a href="#localStorage和sessionStorage" class="headerlink" title="localStorage和sessionStorage"></a>localStorage和sessionStorage</h4><p>HTML5存储设计，容量5M<br>API简单易用:<code>localStorage.setItem(key,value)</code>和<code>localStorage.getItem(key)</code><br>注意：应该try-catch封装，在iOS无痕模式下，getItem(key)会报错</p>
+<h4 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h4><p>容量不同<br>是否会被携带到ajax<br>API易用性<br>清除：localStorage浏览器不主动清除数据，非登录状态都存在这里；sessionStorage每次会话结束会清清除。</p>
+<h2 id="第七章-7开发环境"><a href="#第七章-7开发环境" class="headerlink" title="第七章 7开发环境"></a>第七章 7开发环境</h2><h3 id="7-3-git常用命令"><a href="#7-3-git常用命令" class="headerlink" title="7-3 git常用命令"></a>7-3 git常用命令</h3><p>代码管理、大型项目需要多人协作开发</p>
+<p>命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add</span><br></pre></td></tr></table></figure>
+<h2 id="第1章-系好安全带-准备启航"><a href="#第1章-系好安全带-准备启航" class="headerlink" title="第1章 系好安全带,准备启航"></a>第1章 系好安全带,准备启航</h2><h2 id="第2章-你要懂的规则-JS基础语法"><a href="#第2章-你要懂的规则-JS基础语法" class="headerlink" title="第2章 你要懂的规则(JS基础语法)"></a>第2章 你要懂的规则(JS基础语法)</h2><h2 id="第3章-一起组团-数组"><a href="#第3章-一起组团-数组" class="headerlink" title="第3章 一起组团(数组)"></a>第3章 一起组团(数组)</h2><h2 id="第4章-跟着我的节奏走-流程控制语句"><a href="#第4章-跟着我的节奏走-流程控制语句" class="headerlink" title="第4章 跟着我的节奏走(流程控制语句)"></a>第4章 跟着我的节奏走(流程控制语句)</h2><h2 id="第5章-小程序，大作用（函数）"><a href="#第5章-小程序，大作用（函数）" class="headerlink" title="第5章 小程序，大作用（函数）"></a>第5章 小程序，大作用（函数）</h2><h2 id="第6章-事件响应，让网页交互"><a href="#第6章-事件响应，让网页交互" class="headerlink" title="第6章 事件响应，让网页交互"></a>第6章 事件响应，让网页交互</h2><h2 id="第7章-JavaScript内置对象"><a href="#第7章-JavaScript内置对象" class="headerlink" title="第7章 JavaScript内置对象"></a>第7章 JavaScript内置对象</h2><h2 id="第8章-浏览器对象"><a href="#第8章-浏览器对象" class="headerlink" title="第8章 浏览器对象"></a>第8章 浏览器对象</h2><h2 id="第9章-DOM对象，控制HTML元素"><a href="#第9章-DOM对象，控制HTML元素" class="headerlink" title="第9章 DOM对象，控制HTML元素"></a>第9章 DOM对象，控制HTML元素</h2><h2 id="第10章-编程挑战"><a href="#第10章-编程挑战" class="headerlink" title="第10章 编程挑战"></a>第10章 编程挑战</h2><p>### </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/05/数据结构 -  3 堆与优先队列/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/01/05/数据结构 -  3 堆与优先队列/" itemprop="url">数据结构 -</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-05T13:17:42+08:00">
+                2017-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/01/05/数据结构 -  3 堆与优先队列/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/01/05/数据结构 -  3 堆与优先队列/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/01/05/数据结构 -  3 堆与优先队列/" class="leancloud_visitors" data-flag-title="数据结构 -">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  58
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>应用三：求中位数、第k%大的数字</p>
+<p>维护大顶堆和小顶堆，分别存储n/2个数据（奇数则大顶堆维护n/2+1个）</p>
+<p>大数据：</p>
+<p>10亿关键字，Top10关键字。</p>
+<p>散列表</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/05/❤️算法 - 0 排序实现/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/01/05/❤️算法 - 0 排序实现/" itemprop="url">算法 - 0 排序实现</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-05T13:17:42+08:00">
+                2017-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/01/05/❤️算法 - 0 排序实现/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/01/05/❤️算法 - 0 排序实现/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/01/05/❤️算法 - 0 排序实现/" class="leancloud_visitors" data-flag-title="算法 - 0 排序实现">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  582
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>时间复杂度：O(nlogn)，最差情况为O(n^2)</p>
+<p>空间复杂度：O(1)，没有使用额外空间</p>
+<p>稳定性：不稳定</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 一、算法导论实现</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quickSort</span><span class="params">(array, l, r)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> l &gt;= r:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    mid = partition(array, l, r)</span><br><span class="line">    quickSort(array, l, mid - <span class="number">1</span>)</span><br><span class="line">    quickSort(array, mid + <span class="number">1</span>, r)</span><br><span class="line"></span><br><span class="line"><span class="string">"""在划分partition的过程中排序，使用小区游标i+循环游标j，将比key小的值j与i在的位置交换，直至分区后交换r与i+1的值，返回i+1的中心位置。"""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">partition</span><span class="params">(array, l, r)</span>:</span></span><br><span class="line">    <span class="comment"># 1.选择主元</span></span><br><span class="line">    key = array[r]</span><br><span class="line">    <span class="comment"># 2.找到小区，使用小区最后一个元素i，游标j</span></span><br><span class="line">    i = l - <span class="number">1</span></span><br><span class="line">    j = l</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(l, r):</span><br><span class="line">        <span class="comment"># 2.1 j循环+1，找到小于key的元素时候，i后移动，并将找到的arr[j]与arr[i]换位置</span></span><br><span class="line">        <span class="keyword">if</span> array[j] &lt; key:</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">            array[i], array[j] = array[j], array[i]</span><br><span class="line">    <span class="comment"># 3.游标j循环后，i为小区的最后一个元素，将r与i+1换位置，则分割完成</span></span><br><span class="line">    array[i + <span class="number">1</span>], array[r] = array[r], array[i + <span class="number">1</span>]</span><br><span class="line">    <span class="keyword">return</span> i + <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    nums = [<span class="number">6</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">9</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">10</span>, <span class="number">8</span>, <span class="number">-1</span>]</span><br><span class="line">    quickSort(nums, <span class="number">0</span>, len(nums) - <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">print</span> nums</span><br></pre></td></tr></table></figure>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>时间复杂度：O(nlogn)，最好最优平均</p>
+<p>空间复杂度：O(n)，每次归并的时候需要开辟临时空间 2倍数组长度的空间</p>
+<p>稳定排序</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mergeSort</span><span class="params">(array)</span>:</span></span><br><span class="line">    <span class="comment"># 1.划分小于等于1，则返回自己</span></span><br><span class="line">    <span class="keyword">if</span> len(array) &lt;= <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> array</span><br><span class="line">    <span class="comment"># 2.大于1，继续划分为左右，mid为中位index。返回为merge排序后的结果。</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        mid = len(array) / <span class="number">2</span></span><br><span class="line">        <span class="keyword">print</span> mid</span><br><span class="line">        left = mergeSort(array[:mid])</span><br><span class="line">        right = mergeSort(array[mid:])</span><br><span class="line">        <span class="comment"># 返回排序后的left+right</span></span><br><span class="line">        <span class="keyword">return</span> merge(left, right)</span><br><span class="line"></span><br><span class="line"><span class="string">"""在merge的过程中排序，输入为left，right数组，使用i、j循环俩数组，返回排序好的合并数组result。"""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge</span><span class="params">(left, right)</span>:</span></span><br><span class="line">    <span class="comment"># 1.临时存储空间</span></span><br><span class="line">    result = []</span><br><span class="line">    <span class="comment"># 2.left的下标i，right的下标j</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    j = <span class="number">0</span></span><br><span class="line">    <span class="comment"># 2.循环left和right，将小的存入result，i或j+1，直至i、j有一个分完</span></span><br><span class="line">    <span class="keyword">while</span> i &lt; len(left) <span class="keyword">and</span> j &lt; len(right):</span><br><span class="line">        <span class="keyword">if</span> left[i] &lt;= right[j]:</span><br><span class="line">            result.append(left[i])</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            result.append(right[j])</span><br><span class="line">            j += <span class="number">1</span></span><br><span class="line">    <span class="comment"># 3.将未循环完的剩余left或right数组的数字直接与result连接</span></span><br><span class="line">    result += left[i:]</span><br><span class="line">    result += right[j:]</span><br><span class="line">    <span class="comment"># 4.返回merge结果</span></span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    array = [<span class="number">9</span>, <span class="number">6</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">0</span>, <span class="number">4</span>]</span><br><span class="line">    result = mergeSort(array)</span><br><span class="line">    <span class="keyword">print</span> result</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -2608,7 +2515,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2619,7 +2526,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2704,7 +2611,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">74.7k</span>
+    <span title="Site words total count">74k</span>
   
 </div>
 
