@@ -77,19 +77,19 @@
 
 
 
-<meta name="description" content="O(n^2)排序算法 3 冒泡排序 插入排序 选择排序  选择排序不稳定，相同元素可能会变化，因此这三种不选择选择排序。 代码中，冒泡排序需要 3 个赋值操作，而插入排序只需要 1 个。 因此三种最好的方法就是：插入排序。  O(nlogn) 排序算法 3归并排序 方法：利用了分治思想，用递归代码来实现归并排序。先分，再合。  时间复杂度： T(n)=Cn+nlog2n。非常稳定，所有情况都是O(">
+<meta name="description" content="O(n^2)排序算法 3 冒泡排序 插入排序 选择排序  选择排序不稳定，相同元素可能会变化，因此这三种不选择选择排序。 代码中，把执行一个赋值语句的时间粗略地计为单位时间。冒泡排序需要 3 个赋值操作temp存储临时变量，而插入排序只需要 1 个 a[j]=a[j+1]移动数据。时间比值：1：7。 最优方法：插入排序。  O(nlogn) 排序算法 3归并排序 方法：利用了分治思想，用递归代码来">
 <meta name="keywords" content="Java,数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法 - 0 排序">
 <meta property="og:url" content="http://yoursite.com/2018/01/05/❤️算法 - 0 排序/index.html">
 <meta property="og:site_name" content="IRIS&#39;s BLOG">
-<meta property="og:description" content="O(n^2)排序算法 3 冒泡排序 插入排序 选择排序  选择排序不稳定，相同元素可能会变化，因此这三种不选择选择排序。 代码中，冒泡排序需要 3 个赋值操作，而插入排序只需要 1 个。 因此三种最好的方法就是：插入排序。  O(nlogn) 排序算法 3归并排序 方法：利用了分治思想，用递归代码来实现归并排序。先分，再合。  时间复杂度： T(n)=Cn+nlog2n。非常稳定，所有情况都是O(">
+<meta property="og:description" content="O(n^2)排序算法 3 冒泡排序 插入排序 选择排序  选择排序不稳定，相同元素可能会变化，因此这三种不选择选择排序。 代码中，把执行一个赋值语句的时间粗略地计为单位时间。冒泡排序需要 3 个赋值操作temp存储临时变量，而插入排序只需要 1 个 a[j]=a[j+1]移动数据。时间比值：1：7。 最优方法：插入排序。  O(nlogn) 排序算法 3归并排序 方法：利用了分治思想，用递归代码来">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g10g0wcas2j31mo0u07tq.jpg">
-<meta property="og:updated_time" content="2019-03-30T08:00:06.282Z">
+<meta property="og:updated_time" content="2019-04-22T07:59:44.528Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法 - 0 排序">
-<meta name="twitter:description" content="O(n^2)排序算法 3 冒泡排序 插入排序 选择排序  选择排序不稳定，相同元素可能会变化，因此这三种不选择选择排序。 代码中，冒泡排序需要 3 个赋值操作，而插入排序只需要 1 个。 因此三种最好的方法就是：插入排序。  O(nlogn) 排序算法 3归并排序 方法：利用了分治思想，用递归代码来实现归并排序。先分，再合。  时间复杂度： T(n)=Cn+nlog2n。非常稳定，所有情况都是O(">
+<meta name="twitter:description" content="O(n^2)排序算法 3 冒泡排序 插入排序 选择排序  选择排序不稳定，相同元素可能会变化，因此这三种不选择选择排序。 代码中，把执行一个赋值语句的时间粗略地计为单位时间。冒泡排序需要 3 个赋值操作temp存储临时变量，而插入排序只需要 1 个 a[j]=a[j+1]移动数据。时间比值：1：7。 最优方法：插入排序。  O(nlogn) 排序算法 3归并排序 方法：利用了分治思想，用递归代码来">
 <meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g10g0wcas2j31mo0u07tq.jpg">
 
 
@@ -444,8 +444,8 @@
 <li>选择排序</li>
 </ul>
 <p>选择排序不稳定，相同元素可能会变化，因此这三种不选择选择排序。</p>
-<p>代码中，冒泡排序需要 3 个赋值操作，而插入排序只需要 1 个。</p>
-<p>因此三种最好的方法就是：插入排序。</p>
+<p>代码中，把执行一个赋值语句的时间粗略地计为单位时间。冒泡排序需要 3 个赋值操作<code>temp存储临时变量</code>，而插入排序只需要 1 个 <code>a[j]=a[j+1]移动数据</code>。时间比值：1：7。</p>
+<p>最优方法：插入排序。</p>
 <p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g10g0wcas2j31mo0u07tq.jpg" alt="image-20190312234718950"></p>
 <h1 id="O-nlogn-排序算法-3"><a href="#O-nlogn-排序算法-3" class="headerlink" title="O(nlogn) 排序算法 3"></a>O(nlogn) 排序算法 3</h1><h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><ul>
 <li><p>方法：利用了分治思想，用递归代码来实现归并排序。先分，再合。</p>
@@ -534,8 +534,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/05/数据结构 - 2 链表/" rel="next" title="数据结构 - 2 链表">
-                <i class="fa fa-chevron-left"></i> 数据结构 - 2 链表
+              <a href="/2018/01/05/数据可视化/数据可视化 - 可视化基础/" rel="next" title="数据可视化 - 可视化基础">
+                <i class="fa fa-chevron-left"></i> 数据可视化 - 可视化基础
               </a>
             
           </div>
@@ -544,8 +544,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/05/数据结构 -  5 图/" rel="prev" title="数据结构 -  数组">
-                数据结构 -  数组 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/05/存档/开发与学术/" rel="prev" title="学术">
+                学术 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -628,7 +628,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">66</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -639,7 +639,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -650,7 +650,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -740,7 +740,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">49.5k</span>
+    <span title="Site words total count">74.7k</span>
   
 </div>
 

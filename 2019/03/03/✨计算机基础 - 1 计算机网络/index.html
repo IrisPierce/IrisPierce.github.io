@@ -85,14 +85,16 @@
 <meta property="og:site_name" content="IRIS&#39;s BLOG">
 <meta property="og:description" content="题目合集一、TCP和UDP的区别1.为什么握手需要三次，而挥手却需要四次？握手的时候，A和B打个招呼，B可以直接把自己的SYN信息和对A的回应ACK信息一起带上，但是挥手的时候，A说我要断开了，B还没发完最后的数据，因此需要先回应一下A，我收到你的断开的请求了，但是你要等我把最后的内容给你，所以这里分开了2步： （1）回应A； （2）发送自己的最后一个数据 2.为什么A进入TIME_WAIT需要等">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/Library/Application%20Support/typora-user-images/image-20190421180407824.png">
+<meta property="og:image" content="http://yoursite.com/2019/Library/Application%20Support/typora-user-images/image-20190421180433276.png">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g10hnq0hk7j31mx0u0juy.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g1e5wqlkavj31dm0p04b8.jpg">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g1e6ebmf4oj31aw0qak8z.jpg">
-<meta property="og:updated_time" content="2019-03-30T11:04:14.916Z">
+<meta property="og:updated_time" content="2019-04-21T10:05:09.253Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机基础 - 1 计算机网络">
 <meta name="twitter:description" content="题目合集一、TCP和UDP的区别1.为什么握手需要三次，而挥手却需要四次？握手的时候，A和B打个招呼，B可以直接把自己的SYN信息和对A的回应ACK信息一起带上，但是挥手的时候，A说我要断开了，B还没发完最后的数据，因此需要先回应一下A，我收到你的断开的请求了，但是你要等我把最后的内容给你，所以这里分开了2步： （1）回应A； （2）发送自己的最后一个数据 2.为什么A进入TIME_WAIT需要等">
-<meta name="twitter:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g10hnq0hk7j31mx0u0juy.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2019/Library/Application%20Support/typora-user-images/image-20190421180407824.png">
 
 
 
@@ -403,7 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4k
+                  4.2k
                 </span>
               
 
@@ -419,7 +421,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  14
+                  15
                 </span>
               
             </div>
@@ -442,16 +444,15 @@
       
         <h1 id="题目合集"><a href="#题目合集" class="headerlink" title="题目合集"></a>题目合集</h1><h3 id="一、TCP和UDP的区别"><a href="#一、TCP和UDP的区别" class="headerlink" title="一、TCP和UDP的区别"></a>一、TCP和UDP的区别</h3><h4 id="1-为什么握手需要三次，而挥手却需要四次？"><a href="#1-为什么握手需要三次，而挥手却需要四次？" class="headerlink" title="1.为什么握手需要三次，而挥手却需要四次？"></a>1.为什么握手需要三次，而挥手却需要四次？</h4><p>握手的时候，A和B打个招呼，B可以直接把自己的SYN信息和对A的回应ACK信息一起带上，但是挥手的时候，A说我要断开了，B还没发完最后的数据，因此需要先回应一下A，我收到你的断开的请求了，但是你要等我把最后的内容给你，所以这里分开了2步： （1）回应A； （2）发送自己的最后一个数据</p>
 <h4 id="2-为什么A进入TIME-WAIT需要等待最大报文段生存的时间后，才能关闭？"><a href="#2-为什么A进入TIME-WAIT需要等待最大报文段生存的时间后，才能关闭？" class="headerlink" title="2.为什么A进入TIME_WAIT需要等待最大报文段生存的时间后，才能关闭？"></a>2.为什么A进入TIME_WAIT需要等待最大报文段生存的时间后，才能关闭？</h4><p>原因是，担心网络不可靠而导致的丢包，最后一个回应B的ACK万一丢了怎么办，在这个时间内，A是可以重新发包的，但是超过了最大等待时间的话，就算收不到也没用了，所以就可以关闭了。</p>
-<h3 id="二、HTTP-1-1是什么？"><a href="#二、HTTP-1-1是什么？" class="headerlink" title="二、HTTP 1.1是什么？"></a>二、HTTP 1.1是什么？</h3><ul>
+<h3 id="二、HTTP是什么？"><a href="#二、HTTP是什么？" class="headerlink" title="二、HTTP是什么？"></a>二、HTTP是什么？</h3><ul>
 <li>定义：<strong>HTTP就是一个在TCP基础上实现的，客户机与服务器之间的，请求-响应模式的双向通信协议。</strong></li>
 <li>目的：超文本传输协议（HTTP）的设计目的是保证客户机与服务器之间的通信。</li>
 </ul>
 <p>HTTP 协议构建于 TCP/IP 协议之上，是一个应用层协议，默认端口号是 80。</p>
-<p>通过HTTP协议请求的资源由统一资源标识符<strong>URI</strong>来标识。</p>
-<p>报文：HTTP 的报文大概分为三大部分：第一部分是请求行，第二部分是请求的首部，第三部分才是请求的正文实体。</p>
+<h4 id="HTTP-请求的构建"><a href="#HTTP-请求的构建" class="headerlink" title="HTTP 请求的构建"></a>HTTP 请求的构建</h4><p><img src="../../../Library/Application Support/typora-user-images/image-20190421180407824.png" alt="image-20190421180407824"></p>
+<h5 id="第一部分——请求行："><a href="#第一部分——请求行：" class="headerlink" title="第一部分——请求行："></a>第一部分——请求行：</h5><p>方法：如下。URL ：<a href="http://www.baidu.com、版本：HTTP" target="_blank" rel="noopener">www.baidu.com、版本：HTTP</a> 1.1</p>
 <ul>
-<li><p>常用的HTTP方法有哪些？</p>
-<ul>
+<li>HTTP方法有哪些？<ul>
 <li>GET： 用于请求访问已经被URI（统一资源标识符）识别的资源，可以通过URL传参给服务器</li>
 <li>POST：用于传输信息给服务器，主要功能与GET方法类似，但一般推荐使用POST方式。</li>
 <li>PUT： 传输文件，报文主体中包含文件内容，保存到对应URI位置。</li>
@@ -460,8 +461,15 @@
 <li>OPTIONS：查询相应URI支持的HTTP方法。</li>
 </ul>
 </li>
-<li><p>HTTP 状态消息</p>
+</ul>
+<h5 id="第二部分——首部字段："><a href="#第二部分——首部字段：" class="headerlink" title="第二部分——首部字段："></a>第二部分——首部字段：</h5><p>Accept-Charset，表示客户端可以接受的字符集。</p>
+<p>Content-Type是指正文的格式：POST 的请求，如果正文是 JSON。</p>
+<p>缓存：</p>
+<h5 id="第三部分——请求的正文实体"><a href="#第三部分——请求的正文实体" class="headerlink" title="第三部分——请求的正文实体"></a>第三部分——请求的正文实体</h5><h4 id="HTTP-返回的构建"><a href="#HTTP-返回的构建" class="headerlink" title="HTTP 返回的构建"></a>HTTP 返回的构建</h4><p><img src="../../../Library/Application Support/typora-user-images/image-20190421180433276.png" alt="image-20190421180433276"></p>
+<p><strong>一、状态行：</strong></p>
+<p>状态码会反应 HTTP 请求的结果；短语会大概说一下原因。</p>
 <ul>
+<li>HTTP 状态消息<ul>
 <li>1xx: 信息。100收到部分请求。</li>
 <li>2xx：成果。200 请求成功（其后是对get、post请求的应答文档）</li>
 <li>3xx：重定向。301永久重定向，302 转移至临时url（临时重定向）</li>
@@ -470,6 +478,11 @@
 </ul>
 </li>
 </ul>
+<p><strong>二、首部：</strong>key value。Retry-After表示，告诉客户端应该在多长时间以后再次尝试。Content-Type，表示返回的是 HTML，还是 JSON。</p>
+<h3 id="持久连接：http1-1支持"><a href="#持久连接：http1-1支持" class="headerlink" title="持久连接：http1.1支持"></a>持久连接：http1.1支持</h3><p>HTTP协议采用“请求-应答”模式，当时用普通模式，即非持久连接的模式时，每个请求/应答客户端和服务器都要新建一个连接，完成之后立即断开连接（无连接的协议）</p>
+<p>当使用Keep-Alive模式（持久连接）时，Keep-Alive功能使客户端到服务端的连接持久有效，当出现对服务器的后继请求时，Keep-Alive功能避免了建立或者重新建立连接。</p>
+<h3 id="http管线化"><a href="#http管线化" class="headerlink" title="http管线化"></a>http管线化</h3><p>通俗的讲，不用管线化的持久连接就是来一个请求就响应一个；</p>
+<p>而管线化则是，把请求打包发过去，一起响应。</p>
 <h3 id="三、HTTPS是什么？SSL过程。"><a href="#三、HTTPS是什么？SSL过程。" class="headerlink" title="三、HTTPS是什么？SSL过程。"></a>三、HTTPS是什么？SSL过程。</h3><p>HTTPS并不是一个新协议，HTTPS就是HTTP加上加密处理（一般是SSL安全通信线路，TLS）+认证+完整性保护</p>
 <p>原本HTTP先和TCP（假定传输层是TCP协议）直接通信，而加了SSL后，就变成HTTP先和SSL通信，再由SSL和TCP通信，相当于SSL被嵌在了HTTP和TCP之间。</p>
 <p>HTTPS 在传输数据之前需要客户端（浏览器）与服务端（网站）之间进行一次握手，在握手过程中将确立双方加密传输数据的密码信息。TLS/SSL中使用了非对称加密，对称加密以及HASH算法。握手过程的简单描述如下：</p>
@@ -656,8 +669,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/03/✨计算机基础 - 0 操作系统/" rel="next" title="计算机基础 - 0 操作系统">
-                <i class="fa fa-chevron-left"></i> 计算机基础 - 0 操作系统
+              <a href="/2019/03/03/✨计算机基础 - 2 数据库/" rel="next" title="计算机基础 - 2 数据库">
+                <i class="fa fa-chevron-left"></i> 计算机基础 - 2 数据库
               </a>
             
           </div>
@@ -666,8 +679,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/03/存档/合集 - 优秀iOS开发者博客/" rel="prev" title="合集 - 优秀iOS开发者博客">
-                合集 - 优秀iOS开发者博客 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/03/iOS基础/用Swift开发iOS10 - 4 AutoLayout/" rel="prev" title="用Swift开发iOS10 - 4 AutoLayout">
+                用Swift开发iOS10 - 4 AutoLayout <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -750,7 +763,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">66</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -761,7 +774,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -772,7 +785,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -821,7 +834,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目合集"><span class="nav-number">1.</span> <span class="nav-text">题目合集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、TCP和UDP的区别"><span class="nav-number">1.0.1.</span> <span class="nav-text">一、TCP和UDP的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-为什么握手需要三次，而挥手却需要四次？"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">1.为什么握手需要三次，而挥手却需要四次？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-为什么A进入TIME-WAIT需要等待最大报文段生存的时间后，才能关闭？"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">2.为什么A进入TIME_WAIT需要等待最大报文段生存的时间后，才能关闭？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、HTTP-1-1是什么？"><span class="nav-number">1.0.2.</span> <span class="nav-text">二、HTTP 1.1是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、HTTPS是什么？SSL过程。"><span class="nav-number">1.0.3.</span> <span class="nav-text">三、HTTPS是什么？SSL过程。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、GET和POST的区别"><span class="nav-number">1.0.4.</span> <span class="nav-text">四、GET和POST的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、浏览器进行一次网络请求都需要哪些步骤？"><span class="nav-number">1.0.5.</span> <span class="nav-text">五、浏览器进行一次网络请求都需要哪些步骤？</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#基础知识"><span class="nav-number">2.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#UDP用户数据报协议：-面向无连接"><span class="nav-number">2.1.</span> <span class="nav-text">UDP用户数据报协议： 面向无连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP传输控制协议：-面向连接"><span class="nav-number">2.2.</span> <span class="nav-text">TCP传输控制协议： 面向连接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-的三次握手"><span class="nav-number">2.2.1.</span> <span class="nav-text">TCP 的三次握手</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#“请求-gt-应答-gt-应答之应答”"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">“请求 -&gt; 应答 -&gt; 应答之应答”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#状态时序图："><span class="nav-number">2.2.1.2.</span> <span class="nav-text">状态时序图：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四次挥手"><span class="nav-number">2.2.2.</span> <span class="nav-text">四次挥手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DDOS攻击"><span class="nav-number">2.2.3.</span> <span class="nav-text">DDOS攻击</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http协议"><span class="nav-number">2.3.</span> <span class="nav-text">http协议</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目合集"><span class="nav-number">1.</span> <span class="nav-text">题目合集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、TCP和UDP的区别"><span class="nav-number">1.0.1.</span> <span class="nav-text">一、TCP和UDP的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-为什么握手需要三次，而挥手却需要四次？"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">1.为什么握手需要三次，而挥手却需要四次？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-为什么A进入TIME-WAIT需要等待最大报文段生存的时间后，才能关闭？"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">2.为什么A进入TIME_WAIT需要等待最大报文段生存的时间后，才能关闭？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、HTTP是什么？"><span class="nav-number">1.0.2.</span> <span class="nav-text">二、HTTP是什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP-请求的构建"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">HTTP 请求的构建</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#第一部分——请求行："><span class="nav-number">1.0.2.1.1.</span> <span class="nav-text">第一部分——请求行：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第二部分——首部字段："><span class="nav-number">1.0.2.1.2.</span> <span class="nav-text">第二部分——首部字段：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第三部分——请求的正文实体"><span class="nav-number">1.0.2.1.3.</span> <span class="nav-text">第三部分——请求的正文实体</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP-返回的构建"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">HTTP 返回的构建</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#持久连接：http1-1支持"><span class="nav-number">1.0.3.</span> <span class="nav-text">持久连接：http1.1支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http管线化"><span class="nav-number">1.0.4.</span> <span class="nav-text">http管线化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、HTTPS是什么？SSL过程。"><span class="nav-number">1.0.5.</span> <span class="nav-text">三、HTTPS是什么？SSL过程。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、GET和POST的区别"><span class="nav-number">1.0.6.</span> <span class="nav-text">四、GET和POST的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、浏览器进行一次网络请求都需要哪些步骤？"><span class="nav-number">1.0.7.</span> <span class="nav-text">五、浏览器进行一次网络请求都需要哪些步骤？</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#基础知识"><span class="nav-number">2.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#UDP用户数据报协议：-面向无连接"><span class="nav-number">2.1.</span> <span class="nav-text">UDP用户数据报协议： 面向无连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP传输控制协议：-面向连接"><span class="nav-number">2.2.</span> <span class="nav-text">TCP传输控制协议： 面向连接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-的三次握手"><span class="nav-number">2.2.1.</span> <span class="nav-text">TCP 的三次握手</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#“请求-gt-应答-gt-应答之应答”"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">“请求 -&gt; 应答 -&gt; 应答之应答”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#状态时序图："><span class="nav-number">2.2.1.2.</span> <span class="nav-text">状态时序图：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四次挥手"><span class="nav-number">2.2.2.</span> <span class="nav-text">四次挥手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DDOS攻击"><span class="nav-number">2.2.3.</span> <span class="nav-text">DDOS攻击</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http协议"><span class="nav-number">2.3.</span> <span class="nav-text">http协议</span></a></li></ol></li></div>
             
 
           </div>
@@ -862,7 +875,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">49.5k</span>
+    <span title="Site words total count">74.7k</span>
   
 </div>
 

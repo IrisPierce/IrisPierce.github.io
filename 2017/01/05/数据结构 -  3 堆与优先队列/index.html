@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="两种数据结构：链表和数组。 数组占据随机访问的优势，却有需要连续内存的缺点。 链表具有可不连续存储的优势，但访问查找是线性的。 散列表和链表、跳表的混合使用，是为了结合数组和链表的优势，规避它们的不足。 我们可以得出数据结构和算法的重要性排行榜：连续空间 &amp;gt; 时间 &amp;gt; 碎片空间。 王者荣耀2亿用户，如何实现动态更新排行榜前100名（具体代码）？ 我说的是分文件  然后小根堆实现动态更新">
+<meta name="description" content="应用三：求中位数、第k%大的数字 维护大顶堆和小顶堆，分别存储n/2个数据（奇数则大顶堆维护n/2+1个） 大数据： 10亿关键字，Top10关键字。 散列表">
 <meta name="keywords" content="Java,数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构 -">
 <meta property="og:url" content="http://yoursite.com/2017/01/05/数据结构 -  3 堆与优先队列/index.html">
 <meta property="og:site_name" content="IRIS&#39;s BLOG">
-<meta property="og:description" content="两种数据结构：链表和数组。 数组占据随机访问的优势，却有需要连续内存的缺点。 链表具有可不连续存储的优势，但访问查找是线性的。 散列表和链表、跳表的混合使用，是为了结合数组和链表的优势，规避它们的不足。 我们可以得出数据结构和算法的重要性排行榜：连续空间 &amp;gt; 时间 &amp;gt; 碎片空间。 王者荣耀2亿用户，如何实现动态更新排行榜前100名（具体代码）？ 我说的是分文件  然后小根堆实现动态更新">
+<meta property="og:description" content="应用三：求中位数、第k%大的数字 维护大顶堆和小顶堆，分别存储n/2个数据（奇数则大顶堆维护n/2+1个） 大数据： 10亿关键字，Top10关键字。 散列表">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-29T02:35:57.186Z">
+<meta property="og:updated_time" content="2019-04-21T11:22:16.402Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构 -">
-<meta name="twitter:description" content="两种数据结构：链表和数组。 数组占据随机访问的优势，却有需要连续内存的缺点。 链表具有可不连续存储的优势，但访问查找是线性的。 散列表和链表、跳表的混合使用，是为了结合数组和链表的优势，规避它们的不足。 我们可以得出数据结构和算法的重要性排行榜：连续空间 &amp;gt; 时间 &amp;gt; 碎片空间。 王者荣耀2亿用户，如何实现动态更新排行榜前100名（具体代码）？ 我说的是分文件  然后小根堆实现动态更新">
+<meta name="twitter:description" content="应用三：求中位数、第k%大的数字 维护大顶堆和小顶堆，分别存储n/2个数据（奇数则大顶堆维护n/2+1个） 大数据： 10亿关键字，Top10关键字。 散列表">
 
 
 
@@ -399,7 +399,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  393
+                  58
                 </span>
               
 
@@ -436,29 +436,11 @@
       
 
       
-        <p>两种数据结构：链表和数组。</p>
-<p>数组占据随机访问的优势，却有需要连续内存的缺点。</p>
-<p>链表具有可不连续存储的优势，但访问查找是线性的。</p>
-<p>散列表和链表、跳表的混合使用，是为了结合数组和链表的优势，规避它们的不足。</p>
-<p>我们可以得出数据结构和算法的重要性排行榜：连续空间 &gt; 时间 &gt; 碎片空间。</p>
-<p>王者荣耀2亿用户，如何实现动态更新排行榜前100名（具体代码）？</p>
-<p>我说的是分文件  然后小根堆实现动态更新</p>
-<p>2.进程线程（还有有关操作系统的 我忘了</p>
-<p>3.数据库查询 然后连接查询</p>
-<p>8.链表讲一下 什么单向链表双向链表循环链表 链表适合快排吗为什么</p>
-<ol>
-<li><p>四次挥手 time_wait</p>
-</li>
-<li><p>客户端当被告知服务端接收窗口大小为0后的行为，如果服务端的接收窗口又变大了呢？</p>
-</li>
-<li>拥塞控制</li>
-<li></li>
-</ol>
-<p>浏览器输入 <a href="http://www.qq.com" target="_blank" rel="noopener">www.qq.com</a> 发生了什么; 第二次访问与第一次有什么区别吗，长连接和短连接，四次挥手，客户端先发和服务端先发FIN有什么区别，一般是哪端先发，原因，哪端先发好？time_wait持续时间？2MSL? 没有time_wait有什么问题</p>
-<p>http 与 https 区别，ssl 的过程</p>
-<h2 id="pipeline："><a href="#pipeline：" class="headerlink" title="pipeline："></a>pipeline：</h2><p>1、classification和segment都需要改2、3流程都改 ok</p>
-<p>2、4个圆角改成直角。 ok</p>
-<h2 id="角度angle"><a href="#角度angle" class="headerlink" title="角度angle"></a>角度angle</h2><p>+角度 折线</p>
+        <p>应用三：求中位数、第k%大的数字</p>
+<p>维护大顶堆和小顶堆，分别存储n/2个数据（奇数则大顶堆维护n/2+1个）</p>
+<p>大数据：</p>
+<p>10亿关键字，Top10关键字。</p>
+<p>散列表</p>
 
       
     </div>
@@ -491,18 +473,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/05/数据结构 - /" rel="next" title="数据结构 -">
-                <i class="fa fa-chevron-left"></i> 数据结构 -
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/05/算法 - 2 动态规划/" rel="prev" title="算法 - 2 动态规划">
-                算法 - 2 动态规划 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/01/05/❤️算法 - 0 排序实现/" rel="prev" title="算法 - 0 排序实现">
+                算法 - 0 排序实现 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -558,17 +536,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -585,7 +554,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">66</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -596,7 +565,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -607,7 +576,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -647,22 +616,6 @@
       </section>
 
       
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#pipeline："><span class="nav-number">1.</span> <span class="nav-text">pipeline：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#角度angle"><span class="nav-number">2.</span> <span class="nav-text">角度angle</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
 
       
         <div class="back-to-top">
@@ -697,7 +650,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">49.5k</span>
+    <span title="Site words total count">74.7k</span>
   
 </div>
 

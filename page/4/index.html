@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/05/iOS基础/Objective-C学习/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/28/iOS基础/IOS开发 - 简单的计时器/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -308,7 +308,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/05/iOS基础/Objective-C学习/" itemprop="url">Objective-C学习</a></h1>
+                <a class="post-title-link" href="/2019/02/28/iOS基础/IOS开发 - 简单的计时器/" itemprop="url">IOS开发 - 简单的计时器</a></h1>
         
 
         <div class="post-meta">
@@ -322,8 +322,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-05T13:17:42+08:00">
-                2018-09-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-28T16:59:57+08:00">
+                2019-02-28
               </time>
             
 
@@ -345,8 +345,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/iOS课程/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS课程</span>
+                  <a href="/categories/IOS开发/" itemprop="url" rel="index">
+                    <span itemprop="name">IOS开发</span>
                   </a>
                 </span>
 
@@ -363,8 +363,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/09/05/iOS基础/Objective-C学习/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/05/iOS基础/Objective-C学习/" itemprop="commentCount"></span>
+                <a href="/2019/02/28/iOS基础/IOS开发 - 简单的计时器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/28/iOS基础/IOS开发 - 简单的计时器/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -372,7 +372,7 @@
 
           
           
-             <span id="/2018/09/05/iOS基础/Objective-C学习/" class="leancloud_visitors" data-flag-title="Objective-C学习">
+             <span id="/2019/02/28/iOS基础/IOS开发 - 简单的计时器/" class="leancloud_visitors" data-flag-title="IOS开发 - 简单的计时器">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -397,7 +397,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  9
+                  1.3k
                 </span>
               
 
@@ -413,7 +413,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  6
                 </span>
               
             </div>
@@ -436,10 +436,29 @@
       
         
           
-            <p>APP启动</p>
-<p>冷启动：</p>
-<p>热启动：</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g17amce4bgj31410u0npj.jpg" alt="image-20190318215907380"></p>
+            <h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g0ncssbanmg309d0go75a.gif" alt="4"></p>
+<p>项目完全由代码所写，没有使用storyboard，代码更具有复现性。</p>
+<p>手动部分：需要将图片拖入assets</p>
+<h2 id="项目知识"><a href="#项目知识" class="headerlink" title="项目知识"></a>项目知识</h2><h3 id="SnapKit-布局"><a href="#SnapKit-布局" class="headerlink" title="SnapKit 布局"></a>SnapKit 布局</h3><p>经典的<strong>Swift</strong>版的第三方库，专门用于项目的自动布局，目前在github上的<strong>stars</strong>就高达9340颗星。</p>
+<p>作者仍然是写Objective-C的第三方库Masonry的大牛 - <strong>@Robert Payne</strong>。</p>
+<h4 id="SnapKit配置"><a href="#SnapKit配置" class="headerlink" title="SnapKit配置"></a>SnapKit配置</h4><p>1.github下载：<a href="https://github.com/SnapKit/SnapKit" target="_blank" rel="noopener">https://github.com/SnapKit/SnapKit</a></p>
+<p>2.将下载下来的SnapKit项目的 <strong>SnapKit.xcodeproj</strong> 拖进自己的项目目录最外层中</p>
+<p>3.工程文件 -&gt; <strong>General</strong> -&gt; <strong>Embedded Binaries</strong> 中点击加号，添加SnapKit库到项目中来 </p>
+<p>4.command+B 重新编译项目</p>
+<h4 id="SnapKit使用"><a href="#SnapKit使用" class="headerlink" title="SnapKit使用"></a>SnapKit使用</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"><span class="keyword">import</span> SnapKit</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ViewController</span>: <span class="title">UIViewController</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 1.定义box</span></span><br><span class="line">    <span class="keyword">var</span> box = <span class="type">UIView</span>()</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.viewDidLoad()</span><br><span class="line">        </span><br><span class="line">        box.backgroundColor = <span class="type">UIColor</span>.orange</span><br><span class="line">        <span class="comment">// 2.将box加入父视图，之后的布局是相对于父视图布局的</span></span><br><span class="line">        <span class="keyword">self</span>.view.addSubview(box)</span><br><span class="line">        <span class="comment">// 3. 添加布局的约束：上下左右、中心、</span></span><br><span class="line">        box.snp.makeConstraints &#123; (make) -&gt; <span class="type">Void</span> <span class="keyword">in</span></span><br><span class="line">            make.width.equalTo(<span class="number">100</span>)</span><br><span class="line">            make.height.equalTo(<span class="number">100</span>)</span><br><span class="line">            make.center.equalTo(<span class="keyword">self</span>.view)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Timer-计时器"><a href="#Timer-计时器" class="headerlink" title="Timer 计时器"></a>Timer 计时器</h3><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span>.timer = <span class="type">Timer</span>.scheduledTimer(withTimeInterval: <span class="number">0.1</span>, repeats: <span class="literal">true</span> ,block:&#123; (timer) <span class="keyword">in</span></span><br><span class="line">    <span class="comment">// withTimeInterval ： 的值0.1s 时间片后，执行的代码</span></span><br><span class="line">    <span class="comment">// repeats :   withTimeInterval的时间后，是否继续重复                                                         </span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="启动：fire"><a href="#启动：fire" class="headerlink" title="启动：fire"></a>启动：fire</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span>.timer.fire()</span><br></pre></td></tr></table></figure>
+<p>您可以使用此方法来触发重复计时器，而不会中断其常规的触发计划。</p>
+<p>如果计时器不重复 repeats，则在触发后自动失效，即使其预定的触发日期尚未到达。</p>
+<h4 id="暂停：invalidate（移除计时循环）"><a href="#暂停：invalidate（移除计时循环）" class="headerlink" title="暂停：invalidate（移除计时循环）"></a>暂停：invalidate（移除计时循环）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.timer.invalidate()</span><br></pre></td></tr></table></figure>
+<p>官方的解释是：</p>
+<p>This method is the only way to remove a timer from an NSRunLoop object. The NSRunLoop object removes and releases the timer, either just before the invalidate method returns or at some later point.</p>
+<p>这是唯一一个把一个定时器从NSRunLoop object运行循环中移除的方法。</p>
+<p>NSRunLoop object这个对象移除，并且release掉这个的定时器，或者是在这个invalidate方法返回的之前或是在之后的某个时间段，再进行移除并release操作。</p>
+<h3 id="guard"><a href="#guard" class="headerlink" title="guard"></a>guard</h3><p>guard 打头只判断合理条件，保证判断条件简约</p>
+<p>guard xxx : 如果不满足gurad后面的条件xxx，则执行else的内部代码</p>
+<p>详见 <a href="https://link.juejin.im/?target=http%3A%2F%2Fwww.jianshu.com%2Fp%2F3a8e45af7fdd" target="_blank" rel="noopener">guard详解</a></p>
+<h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  ViewController.swift</span></span><br><span class="line"><span class="comment">//  WatchDemo</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  Created by iris on 2019/2/27.</span></span><br><span class="line"><span class="comment">//  Copyright © 2019 iris. All rights reserved.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 学习：</span></span><br><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"><span class="keyword">import</span> SnapKit</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ViewController</span>: <span class="title">UIViewController</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> timer:<span class="type">Timer!</span></span><br><span class="line">    <span class="keyword">var</span> resultLabel:<span class="type">UILabel!</span>    <span class="comment">//计时器：文字显示</span></span><br><span class="line">    <span class="keyword">var</span> resultNumber:<span class="type">Double</span> = <span class="number">0</span> <span class="comment">//计时器：时间记录</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.viewDidLoad()</span><br><span class="line">        <span class="comment">// Do any additional setup after loading the view, typically from a nib.</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 1.计时器的数字显示</span></span><br><span class="line">        <span class="comment">// 1.1 数字的背景</span></span><br><span class="line">        <span class="keyword">let</span> resultView = <span class="type">UIView</span>()</span><br><span class="line">        resultView.backgroundColor = <span class="type">UIColor</span>.<span class="keyword">init</span>(red: <span class="number">0.0</span>, green: <span class="number">0.0</span>, blue: <span class="number">0.1</span>, alpha: <span class="number">1</span>)</span><br><span class="line">        <span class="comment">// 注意：使用snp.makeConstraints方法的元素必须事先添加到父元素的中，例如：self.view.addSubview(view)</span></span><br><span class="line">        <span class="keyword">self</span>.view.addSubview(resultView)</span><br><span class="line">        resultView.snp.makeConstraints&#123; (make) <span class="keyword">in</span></span><br><span class="line">            make.top.equalTo(<span class="number">0</span>)</span><br><span class="line">            make.<span class="keyword">left</span>.equalTo(<span class="number">0</span>)</span><br><span class="line">            make.height.equalTo(<span class="number">300</span>) <span class="comment">// 长度 300</span></span><br><span class="line">            make.width.equalTo(<span class="keyword">self</span>.view.frame.width)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 1.2 数字的显示</span></span><br><span class="line">        resultLabel = <span class="type">UILabel</span>()</span><br><span class="line">        <span class="keyword">self</span>.view.addSubview(resultLabel)</span><br><span class="line">        resultLabel.textColor = <span class="type">UIColor</span>.black</span><br><span class="line">        resultView.addSubview(resultLabel)</span><br><span class="line">        resultLabel.snp.makeConstraints&#123; (make) <span class="keyword">in</span></span><br><span class="line">            make.center.equalTo(resultView)</span><br><span class="line">            make.width.height.equalTo(<span class="number">140</span>)</span><br><span class="line">            make.width.equalTo(<span class="number">400</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        resultLabel.font = <span class="type">UIFont</span>.<span class="keyword">init</span>(name: <span class="string">"Helvetica Neue"</span>, size: <span class="number">60</span>)</span><br><span class="line">        resultLabel.text = <span class="string">"0.0"</span></span><br><span class="line">        resultLabel.textColor = <span class="type">UIColor</span> .white</span><br><span class="line">        <span class="comment">// 设置字体对齐方式</span></span><br><span class="line">        resultLabel.textAlignment = <span class="type">NSTextAlignment</span>.center</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 2.开始按钮</span></span><br><span class="line">        <span class="comment">// 2.1 开始按钮：背景</span></span><br><span class="line">        <span class="keyword">let</span> startView = <span class="type">UIView</span>()</span><br><span class="line">        startView.backgroundColor = <span class="type">UIColor</span>.<span class="keyword">init</span>(red: <span class="number">0.1</span>, green: <span class="number">0.0</span>, blue: <span class="number">0.8</span>, alpha: <span class="number">0.8</span>)</span><br><span class="line">        <span class="keyword">self</span>.view.addSubview(startView)</span><br><span class="line">        startView.snp.makeConstraints &#123; (make) <span class="keyword">in</span></span><br><span class="line">            make.top.equalTo(<span class="number">300</span>)</span><br><span class="line">            make.<span class="keyword">left</span>.equalTo(<span class="number">0</span>)</span><br><span class="line">            make.bottom.equalTo(<span class="number">0</span>)</span><br><span class="line">            make.width.equalTo(<span class="keyword">self</span>.view.frame.width / <span class="number">2</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 2.2 开始按钮：布局</span></span><br><span class="line">        <span class="keyword">let</span> startButton:<span class="type">UIButton</span> = <span class="type">UIButton</span>()</span><br><span class="line">        <span class="comment">//        startButton.setTitle("Start", for: UIControl.State.normal)</span></span><br><span class="line">        startButton.setImage(<span class="type">UIImage</span> (imageLiteralResourceName: <span class="string">"start"</span>), <span class="keyword">for</span>: <span class="type">UIControl</span>.<span class="type">State</span>.normal)</span><br><span class="line">        startView.addSubview(startButton)</span><br><span class="line">        startButton.snp.makeConstraints &#123; (make) <span class="keyword">in</span></span><br><span class="line">            make.center.equalTo(startView)</span><br><span class="line">            make.width.height.equalTo(<span class="number">50</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 2.3 开始按钮：点击事件添加</span></span><br><span class="line">        startButton.addTarget(<span class="keyword">self</span>, action: #selector(startHander), <span class="keyword">for</span>: <span class="type">UIControl</span>.<span class="type">Event</span>.touchUpInside)</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 3 停止按钮</span></span><br><span class="line">        <span class="comment">// 3.1 停止：背景</span></span><br><span class="line">        <span class="keyword">let</span> stopView:<span class="type">UIView</span> = <span class="type">UIView</span>()</span><br><span class="line">        stopView.backgroundColor = <span class="type">UIColor</span>.<span class="keyword">init</span>(red: <span class="number">0.1</span>, green: <span class="number">0.8</span>, blue: <span class="number">0.0</span>, alpha: <span class="number">0.8</span>)</span><br><span class="line">        <span class="keyword">self</span>.view.addSubview(stopView)</span><br><span class="line">        stopView.snp.makeConstraints &#123; (make) <span class="keyword">in</span></span><br><span class="line">            make.top.equalTo(<span class="number">300</span>)</span><br><span class="line">            make.bottom.equalTo(<span class="number">0</span>)</span><br><span class="line">            make.<span class="keyword">right</span>.equalTo(<span class="number">0</span>)</span><br><span class="line">            make.width.equalTo(<span class="keyword">self</span>.view.frame.width / <span class="number">2</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 3.2 停止：按钮</span></span><br><span class="line">        <span class="keyword">let</span> stopButton:<span class="type">UIButton</span> = <span class="type">UIButton</span>()</span><br><span class="line"><span class="comment">//        stopButton.setTitle("Stop", for: UIControl.State.normal)</span></span><br><span class="line">        stopButton.setImage(<span class="type">UIImage</span> (imageLiteralResourceName: <span class="string">"pause"</span>), <span class="keyword">for</span>: <span class="type">UIControl</span>.<span class="type">State</span>.normal)</span><br><span class="line">        stopView.addSubview(stopButton)</span><br><span class="line">        stopButton.snp.makeConstraints &#123; (make) <span class="keyword">in</span></span><br><span class="line">            make.center.equalTo(stopView)</span><br><span class="line">            make.width.height.equalTo(<span class="number">50</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 3.2 停止：按钮事件添加</span></span><br><span class="line">        stopButton.addTarget(<span class="keyword">self</span>, action: #selector(stopHander), <span class="keyword">for</span>: <span class="type">UIControl</span>.<span class="type">Event</span>.touchUpInside)</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 4 重置</span></span><br><span class="line">        <span class="comment">// 4.1 重置按钮</span></span><br><span class="line">        <span class="keyword">let</span> resetButton:<span class="type">UIButton</span> = <span class="type">UIButton</span>()</span><br><span class="line">        resetButton.setTitle(<span class="string">"Reset"</span>, <span class="keyword">for</span>: <span class="type">UIControl</span>.<span class="type">State</span>.normal)</span><br><span class="line">        resetButton.titleLabel?.font = <span class="type">UIFont</span>.<span class="keyword">init</span>(name:<span class="string">"Helvetica Neue"</span>,size:<span class="number">20</span>)</span><br><span class="line">        resultView.addSubview(resetButton)</span><br><span class="line">        resetButton.snp.makeConstraints &#123; (make) <span class="keyword">in</span></span><br><span class="line">            make.<span class="keyword">right</span>.equalTo(-<span class="number">10</span>)</span><br><span class="line">            make.top.equalTo(<span class="number">10</span>)</span><br><span class="line">            make.width.equalTo(<span class="number">100</span>)</span><br><span class="line">            make.height.equalTo(<span class="number">50</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 4.1 重置：事件监听</span></span><br><span class="line">        resetButton.addTarget(<span class="keyword">self</span>, action: #selector(resetHander), <span class="keyword">for</span>: <span class="type">UIControl</span>.<span class="type">Event</span>.touchUpInside)</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 3个按钮的事件函数</span></span><br><span class="line">    <span class="comment">// 1.开始计时</span></span><br><span class="line">    <span class="meta">@objc</span> <span class="function"><span class="keyword">func</span> <span class="title">startHander</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">self</span>.timer != <span class="literal">nil</span>&#123;</span><br><span class="line">            <span class="keyword">self</span>.stopHander()</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">self</span>.timer = <span class="type">Timer</span>.scheduledTimer(withTimeInterval: <span class="number">0.1</span>, repeats: <span class="literal">true</span>,block:&#123; (timer) <span class="keyword">in</span></span><br><span class="line">            <span class="keyword">self</span>.resultNumber = <span class="keyword">self</span>.resultNumber + <span class="number">0.1</span></span><br><span class="line">            <span class="keyword">self</span>.resultLabel.text = <span class="type">String</span>(format:<span class="string">"%.1f"</span>,<span class="keyword">self</span>.resultNumber)</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="keyword">self</span>.timer.fire()</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 2.暂停时间</span></span><br><span class="line">    <span class="meta">@objc</span> <span class="function"><span class="keyword">func</span> <span class="title">stopHander</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">// 2.1 不进行判断的方法，可能出现异常，内存可能泄露</span></span><br><span class="line"><span class="comment">//        var timerForDistory:Timer!</span></span><br><span class="line"><span class="comment">//        timerForDistory = self.timer</span></span><br><span class="line"><span class="comment">//        timerForDistory.invalidate()</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 2.2 进行判断的方法，可能出现异常，内存可能泄露</span></span><br><span class="line">        <span class="comment">// guard 打头只判断合理条件，保证判断条件简约</span></span><br><span class="line">        <span class="comment">// guard xxx : 如果不满足gurad后面的条件xxx，则执行else的内部代码</span></span><br><span class="line">        <span class="keyword">guard</span> <span class="keyword">let</span> timerForDistory = <span class="keyword">self</span>.timer <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        timerForDistory.invalidate()</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 3.重置计时器</span></span><br><span class="line">    <span class="meta">@objc</span> <span class="function"><span class="keyword">func</span> <span class="title">resetHander</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">self</span>.resultNumber = <span class="number">0</span></span><br><span class="line">        <span class="keyword">self</span>.resultLabel.text = <span class="string">"0.0"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
           
         
@@ -488,7 +507,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/05/iOS基础/极客iOS课程 - 2 APP启动优化与监控/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/26/iOS基础/IOS开发 - 简单的加法计算器swift版本/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -507,7 +526,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/05/iOS基础/极客iOS课程 - 2 APP启动优化与监控/" itemprop="url">极客iOS课程 - 2 APP启动优化与监控</a></h1>
+                <a class="post-title-link" href="/2019/02/26/iOS基础/IOS开发 - 简单的加法计算器swift版本/" itemprop="url">IOS开发 - 简单的加法计算器swift版本</a></h1>
         
 
         <div class="post-meta">
@@ -521,8 +540,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-05T13:17:42+08:00">
-                2018-09-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-26T11:18:17+08:00">
+                2019-02-26
               </time>
             
 
@@ -544,8 +563,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/iOS课程/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS课程</span>
+                  <a href="/categories/IOS开发/" itemprop="url" rel="index">
+                    <span itemprop="name">IOS开发</span>
                   </a>
                 </span>
 
@@ -562,8 +581,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/09/05/iOS基础/极客iOS课程 - 2 APP启动优化与监控/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/05/iOS基础/极客iOS课程 - 2 APP启动优化与监控/" itemprop="commentCount"></span>
+                <a href="/2019/02/26/iOS基础/IOS开发 - 简单的加法计算器swift版本/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/26/iOS基础/IOS开发 - 简单的加法计算器swift版本/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -571,7 +590,7 @@
 
           
           
-             <span id="/2018/09/05/iOS基础/极客iOS课程 - 2 APP启动优化与监控/" class="leancloud_visitors" data-flag-title="极客iOS课程 - 2 APP启动优化与监控">
+             <span id="/2019/02/26/iOS基础/IOS开发 - 简单的加法计算器swift版本/" class="leancloud_visitors" data-flag-title="IOS开发 - 简单的加法计算器swift版本">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -596,206 +615,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  9
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>APP启动</p>
-<p>冷启动：</p>
-<p>热启动：</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g17amce4bgj31410u0npj.jpg" alt="image-20190318215907380"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/12/数据结构 - 2 散列表/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/12/数据结构 - 2 散列表/" itemprop="url">数据结构 - 2 散列表</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-12T13:17:42+08:00">
-                2018-03-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/03/12/数据结构 - 2 散列表/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/12/数据结构 - 2 散列表/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/03/12/数据结构 - 2 散列表/" class="leancloud_visitors" data-flag-title="数据结构 - 2 散列表">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1k
+                  727
                 </span>
               
 
@@ -833,72 +653,18 @@
 
       
         
-          
-            <h2 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h2><p>来源于数组支持按下表访问的特性，是数组的拓展。</p>
-<p>构造：首先根据数据确定哈希函数，接着选择冲突解决方法，最后构造散列表，再写上需要的增加、查找、删除的方法。</p>
-<p>插入：根据key键值，经过哈希函数，得到哈希值，插入表中。</p>
-<p>查找：根据key值查找。</p>
-<p><strong>三个问题：如何设计散列函数，如何根据装载因子动态扩容，以及如何选择散列冲突解决方法。</strong></p>
-<h2 id="设计散列函数"><a href="#设计散列函数" class="headerlink" title="设计散列函数"></a>设计散列函数</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>key值通过哈希函数之后，数据散列到列表中。</p>
-<h3 id="4个要求"><a href="#4个要求" class="headerlink" title="4个要求"></a>4个要求</h3><ol>
-<li><p>哈希之后，值为大于0的整数，对应到数组的下标</p>
-</li>
-<li><p>同一个key的哈希结果相同</p>
-</li>
-<li><p>哈希之后的值均匀分布</p>
-</li>
-<li><p>哈希方法不能太复杂</p>
-</li>
-</ol>
-<h2 id="根据装载因子动态扩容-rehash"><a href="#根据装载因子动态扩容-rehash" class="headerlink" title="根据装载因子动态扩容 rehash"></a>根据装载因子动态扩容 rehash</h2><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>装载因子——给定一个能存放n个元素的、具有m个槽位的散列表T：</p>
-<p><strong>定义T的装载因子：α = n / m</strong></p>
-<p>对于动态的数据集，一开始无法知道其大小，其频繁的插入和删除，可能导致装载因子过大或者过小。此时我们需要动态扩容。</p>
-<h3 id="方式"><a href="#方式" class="headerlink" title="方式"></a>方式</h3><ul>
-<li><h4 id="一次扩容"><a href="#一次扩容" class="headerlink" title="一次扩容"></a>一次扩容</h4></li>
-</ul>
-<p>插入数据的时间复杂度O(1)，但是某次达到装载因子阈值的插入时需要重新对原来数据进行hash操作，再放入新元素。非常耗时，需要优化放入分批扩容。</p>
-<ul>
-<li><h4 id="分批扩容"><a href="#分批扩容" class="headerlink" title="分批扩容"></a>分批扩容</h4></li>
-</ul>
-<p>对于插入：获取一个新的2倍大小的哈希表，将新元素哈希之后插入，同时选择原哈希表中的一个数据插入新表，直至原哈希表为空。</p>
-<p>对于查找：现在新表中查询，再查找旧表。</p>
-<h2 id="选择冲突解决的办法"><a href="#选择冲突解决的办法" class="headerlink" title="选择冲突解决的办法"></a>选择冲突解决的办法</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>不同的key值散列之后，有可能获得同样的值，发生散列冲突</p>
-<h3 id="2个方法"><a href="#2个方法" class="headerlink" title="2个方法"></a>2个方法</h3><ul>
-<li><h4 id="空间寻值法："><a href="#空间寻值法：" class="headerlink" title="空间寻值法："></a>空间寻值法：</h4><h5 id="1-种类："><a href="#1-种类：" class="headerlink" title="1 种类："></a>1 种类：</h5><ul>
-<li>线性寻址：index + i</li>
-<li>平方寻址：index + i^2</li>
-<li>二次哈希：经过两次哈希函数得到的值</li>
-</ul>
-<h5 id="2-对应方法"><a href="#2-对应方法" class="headerlink" title="2 对应方法"></a>2 对应方法</h5><ul>
-<li><p>增加：冲突后，往后找寻空位置放置元素</p>
-</li>
-<li><p>查找：哈希之后的值不是要找寻的元素时，往后面继续寻找。找到返回true；若找到空，则说明不存在该元素。</p>
-</li>
-<li><p>删除：注意。删除后标记delete，而不知直接删除。否则查找方式受影响。</p>
-</li>
-</ul>
-<h5 id="3-缺点"><a href="#3-缺点" class="headerlink" title="3 缺点"></a>3 缺点</h5><ul>
-<li>装载因子不能过大，因此要求的空位要足够，需要较大的内存</li>
-<li>会发生一次集群、二次集群，经过哈希之后的值都分布在某一段，插入和查找的时间成本变多</li>
-</ul>
-</li>
-<li><h4 id="链接法"><a href="#链接法" class="headerlink" title="链接法"></a>链接法</h4><ul>
-<li>方法：将冲突元素装在以h(k)开头的链表</li>
-<li>查找时间：为<strong>Θ(1 + α)</strong>，查找操作最坏情况下，需要常数时间。</li>
-<li>优点：装载因子可以较大，要求的内存少</li>
-<li>优化：如果链表中元素较多的时候，我们可以使用改造为其他高效的动态数据结构（树等），及时最极端情况下也只是退化为一棵树，查找时间还是0(log n)。</li>
-</ul>
-</li>
-</ul>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><h3 id="工业散列表：Java-中的-HashMap"><a href="#工业散列表：Java-中的-HashMap" class="headerlink" title="工业散列表：Java 中的 HashMap"></a>工业散列表：Java 中的 HashMap</h3><p>1 初始大小：默认16，预先知道数据大小可以设计出适合大小避免rehash</p>
-<p>2 装载因子和动态扩容：0.75，自动扩容为2倍</p>
-<p>3 散列冲突：链接法。jdk1.8版本中，优化链表，如果链表&gt;8，则转化为红黑树，查找更快；&lt;8时，变为链表，因为树结构平衡维护。</p>
-<h3 id="word的拼写检查"><a href="#word的拼写检查" class="headerlink" title="word的拼写检查"></a>word的拼写检查</h3><p>1 数据存储的数据结构：50w个英文单词不超多10M，存储于哈希表中。</p>
-<p>2 单词比对：对于每次输入的单词，作为key值，hash之后，查找哈希表，若查找不到，则标注拼写错误。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>当数据量比较小、装载因子小的时候，适合采用开放寻寻址法。</p>
-<p>数据量大，空间不足，使用链表法。</p>
-
-          
+          <p>近日开始学习IOS开发。想找一个简单版本较新的IOS开发教程都很难：（1）现在找的很多都是object-C的，不是swift的，（2）老版与最新版本swift中很多语法也不适配，（3）Xcode版本和用法也不一样。</p>
+<p>因此，今天自己写一个最简单的教程，用于swift入门，记录自己的学习。</p>
+<h2 id="基础步骤"><a href="#基础步骤" class="headerlink" title="基础步骤"></a>基础步骤</h2><p>基础步骤就是项目类型、项目名称、项目位置的选取。</p>
+<p>1.创建APP</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1g0ir0q4815j318k0q4dm2.jpg" alt="1061D097-18CB-43D0-A701-5DF5918FB88E"></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/26/iOS基础/IOS开发 - 简单的加法计算器swift版本/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -945,7 +711,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/12/数据结构 - 3 二叉树/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/23/存档/Mac系统下使用Hexo在Github上搭建博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -964,7 +730,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/12/数据结构 - 3 二叉树/" itemprop="url">数据结构 - 2 散列表</a></h1>
+                <a class="post-title-link" href="/2019/02/23/存档/Mac系统下使用Hexo在Github上搭建博客/" itemprop="url">Mac系统下使用Hexo在Github上搭建博客</a></h1>
         
 
         <div class="post-meta">
@@ -978,8 +744,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-12T13:17:42+08:00">
-                2018-03-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-23T13:50:21+08:00">
+                2019-02-23
               </time>
             
 
@@ -1001,8 +767,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
                   </a>
                 </span>
 
@@ -1019,8 +785,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/03/12/数据结构 - 3 二叉树/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/12/数据结构 - 3 二叉树/" itemprop="commentCount"></span>
+                <a href="/2019/02/23/存档/Mac系统下使用Hexo在Github上搭建博客/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/23/存档/Mac系统下使用Hexo在Github上搭建博客/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1028,7 +794,7 @@
 
           
           
-             <span id="/2018/03/12/数据结构 - 3 二叉树/" class="leancloud_visitors" data-flag-title="数据结构 - 2 散列表">
+             <span id="/2019/02/23/存档/Mac系统下使用Hexo在Github上搭建博客/" class="leancloud_visitors" data-flag-title="Mac系统下使用Hexo在Github上搭建博客">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1053,7 +819,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.5k
+                  17
                 </span>
               
 
@@ -1069,7 +835,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  1
                 </span>
               
             </div>
@@ -1092,48 +858,7 @@
       
         
           
-            <h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><h2 id="为什么需要二叉树？"><a href="#为什么需要二叉树？" class="headerlink" title="为什么需要二叉树？"></a>为什么需要二叉树？</h2><p>线性表查询快</p>
-<p>链表（双向）插入删除快</p>
-<p>哈希表结合两者优点，但是构建需要考虑的多</p>
-<p>二叉树结合三者优点，且更符合人类认知+可以映射现实的结构</p>
-<h3 id="树"><a href="#树" class="headerlink" title="树"></a>树</h3><h4 id="存储："><a href="#存储：" class="headerlink" title="存储："></a>存储：</h4><p>一种是基于指针或者引用的二叉链式存储法，一种是基于数组的顺序存储法</p>
-<p>链式存储法：每个节点有三个字段，其中一个存储数据，另外两个是指向左右子节点</p>
-<p>顺序存储法：完全二叉树适合，不浪费空间，堆其实就是一种完全二叉树。</p>
-<h4 id="高度、深度、层数："><a href="#高度、深度、层数：" class="headerlink" title="高度、深度、层数："></a>高度、深度、层数：</h4><p>“高度”这个概念，其实就是从下往上度量，3-0</p>
-<p>“深度”这个概念在生活中是从上往下度量的，0-3</p>
-<p>“层数”跟深度的计算类似，不过，计数起点是 1，也就是说根节点从1开始。</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g102bg40m7j31o40u0qap.jpg" alt="image-20190312155307376"></p>
-<h3 id="二叉树-1"><a href="#二叉树-1" class="headerlink" title="二叉树"></a>二叉树</h3><p>遍历</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g1021iqnfbj31mv0u0b1p.jpg" alt="image-20190312154334354"></p>
-<p>前序遍历：打印顺序为本节点、左节点、右节点</p>
-<p>中序遍历：打印顺序为左节点、本节点、右节点</p>
-<p>后序遍历：打印顺序为左节点、右节点、本节点</p>
-<p>时间复杂度是 O(n)。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">前序遍历的递推公式：</span><br><span class="line">preOrder(r) = print r-&gt;preOrder(r-&gt;left)-&gt;preOrder(r-&gt;right)</span><br><span class="line"></span><br><span class="line">中序遍历的递推公式：</span><br><span class="line">inOrder(r) = inOrder(r-&gt;left)-&gt;print r-&gt;inOrder(r-&gt;right)</span><br><span class="line"></span><br><span class="line">后序遍历的递推公式：</span><br><span class="line">postOrder(r) = postOrder(r-&gt;left)-&gt;postOrder(r-&gt;right)-&gt;print r</span><br><span class="line"></span><br><span class="line"><span class="comment">// 真实代码</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">preOrder</span><span class="params">(Node* root)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (root == <span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">  print root <span class="comment">// 此处为伪代码，表示打印 root 节点</span></span><br><span class="line">  preOrder(root-&gt;left);</span><br><span class="line">  preOrder(root-&gt;right);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inOrder</span><span class="params">(Node* root)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (root == <span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">  inOrder(root-&gt;left);</span><br><span class="line">  print root <span class="comment">// 此处为伪代码，表示打印 root 节点</span></span><br><span class="line">  inOrder(root-&gt;right);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">postOrder</span><span class="params">(Node* root)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (root == <span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">  postOrder(root-&gt;left);</span><br><span class="line">  postOrder(root-&gt;right);</span><br><span class="line">  print root <span class="comment">// 此处为伪代码，表示打印 root 节点</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>按层遍历：使用队列。</p>
-<p>根节点入队列，此时队列不为空。取出队列第一个元素打印出来，若其左节点存在就存入队列，否组什么也不做，右节点同理。</p>
-<p>直至队列为空，表示数的层次遍历结束，层次遍历也是一个广度优先遍历算法。</p>
-<h3 id="翻转二叉树"><a href="#翻转二叉树" class="headerlink" title="翻转二叉树"></a>翻转二叉树</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inverttree</span><span class="params">(self, treenode)</span>:</span>      <span class="comment">#真正的翻转只有这8行代码</span></span><br><span class="line">       <span class="keyword">if</span> treenode == <span class="keyword">None</span>:</span><br><span class="line">           <span class="keyword">return</span> <span class="keyword">None</span></span><br><span class="line">       temp = treenode.lchild</span><br><span class="line">       treenode.lchild = treenode.rchild</span><br><span class="line">       treenode.rchild = temp</span><br><span class="line">       self.inverttree(treenode.lchild)</span><br><span class="line">       self.inverttree(treenode.rchild)</span><br></pre></td></tr></table></figure>
-<h2 id="二叉查找树"><a href="#二叉查找树" class="headerlink" title="二叉查找树"></a>二叉查找树</h2><p>支持：快速插入、删除、查找一个数据</p>
-<p>要求：树中的任意一个节点，其左子树中的每个节点值都小于该节点，有字数节点值大于该节点。</p>
-<h3 id="查找、插入和删除"><a href="#查找、插入和删除" class="headerlink" title="查找、插入和删除"></a>查找、插入和删除</h3><p>首先取根节点，两者相等则返回，数小于该节点则在其左子树中递归；大于则在右边递归查找。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 节点类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">static</span> <span class="title">class</span> <span class="title">Node</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> data；</span><br><span class="line">    <span class="keyword">private</span> Node left;</span><br><span class="line">    <span class="keyword">private</span> Node right;</span><br><span class="line">    <span class="comment">// 初始化方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(<span class="keyword">int</span> data)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.data = data;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 二叉树类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">binarySeachTree</span></span>&#123;</span><br><span class="line">	<span class="comment">// 声明一棵树，根节点为 tree</span></span><br><span class="line">	<span class="keyword">private</span> Node tree;</span><br><span class="line">    </span><br><span class="line">	<span class="comment">// 1.查找函数</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Node <span class="title">find</span><span class="params">(<span class="keyword">int</span> data)</span></span>&#123;</span><br><span class="line">		<span class="comment">//复制</span></span><br><span class="line">		Node p = tree;</span><br><span class="line">		<span class="comment">// 不为空则继续查找</span></span><br><span class="line">		<span class="keyword">while</span>(data != <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="comment">// 是否相等</span></span><br><span class="line">            <span class="keyword">if</span>(data &lt; p.data) p = p.left</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(data &gt; p.data) p = p.right</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">return</span> p；</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 为空返回空，表示没找到</span></span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 2.插入函数</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> data)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 若根节点为空,根节点为该数据，实例化</span></span><br><span class="line">        <span class="keyword">if</span> (tree == <span class="keyword">null</span>)&#123;</span><br><span class="line">            tree = <span class="keyword">new</span> Node(data)</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Node p = tree;</span><br><span class="line">        <span class="comment">//  若不为空</span></span><br><span class="line">        <span class="keyword">while</span>(p != <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="comment">// 小于，查看节点左边是否有节点，没有就实例化，有就继续判断下一个</span></span><br><span class="line">            <span class="keyword">if</span>(data &lt; p.data) &#123;</span><br><span class="line">                <span class="keyword">if</span>(p.left = <span class="keyword">null</span>)&#123;</span><br><span class="line">                    p.left = <span class="keyword">new</span> Node(data)</span><br><span class="line">                &#125;</span><br><span class="line">              	p = p.left;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(data &gt; p.data)&#123;</span><br><span class="line">                <span class="keyword">if</span>(p.right == <span class="keyword">null</span>)&#123;</span><br><span class="line">                    p.right = <span class="keyword">new</span> Node(data)</span><br><span class="line">                &#125;</span><br><span class="line">                 p = p.right;       </span><br><span class="line">            &#125;            </span><br><span class="line">        &#125;       </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Question_39</span> </span>&#123;</span><br><span class="line">    <span class="comment">//----递归求二叉树深度----</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">treeDepth</span><span class="params">(BinaryTreeNode root)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> left = treeDepth(root.left);</span><br><span class="line">        <span class="keyword">int</span> right = treeDepth(root.right);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> (left&gt;right)?(left+<span class="number">1</span>):(right+<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="其他操作：最大最小、前驱后继节点"><a href="#其他操作：最大最小、前驱后继节点" class="headerlink" title="其他操作：最大最小、前驱后继节点"></a>其他操作：最大最小、前驱后继节点</h3><p>中序遍历（左中右）二叉查找树，可以输出有序的数据序列，时间复杂度是 O(n)，非常高效率。</p>
-<p>因此，二叉查找树也叫作二叉排序树。</p>
-<h3 id="支持重复数据的二叉查找树"><a href="#支持重复数据的二叉查找树" class="headerlink" title="支持重复数据的二叉查找树"></a>支持重复数据的二叉查找树</h3><p>方式一：一个节点不仅存储数据，通过链表和支持动态扩容的数组等数据结构，把值相同的数据存储于一个节点上。</p>
-<p>方式二：更优雅。相等的时候看做大于该值。</p>
-<h3 id="二叉查找树的时间复杂度分析"><a href="#二叉查找树的时间复杂度分析" class="headerlink" title="二叉查找树的时间复杂度分析"></a>二叉查找树的时间复杂度分析</h3><p>最差情况：二叉查找树，根节点的左右子树极度不平衡，已经退化成链表。O(n)。</p>
-<p>时间复杂度其实都跟树的高度成正比，也就是 O(height)。</p>
-<p>两个极端情况的时间复杂度分别是 O(n) 和 O(logn)。</p>
-<p>而对于完全二叉树：</p>
-<p>问题就转变成另外一个了，也就是，如何求一棵包含 n 个节点的完全二叉树的高度？</p>
-<p>完全二叉树的层数小于等于 log n +1，也就是说，完全二叉树的高度小于等于 （log n）。</p>
-<p>平衡二叉树是 O(logn)。</p>
-<h2 id="散列表和二叉查找树比较"><a href="#散列表和二叉查找树比较" class="headerlink" title="散列表和二叉查找树比较"></a>散列表和二叉查找树比较</h2><p>排序：散列表无序排序，输出有序数据前需要排序；二叉查找树有序，中序遍历可以在时间复杂度O(n)中，输出有序序列。</p>
-<p>稳定性：散列表扩容耗时多、散列冲突的时候性能不稳定；平衡二叉查找树较稳定，时间稳定在 O(logn)。</p>
-<p>构造复杂：散列表更加复杂，需要考虑散列函数、负载因子动态扩容、冲突解决。平衡二叉树只需要考虑平衡性。</p>
-<p>空间：对于散列表的开放寻址法，装载因子不能太大，需要更多的空间。</p>
-
+            <h1 id="一、安装环节"><a href="#一、安装环节" class="headerlink" title="一、安装环节"></a>一、安装环节</h1><h1 id="二、Hexo部署"><a href="#二、Hexo部署" class="headerlink" title="二、Hexo部署"></a>二、Hexo部署</h1><h1 id="三、github仓库"><a href="#三、github仓库" class="headerlink" title="三、github仓库"></a>三、github仓库</h1><h1 id="四、git代码"><a href="#四、git代码" class="headerlink" title="四、git代码"></a>四、git代码</h1>
           
         
       
@@ -1181,7 +906,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/12/数据结构 - 3 二叉树的扩展 /">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/19/存档/工具整理 - 设计类工具/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -1200,7 +925,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/12/数据结构 - 3 二叉树的扩展 /" itemprop="url">数据结构 - 2 散列表</a></h1>
+                <a class="post-title-link" href="/2019/02/19/存档/工具整理 - 设计类工具/" itemprop="url">工具整理 - 设计类工具</a></h1>
         
 
         <div class="post-meta">
@@ -1214,8 +939,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-12T13:17:42+08:00">
-                2018-03-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-19T16:00:57+08:00">
+                2019-02-19
               </time>
             
 
@@ -1237,8 +962,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
+                  <a href="/categories/实用工具/" itemprop="url" rel="index">
+                    <span itemprop="name">实用工具</span>
                   </a>
                 </span>
 
@@ -1255,8 +980,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/03/12/数据结构 - 3 二叉树的扩展 /#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/03/12/数据结构 - 3 二叉树的扩展 /" itemprop="commentCount"></span>
+                <a href="/2019/02/19/存档/工具整理 - 设计类工具/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/19/存档/工具整理 - 设计类工具/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1264,7 +989,7 @@
 
           
           
-             <span id="/2018/03/12/数据结构 - 3 二叉树的扩展 /" class="leancloud_visitors" data-flag-title="数据结构 - 2 散列表">
+             <span id="/2019/02/19/存档/工具整理 - 设计类工具/" class="leancloud_visitors" data-flag-title="工具整理 - 设计类工具">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1289,7 +1014,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.5k
+                  66
                 </span>
               
 
@@ -1305,7 +1030,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  1
                 </span>
               
             </div>
@@ -1328,61 +1053,16 @@
       
         
           
-            <h2 id="其他二叉树"><a href="#其他二叉树" class="headerlink" title="其他二叉树"></a>其他二叉树</h2><h3 id="平衡二叉树-AVL-树-没有很严格"><a href="#平衡二叉树-AVL-树-没有很严格" class="headerlink" title="平衡二叉树-AVL 树(没有很严格)"></a>平衡二叉树-AVL 树(没有很严格)</h3><p>平衡二叉树（balanced binary tree）,又称 AVL 树。它或者是一棵空树,或者是具有如下性质的二叉树：</p>
-<ol>
-<li>它的左子树和右子树都是平衡二叉树，</li>
-<li>左子树和右子树的深度之差的绝对值不超过1。</li>
-</ol>
-<p>平衡二叉树是对二叉搜索树(又称为二叉排序树)的一种改进。二叉搜索树有一个缺点就是，树的结构是无法预料的，随意性很大，它只与节点的值和插入的顺序有关系，往往得到的是一个不平衡的二叉树。在最坏的情况下，可能得到的是一个单支二叉树，其高度和节点数相同，相当于一个单链表，对其正常的时间复杂度有O(log(n))变成了O(n)，从而丧失了二叉排序树的一些应该有的优点。</p>
-<p>### </p>
-<h3 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h3><p>红黑树的五个基本原则：</p>
-<ol>
-<li>首先它一颗平衡树，每个节点是红色或黑色的。</li>
-<li>根节点是黑色的。</li>
-<li>每个叶节点（null）是黑色的。</li>
-<li>如果一个节点是红色的，则它的两个子节点是黑色的。</li>
-<li>对每个节点，从该节点到其所有后代叶节点上的简单路径，包含相同数目的黑色节点。</li>
-</ol>
-<p>比较重要的是第4点和第5点，因为它可以保证我们树的最长路径不超过最短路径的两倍。也就是说一个n个节点的红黑树，它的高度至多为2lg（n+1），虽然不是严格平衡，但至少查找的效率还是可以接受的。</p>
-<p>红黑树在高度方面不像AVL有个左右子树高度差不超过1的限制，同时红黑树的维护效率比AVL高很多。红黑树需要旋转的次数较少。</p>
-<p>Java中的map就是通过红黑树来实现的。</p>
-<p>Question：动态数据结构支持动态地数据插入、删除、查找操作，除了红黑树，还有哪些？比较优劣和场景。</p>
-<p>动态数据结构是支持动态的更新操作，里面存储的数据是时刻在变化的，通俗一点讲，它不仅仅支持查询，还支持删除、插入数据。</p>
-<p>而且，这些操作都非常高效动态数据结构有链表，栈，队列，哈希表等等。</p>
-<p>链表适合遍历的场景，插入和删除操作方便；</p>
-<p>栈和队列可以算一种特殊的链表，分别适用先进后出和先进先出的场景。</p>
-<p>哈希表适合插入和删除比较少（尽量少的扩容和缩容），查找比较多的时候。</p>
-<p>红黑树对数据要求有序，对数据增删查都有一定要求的时候。</p>
-<h2 id="B树（平衡多路查找树）"><a href="#B树（平衡多路查找树）" class="headerlink" title="B树（平衡多路查找树）"></a>B树（平衡多路查找树）</h2><p>B树和平衡二叉树稍有不同的是B树属于多叉树又名平衡多路查找树（查找路径不只两个），数据库索引技术里大量使用者B树和B+树的数据结构;</p>
-<p>（1）排序方式：所有节点关键字是按递增次序排列，并遵循左小右大原则；</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g1g8a2ev4rj313q0hmq7i.jpg" alt="image-20190326152824931"></p>
-<p>B树相对于平衡二叉树的不同是，每个节点包含的关键字增多了，特别是在B树应用到数据库中的时候，数据库充分利用了磁盘块的原理，把节点大小限制和充分使用在磁盘快大小范围；把树的节点关键字增多后树的层级比原来的二叉树少了，减少数据查找的次数和复杂度;</p>
-<p>目的：使树的层级减少达到快速查找数据的目的。</p>
-<p>适合：外部存储。磁盘。</p>
-<p>##B+树</p>
-<p>B+树是B树的一个升级版，相对于B树来说B+树更充分的利用了节点的空间，让查询速度更加稳定，其速度完全接近于二分法查找。</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g1g8d1hyibj314008e0yv.jpg" alt="image-20190326153116561"></p>
-<ul>
-<li><strong>特点</strong></li>
-</ul>
-<p>1、B+<strong>树的层级更少</strong>：相较于B树B+每个<strong>非叶子</strong>节点存储的关键字数更多，树的层级更少所以查询数据更快；</p>
-<p>2、B+<strong>树查询速度更稳定</strong>：B+所有关键字数据地址都存在<strong>叶子</strong>节点上，所以每次查找的次数都相同所以查询速度要比B树更稳定;</p>
-<p>3、B+<strong>树天然具备排序功能：</strong>B+树所有的<strong>叶子</strong>节点数据构成了一个有序链表，在查询大小区间的数据时候更方便，数据紧密性很高，缓存的命中率也会比B树高。</p>
-<p>4、B+<strong>树全节点遍历更快：</strong>B+树遍历整棵树只需要遍历所有的<strong>叶子</strong>节点即可，而不需要像B树一样需要对每一层进行遍历，这有利于数据库做全表扫描。</p>
-<p><strong>B树</strong>相对于<strong>B+树</strong>的优点是，如果经常访问的数据离根节点很近，而<strong>B树</strong>的<strong>非叶子</strong>节点本身存有关键字其数据的地址，所以这种数据检索的时候会要比<strong>B+树</strong>快。</p>
-<h3 id="哈弗曼树"><a href="#哈弗曼树" class="headerlink" title="哈弗曼树"></a>哈弗曼树</h3><ul>
-<li><p>定义：给定n个权值作为n的叶子结点，构造一棵二叉树，若带权路径长度达到最小，称这样的二叉树为最优二叉树，也称为哈夫曼树(Huffman tree)。</p>
-</li>
-<li><p>构造：</p>
-<p>假设有n个权值，则构造出的哈夫曼树有n个叶子结点。 n个权值分别设为 w1、w2、…、wn，则哈夫曼树的构造规则为：</p>
-<ol>
-<li>将w1、w2、…，wn看成是有 n 棵树的森林(每棵树仅有一个结点)；</li>
-<li>在森林中选出两个根结点的权值最小的树合并，作为一棵新树的左、右子树，且新树的根结点权值为其左、右子树根结点权值之和；</li>
-<li>从森林中删除选取的两棵树，并将新树加入森林；</li>
-<li>重复(2)、(3)步，直到森林中只剩一棵树为止，该树即为所求得的哈夫曼树。</li>
-</ol>
-</li>
-</ul>
+            <p>设计icon：<a href="https://www.canva.cn/" target="_blank" rel="noopener">https://www.canva.cn/</a></p>
+<p>生成icon：<a href="https://appicon.co/" target="_blank" rel="noopener">https://appicon.co/</a></p>
+<p>海报：</p>
+<p>阿里矢量图标：<a href="https://www.iconfont.cn/" target="_blank" rel="noopener">https://www.iconfont.cn/</a></p>
+<p>矢量图标：<a href="https://www.easyicon.net/update/" target="_blank" rel="noopener">https://www.easyicon.net/update/</a></p>
+<p>机器学习：<a href="https://mp.weixin.qq.com/s/F_AvAtITyQHWhXgi2K02Ag" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/F_AvAtITyQHWhXgi2K02Ag</a></p>
+<p>快捷键</p>
+<p>command+shift+g ：跳出窗口，进入地址</p>
+<p>Cammand+i :格式化</p>
+<p>简历：</p>
 
           
         
@@ -1431,7 +1111,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/存档/开发与学术/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/19/前端基础学习/Node.js的Web服务器搭建/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -1450,7 +1130,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/05/存档/开发与学术/" itemprop="url">学术</a></h1>
+                <a class="post-title-link" href="/2019/02/19/前端基础学习/Node.js的Web服务器搭建/" itemprop="url">Node.js的Web服务器搭建</a></h1>
         
 
         <div class="post-meta">
@@ -1464,8 +1144,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T13:17:42+08:00">
-                2018-01-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-19T16:00:57+08:00">
+                2019-02-19
               </time>
             
 
@@ -1487,8 +1167,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学术/" itemprop="url" rel="index">
-                    <span itemprop="name">学术</span>
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
                   </a>
                 </span>
 
@@ -1505,8 +1185,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/01/05/存档/开发与学术/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/存档/开发与学术/" itemprop="commentCount"></span>
+                <a href="/2019/02/19/前端基础学习/Node.js的Web服务器搭建/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/19/前端基础学习/Node.js的Web服务器搭建/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1514,7 +1194,1042 @@
 
           
           
-             <span id="/2018/01/05/存档/开发与学术/" class="leancloud_visitors" data-flag-title="学术">
+             <span id="/2019/02/19/前端基础学习/Node.js的Web服务器搭建/" class="leancloud_visitors" data-flag-title="Node.js的Web服务器搭建">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  70
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="服务器搭建"><a href="#服务器搭建" class="headerlink" title="服务器搭建"></a>服务器搭建</h3> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//安装服务区</span><br><span class="line">npm install http-server -g</span><br><span class="line"></span><br><span class="line">//启动服务器</span><br><span class="line">http-server</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g19eohhultj30vi0g0n09.jpg" alt="image-20190320175055690"></p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1g19et0ebl8j30vg04ojs3.jpg" alt="image-20190320175516351"></p>
+<p>打开浏览器，进入指定端口访问：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1g19evh9l4fj31b80dymzm.jpg" alt="image-20190320175738391"></p>
+<h3 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h3><p>查看所需端口是否被占用</p>
+<p>lsof -i tcp:8080</p>
+<p>删除该PID，则该端口号就不会被占用</p>
+<p>kill 7826</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g19km17bitj318w05sjt7.jpg" alt="image-20190320211610015"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/11/数据可视化/腾讯手机QQ看点iOS开发面试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/11/数据可视化/腾讯手机QQ看点iOS开发面试/" itemprop="url">暑期实习面试 - 腾讯PCG移动客户端iOS开发面试</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-11T16:00:57+08:00">
+                2019-02-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面试/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/02/11/数据可视化/腾讯手机QQ看点iOS开发面试/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/11/数据可视化/腾讯手机QQ看点iOS开发面试/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/02/11/数据可视化/腾讯手机QQ看点iOS开发面试/" class="leancloud_visitors" data-flag-title="暑期实习面试 - 腾讯PCG移动客户端iOS开发面试">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h1><p>事业群：PCG </p>
+<p>产品：手机QQ 看点</p>
+<p>岗位：移动客户端开发（iOS、Objective-C语言开发）</p>
+<p>地点：深圳总部</p>
+<p>转正：几率较小</p>
+<p>实习时间：6月份之后的暑期实习</p>
+<p>面试日期：3月30日 - 3月31日</p>
+<p>offer call：4月10日(看到很多小伙伴都接到offer call了，内心有一些着急，9号换了ycy头像)</p>
+<h1 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h1><p>面试时间一共为：28min，3月30日</p>
+<p>问题涉及：iOS项目、操作系统</p>
+<p>问题未涉及：计算机网络、数据结构、算法、场景</p>
+<h2 id="项目介绍及相关问题："><a href="#项目介绍及相关问题：" class="headerlink" title="项目介绍及相关问题："></a>项目介绍及相关问题：</h2><h3 id="APP"><a href="#APP" class="headerlink" title="APP"></a>APP</h3><h4 id="1-获取当前天气功能为什么要使用协议代理？过程如何？"><a href="#1-获取当前天气功能为什么要使用协议代理？过程如何？" class="headerlink" title="1.获取当前天气功能为什么要使用协议代理？过程如何？"></a>1.获取当前天气功能为什么要使用协议代理？过程如何？</h4><p>表述还需加强。</p>
+<h4 id="2-是否接触TableView渲染性能相关的东西？"><a href="#2-是否接触TableView渲染性能相关的东西？" class="headerlink" title="2.是否接触TableView渲染性能相关的东西？"></a>2.是否接触TableView渲染性能相关的东西？</h4><ul>
+<li><p>cell的数目，配置tableview数据</p>
+<p>重用单元格的形式，数据成千上万行，最终渲染个数为屏幕上显示的数目。</p>
+<p>往下拉的时候，最上面的cell到最下面来，放置重复渲染，提高手机性能。</p>
+</li>
+<li><p>刷新页面的两种方法</p>
+<ul>
+<li>无动画效果：tableView.reloadData()，就是相当于执行 cell for row的方法，将结果取出来，再更新视图</li>
+<li>将刷新语句放在View.beginUpdates()、tableView.endUpdates()中间，可以提高app的性能</li>
+</ul>
+</li>
+</ul>
+<h2 id="基础问题"><a href="#基础问题" class="headerlink" title="基础问题"></a>基础问题</h2><h3 id="iOS相关问题"><a href="#iOS相关问题" class="headerlink" title="iOS相关问题"></a>iOS相关问题</h3><h4 id="3-MVC模式，有什么缺点？"><a href="#3-MVC模式，有什么缺点？" class="headerlink" title="3.MVC模式，有什么缺点？"></a>3.MVC模式，有什么缺点？</h4><p>介绍了概念和优点。</p>
+<p>缺点猜测作答。</p>
+<h4 id="4-RunLoop是什么？"><a href="#4-RunLoop是什么？" class="headerlink" title="4.RunLoop是什么？"></a>4.RunLoop是什么？</h4><ul>
+<li>概念：事件循环对象，在循环过程中处理各种事件（点击、刷新等），从而保持程序持续运行；在没有事件处理的时候，会进入睡眠模式，从而节省CPU资源，提高程序性能。</li>
+<li>为什么需要：一个线程只能执行一个任务，执行完就会退出，如果我们需要一种机制，让线程能随时处理时间但并不退出，那么 RunLoop 就是这样的一个机制。Runloop是事件接收和分发机制的一个实现。</li>
+<li>Runloop 和线程是绑定在一起的。每个线程（包括主线程）都有一个对应的 Runloop 对象。我们并不能自己创建 Runloop 对象，但是可以获取到系统提供的 Runloop 对象。</li>
+</ul>
+<h4 id="5-点击事件之后发生什么？"><a href="#5-点击事件之后发生什么？" class="headerlink" title="5.点击事件之后发生什么？"></a>5.点击事件之后发生什么？</h4><p>这里没准备过，跟面试官说是否可以根据已有知识猜测一下流程，面试官说可以。</p>
+<p>大概从获取事件源，执行事件内容方面作答。</p>
+<h3 id="操作系统问题"><a href="#操作系统问题" class="headerlink" title="操作系统问题"></a>操作系统问题</h3><h4 id="6-进程和线程的区别？"><a href="#6-进程和线程的区别？" class="headerlink" title="6.进程和线程的区别？"></a>6.进程和线程的区别？</h4><p>操作系统的概念；异同点；iOS上的进程和线程，多线程。</p>
+<h4 id="7-多线程共享资源，如何防止资源问题？"><a href="#7-多线程共享资源，如何防止资源问题？" class="headerlink" title="7.多线程共享资源，如何防止资源问题？"></a>7.多线程共享资源，如何防止资源问题？</h4><ul>
+<li>资源是否是独占（独占锁 - 共享锁）</li>
+<li>抢占不到资源怎么办（互斥锁 - 自旋锁）</li>
+<li>自己能不能重复抢（重入锁 - 不可重入锁）</li>
+<li>竞争读的情况比较多，读可不可以不加锁（读写锁）</li>
+</ul>
+<h2 id="提问环节"><a href="#提问环节" class="headerlink" title="提问环节"></a>提问环节</h2><h3 id="我：为什么面试时间较短？"><a href="#我：为什么面试时间较短？" class="headerlink" title="我：为什么面试时间较短？"></a>我：为什么面试时间较短？</h3><p>有人面试一个小时，被举报了。</p>
+<h3 id="面试官：是否介意转正率低？"><a href="#面试官：是否介意转正率低？" class="headerlink" title="面试官：是否介意转正率低？"></a>面试官：是否介意转正率低？</h3><p>不介意，先努力转正，不行可以秋招再投递。</p>
+<h1 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h1><p>面试时间一共为：28min，3月30日</p>
+<p>问题涉及：iOS项目、网络、排序算法</p>
+<h2 id="项目介绍及相关问题"><a href="#项目介绍及相关问题" class="headerlink" title="项目介绍及相关问题"></a>项目介绍及相关问题</h2><h3 id="自由探索科研项目"><a href="#自由探索科研项目" class="headerlink" title="自由探索科研项目"></a>自由探索科研项目</h3><h4 id="1-高维数据降维"><a href="#1-高维数据降维" class="headerlink" title="1.高维数据降维"></a>1.高维数据降维</h4><h4 id="2-数据稀疏如何处理"><a href="#2-数据稀疏如何处理" class="headerlink" title="2.数据稀疏如何处理"></a>2.数据稀疏如何处理</h4><h4 id="3-梯度下降过程"><a href="#3-梯度下降过程" class="headerlink" title="3.梯度下降过程"></a>3.梯度下降过程</h4><h3 id="APP-1"><a href="#APP-1" class="headerlink" title="APP"></a>APP</h3><h4 id="4-网络请求的第三方库是什么？"><a href="#4-网络请求的第三方库是什么？" class="headerlink" title="4.网络请求的第三方库是什么？"></a>4.网络请求的第三方库是什么？</h4><h2 id="基础问题-1"><a href="#基础问题-1" class="headerlink" title="基础问题"></a>基础问题</h2><h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><h4 id="5-HTTP状态码"><a href="#5-HTTP状态码" class="headerlink" title="5.HTTP状态码"></a>5.HTTP状态码</h4><h4 id="6-HTTP和HTTPS的区别"><a href="#6-HTTP和HTTPS的区别" class="headerlink" title="6.HTTP和HTTPS的区别"></a>6.HTTP和HTTPS的区别</h4><h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><h4 id="7-稳定的排序有哪些？"><a href="#7-稳定的排序有哪些？" class="headerlink" title="7.稳定的排序有哪些？"></a>7.稳定的排序有哪些？</h4><h1 id="三面"><a href="#三面" class="headerlink" title="三面"></a>三面</h1><p>面试时间一共为：23min，3月31日</p>
+<h2 id="项目介绍及相关问题-1"><a href="#项目介绍及相关问题-1" class="headerlink" title="项目介绍及相关问题"></a>项目介绍及相关问题</h2><h4 id="1-遇到的困难？"><a href="#1-遇到的困难？" class="headerlink" title="1.遇到的困难？"></a>1.遇到的困难？</h4><p>反向传值delegate+protocal；</p>
+<p>GCD主线程控制UI刷新。</p>
+<h4 id="2-是否了解性能相关的东西？"><a href="#2-是否了解性能相关的东西？" class="headerlink" title="2.是否了解性能相关的东西？"></a>2.是否了解性能相关的东西？</h4><p>渲染和多线程</p>
+<h4 id="3-是否了解跨平台开发？"><a href="#3-是否了解跨平台开发？" class="headerlink" title="3.是否了解跨平台开发？"></a>3.是否了解跨平台开发？</h4><p>不了解，聊了一些前端的东西。</p>
+<p><a href="https://juejin.im/post/5b076e3af265da0dce48fe95" target="_blank" rel="noopener">https://juejin.im/post/5b076e3af265da0dce48fe95</a></p>
+<h2 id="social环节"><a href="#social环节" class="headerlink" title="social环节"></a>social环节</h2><h4 id="4-为什么想做iOS开发？"><a href="#4-为什么想做iOS开发？" class="headerlink" title="4.为什么想做iOS开发？"></a>4.为什么想做iOS开发？</h4><h4 id="5-未来移动端开发的趋势是什么？"><a href="#5-未来移动端开发的趋势是什么？" class="headerlink" title="5.未来移动端开发的趋势是什么？"></a>5.未来移动端开发的趋势是什么？</h4><p>可能以后 Web 和 Native 的边界会越来越模糊。偏向于Hybrid APP开发。</p>
+<p>(我是果粉，面试的时候表现的是热爱iOS开发。然而说到最后，面试官老师说未来的趋势是安卓，感觉就有点崩了。最后建议我了解跨平台开发。)</p>
+<h1 id="HR面"><a href="#HR面" class="headerlink" title="HR面"></a>HR面</h1><p>时间：9min，3月31日下午4点半 </p>
+<p>自我介绍+哪里人+是否愿意来深圳之类的问题。</p>
+<h1 id="offer-call"><a href="#offer-call" class="headerlink" title="offer call"></a>offer call</h1><p>时间：2min，4月10日上午11点</p>
+<p>确认个人信息、部门、岗位、工作地点。</p>
+<p>通知今日之内会发放offer到邮箱。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/11/数据可视化/阿里数据中台面试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/11/数据可视化/阿里数据中台面试/" itemprop="url">暑期实习面试 - 阿里数据中台前端可视化</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-11T16:00:57+08:00">
+                2019-02-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面试/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/02/11/数据可视化/阿里数据中台面试/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/11/数据可视化/阿里数据中台面试/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/02/11/数据可视化/阿里数据中台面试/" class="leancloud_visitors" data-flag-title="暑期实习面试 - 阿里数据中台前端可视化">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  6.6k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  22
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="三面准备"><a href="#三面准备" class="headerlink" title="三面准备"></a>三面准备</h1><h2 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h2><p>三个部分。</p>
+<ul>
+<li>基本信息，中南大学研二王雨思，研究方向是数据可视分析，项目中有专利一项、参与A类会议论文一篇、主持自由探索项目一项，该项目论文预计4月投稿，投稿完成后即可到岗实习。</li>
+<li>项目经历，可视分析项目有三项，主要是关于高维数据可视分析的。同时自己对iOS开发有些兴趣，申请了开发者账号，目前审核中APP有两款。</li>
+<li><p>详细介绍我的项目。</p>
+<ul>
+<li>首先是自由探索项目：面向分类的感知驱动的可视化监督降维方法。<ul>
+<li>1背景：大数据时代，涌现出无数复杂的有标签的高维数据：如手写数据、汽车数据、人脸数据等。</li>
+<li>2困难：难以分析标签HD数据。降维是分析有标签的高维数据的常用方法。高维数据的低维表示可以帮助用户探索有标签数据中类的分离程度和数据的空间分布。【非监督降维方法PCA：没有考虑类的分离程度；监督降维方法LDA：事先假设数据符合高斯分布，对于复杂的类结构无效；】</li>
+<li>3降维方法和直接映射法是帮助分析HD数据的方法：降维方法来源于机器学习。提出优化目标，选择优化方法。我们可以使用基于人类感知的度量DSC。 </li>
+<li>4本文方法：感知驱动降维PDD：单个投影可能会导致重要的类结构被忽略。</li>
+</ul>
+</li>
+<li>第二个是A类会议IEEE VIS项目：适用于不清楚数据内部特征与结构时候，帮助有效识别低维结构(维度和是否为线性子空间)。当我们指导数据的真实维度之后，则可以使用合适的方式去进行可视化或者数据挖掘等工作。该文章我是帮助师兄做了user study的具体case、discussion部分的对比试验，与其他工作降维方法（包括线性PCA\MDS，非线性tsne等方法）的对比。</li>
+<li>第三个是基于 kNN Graph 的内蕴特征抽取可视分析：<ul>
+<li>内蕴特征-是指底层属性的语义解释。例子：国家生活质量数据集，数据点美国到数据点古巴是如何变化的。得到其解释就特征抽取。data-view-knowledge。</li>
+<li>三步骤：初始布局，交互获取路径（点选），结构化投影（使用测地距离）。</li>
+<li>例子：国家：趋势美国到古巴、异常：赞比亚。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>适合数据中台可视化的原因：</p>
+<ul>
+<li>1研究方向是这个，找到如此契合的部门比较难；高维数据可视分析虽然听起来较理论，但是实际上大数据时代，这样的数据确实非常多，需要一些理论的方式去进行可视分析；</li>
+<li>2身体素质好，有恒心。为了拿到校运会跨栏金牌，每天坚持晨跑。因此可以接受高强度的工作。</li>
+</ul>
+</li>
+</ul>
+<h2 id="职业规划"><a href="#职业规划" class="headerlink" title="职业规划"></a>职业规划</h2><p>这个问题其实我自己在选择保研到可视化方向的时候就有想过。</p>
+<p>首先，我认为可视化并不是像别人所说只是展示数据的工具，他可以帮助用户探索到自动化方法分析数据无法发现的的特征和模式。</p>
+<p>所以我选择了数据可视分析的方向，在研究生阶段从可视化的算法和理论方面先充实自己。</p>
+<p>我的职业规划阶段主要分为三个部分，实习之前、入职1~2年、入职2~5年。</p>
+<h3 id="实习之前："><a href="#实习之前：" class="headerlink" title="实习之前："></a>实习之前：</h3><p>我会从把红宝书、犀牛书等书籍刷一遍，在实习之前了解所需前端技术；根据团队的技术路线需要，自己实现一些react框架的项目。争取在实习的时候能够按时按量完成导师给的任务。</p>
+<h3 id="入职1-3年内："><a href="#入职1-3年内：" class="headerlink" title="入职1~3年内："></a>入职1~3年内：</h3><p>1工作方面：之前的面试官有说过做工程和论文是不一样的，导师对于学术研究是提出一个新的方法去解决问题，需要在短时间内做出case；而前一位面试官说的是工程需要考虑更多的东西，比如大数据渲染的效率。所以我希望能过实现业务，培养工程能力和工程思维。</p>
+<p>2学习方面：非常希望学习一些框架和库。“不要重复的造轮子”这句话，我认为初学者都应该无视，不了解轮子怎么知道这个轮子好不好用呢？我们做论文分析的时候也需要做实验比较算法的优越性。</p>
+<p>所以我希望从学习熟练使用轮子开始，到看轮子，理解如何造轮子，如果够厉害的话，或许在业务的实践中自己也能成为造轮子团队的一员。</p>
+<p>3爱好方面：工作之余还希望能像字体日记APP的开发者一样，做一些自己喜欢iOS开发。之前在react论坛上看到说阿里有的iOS开发是使用前端技术rn weex，希望学习之后帮助自己的从native开发转变为混合开发——做一些Hybrid APP；或者是做一个针对没有计算机课程的县城中学生的在线教育的前端产品。</p>
+<h3 id="3-5应该算一个有经验的前端工程师了："><a href="#3-5应该算一个有经验的前端工程师了：" class="headerlink" title="3~5应该算一个有经验的前端工程师了："></a>3~5应该算一个有经验的前端工程师了：</h3><p>1 <strong>数据分析能力、交互视觉能力、研发能力</strong></p>
+<p>//3同时努力成为一个一专多长的人才。因为制作一个性能高、交互好、视觉美的页面，需要从前端框架选型、架构设计、构建工具，到后端通信机制、设计与交互、网络和浏览器优化等各方面的知识。</p>
+<p>2这时候可以通过发表技术博客，提交和参与开源项目，参加业界会议。保持技术交流。</p>
+<h3 id="远期规划："><a href="#远期规划：" class="headerlink" title="远期规划："></a>远期规划：</h3><p>这时候的方向其实很难预估。会根据自身情况去调整。</p>
+<p>//</p>
+<p>但是我有一个比较梦幻的希望，关于<strong>前端的教学产品</strong>。</p>
+<p>因为我小时候在湘西(沈从文写的边城)那边的一个小县城长大，经济和师资其实比起大城市真的有很大差距，接触计算机是在本科。而我看很多大城市长大的同学都是在高中初中就接触过这些前沿课程了。</p>
+<p>我希望能在我有一定的技术和社会资源之后，能够推出面向县城无法接触计算机的学生的，类似极客时间、慕课这类的免费的学习数据结构、编程的<strong>前端教学产品</strong>。让县城的孩子也能早早接触这个世界的前沿科技。这个除了网页端还可能需要一个安卓端，因为县城的家长大部分用的都是oppo、vivo手机。</p>
+<p>更宏大的理想就是可以帮助师资力量非常弱的村镇里面的小学生和乡村教师（我老家那种基本就几个村在一个镇上学，老师也是一个人教2、3门课），全镇购置为每个班计算机设备+投影仪，就可以利用互联网课堂学习基础课程。没有生物化学实验室，可以使用可视化技术在web端模拟实验；地理也可以用3D可视化技术帮助理解。</p>
+<p>以上的想法老师您可能觉得比较幼稚，因为这还需要考虑很多课程版权、社会实践等因素。但是这是我作为一个来自少数民族地区学生的一点想法。</p>
+<p>谢谢。</p>
+<h2 id="你理解的-Web-前端未来的发展"><a href="#你理解的-Web-前端未来的发展" class="headerlink" title="你理解的 Web 前端未来的发展"></a>你理解的 Web 前端未来的发展</h2><p>我认为随着 HTML、CSS 等的发展，网页上能做的事情越来越丰富了，包括更酷炫的前端呈现方式、音视频的处理，更趋向于能够做 Native 应用能做的事情了，可能以后 Web 和 Native 的边界会越来越模糊。</p>
+<p>比如说现在的开发中很多都是用 Hybrid APP。比如微信在钱包里面的理财就是网页，但是基础的聊天、朋友圈都是原生（Native) APP。框架是原生的，但是其他的详细内容就是网页封装。</p>
+<h2 id="优势和缺点"><a href="#优势和缺点" class="headerlink" title="优势和缺点"></a>优势和缺点</h2><p>人其实比较难正确认识自己，但是基于一些师长朋友的评价和日常总结，我觉得我的优点是：</p>
+<h3 id="1、可视化背景："><a href="#1、可视化背景：" class="headerlink" title="1、可视化背景："></a>1、可视化背景：</h3><p>虽然我研究的是高维数据可视化，可能初期没有研究交通信息可视化、时序数据可视化的同学的项目更适合于工程。但是现如今很多数据都是高维多元数据，如商品数据、人脸图像数据等。</p>
+<p>而直接使用一些很成熟的方法可视化这些高维数据不一定是最好的，我们或许可以从可视化顶级会议IEEE VIS上面去阅读一些新的方法，来试着更新可视化流程、降维方法和交互手段。</p>
+<h3 id="2、热爱学习新事物："><a href="#2、热爱学习新事物：" class="headerlink" title="2、热爱学习新事物："></a>2、热爱学习新事物：</h3><p>在Coursera上自习Andrew ng的ML，拿了97分；在Java上面写的小游戏、也会在自学安卓、iOS的时候再写一遍；同时自己对iOS的开发很感兴趣，觉得能推出一些对受众有用的产品就会很酷。后期希望学习混合开发APP。</p>
+<h3 id="3、有坚持精神且身体好"><a href="#3、有坚持精神且身体好" class="headerlink" title="3、有坚持精神且身体好"></a>3、有坚持精神且身体好</h3><p>之前因为每次跨栏只有银牌和铜牌，最后气不过就坚持晨跑，最后终于拿下了金牌。同时坚持锻炼也让我的身体素质很好，可以接受高强度的工作。</p>
+<h3 id="4、缺点是："><a href="#4、缺点是：" class="headerlink" title="4、缺点是："></a>4、缺点是：</h3><p>个人爱好有时候比较广泛，如本科时期喜欢爵士舞、话剧、乐器、运动，还喜欢去做学生干部工作，就有一些会影响自己的学习时间，成绩只保持到刚好保研的边缘。但是研究生时候算是改正了一些，只保留了每周去学爵士的兴趣。但是这个缺点我能保证，以后绝对不影响我的工作。</p>
+<p>我是如何面试一位前端工程师：<a href="https://zhuanlan.zhihu.com/p/30487025" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/30487025</a></p>
+<h2 id="Q1-过去的思考和总结"><a href="#Q1-过去的思考和总结" class="headerlink" title="Q1 过去的思考和总结"></a>Q1 过去的思考和总结</h2><h3 id="最有难度的事情：项目一"><a href="#最有难度的事情：项目一" class="headerlink" title="最有难度的事情：项目一"></a>最有难度的事情：项目一</h3><p>自己写论文比跟着导师写难度大多了。基本没两天都会有新的问题出现。然后又要去看论文想方法。</p>
+<h3 id="之前面试的总结"><a href="#之前面试的总结" class="headerlink" title="之前面试的总结"></a>之前面试的总结</h3><p>一面：</p>
+<p>主要是科研项目表达逻辑的不足。</p>
+<p>高维数据可视分析科研项目在没有图表支撑的情况下，是比较难描述清楚的。所以我再次整合了逻辑，从背景、目的、方法以及困难三个方面总结了自己的项目。在二面的时候，项目表述就比较完善了。</p>
+<p>二面：</p>
+<p>理论研究还行，包括高维数据可视分析流程和降维方法，对工业级别项目了解不足，这也是以后我会努力的方向。近期看了18年云溪大会上的企业中台架构，大中台小前台的展示；也翻阅了《阿里巴巴大数据实践》的总览第一章、和日志采集第二章。但是我觉得有的部分还是没那么容易理解。这一点希望能在工作中去实践。</p>
+<p>《大数据之路：阿里巴巴大数据实践》</p>
+<p>三面：</p>
+<p>操作系统调度</p>
+<p>进程通信方式？——几种</p>
+<p>线程</p>
+<p>数据库了解吗？——不了解</p>
+<p>操作系统：B+树</p>
+<p>判断是否为质数</p>
+<h3 id="可视分析流程"><a href="#可视分析流程" class="headerlink" title="可视分析流程"></a>可视分析流程</h3><p>数据转化、可视映射、视图转化</p>
+<p>原数据-&gt;转化后的数据-&gt;可视结构-&gt;视图</p>
+<p>如：我们选择线性投影将30维的原数据降为5维度的转化数据，再使用平行坐标视觉映射转为可视结构，然而数据有相互遮挡，则选择PCP方法视图转化至视图上。最后呈现热力图式的平行坐标。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g16qrifmtjj31ee0lc4az.jpg" alt="image-20190318103214651"></p>
+<h3 id="D3-js源码阅读："><a href="#D3-js源码阅读：" class="headerlink" title="D3.js源码阅读："></a>D3.js源码阅读：</h3><ul>
+<li>把输入的原始数据转化成为标准的D3可接受的数据格式</li>
+<li>根据原始数据定义好x轴函数、y轴函数和定义好作图方式(如d3.line) </li>
+<li>在SVG上面画出x轴y轴、根据原始数据结合x轴及y轴函数作线状图 </li>
+<li>再画出标题等细节的东西</li>
+<li>最后，给已经完成的图形添加<strong>动画效果</strong></li>
+</ul>
+<p>D3力导向图。</p>
+<p>模块1：center.js 设置力导图点阵中心</p>
+<p>虽然每个节点的坐标都是计算得到的，但总有开始状态。开始状态下的坐标设置的是获取的随机数，这个随机数可以根据当前 View 的宽高来限定。</p>
+<p>遍历所有 FNode，给每个 FNode 设置一个随机获取的坐标。遍历所有 FLink，计算每条 FLink 的 sourceNode 和 targetNode 的距离 d，利用 α 值和 FLink 的拉力，计算 sourceNode 和 targetNode 的距离的减少量。</p>
+<p>遍历所有 FNode，使每个节点向 View 中心聚拢。</p>
+<p>模块3：jiggle.js 微小晃动随机数 </p>
+<p>模块4：collide.js 碰撞</p>
+<p><a href="https://segmentfault.com/a/1190000008578391" target="_blank" rel="noopener">https://segmentfault.com/a/1190000008578391</a></p>
+<h2 id="问面试官的问题"><a href="#问面试官的问题" class="headerlink" title="问面试官的问题"></a>问面试官的问题</h2><p>可以了解一下团队对于实习生的培养吗？如果有幸接到offer后，是否可以联系组内前辈去问一下需要学习哪些技能，因为现在距离暑期实习还有一两个月时间，是否可以预备学习一些组内的必备技能？</p>
+<p>您是我一个位BOSS面的面试官，可以了解一下作为高级前端工程师的一些工作的日常吗？之前总听说架构这些词，但是在校园里面确实没有接触过您这样的高级工程师。谢谢！</p>
+<h3 id="位图和矢量图"><a href="#位图和矢量图" class="headerlink" title="位图和矢量图"></a>位图和矢量图</h3><p>1.位图图像(bitmap)<br>亦称为点阵图像或绘制图像，是由称作<strong>像素（图片元素）的单个点组成</strong>的。这些点可以进行不同的排列和染色以构成图样。当放大位图时，可以看见赖以构成整个图像的<strong>无数单个方块</strong>。扩大位图尺寸的效果是<strong>增大单个像素</strong>，从而使线条和形状<strong>显得参差不齐</strong>。然而，如果从稍远的位置观看它，位图图像的颜色和形状又显得是连续的。</p>
+<p>矢量图：矢量图使用<strong>直线和曲线来描述图形</strong>，这些图形的元素是<strong>一些点、线、矩形、多边形、圆和弧线</strong>等等，它们都是<strong>通过数学公式计算</strong>获得的。由于矢量图形<strong>可通过公式计算</strong>获得，所以矢量图形<strong>文件体积一般较小</strong>。矢量图形最大的优点是<strong>无论放大、缩小或旋转</strong>等不会失真；最大的缺点是难以表现<strong>色彩层次丰富的逼真图像效果</strong>。</p>
+<h2 id="数据中台"><a href="#数据中台" class="headerlink" title="数据中台"></a>数据中台</h2><p>阿里中台主要由业务中台和数字中台并肩构成了双中台，并肩扛起了所有前台业务。</p>
+<p>业务中台将后台资源进行抽象包装整合，转化为前台友好的可重用共享的核心能力，实现了后端业务资源到前台易用能力的转化。</p>
+<p>数据中台从后台及业务中台将数据流入，完成海量数据的存储、计算、产品化包装过程，构成企业的核心数据能力，为前台基于数据的定制化创新和业务中台基于数据反馈的持续演进提供了强大支撑。业务中台与数据中台，相辅相成，互相支撑，一起构建起了战场强大的后方炮火群。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g18jmn4hddj30rs0fe0ua.jpg" alt="img"></p>
+<h1 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h1><h3 id="可视化项目，及相关展开"><a href="#可视化项目，及相关展开" class="headerlink" title="可视化项目，及相关展开"></a>可视化项目，及相关展开</h3><h3 id="可视化的流程"><a href="#可视化的流程" class="headerlink" title="可视化的流程"></a>可视化的流程</h3><p>data transformation、visual structure、view transformation + 交互</p>
+<p>如果类别多、数据大有遮挡该如何解决？</p>
+<ol>
+<li><p>data transformation：</p>
+<p>数据采样</p>
+</li>
+<li><p>visual structure：已有方式——散点图、三维散点图、平行坐标。我研究的方式——。</p>
+</li>
+<li><p>view transformation：如果以上方式还是会产生遮挡问题，可以采用一些通道编码，如颜色深浅、透明度、大小——表示该位置的相同类型数据的多少；</p>
+<p>热力图、透明度、汇合</p>
+</li>
+<li><p>交互： </p>
+</li>
+</ol>
+<p>在散点矩阵中使用动画来减轻重叠（Using Animation to Alleviate Overdraw in Multiclass Scatterplot Matrices）</p>
+<h3 id="数据预处理——数据缺失和异常"><a href="#数据预处理——数据缺失和异常" class="headerlink" title="数据预处理——数据缺失和异常"></a>数据预处理——数据缺失和异常</h3><h3 id="缺失值处理："><a href="#缺失值处理：" class="headerlink" title="缺失值处理："></a>缺失值处理：</h3><h4 id="造成数据缺失的原因是多方面的，主要可能有以下几种："><a href="#造成数据缺失的原因是多方面的，主要可能有以下几种：" class="headerlink" title="造成数据缺失的原因是多方面的，主要可能有以下几种："></a>造成<strong>数据缺失的原因</strong>是多方面的，主要可能有以下几种：</h4><ol>
+<li>有些信息暂时无法获取，致使一部分属性值空缺出来。</li>
+<li>有些信息因为一些人为因素而丢失了。</li>
+<li>有些对象的某个或某些属性是不可用的。如一个未婚者的配偶姓名。</li>
+<li>获取这些信息的代价太大，从而未获取数据。</li>
+</ol>
+<h4 id="空值处理的重要性："><a href="#空值处理的重要性：" class="headerlink" title="空值处理的重要性："></a>空值处理的重要性：</h4><p>空值的存在，造成了以下影响：</p>
+<ol>
+<li>系统丢失了大量的有用信息；</li>
+<li>系统的不确定性更加显著，系统中的确定性成分更难把握；</li>
+<li>包含空值的数据会使挖掘过程陷入混乱，导致不可靠的输出。</li>
+</ol>
+<h4 id="空值处理的方法："><a href="#空值处理的方法：" class="headerlink" title="空值处理的方法："></a>空值处理的方法：</h4><h5 id="一、删除元组"><a href="#一、删除元组" class="headerlink" title="一、删除元组"></a>一、删除元组</h5><p>将存在遗漏信息属性值的对象（记录）删除，从而得到一个完备的信息表。这种方法在对象有多个属性缺失值、被删除的含缺失值的对象与信息表中的数据量相比非常小的情况下是非常有效的。然而这种方法丢弃了大量隐藏在这些对象中的信息。在信息表中对象很少的情况下会影响到结果的正确性，可能导致数据发生偏离，从而引出错误的结论。</p>
+<h5 id="二、数据补齐"><a href="#二、数据补齐" class="headerlink" title="二、数据补齐"></a>二、数据补齐</h5><p>这类方法是基于统计学原理用一定的值去填充空值，从而使信息表完备化。数据挖掘中常用的有以下几种补齐方法：</p>
+<ol>
+<li><strong>人工填写</strong><br>这个方法产生数据偏离最小，是填充效果最好的一种。当数据规模很大、空值很多的时候，该方法是不可行的。</li>
+<li><strong>特殊值填充</strong><br>将空值作为一种特殊的属性值来处理，它不同于其他的任何属性值。如所有的空值都用“unknown”填充。这样将形成另一个概念，可能导致严重的数据偏离，一般不使用。</li>
+<li><strong>平均值填充</strong><br>如果空值是<strong>数值属性</strong>，就使用该属性在<strong>其他所有对象的取值的平均值</strong>来填充该缺失的属性值.<br>如果空值是<strong>非数值属性</strong>，就根据统计学中的<strong>众数原理</strong>，用该属性在其他所有对象<strong>出现频率最高的值</strong>来补齐该缺失的属性值。</li>
+<li><strong>热卡填充（就近补齐）</strong><br>对于一个包含空值的对象，热卡填充法在完整数据中找到一个与它最相似的对象，然后用这个相似对象的值来进行填充。不同的问题选用不同的标准来对相似进行判定。</li>
+<li><strong>K最近邻法</strong><br>先根据欧式距离或相关分析来确定距离具有缺失数据样本最近的K个样本，将这K个值加权平均来估计该样本的缺失数据。</li>
+<li><strong>使用所有可能的值填充</strong><br>这种方法是用空缺属性值的所有可能的属性取值来填充，能够得到较好的补齐效果。但是当数据量很大或者遗漏的属性值较多时，其计算的代价很大，可能的测试方案很多。</li>
+<li><strong>回归</strong><br>基于完整的数据集，建立回归方程（模型）。对于包含空值的对象，将已知属性值代入方程来估计未知属性值，以此估计值来进行填充。</li>
+<li><strong>期望值最大化方法（EM）</strong><br>在缺失类型为随机缺失的条件下，假设模型对于完整的样本是正确的，通过观测数据的边际分布可以对未知参数进行极大似然估计。它一个重要前提：适用于大样本。有效样本的数量足够以保证ML估计值是渐近无偏的并服从正态分布。但是这种方法可能会陷入局部极值，收敛速度也不是很快，并且计算很复杂。</li>
+</ol>
+<h5 id="三、不处理——使用深度学习、数据挖掘方式填补"><a href="#三、不处理——使用深度学习、数据挖掘方式填补" class="headerlink" title="三、不处理——使用深度学习、数据挖掘方式填补"></a>三、不处理——使用深度学习、数据挖掘方式填补</h5><p>直接在包含空值的数据上进行数据挖掘。这类方法包括贝叶斯网络和人工神经网络等。</p>
+<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><h5 id="异常值的判别方法："><a href="#异常值的判别方法：" class="headerlink" title="异常值的判别方法："></a>异常值的判别方法：</h5><ol>
+<li>简单统计分析<br>对属性值进行一个描述性的统计（规定范围），从而查看哪些值是不合理的（范围以外的值）。</li>
+<li>3δ原则<br>若数据服从正态分布：根据正态分布的定义可知，距离平均值3δ之外的概率为 P(|x-μ|&gt;3δ) &lt;= 0.003 ，这属于极[小概率事件]，在默认情况下我们可以认定，距离超过平均值3δ的样本是不存在的。因此，当样本距离平均值大于3δ，认为该样本为异常值。 </li>
+<li>使用距离检测多元离群点<br>当数据不服从正态分布时，可以通过远离平均距离多少倍的标准差来判定，多少倍的取值需要根据经验和实际情况来决定。</li>
+<li>可视化结果后的判定</li>
+</ol>
+<h5 id="异常值的处理方法："><a href="#异常值的处理方法：" class="headerlink" title="异常值的处理方法："></a>异常值的处理方法：</h5><ol>
+<li>删除含有异常值的记录</li>
+<li>将异常值视为缺失值，使用缺失值处理方法来处理</li>
+<li>用平均值来修正</li>
+<li>不处理</li>
+</ol>
+<h3 id="经典可视化图标的优缺点"><a href="#经典可视化图标的优缺点" class="headerlink" title="经典可视化图标的优缺点"></a>经典可视化图标的优缺点</h3><p>饼图的缺点</p>
+<p>玫瑰图的缺点，视觉干扰是什么</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g18ipg8lxxj31860gqwkt.jpg" alt="image-20190319232437932"></p>
+<h3 id="场景应用"><a href="#场景应用" class="headerlink" title="场景应用"></a>场景应用</h3><p>解决分类数据可视化中类别过多、数据量过多的遮挡问题。</p>
+<p>数据部分：</p>
+<p>可视化部分：</p>
+<p>交互部分：</p>
+<h3 id="面向对象思维"><a href="#面向对象思维" class="headerlink" title="面向对象思维"></a>面向对象思维</h3><p>绘制折线图和柱状图的代码大部分相似，可以写在一个类中。</p>
+<h3 id="一个平面n个圆有多少个相交的圆"><a href="#一个平面n个圆有多少个相交的圆" class="headerlink" title="一个平面n个圆有多少个相交的圆"></a>一个平面n个圆有多少个相交的圆</h3><p>1 遍历的方法。时间复杂度较高。</p>
+<p>2 对每一个圆计算其变上有多少个交点，交点数除以2就位改圆的相交圆的个数。将所有相交个数加起来除以2(2个圆相交会有一个相交个数，遍历后算了两遍)，结果为一共有多少个相交的圆。</p>
+<h1 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h1><p>t-SNE没回答完整。</p>
+<p>高维数据可视分析研究有哪些？</p>
+<p>子空间聚类？</p>
+<h1 id="常问问题"><a href="#常问问题" class="headerlink" title="常问问题"></a>常问问题</h1><h3 id="Q1：基础知识"><a href="#Q1：基础知识" class="headerlink" title="Q1：基础知识"></a>Q1：基础知识</h3><h3 id="Q2可视化图表："><a href="#Q2可视化图表：" class="headerlink" title="Q2可视化图表："></a>Q2可视化图表：</h3><p>比如在没写过图表的前提下，怎么抽象数据与图形的映射，怎么去组合不同的图表部件。</p>
+<h4 id="要从图表类型的隐喻上进行区分"><a href="#要从图表类型的隐喻上进行区分" class="headerlink" title="要从图表类型的隐喻上进行区分"></a>要从图表类型的隐喻上进行区分</h4><p>饼图表达的是一个<em>整体</em>和<em>局部</em>的关系，也就是一个部分占据整体的多少比例。柱状图和折线图较为接近，通常前者表示不同对象数据的对比，后者更常用作表示同一对象数据在不同（时间）维度上的趋势。</p>
+<p>首先，饼图中的类目不应太多，否则信息很分散，不知道作者想表达什么信息。</p>
+<p>其次，饼图的颜色不要五颜六色，除了用以区分类目之外，颜色还可以传递更多有效信息。比如上图用绿色表示正确，灰色表示错误，是符合一般对颜色的认知的，并且绿色的类目更醒目，第一眼就能关注到；相反，如果用普通的三种颜色表示三个类目，则读者很难一眼从图中解读出有效信息。</p>
+<p>第三，区分出想表明特定意思的类目。比如上图将正确的类目和错误的类目分隔开，读者很容易抓取到关键信息。</p>
+<h4 id="南丁格尔玫瑰图："><a href="#南丁格尔玫瑰图：" class="headerlink" title="南丁格尔玫瑰图："></a>南丁格尔玫瑰图：</h4><p>误导在于，数据的比值为到底是半径比、面积比、还是角度比？</p>
+<p>第一种图将数据映射到半径；第二种图将数据映射到半径和角度；第三将图将数据映射到角度。</p>
+<p>何时使用？</p>
+<h3 id="Q3前端设计："><a href="#Q3前端设计：" class="headerlink" title="Q3前端设计："></a>Q3前端设计：</h3><p>常问的一个校招问题，有一块区域要展示一组数据，但数据需要请求 3 个接口才能计算得到，请问前端是怎么做的，如何优化，前端什么情况下可以放弃合并接口的要求。这个地方至少会考察到异步，本地缓存，延展下会问下并发，竞态，协程等。</p>
+<h1 id="HR面试准备"><a href="#HR面试准备" class="headerlink" title="HR面试准备"></a>HR面试准备</h1><p>1、为什么想加入这家公司？你需要了解下这家公司的文化和氛围。<br> 2、为什么离开上一家公司？钱少，不能实现梦想，还是有哪些不爽的地方。如果是换工作为了实现梦想，那么你的梦想是什么。不爽的地方如果在新公司再遇到怎么处理。<br> 3、你的职业规划是什么？<br> 4、当你遇到瓶颈的时候你怎么办？<br> 5、这些年你每年的成长是什么？怎么能体现你的进步？</p>
+<p>6、谈谈你对阿里的企业文化理解？<br> 7、你的期望薪资？<br> 8、项目中遇到的最大挑战是什么？怎么解决的？<br> 9、最有成就感的事情是？<br> 10、怎么看待加班（你能接受996、997、007吗）？</p>
+<p>11、说说自己性格上的优缺点（描述一下自己的性格）<br> 12、自己觉得自己工作上的短板/优点是什么？<br> 13、可以接受降薪吗？</p>
+<p>作者：阅跑影财者</p>
+<p>链接：<a href="https://www.jianshu.com/p/a1863ef1610f" target="_blank" rel="noopener">https://www.jianshu.com/p/a1863ef1610f</a></p>
+<p>来源：简书</p>
+<p>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/11/数据可视化/阿里天猫超市面试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/11/数据可视化/阿里天猫超市面试/" itemprop="url">阿里天猫超市面试.md</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-11T16:00:57+08:00">
+                2019-02-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面试/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/02/11/数据可视化/阿里天猫超市面试/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/11/数据可视化/阿里天猫超市面试/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/02/11/数据可视化/阿里天猫超市面试/" class="leancloud_visitors" data-flag-title="阿里天猫超市面试.md">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  300
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>2018年11月，阿里巴巴天猫和新零售相关战略调整，成立了「天猫超市事业群」，与「天猫事业群」并驾齐驱，是升级版「大天猫」的一大重要板块。 </p>
+<p>新启航的「天猫超市事业群」，将重回零售本质，致力于创造消费者可感知的价值。新的天猫超市，将超越过往线上的工作方式，融入线下的“新蓝海”， </p>
+<p>强化商品、消费者、线下伙伴、供应链的各项能力，整合原有天猫超市和淘鲜达业务，并和阿里大生态内的大卖场、超市等合作伙伴紧密合作， 推进线上线下一体化的超市新零售模式，共同实现“天下超市”的理想。 </p>
+<p>  附相关PR网址：<br> - 阿里巴巴组织架构调整：天猫升级为“大天猫”_事业群 - 搜狐<br> <a href="http://www.sohu.com/a/277841560_561670" target="_blank" rel="noopener">http://www.sohu.com/a/277841560_561670</a><br> - 天猫超市模式生变：架构一划为三代销、采销并行<br> <a href="https://tech.sina.com.cn/i/2019-01-13/doc-ihqfskcn6611066.shtml" target="_blank" rel="noopener">https://tech.sina.com.cn/i/2019-01-13/doc-ihqfskcn6611066.shtml</a></p>
+<h2 id="三面"><a href="#三面" class="headerlink" title="三面"></a>三面</h2><p>4月22日 晚上</p>
+<h2 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h2><p>react：基于事件 event的，组件通信</p>
+<p>上传图片</p>
+<p>1.如何跨域？</p>
+<h2 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h2><h2 id="部门基本信息"><a href="#部门基本信息" class="headerlink" title="部门基本信息"></a>部门基本信息</h2>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/11/数据可视化/阿里数据中台面试总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/11/数据可视化/阿里数据中台面试总结/" itemprop="url">暑期实习面试 - 阿里数据中台前端可视化总结</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-11T16:00:57+08:00">
+                2019-02-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面试/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/02/11/数据可视化/阿里数据中台面试总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/11/数据可视化/阿里数据中台面试总结/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/02/11/数据可视化/阿里数据中台面试总结/" class="leancloud_visitors" data-flag-title="暑期实习面试 - 阿里数据中台前端可视化总结">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1578,751 +2293,121 @@
       
         
           
-            <h2 id="自由探索项目——面向分类的感知驱动的可视化监督降维方法"><a href="#自由探索项目——面向分类的感知驱动的可视化监督降维方法" class="headerlink" title="自由探索项目——面向分类的感知驱动的可视化监督降维方法"></a>自由探索项目——面向分类的感知驱动的可视化监督降维方法</h2><h3 id="成绩："><a href="#成绩：" class="headerlink" title="成绩："></a>成绩：</h3><p>自由探索项目，预计4月-5月投稿。（负责人）</p>
-<h3 id="目标："><a href="#目标：" class="headerlink" title="目标："></a><strong>目标：</strong></h3><p>分类数据的分析。</p>
-<h3 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h3><p>本文提出了一种感知驱动的线性降维方法，寻求生成具有最大视觉分离程度、最少数量的最优二维投影集合。</p>
-<p>（1）子空间表达：对于类别两两之间利用分离度量求最优分离向量，然后在各个维度上找出在这个度量上能够达到分离度量阈值的范围，各个维度上的范围构成了一个包围盒。</p>
-<p>（2）子空间求交：包围盒如果有交集，则代表它们之间可以用一条向量进行区分。</p>
-<p>我们将包围盒看做点，两个包围盒有交，则在对应的点之间连边，若存在一个完全图，则代表这些包围盒所代表的点对都可以用一条向量进行区分，用最少数量的团对这张图进行覆盖，这些团就对应了最少数量的包围盒集合。</p>
-<p>（3）组合优化：我们取包围盒的中心所对应的向量作为投影的坐标轴，将坐标轴进行组合，得到最少数量的投影集合。 </p>
-<h3 id="困难1："><a href="#困难1：" class="headerlink" title="困难1："></a>困难1：</h3><p>一开始构建单个视图，发现类别多的时候无法构建</p>
-<p><strong>目标函数：</strong>为了最大化非线性目标函数dDSC。<strong>优化方法：</strong>使用模拟退火算法，通过比较随机生成的投影结果的costFuction，找出全局最优值。得到最优的投影结果展示分类数据。</p>
-<p>发现：真实数据中可能存在很多类，如骑车包括：</p>
-<p>困难2：</p>
-<p>方式2：几何的方式优化</p>
-<h4 id="方法：-1"><a href="#方法：-1" class="headerlink" title="方法："></a>方法：</h4><p>要得到一个最优的向量w，步骤如下：</p>
-<h5 id="1）得到使方差很小的Pa、Pb两个子空间"><a href="#1）得到使方差很小的Pa、Pb两个子空间" class="headerlink" title="1）得到使方差很小的Pa、Pb两个子空间"></a>1）得到使方差很小的Pa、Pb两个子空间</h5><p>基本功能已经完成。</p>
-<p>矩阵分解得到将得到两个特征矩阵Pa、Pb（n*k），其k个特征向量均为正交矩阵，则该矩阵为正交矩阵。</p>
-<h5 id="2）Pa、Pb两个子空间求交"><a href="#2）Pa、Pb两个子空间求交" class="headerlink" title="2）Pa、Pb两个子空间求交"></a>2）Pa、Pb两个子空间求交</h5><p>基本功能已经完成。</p>
-<p>解线性方程组得到基础解系{x,y}，Ax为基向量，再将Ax化为模等于1的单位向量。</p>
-<p>得到验证结果，类别A的数据在本空间Va的标准差和在交空间的方差标准差数值接近。</p>
-<p>类别A的data在Va、Vb、AB交空间vec的方差：<br>0.008852595341477247<br>0.011424545768485063<br>0.00896923772901887<br>类别A的data在Va、Vb、AB交空间vec的标准差：<br>0.09504346664830678<br>0.1079708282998712<br>0.09566756711110631</p>
-<p> 数据A投影到Va、Vab中的结果如下：</p>
-<h5 id="3）最大化两个类别中心点的距离的特征向量distVec"><a href="#3）最大化两个类别中心点的距离的特征向量distVec" class="headerlink" title="3）最大化两个类别中心点的距离的特征向量distVec"></a>3）最大化两个类别中心点的距离的特征向量distVec</h5><p>由于方式2为几何的方法，我们得到的该特征项就是两个类别中心的连线 </p>
-<p>v_{dist} = u_a-u_b</p>
-<p>这一步很简单，直接可以得到的为：n*1的特征向量 v_dist</p>
-<p>A、B可视化为图中绿色点，中心点为红色点、distVec则为蓝色线段的方向，我们将其化作单位向量如橙色线段。</p>
-<h5 id="4）将2）中的交空间和3）中的子空间（向量）组合，得到最终的子空间范围-V"><a href="#4）将2）中的交空间和3）中的子空间（向量）组合，得到最终的子空间范围-V" class="headerlink" title="4）将2）中的交空间和3）中的子空间（向量）组合，得到最终的子空间范围 V"></a>4）将2）中的交空间和3）中的子空间（向量）组合，得到最终的子空间范围 V</h5><p>方式1：直接看做两个子空间求交</p>
-<p>对于该方式，大概率会求出空集。</p>
-<p>方式2：线性组合。</p>
-<p>这里提出enegeFuction = distAB- Sa-Sb(A、B的方差)</p>
-<p>最大化enegeFuction，得到参数k。</p>
-<p>得到newV= {vec+k1α1，vec+k2α2，…，vec+knαn}</p>
-<p>纯代数无法得到结果。</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g11j32hh92j31b50u0gxp.jpg" alt="子空间相交"></p>
-<h3 id="D3是Data-Driven-Document的缩写，从字面上理解就是数据驱动文本"><a href="#D3是Data-Driven-Document的缩写，从字面上理解就是数据驱动文本" class="headerlink" title="D3是Data-Driven Document的缩写，从字面上理解就是数据驱动文本"></a>D3是Data-Driven Document的缩写，从字面上理解就是数据驱动文本</h3><h1 id="高维数据中的低维结构的可视探索"><a href="#高维数据中的低维结构的可视探索" class="headerlink" title="高维数据中的低维结构的可视探索"></a>高维数据中的低维结构的可视探索</h1><p>成绩：并推荐可视化顶级刊 TVCG。非学生一作</p>
-<p><strong>问题：</strong>高维数据集中往往含有不同结构的低维结构，当未知数据集中的低维结构与当前的可视化方法的假设不匹配时，可视化结果将难以理解。<strong>解决：</strong>可视分析方法帮助用户有效地识别低维结构及关键特征，为进一步分析提供关键结构信息。<strong>方法：</strong>t-SNE初步提供初始聚类信息，局部切空间-测地距离视图用来发现子空间，2个滚石图拐点为子空间维度，</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g11k6otgvnj30rc0je77a.jpg" alt="image-20190313225653964"></p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g11k9nemw0j30ti0h4n4d.jpg" alt="image-20190313225944793"></p>
-<p>高维多元数据——独立属性、相关数据</p>
-<p>可视分析——维度太高，难以提取可理解的维度关联信息</p>
-<p>高维数据低维结构</p>
-<p>P1——二维S1、一维S2、S3</p>
-<p>P2——</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g11fiug9k8j30rs08qjwb.jpg" alt="image-20190313201534472"></p>
-<p>一、选题意义和研究价值</p>
-<p>分析高维数据集的许多方法都假设数据集包含特定结构，例如聚类位于线性子空间中或位于非线性流形上。这需要反复的实验去验证适当的模型和参数。本文提出了一个探索性的界面，支持识别高维数据集中的低维结构，并有助于选择最优的数据模型和参数配置。我们的关键思想是从潜在的低维结构的邻居图表示中提取一组全局和局部特征描述符，例如点间的测地距离(GD)以及点的局部切空间(LTS)中点间的局部切空间散度(LTSD)。我们提出了一个新的LTSD-GD视图，它通过多维标度分析方法(MDS[6])分别将LTSD和GD映射到x轴和y轴。与保留点之间各种距离的传统降维方法不同，LTSD-GD视图展示了点LTS(x轴)的分布和结构中LTS的变化(x轴和y轴的组合)。我们设计并且实现了一系列可视化工具，用于探索高维数据中的内在结构</p>
-<p>二、国内外研究现状和发展动态</p>
-<p><strong>2.1可视化高维数据</strong></p>
-<p>高维数据可视化引起了广泛关注[18]。包括平行坐标图[14]，散点图矩阵和雷达图[11]等的常规可视化技术被设计去呈现数据的统计，例如维度中的数据分布或两个维度之间的相关性。然而，这些方法基本不可能去揭示潜在的聚类模式和潜在的特征。</p>
-<p>基于DR的投影方法是可视化方法中的重要组成部分。通常，将点投影到二维或三维空间，并且同时保留一定的结构。广泛使用的PCA方法尽力去保留数据的方差。经典的多维标度分析(MDS)[6]，在投影过程中保留了高维空间中数据间的欧几里德距离。这些方法假定点位于单个的低维线性子空间中。如果当点位于非线性流形中，同样也已经提出了几种流形学习方法来检测潜在流形，例如ISOMAP[34]，LLE[24]，LE[4]和LTSA[44]。然而，基于DR的投影结果可能难以理解和解释[31]。首先，这些点被盲目地减少到二维或三维空间，由于维度的限制，这些空间可能不能准确地捕捉到数据间的内在结构[13]。第二，分析者可能缺乏DR方法与内在结构之间是否合适的相关知识[13]。分析者可能对DR模型的理解有限，或者在初始阶段对数据的了解有限。</p>
-<p>在现实世界的高维数据集中，数据点通常位于多个子空间或多个流形中。子空间聚类[40]和流形聚类[8]方法被设计用于检测潜在的多个低维结构。通常的策略是首先采用DR模型，然后有序地可视化检测到的低维结构。VISA[2]系统根据全局视图中的聚类和维度的大小提出了聚类之间的相似性。它还在详细视图中显示了各个聚类的属性。Tatu等人[33]开发了一个可视化界面来探索SURFIN[3]发现的大量子空间。基于相似度函数来探索子空间，其重点在于子空间之间的拓扑和维度重叠。Liu等[19]用谱法提取子空间，并将子空间用可视化技术呈现出来。然而，子空间聚类和流形聚类模型通常强烈依赖于本质结构的假设，例如聚类的数量[7]，聚类的维度[36]和结构之间的是否相交。在不了解本质结构的情况下，很难选择合适的模型。</p>
-<p>在这些可视化方法中，<em>t-SNE</em>[39]对内在结构做了一个温和的假设。在低维嵌入中，它保留了对不同结构(如多个流形)的<em>k</em>-Nearest-Neighbors(<em>k</em>NN)图的统计数据。<em>t-SNE</em>不仅保留了局部结构而且还显示了全局信息[22]，因此我们将其作为高维数据集中内在结构的初始指标之一，并在可视化探索过程中优化它。为了计算效率，在<em>t-SNE</em>中可以采用层次化策略[21]。</p>
-<p><strong>2.2</strong> <strong>探索高维数据</strong></p>
-<p>探索高维数据比自动模型更需要含有交互功能的预处理工具[42]。传统的方法，如平行坐标图，散点图矩阵[12]和各种投影[25]已经得到了很好的研究。</p>
-<p>通常，分析者需要在探索期间以交互方式产生许多视图。为减轻手工负担，Voyager[41]提出自动生成可视化的建议。接下来，出现了大量关于质量测量[5,32]和排名[29]的可视化文献。DimScanner[42]提出构建可视化来发现不同视图之间的信息感知关系。Sarvghad等[27]可视化了维度覆盖以记录探索的历史。为了探索显著的子空间，Yuan等[43]提出了一个矩阵/树结构，以便在探索过程中组织数据和维度的子集。</p>
-<p>为了增强发现潜在结构的能力，自动化的DR模型被集成到探索界面中。因为数据的潜在结构往往是未知的，所以这些方法利用混合模型[23]来匹配潜在的结构。DimStiller[13]提出了用于维度分析和减少组合的自动化DR模型的工作流程。通常，只能选择比较容易理解的模型，如PCA和MDS。当处理包含多个低维结构的数据时，这些模型和工作流程产生可解释的结果是基本不可能的。在本文中，我们试图在构建具体模型之前对其内在结构和特征进行表征。结构的特征和可视化揭示了潜在的低维结构。</p>
-<p>三、主要研究思路、研究内容和在学术方面的创新点</p>
-<p><strong>3.1</strong> <strong>低维结构的表示</strong></p>
-<p>我们将子空间定义为一个聚类低维表示的基础[40]。给定一组线性或仿射子空间的点，子空间可以通过奇异值分解(SVD)或主成分分析(PCA)来计算得出。还有一点需要注意的是数据可以是轴对齐的，也可以是非轴对齐的。</p>
-<p>在一般情况下，点大多位于非线性流形上。我们可以把流形认为是一个“软”和“弯曲”的子空间。d维流形的每一个点都有一个与d维的欧几里得空间同胚的小邻域，在一个流形中，点的局部子空间的方向是逐渐变化的。另一方面，子空间是流形的一般情况。对于位于相同子空间中的聚类，点的局部子空间的方向是相同的。</p>
-<p>受流形学习方法的启发，我们建立了一个邻居图，一个<em>k</em>NN图，用来表示位于潜在流形或子空间中的聚类。这个表示是基于一个局部假设[16]，即每个点都有一个小的邻域，在这个邻域里，每个点都属于同一流形，近似地位于一个低维的仿射子空间中。这意味着即使在全维空间中，每个点的局部子空间也可以从局部领域中获取。给定一个不熟悉的数据集，分析者总是可以从一个统一的表示开始。</p>
-<p>在本文中，我们使用Shared-Nearest-Neighbor (SNN)图[9]，它是一个<em>k</em>NN图的子图，用来表示本质结构。在SNN图中，当且仅当p和q位于彼此的<em>k</em>NN邻域时，两者之间才存在一条边。SNN图形倾向于生成多个分区，这非常适合用于呈现聚类特征。</p>
-<h1 id="三、"><a href="#三、" class="headerlink" title="三、"></a>三、</h1><p>4.5.1  kNN Graph与SNN Graph </p>
-<p>首先我们构建出Shared-NearNeighbors(SNN) Graph，来表示高维数据的内蕴结构。SNN Graph是kNN Graph的子图，他要求两点互为k近邻时，两点之间才存在边；数据存在异常值时，与其他部分相互分隔开。与kNN Graph相比，SNN Graph中心和边界的数据分布得到了增强。接着，我们用节点链接布局SNN Graph。本文提供了两种方式来交互地从SNN Graph中提取内蕴轴：点选和自由绘制曲线。</p>
-<p>4.5.2  点选</p>
-<p>用户可以选择一系列数据点来解释他的点选的趋势。我们根据用户点选的顺序，通过Dijkstra算法得到最短路径，并连接数据点，得到原始路径。当所选点的数量超过两个时，构建的原始路径中可能存在回路。当原始路径中存在回路时，算法将会移除该回路，如图4-5-2。如果在点选列表中相继的两个点处于两个不相连接的图中部分，我们将会寻找两部分中最近的两个点，并添加一条边来连接两个部分。</p>
-<p>随着选定点的增加，解释知识从宽泛到细致。因此，路径中的回路反映了人类知识的不确定性。视觉特征，如聚类，路径趋势和异常值，往往可以作为用户交互的感知线索。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g11ji6gq7dj30cl073aat.jpg" alt="pastedGraphic.png"></p>
-<p>图4-5-2  从原始路径中移除回路（a）点选两点的最短路径（b）选择多个点时，路径不确定性增加（c）原始路径存在回路（d）从路径中移除回路</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/❤️算法 - 0 排序/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/05/❤️算法 - 0 排序/" itemprop="url">算法 - 0 排序</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T13:17:42+08:00">
-                2018-01-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/01/05/❤️算法 - 0 排序/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/❤️算法 - 0 排序/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/01/05/❤️算法 - 0 排序/" class="leancloud_visitors" data-flag-title="算法 - 0 排序">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1.5k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  5
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="O-n-2-排序算法-3"><a href="#O-n-2-排序算法-3" class="headerlink" title="O(n^2)排序算法 3"></a>O(n^2)排序算法 3</h1><ul>
-<li>冒泡排序</li>
-<li>插入排序</li>
-<li>选择排序</li>
+            <h1 id="三面"><a href="#三面" class="headerlink" title="三面"></a>三面</h1><h3 id="数据结构："><a href="#数据结构：" class="headerlink" title="数据结构："></a>数据结构：</h3><p>为什么需要二叉树？</p>
+<p>B+树？</p>
+<p>跳表？</p>
+<h3 id="操作系统："><a href="#操作系统：" class="headerlink" title="操作系统："></a>操作系统：</h3><p>进程通信方式？</p>
+<p>拥塞</p>
+<h3 id="数据库："><a href="#数据库：" class="headerlink" title="数据库："></a>数据库：</h3><p>数据库了解吗？</p>
+<h3 id="算法："><a href="#算法：" class="headerlink" title="算法："></a>算法：</h3><p>找出小于k的所有质数</p>
+<h3 id="可视分析流程"><a href="#可视分析流程" class="headerlink" title="可视分析流程"></a>可视分析流程</h3><p>数据转化、可视映射、视图转化</p>
+<p>原数据-&gt;转化后的数据-&gt;可视结构-&gt;视图</p>
+<p>如：我们选择线性投影将30维的原数据降为5维度的转化数据，再使用平行坐标视觉映射转为可视结构，然而数据有相互遮挡，则选择PCP方法视图转化至视图上。最后呈现热力图式的平行坐标。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g16qrifmtjj31ee0lc4az.jpg" alt="image-20190318103214651"></p>
+<h3 id="D3-js源码阅读："><a href="#D3-js源码阅读：" class="headerlink" title="D3.js源码阅读："></a>D3.js源码阅读：</h3><ul>
+<li>把输入的原始数据转化成为标准的D3可接受的数据格式</li>
+<li>根据原始数据定义好x轴函数、y轴函数和定义好作图方式(如d3.line) </li>
+<li>在SVG上面画出x轴y轴、根据原始数据结合x轴及y轴函数作线状图 </li>
+<li>再画出标题等细节的东西</li>
+<li>最后，给已经完成的图形添加<strong>动画效果</strong></li>
 </ul>
-<p>选择排序不稳定，相同元素可能会变化，因此这三种不选择选择排序。</p>
-<p>代码中，冒泡排序需要 3 个赋值操作，而插入排序只需要 1 个。</p>
-<p>因此三种最好的方法就是：插入排序。</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g10g0wcas2j31mo0u07tq.jpg" alt="image-20190312234718950"></p>
-<h1 id="O-nlogn-排序算法-3"><a href="#O-nlogn-排序算法-3" class="headerlink" title="O(nlogn) 排序算法 3"></a>O(nlogn) 排序算法 3</h1><h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><ul>
-<li><p>方法：利用了分治思想，用递归代码来实现归并排序。先分，再合。</p>
-</li>
-<li><p>时间复杂度： T(n)=Cn+nlog2n。非常稳定，所有情况都是O(nlogn)。</p>
-</li>
-<li>空间复杂度：不是原地排序算法，每次合并操作都需要申请额外的内存空间，但在合并完成之后，临时空间释放。 O(n)。</li>
-<li>处理过程：是由下到上的，先处理子问题，然后再合并。</li>
-</ul>
-<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>方法：利用主元分区，每次分为左边小区，右边大区。直至区内只有一个元素之后，排序完成。</p>
-<p>时间复杂度：分区每次右边都没有元素。就从 O(nlogn) 退化成了 O(n2)。</p>
-<p>处理过程：是由上到下的，先分区，然后再处理子问题。</p>
-<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><h3 id="10-亿个搜索关键词的日志文件，Top-10-最热门的搜索关键词"><a href="#10-亿个搜索关键词的日志文件，Top-10-最热门的搜索关键词" class="headerlink" title="10 亿个搜索关键词的日志文件，Top 10 最热门的搜索关键词"></a>10 亿个搜索关键词的日志文件，Top 10 最热门的搜索关键词</h3><p>用户搜索的关键词，有很多可能都是重复的，散列表先记录次数。</p>
-<p>用堆求 Top K 的方法，建立一个大小为 10 的小顶堆，遍历散列表，依次取出次数，若次数多&gt;顶堆，则删除顶堆。遍历完成后得到top10。</p>
-<p>然而10亿太大了。</p>
-<p>哈希之后，将 10 亿条搜索关键词先通过哈希算法分到10个文件。在进行上述步骤，然后得到10x10个关键字。租后排序得到top10。</p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>10 个接口访问日志文件，每个日志文件大小约 300MB，日志都是按照时间戳从小到大排序的</p>
-<p>将这 10 个较小的日志文件，合并为 1 个日志文件，合并之后也是从小到大排序。</p>
-<p>机器内存只有 1GB，你有什么好的解决思路，能“快速”地将这10 个日志文件合并吗？</p>
-<p>每次从各个文件中取一条数据，在内存中根据数据时间戳构建一个最小堆，然后每次把最小值给写入新文件，同时将最小值来自的那个文件再出来一个数据，加入到最小堆中。这个空间复杂度为常数，但没能很好利用1g内存，而且磁盘单个读取比较慢，所以考虑每次读取一批数据，没了再从磁盘中取，时间复杂度还是一样O(n)。</p>
-<h1 id="线性排序-3"><a href="#线性排序-3" class="headerlink" title="线性排序 3"></a>线性排序 3</h1><h2 id="桶排序（Bucket-sort）"><a href="#桶排序（Bucket-sort）" class="headerlink" title="桶排序（Bucket sort）"></a>桶排序（Bucket sort）</h2><h3 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h3><ul>
-<li>容易划分为m个桶，且天然有序</li>
-<li>分布均匀，若分布不均匀全在一个桶里会退化为log（n/m log(n/m)) = log(n logn)</li>
-<li>外部排序。数据大，内存有限，无法将数据全部加载到内存，存放于外部磁盘中。</li>
-</ul>
-<h3 id="10GB数据，如何按照订单金额排序？"><a href="#10GB数据，如何按照订单金额排序？" class="headerlink" title="10GB数据，如何按照订单金额排序？"></a>10GB数据，如何按照订单金额排序？</h3><ul>
-<li><p>扫描一遍文件，看订单金额所处的数据范围。假设经过扫描之后我们得到，订单金额最小是 1 元，最大是 1…</p>
-</li>
-<li><p>将所有订单根据金额划分到 100 个桶里，第一个桶我们存储金额在 1 元到 1000 元之内，第二个1001-2000，类推。每个桶按照范围命名。</p>
-</li>
-<li>理想状态均匀分布，则划分为100个100M文件。按文件编号，依次将文件放入内存快排，在写入同一个文件。</li>
-<li>若部分文件很大，无法写入内存，继续划分，直到对所有文件都可读入内存为止，再依次快排。</li>
-</ul>
-<h2 id="计数排序（Counting-sort）"><a href="#计数排序（Counting-sort）" class="headerlink" title="计数排序（Counting sort）"></a>计数排序（Counting sort）</h2><h3 id="要求：-1"><a href="#要求：-1" class="headerlink" title="要求："></a>要求：</h3><ul>
-<li>数据量大，数据区间小</li>
-<li>非负整数。若为不符合该条件，则转化即可。</li>
-</ul>
-<h3 id="如何根据年龄给-100-万用户排序？"><a href="#如何根据年龄给-100-万用户排序？" class="headerlink" title="如何根据年龄给 100 万用户排序？"></a>如何根据年龄给 100 万用户排序？</h3><p>年龄的范围最小 1 岁，最大不超过 120 岁；</p>
-<p>遍历这 100 万用户，根据年龄将其划分到这 120 个桶里；</p>
-<p>依次顺序遍历这 120 个桶中的元素。</p>
-<h3 id="高考查分系统，省内50万名考生，分数范围为900-0。"><a href="#高考查分系统，省内50万名考生，分数范围为900-0。" class="headerlink" title="高考查分系统，省内50万名考生，分数范围为900-0。"></a>高考查分系统，省内50万名考生，分数范围为900-0。</h3><p>数据范围小，我们划分为901个桶，桶内为分数相同的学生。</p>
-<p>此时不需要在排序，而是只需要依次输出到数组即可，只需一次扫描操作，时间复杂度O(n)。</p>
-<p>ps. 若考生分数有小数点后一位，则需要所有分数乘10，转为整数，再放进9010个桶内。</p>
-<h2 id="基数排序（Radix-sort）"><a href="#基数排序（Radix-sort）" class="headerlink" title="基数排序（Radix sort）"></a>基数排序（Radix sort）</h2><h3 id="要求：-2"><a href="#要求：-2" class="headerlink" title="要求："></a>要求：</h3><ul>
-<li>数据可以分割出独立的“位”来比较，位之间有递进的关系（高位优先）</li>
-<li>每一位的数据范围不能太大，要可以用线性排序算法来排序</li>
-</ul>
-<h3 id="10万个11位电话号码排序（等长）"><a href="#10万个11位电话号码排序（等长）" class="headerlink" title="10万个11位电话号码排序（等长）"></a>10万个11位电话号码排序（等长）</h3><ul>
-<li>规律：比较两个号码a、b，若前几位a已经大于b，则后面不用看。</li>
-<li>方法：先按照最后一位排序，再按照倒数第二位，以此类推。最后按照第一位来排序。11排序之后，手机号码有序。</li>
-<li>时间复杂度：按照每一位排序，数字只有0-10，可以使用桶排序，时间复杂度可以做到 O(n)。排序的数据有 k 位，时间为O(k*n)。k不大的时候，近似为O(n)。</li>
-</ul>
-<h3 id="排序牛津字典中的20-万个英文单词（非等长1-45）"><a href="#排序牛津字典中的20-万个英文单词（非等长1-45）" class="headerlink" title="排序牛津字典中的20 万个英文单词（非等长1-45）"></a>排序牛津字典中的20 万个英文单词（非等长1-45）</h3><ul>
-<li>解决非等长：把所有的单词补齐到相同长度，位数不够的可以在后面补“0”。根据ASCII 值，所有字母都大于“0”，所以补“0”不会影响排序。</li>
-<li>接着使用基数排序</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/数据结构 - 2 链表/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/05/数据结构 - 2 链表/" itemprop="url">数据结构 - 2 链表</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T13:17:42+08:00">
-                2018-01-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/01/05/数据结构 - 2 链表/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/数据结构 - 2 链表/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/01/05/数据结构 - 2 链表/" class="leancloud_visitors" data-flag-title="数据结构 - 2 链表">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  482
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="LRU-缓存淘汰策略"><a href="#LRU-缓存淘汰策略" class="headerlink" title="LRU 缓存淘汰策略"></a>LRU 缓存淘汰策略</h2><p>内存管理的一种页面置换算法。<em>LRU</em>全称是Least Recently Used,即最近最久未使用的意思，最久未使用的数据，下次被访问的可能最小，我们需要删除它。</p>
-<h3 id="链表实现"><a href="#链表实现" class="headerlink" title="链表实现"></a>链表实现</h3><p>维护一个有序单链表，靠近尾部是最早访问，头部为最新访问。当有新数据被访问，我们从头开始遍历链表：</p>
-<ul>
-<li>若此数据之前已有，从原来的位置删除，再将数据放在头结点；</li>
-<li>若之前没有：缓存未满，直接放在头部；缓存已满，删除尾部数据，将其放在头部。</li>
-</ul>
-<p>时间复杂度：时间复杂度为 O(n)，需要遍历。</p>
-<h3 id="散列表实现"><a href="#散列表实现" class="headerlink" title="散列表实现"></a>散列表实现</h3><p>1.上面所讲的几个散列表和链表组合的例子里，我们都是使用双向链表。如果把双向链表改成单链表，还能否正常工作？为什么呢？<br>2.假设猎聘网有10万名猎头，每个猎头可以通过做任务（比如发布职位）来积累积分，然后通过积分来下载简历。假设你是猎聘网的一名工程师，如何在内存中存储这10万个猎头的ID和积分信息，让它能够支持这样几个操作：<br>1）根据猎头ID查收查找、删除、更新这个猎头的积分信息；<br>2）查找积分在某个区间的猎头ID列表；<br>3）查找按照积分从小到大排名在第x位到第y位之间的猎头ID列表。</p>
-<p>以积分排序构建一个跳表，再以猎头 ID 构建一个散列表。</p>
-<p>1）ID 在散列表中所以可以 O(1) 查找到这个猎头；<br>2）积分以跳表存储，跳表支持区间查询；<br>3）这点根据目前学习的知识暂时无法实现，老师文中也提到了。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/数据结构 - 二分查找/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/05/数据结构 - 二分查找/" itemprop="url">数据结构 -  二分查找</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T13:17:42+08:00">
-                2018-01-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/01/05/数据结构 - 二分查找/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/数据结构 - 二分查找/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/01/05/数据结构 - 二分查找/" class="leancloud_visitors" data-flag-title="数据结构 -  二分查找">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  327
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>针对有序数据集合的查找算法</p>
-<p>1000 万个整数数据，每个数据占 8 个字节，如何设计数据结构和算法，快速判断某个整数是否出现在这 1000 万数据中？</p>
-<p>该功能不要占用太多的内存空间，最多不要超过 100MB。</p>
-<h3 id="二分思想"><a href="#二分思想" class="headerlink" title="二分思想"></a>二分思想</h3><p>O(logn) 惊人的查找速度</p>
-<h3 id="二分查找的递归与非递归实现"><a href="#二分查找的递归与非递归实现" class="headerlink" title="二分查找的递归与非递归实现"></a>二分查找的递归与非递归实现</h3><p>最简单的情况就是有序数组中不存在重复元素。</p>
+<p>D3力导向图。</p>
+<p>模块1：center.js 设置力导图点阵中心</p>
+<p>虽然每个节点的坐标都是计算得到的，但总有开始状态。开始状态下的坐标设置的是获取的随机数，这个随机数可以根据当前 View 的宽高来限定。</p>
+<p>遍历所有 FNode，给每个 FNode 设置一个随机获取的坐标。遍历所有 FLink，计算每条 FLink 的 sourceNode 和 targetNode 的距离 d，利用 α 值和 FLink 的拉力，计算 sourceNode 和 targetNode 的距离的减少量。</p>
+<p>遍历所有 FNode，使每个节点向 View 中心聚拢。</p>
+<p>模块3：jiggle.js 微小晃动随机数 </p>
+<p>模块4：collide.js 碰撞</p>
+<p><a href="https://segmentfault.com/a/1190000008578391" target="_blank" rel="noopener">https://segmentfault.com/a/1190000008578391</a></p>
+<h2 id="问面试官的问题"><a href="#问面试官的问题" class="headerlink" title="问面试官的问题"></a>问面试官的问题</h2><p>可以了解一下团队对于实习生的培养吗？如果有幸接到offer后，是否可以联系组内前辈去问一下需要学习哪些技能，因为现在距离暑期实习还有一两个月时间，是否可以预备学习一些组内的必备技能？</p>
+<p>您是我一个位BOSS面的面试官，可以了解一下作为高级前端工程师的一些工作的日常吗？之前总听说架构这些词，但是在校园里面确实没有接触过您这样的高级工程师。谢谢！</p>
+<h3 id="位图和矢量图"><a href="#位图和矢量图" class="headerlink" title="位图和矢量图"></a>位图和矢量图</h3><p>1.位图图像(bitmap)<br>亦称为点阵图像或绘制图像，是由称作<strong>像素（图片元素）的单个点组成</strong>的。这些点可以进行不同的排列和染色以构成图样。当放大位图时，可以看见赖以构成整个图像的<strong>无数单个方块</strong>。扩大位图尺寸的效果是<strong>增大单个像素</strong>，从而使线条和形状<strong>显得参差不齐</strong>。然而，如果从稍远的位置观看它，位图图像的颜色和形状又显得是连续的。</p>
+<p>矢量图：矢量图使用<strong>直线和曲线来描述图形</strong>，这些图形的元素是<strong>一些点、线、矩形、多边形、圆和弧线</strong>等等，它们都是<strong>通过数学公式计算</strong>获得的。由于矢量图形<strong>可通过公式计算</strong>获得，所以矢量图形<strong>文件体积一般较小</strong>。矢量图形最大的优点是<strong>无论放大、缩小或旋转</strong>等不会失真；最大的缺点是难以表现<strong>色彩层次丰富的逼真图像效果</strong>。</p>
+<h2 id="数据中台"><a href="#数据中台" class="headerlink" title="数据中台"></a>数据中台</h2><p>阿里中台主要由业务中台和数字中台并肩构成了双中台，并肩扛起了所有前台业务。</p>
+<p>业务中台将后台资源进行抽象包装整合，转化为前台友好的可重用共享的核心能力，实现了后端业务资源到前台易用能力的转化。</p>
+<p>数据中台从后台及业务中台将数据流入，完成海量数据的存储、计算、产品化包装过程，构成企业的核心数据能力，为前台基于数据的定制化创新和业务中台基于数据反馈的持续演进提供了强大支撑。业务中台与数据中台，相辅相成，互相支撑，一起构建起了战场强大的后方炮火群。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g18jmn4hddj30rs0fe0ua.jpg" alt="img"></p>
+<h1 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h1><h3 id="可视化项目，及相关展开"><a href="#可视化项目，及相关展开" class="headerlink" title="可视化项目，及相关展开"></a>可视化项目，及相关展开</h3><h3 id="可视化的流程"><a href="#可视化的流程" class="headerlink" title="可视化的流程"></a>可视化的流程</h3><p>data transformation、visual structure、view transformation + 交互</p>
+<p>如果类别多、数据大有遮挡该如何解决？</p>
 <ol>
-<li><p>循环条件：low&lt;=high</p>
+<li><p>data transformation：</p>
+<p>数据采样</p>
 </li>
-<li><p>mid取值：</p>
-<p>low 和 high 比较大的话，mid=(low+high)/2和可能会溢出。</p>
-<p>改进方式1为，mid=low+(high-low)/2</p>
-<p>改进方式2为，除以 2 操作转化成位运算 mid = low+((high-low)&gt;&gt;1)</p>
+<li><p>visual structure：已有方式——散点图、三维散点图、平行坐标。我研究的方式——。</p>
 </li>
-<li><p>low和high更新</p>
-<p>low=mid+1，high=mid-1</p>
+<li><p>view transformation：如果以上方式还是会产生遮挡问题，可以采用一些通道编码，如颜色深浅、透明度、大小——表示该位置的相同类型数据的多少；</p>
+<p>热力图、透明度、汇合</p>
+</li>
+<li><p>交互：</p>
 </li>
 </ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 循环二分查找</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">search</span><span class="params">(arr, n, value)</span>:</span></span><br><span class="line">    low = <span class="number">0</span></span><br><span class="line">    high = n - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> low &lt;= high:</span><br><span class="line">        mid = int((high + low) / <span class="number">2</span>)</span><br><span class="line">        <span class="keyword">if</span> arr[mid] == value:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> arr[mid] &lt; value:</span><br><span class="line">            low = mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            high = mid - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 递归二分查找</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Binarysearch</span><span class="params">(arr, low, high, value)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> low &gt; high:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">    <span class="comment"># 位操作，防止溢出</span></span><br><span class="line">    mid = low + ((high - low) &gt;&gt; <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">if</span> arr[mid] == value:</span><br><span class="line">        <span class="keyword">return</span> mid</span><br><span class="line">    <span class="keyword">elif</span> arr[mid] &lt; value:</span><br><span class="line">        <span class="keyword">return</span> Binarysearch(arr, mid + <span class="number">1</span>, high, value)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> Binarysearch(arr, low, mid - <span class="number">1</span>, value)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line">n = len(a)</span><br><span class="line">value = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(search(a, n, value))</span><br><span class="line">print(Binarysearch(a, <span class="number">0</span>, n - <span class="number">1</span>, value))</span><br></pre></td></tr></table></figure>
+<p>在散点矩阵中使用动画来减轻重叠（Using Animation to Alleviate Overdraw in Multiclass Scatterplot Matrices）</p>
+<h3 id="数据预处理——数据缺失和异常"><a href="#数据预处理——数据缺失和异常" class="headerlink" title="数据预处理——数据缺失和异常"></a>数据预处理——数据缺失和异常</h3><h3 id="缺失值处理："><a href="#缺失值处理：" class="headerlink" title="缺失值处理："></a>缺失值处理：</h3><h4 id="造成数据缺失的原因是多方面的，主要可能有以下几种："><a href="#造成数据缺失的原因是多方面的，主要可能有以下几种：" class="headerlink" title="造成数据缺失的原因是多方面的，主要可能有以下几种："></a>造成<strong>数据缺失的原因</strong>是多方面的，主要可能有以下几种：</h4><ol>
+<li>有些信息暂时无法获取，致使一部分属性值空缺出来。</li>
+<li>有些信息因为一些人为因素而丢失了。</li>
+<li>有些对象的某个或某些属性是不可用的。如一个未婚者的配偶姓名。</li>
+<li>获取这些信息的代价太大，从而未获取数据。</li>
+</ol>
+<h4 id="空值处理的重要性："><a href="#空值处理的重要性：" class="headerlink" title="空值处理的重要性："></a>空值处理的重要性：</h4><p>空值的存在，造成了以下影响：</p>
+<ol>
+<li>系统丢失了大量的有用信息；</li>
+<li>系统的不确定性更加显著，系统中的确定性成分更难把握；</li>
+<li>包含空值的数据会使挖掘过程陷入混乱，导致不可靠的输出。</li>
+</ol>
+<h4 id="空值处理的方法："><a href="#空值处理的方法：" class="headerlink" title="空值处理的方法："></a>空值处理的方法：</h4><h5 id="一、删除元组"><a href="#一、删除元组" class="headerlink" title="一、删除元组"></a>一、删除元组</h5><p>将存在遗漏信息属性值的对象（记录）删除，从而得到一个完备的信息表。这种方法在对象有多个属性缺失值、被删除的含缺失值的对象与信息表中的数据量相比非常小的情况下是非常有效的。然而这种方法丢弃了大量隐藏在这些对象中的信息。在信息表中对象很少的情况下会影响到结果的正确性，可能导致数据发生偏离，从而引出错误的结论。</p>
+<h5 id="二、数据补齐"><a href="#二、数据补齐" class="headerlink" title="二、数据补齐"></a>二、数据补齐</h5><p>这类方法是基于统计学原理用一定的值去填充空值，从而使信息表完备化。数据挖掘中常用的有以下几种补齐方法：</p>
+<ol>
+<li><strong>人工填写</strong><br>这个方法产生数据偏离最小，是填充效果最好的一种。当数据规模很大、空值很多的时候，该方法是不可行的。</li>
+<li><strong>特殊值填充</strong><br>将空值作为一种特殊的属性值来处理，它不同于其他的任何属性值。如所有的空值都用“unknown”填充。这样将形成另一个概念，可能导致严重的数据偏离，一般不使用。</li>
+<li><strong>平均值填充</strong><br>如果空值是<strong>数值属性</strong>，就使用该属性在<strong>其他所有对象的取值的平均值</strong>来填充该缺失的属性值.<br>如果空值是<strong>非数值属性</strong>，就根据统计学中的<strong>众数原理</strong>，用该属性在其他所有对象<strong>出现频率最高的值</strong>来补齐该缺失的属性值。</li>
+<li><strong>热卡填充（就近补齐）</strong><br>对于一个包含空值的对象，热卡填充法在完整数据中找到一个与它最相似的对象，然后用这个相似对象的值来进行填充。不同的问题选用不同的标准来对相似进行判定。</li>
+<li><strong>K最近邻法</strong><br>先根据欧式距离或相关分析来确定距离具有缺失数据样本最近的K个样本，将这K个值加权平均来估计该样本的缺失数据。</li>
+<li><strong>使用所有可能的值填充</strong><br>这种方法是用空缺属性值的所有可能的属性取值来填充，能够得到较好的补齐效果。但是当数据量很大或者遗漏的属性值较多时，其计算的代价很大，可能的测试方案很多。</li>
+<li><strong>回归</strong><br>基于完整的数据集，建立回归方程（模型）。对于包含空值的对象，将已知属性值代入方程来估计未知属性值，以此估计值来进行填充。</li>
+<li><strong>期望值最大化方法（EM）</strong><br>在缺失类型为随机缺失的条件下，假设模型对于完整的样本是正确的，通过观测数据的边际分布可以对未知参数进行极大似然估计。它一个重要前提：适用于大样本。有效样本的数量足够以保证ML估计值是渐近无偏的并服从正态分布。但是这种方法可能会陷入局部极值，收敛速度也不是很快，并且计算很复杂。</li>
+</ol>
+<h5 id="三、不处理——使用深度学习、数据挖掘方式填补"><a href="#三、不处理——使用深度学习、数据挖掘方式填补" class="headerlink" title="三、不处理——使用深度学习、数据挖掘方式填补"></a>三、不处理——使用深度学习、数据挖掘方式填补</h5><p>直接在包含空值的数据上进行数据挖掘。这类方法包括贝叶斯网络和人工神经网络等。</p>
+<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><h5 id="异常值的判别方法："><a href="#异常值的判别方法：" class="headerlink" title="异常值的判别方法："></a>异常值的判别方法：</h5><ol>
+<li>简单统计分析<br>对属性值进行一个描述性的统计（规定范围），从而查看哪些值是不合理的（范围以外的值）。</li>
+<li>3δ原则<br>若数据服从正态分布：根据正态分布的定义可知，距离平均值3δ之外的概率为 P(|x-μ|&gt;3δ) &lt;= 0.003 ，这属于极[小概率事件]，在默认情况下我们可以认定，距离超过平均值3δ的样本是不存在的。因此，当样本距离平均值大于3δ，认为该样本为异常值。 </li>
+<li>使用距离检测多元离群点<br>当数据不服从正态分布时，可以通过远离平均距离多少倍的标准差来判定，多少倍的取值需要根据经验和实际情况来决定。</li>
+<li>可视化结果后的判定</li>
+</ol>
+<h5 id="异常值的处理方法："><a href="#异常值的处理方法：" class="headerlink" title="异常值的处理方法："></a>异常值的处理方法：</h5><ol>
+<li>删除含有异常值的记录</li>
+<li>将异常值视为缺失值，使用缺失值处理方法来处理</li>
+<li>用平均值来修正</li>
+<li>不处理</li>
+</ol>
+<h3 id="经典可视化图标的优缺点"><a href="#经典可视化图标的优缺点" class="headerlink" title="经典可视化图标的优缺点"></a>经典可视化图标的优缺点</h3><p>饼图的缺点</p>
+<p>玫瑰图的缺点，视觉干扰是什么</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g18ipg8lxxj31860gqwkt.jpg" alt="image-20190319232437932"></p>
+<h3 id="场景应用"><a href="#场景应用" class="headerlink" title="场景应用"></a>场景应用</h3><p>解决分类数据可视化中类别过多、数据量过多的遮挡问题。</p>
+<p>数据部分：</p>
+<p>可视化部分：</p>
+<p>交互部分：</p>
+<h3 id="面向对象思维"><a href="#面向对象思维" class="headerlink" title="面向对象思维"></a>面向对象思维</h3><p>绘制折线图和柱状图的代码大部分相似，可以写在一个类中。</p>
+<h3 id="一个平面n个圆有多少个相交的圆"><a href="#一个平面n个圆有多少个相交的圆" class="headerlink" title="一个平面n个圆有多少个相交的圆"></a>一个平面n个圆有多少个相交的圆</h3><p>1 遍历的方法。时间复杂度较高。</p>
+<p>2 对每一个圆计算其变上有多少个交点，交点数除以2就位改圆的相交圆的个数。将所有相交个数加起来除以2(2个圆相交会有一个相交个数，遍历后算了两遍)，结果为一共有多少个相交的圆。</p>
+<h1 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h1><p>t-SNE没回答完整。</p>
+<p>高维数据可视分析研究有哪些？</p>
+<p>子空间聚类？</p>
+<h1 id="常问问题"><a href="#常问问题" class="headerlink" title="常问问题"></a>常问问题</h1><h3 id="Q1：基础知识"><a href="#Q1：基础知识" class="headerlink" title="Q1：基础知识"></a>Q1：基础知识</h3><h3 id="Q2可视化图表："><a href="#Q2可视化图表：" class="headerlink" title="Q2可视化图表："></a>Q2可视化图表：</h3><p>比如在没写过图表的前提下，怎么抽象数据与图形的映射，怎么去组合不同的图表部件。</p>
+<h4 id="要从图表类型的隐喻上进行区分"><a href="#要从图表类型的隐喻上进行区分" class="headerlink" title="要从图表类型的隐喻上进行区分"></a>要从图表类型的隐喻上进行区分</h4><p>饼图表达的是一个<em>整体</em>和<em>局部</em>的关系，也就是一个部分占据整体的多少比例。柱状图和折线图较为接近，通常前者表示不同对象数据的对比，后者更常用作表示同一对象数据在不同（时间）维度上的趋势。</p>
+<p>首先，饼图中的类目不应太多，否则信息很分散，不知道作者想表达什么信息。</p>
+<p>其次，饼图的颜色不要五颜六色，除了用以区分类目之外，颜色还可以传递更多有效信息。比如上图用绿色表示正确，灰色表示错误，是符合一般对颜色的认知的，并且绿色的类目更醒目，第一眼就能关注到；相反，如果用普通的三种颜色表示三个类目，则读者很难一眼从图中解读出有效信息。</p>
+<p>第三，区分出想表明特定意思的类目。比如上图将正确的类目和错误的类目分隔开，读者很容易抓取到关键信息。</p>
+<h4 id="南丁格尔玫瑰图："><a href="#南丁格尔玫瑰图：" class="headerlink" title="南丁格尔玫瑰图："></a>南丁格尔玫瑰图：</h4><p>误导在于，数据的比值为到底是半径比、面积比、还是角度比？</p>
+<p>第一种图将数据映射到半径；第二种图将数据映射到半径和角度；第三将图将数据映射到角度。</p>
+<p>何时使用？</p>
+<h3 id="Q3前端设计："><a href="#Q3前端设计：" class="headerlink" title="Q3前端设计："></a>Q3前端设计：</h3><p>常问的一个校招问题，有一块区域要展示一组数据，但数据需要请求 3 个接口才能计算得到，请问前端是怎么做的，如何优化，前端什么情况下可以放弃合并接口的要求。这个地方至少会考察到异步，本地缓存，延展下会问下并发，竞态，协程等。</p>
+<h1 id="HR面试准备"><a href="#HR面试准备" class="headerlink" title="HR面试准备"></a>HR面试准备</h1><p>1、为什么想加入这家公司？你需要了解下这家公司的文化和氛围。<br> 2、为什么离开上一家公司？钱少，不能实现梦想，还是有哪些不爽的地方。如果是换工作为了实现梦想，那么你的梦想是什么。不爽的地方如果在新公司再遇到怎么处理。<br> 3、你的职业规划是什么？<br> 4、当你遇到瓶颈的时候你怎么办？<br> 5、这些年你每年的成长是什么？怎么能体现你的进步？</p>
+<p>6、谈谈你对阿里的企业文化理解？<br> 7、你的期望薪资？<br> 8、项目中遇到的最大挑战是什么？怎么解决的？<br> 9、最有成就感的事情是？<br> 10、怎么看待加班（你能接受996、997、007吗）？</p>
+<p>11、说说自己性格上的优缺点（描述一下自己的性格）<br> 12、自己觉得自己工作上的短板/优点是什么？<br> 13、可以接受降薪吗？</p>
+<p>作者：阅跑影财者</p>
+<p>链接：<a href="https://www.jianshu.com/p/a1863ef1610f" target="_blank" rel="noopener">https://www.jianshu.com/p/a1863ef1610f</a></p>
+<p>来源：简书</p>
+<p>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。</p>
 
           
         
@@ -2371,7 +2456,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/数据结构 -  2 堆栈/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/19/存档/简历 - 简历要点/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -2390,7 +2475,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/05/数据结构 -  2 堆栈/" itemprop="url">数据结构 -  数组</a></h1>
+                <a class="post-title-link" href="/2019/01/19/存档/简历 - 简历要点/" itemprop="url">简历 - 简历要点</a></h1>
         
 
         <div class="post-meta">
@@ -2404,8 +2489,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T13:17:42+08:00">
-                2018-01-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-19T16:00:57+08:00">
+                2019-01-19
               </time>
             
 
@@ -2427,8 +2512,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
+                  <a href="/categories/简历/" itemprop="url" rel="index">
+                    <span itemprop="name">简历</span>
                   </a>
                 </span>
 
@@ -2445,8 +2530,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/01/05/数据结构 -  2 堆栈/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/数据结构 -  2 堆栈/" itemprop="commentCount"></span>
+                <a href="/2019/01/19/存档/简历 - 简历要点/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/19/存档/简历 - 简历要点/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -2454,7 +2539,7 @@
 
           
           
-             <span id="/2018/01/05/数据结构 -  2 堆栈/" class="leancloud_visitors" data-flag-title="数据结构 -  数组">
+             <span id="/2019/01/19/存档/简历 - 简历要点/" class="leancloud_visitors" data-flag-title="简历 - 简历要点">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -2479,7 +2564,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  225
+                  812
                 </span>
               
 
@@ -2495,7 +2580,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -2518,12 +2603,19 @@
       
         
           
-            <h1 id="08-栈：如何实现浏览器的前进和后退功能？"><a href="#08-栈：如何实现浏览器的前进和后退功能？" class="headerlink" title="08 | 栈：如何实现浏览器的前进和后退功能？"></a>08 | 栈：如何实现浏览器的前进和后退功能？</h1><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g1e825e40tj30lc05iwg5.jpg" alt="image-20190324214941336"></p>
-<p>abc顺序浏览页面，回退返回a页面，前进返回b页面。</p>
-<p>若此时在进入新的页面d，则无法再回到页面c，需要清空第二个栈。</p>
-<p>ps.内存中的堆栈和数据结构堆栈不是一个概念，可以说内存中的堆栈是真实存在的物理区，数据结构中的堆栈是抽象的数据存储结构。</p>
-<h1 id="09-队列：队列在线程池等有限资源池中的应用"><a href="#09-队列：队列在线程池等有限资源池中的应用" class="headerlink" title="09 | 队列：队列在线程池等有限资源池中的应用"></a>09 | 队列：队列在线程池等有限资源池中的应用</h1><p>线程池没有空闲线程时，新的任务请求线程资源时，线程池该如何处理？</p>
-<p>第一种是非阻塞的处理方式，直接拒绝任务请求；另一种是阻塞的处理方式，将请求排队，等到有空闲线程时，取出排队的请求继续处理。</p>
+            <h2 id="简历命名"><a href="#简历命名" class="headerlink" title="简历命名"></a>简历命名</h2><p>除了姓名是一定要有的，最好还有这几个信息：岗位方向、学校、几几届（不是几几级），后两个是针对校招简历</p>
+<h2 id="排版"><a href="#排版" class="headerlink" title="排版"></a>排版</h2><p>排版是简历给面试官的第一印象，正所谓人靠衣装……但是排版其实是需要审美的，有人说那我不会穿衣打扮怎么办，不会打扮不要紧，但是要会打理，可以不会搭配，但是需要打理得干净、整洁、大方，不能给人邋遢的感觉，简历也是这个道理</p>
+<p>第一是行间距，不知道大家有没有看过一些简历字迹是挤在一起一坨一坨的，这种情况下，稍稍加大一点行间距，就可以美观很多，单倍行距太小了，1.5倍太宽，一页纸写不下多少东西，比较合适的参考值是1.2和1.25倍</p>
+<p>第三是字体，字体可以通篇一致（指中文一致，英文数字一致，并不是中英文都一致），也可以根据分级目录选字体，字体颜色大小粗细都可以根据审美自行调整，但核心还是要整洁大方</p>
+<p>第四是标点，尤其注意列项的时候，切忌有的加标点有的没加，还要注意半角全角等</p>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><h3 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h3><p>个人信息里面，三项必填的，姓名、电话、邮箱，几项选填的，性别、年龄、学历、所在地、政治面貌等，有些没必要填的，学校专业班级，学校专业可以放在教育经历那一栏，还有，如果有技术博客和GitHub，建议都写上</p>
+<h3 id="实习工作经历、项目经验"><a href="#实习工作经历、项目经验" class="headerlink" title="实习工作经历、项目经验"></a>实习工作经历、项目经验</h3><p>除了公司和时间，重要的是做的是啥，项目经验也是一样，做了啥，才是整个简历面试官想看的主要部分，个人觉得这块可以尝试这么去写，先是简单介绍整体项目，再说一说用到的技术栈，再是自己在项目中的角色，承担的部分，也可以把遇到的最大的挑战、难点写上去，前提是你得想好应对政策，面试的一大套路是让面试官往你铺设的道上走</p>
+<p>如果你做的项目很多，挑最熟悉的写，难度最大的，收获成长最多的，这些你有的讲</p>
+<p>一般挑两到三个细写就可以了</p>
+<h3 id="基本技能"><a href="#基本技能" class="headerlink" title="基本技能"></a>基本技能</h3><p>这个常规写就好，不要太夸张，也不要太笼统，一句熟悉C、C++、Java，就没有展开了，可以稍微具体一点</p>
+<h3 id="获奖经历、科研成果"><a href="#获奖经历、科研成果" class="headerlink" title="获奖经历、科研成果"></a>获奖经历、科研成果</h3><p>挑重点写，获奖经历最好写含金量比较大的，小规模的比赛其实没必要写，奖学金的话可以写国奖，校级院级的个人觉得也没什么必要，有论文专利之类要写上</p>
+<h3 id="自我评价"><a href="#自我评价" class="headerlink" title="自我评价"></a>自我评价</h3><p>这块其实是最虚的东西，写得好与坏差距挺大的，但基本套话比较多，所以自己衡量</p>
+<p>自我评价真的很虚，写得好和坏差距挺大的，如果你觉得写得好的，往上放，这是亮点</p>
 
           
         
@@ -2563,7 +2655,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2611,7 +2703,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">66</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2622,7 +2714,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2633,7 +2725,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2707,7 +2799,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">49.5k</span>
+    <span title="Site words total count">74.7k</span>
   
 </div>
 

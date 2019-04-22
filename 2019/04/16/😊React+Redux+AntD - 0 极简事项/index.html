@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/saturn_128.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/saturn_32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/saturn_16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Swift,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="项目介绍阿里交叉面的面试官介绍了技术框架React+Redux+AntD，使用新技术把自己的iOS极简事项改写为前端版本。  ###  项目优化其实项目本身比较简单，我自己就从优化的方面去进行了思考。 1 React本身的性能优化方法： 使用虚拟DOM。减少生成真实DOM时间，且DOM对象比对加快。 虚拟DOM的比对。同层比对+使用key值比对，提升虚拟DOM比对速度 react16，setSta">
+<meta name="keywords" content="Swift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React+Redux+AntD - 0 极简事项.md">
+<meta property="og:url" content="http://yoursite.com/2019/04/16/😊React+Redux+AntD - 0 极简事项/index.html">
+<meta property="og:site_name" content="IRIS&#39;s BLOG">
+<meta property="og:description" content="项目介绍阿里交叉面的面试官介绍了技术框架React+Redux+AntD，使用新技术把自己的iOS极简事项改写为前端版本。  ###  项目优化其实项目本身比较简单，我自己就从优化的方面去进行了思考。 1 React本身的性能优化方法： 使用虚拟DOM。减少生成真实DOM时间，且DOM对象比对加快。 虚拟DOM的比对。同层比对+使用key值比对，提升虚拟DOM比对速度 react16，setSta">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/Library/Application%20Support/typora-user-images/image-20190417170435185.png">
+<meta property="og:updated_time" content="2019-04-21T12:04:33.002Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React+Redux+AntD - 0 极简事项.md">
+<meta name="twitter:description" content="项目介绍阿里交叉面的面试官介绍了技术框架React+Redux+AntD，使用新技术把自己的iOS极简事项改写为前端版本。  ###  项目优化其实项目本身比较简单，我自己就从优化的方面去进行了思考。 1 React本身的性能优化方法： 使用虚拟DOM。减少生成真实DOM时间，且DOM对象比对加快。 虚拟DOM的比对。同层比对+使用key值比对，提升虚拟DOM比对速度 react16，setSta">
+<meta name="twitter:image" content="http://yoursite.com/2019/Library/Application%20Support/typora-user-images/image-20190417170435185.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/04/16/😊React+Redux+AntD - 0 极简事项/">
+
+
+
+
+
+  <title>React+Redux+AntD - 0 极简事项.md | IRIS's BLOG</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">IRIS's BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">王圆圆的每日报告</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/16/😊React+Redux+AntD - 0 极简事项/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">React+Redux+AntD - 0 极简事项.md</h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-16T20:19:57+08:00">
+                2019-04-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/APP/" itemprop="url" rel="index">
+                    <span itemprop="name">APP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/16/😊React+Redux+AntD - 0 极简事项/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/16/😊React+Redux+AntD - 0 极简事项/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/04/16/😊React+Redux+AntD - 0 极简事项/" class="leancloud_visitors" data-flag-title="React+Redux+AntD - 0 极简事项.md">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.6k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p>阿里交叉面的面试官介绍了技术框架React+Redux+AntD，使用新技术把自己的iOS极简事项改写为前端版本。</p>
+<p><img src="../../../Library/Application Support/typora-user-images/image-20190417170435185.png" alt="image-20190417170435185"></p>
+<p>### </p>
+<h3 id="项目优化"><a href="#项目优化" class="headerlink" title="项目优化"></a>项目优化</h3><p>其实项目本身比较简单，我自己就从优化的方面去进行了思考。</p>
+<h3 id="1-React本身的性能优化方法："><a href="#1-React本身的性能优化方法：" class="headerlink" title="1 React本身的性能优化方法："></a>1 React本身的性能优化方法：</h3><ul>
+<li>使用虚拟DOM。减少生成真实DOM时间，且DOM对象比对加快。</li>
+<li>虚拟DOM的比对。同层比对+使用key值比对，提升虚拟DOM比对速度</li>
+<li>react16，setState性能提升机制，使用异步函数：多次数据改变结合成一次来做，降低虚拟DOM频率</li>
+</ul>
+<h3 id="2-性能优化："><a href="#2-性能优化：" class="headerlink" title="2 性能优化："></a>2 性能优化：</h3><h4 id="渲染优化："><a href="#渲染优化：" class="headerlink" title="渲染优化："></a>渲染优化：</h4><ul>
+<li>1 作用域修改放在constructor构造函数内，保证作用域绑定操作只执行一次 + 避免子组件的无谓渲染。</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.handleClick = <span class="keyword">this</span>.handleClick.bind(<span class="keyword">this</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>2 借助生命周期函数：shouldComponentUpdate，提高react组件性能，避免无谓的组件render渲染。</li>
+</ul>
+<h4 id="异步优化："><a href="#异步优化：" class="headerlink" title="异步优化："></a>异步优化：</h4><ul>
+<li><p>3 发送<strong>ajax请求，放在componentDidMount</strong></p>
+<ul>
+<li>原因：ajax只需要请求1次，需要在渲染前获取数据。场景：使用ajax异步请求的方式，从我的一个接口上，请求一个远程的todolist数据，将远程数据加载到本地，渲染到页面上。</li>
+</ul>
+</li>
+<li><p>4 <strong>Redux-thunk</strong>中间件实现ajax数据请求。</p>
+<ul>
+<li><p>把异步操作的代码从组件中移除，移除到action中去。使用redux-thunk后，action不仅可以是一个action对象（JS对象）了，还可以是一个函数。</p>
+</li>
+<li><p>原因：</p>
+<p>把异步函数放在生命周期函数中去做，该生命周期函数会越来越复杂且多，组件会越来越大。</p>
+<p>好处1：应该把复杂的业务逻辑和异步函数拆分到一个地方去管理。借助redux-thunk，放在actionCreator去管理。</p>
+<p>好处2：放在actionCreator的时候，自动化测试时，测试getTodoList方法，比测试生命周期函数要简单的多。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>异步组件react-loadable</strong>：一个动态导入加载组件的高阶组件。页面异步，分割成多个js文件。按需加载 （懒加载）</p>
+<ul>
+<li>loadable.js：loader：本页面。loading：加载时候显示的内容。</li>
+<li>App.js，from修改loadable.js，使用withRouter，让detail有能力获取Rounter的所有参数和内容，即可以获取id。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-维护性优化，方便测试和找BUG："><a href="#3-维护性优化，方便测试和找BUG：" class="headerlink" title="3 维护性优化，方便测试和找BUG："></a>3 维护性优化，方便测试和找BUG：</h3><ul>
+<li>React是函数式编程，使用前端自动化测试：只需要给函数一个数值，查看输出是否符合预期。</li>
+<li>propTypes:组件要接受外部传过来的值，进行类型校验。验证传值。DefaultProps:若父组件未向子组件传值，定义属性默认值。设置默认值</li>
+<li>ActionTypes的拆分：action判断的时候，若常量写错了会报异常，字符串不会报异常。方便找出bug。</li>
+<li>使用actionCreators统一创建action：自动化测试，有利于代码维护，不然每一个绑定事件的函数都要写一个生成的action，不利于大型项目的维护。</li>
+<li>使用UI组件和容器组件，分离UI操作和逻辑操作。</li>
+<li>无状态组件：当普通组件只有render函数的时候，可以使用无状态组件替换该组件。<ul>
+<li>普通组件的性能比不上无状态组件的性能高 。无状态组件就是一个函数；普通组件是JS的类，类生成的对象里面还有生命周期函数，执行的时候既要执行函数，又要执行render。</li>
+</ul>
+</li>
+<li><strong>React-Redux</strong>重写TodoList：<ul>
+<li>Provider组件：核心组件，把store提供给每一个内部组件，也叫提供器</li>
+<li>连接： connect方法，前两个参数为连接的规则，最后的参数为本组件TodoList。</li>
+<li>结果=》todoList是一个UI组件，connect把UI组件和业务逻辑（数据、派发）结合，返回的结果为一个容器组件。</li>
+</ul>
+</li>
+</ul>
+<h3 id="项目对比"><a href="#项目对比" class="headerlink" title="项目对比"></a>项目对比</h3><p>目标相同：展现UI，监听用户。js单线程。ios主队列=刷新页面。</p>
+<p>UI设计：</p>
+<ul>
+<li>storyboard和纯代码（snp布局）实现</li>
+<li>react组件化来实现</li>
+</ul>
+<p>传值：</p>
+<ul>
+<li>前端是属性传值、子组件调用父组件方法传值。</li>
+<li>iOS使用segue正向传值，自定义protocal-delegate反向传值</li>
+</ul>
+<p>耗时操作：HTTP等放在异步操作。</p>
+<p>✨需要优化性能：</p>
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><p>Redux：数据层框架。将组件中的数据放在一个公用存储区域去存储，组件改变数据，其他组件会感知Redux的改变，再去取数据更新组件。</p>
+<p>AntD：统一中台项目的前端 UI 设计，减少设计成本(大型前端项目可能不适用，适合管理系统)</p>
+<p>React：构建用户界面的JS库。用于构建UI， 是 MVC 中的 V（视图）。</p>
+<a id="more"></a>
+<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><h3 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h3><p>1 新增任务功能：输入inputValue+添加Item ；2 删除任务功能：</p>
+<h3 id="组件："><a href="#组件：" class="headerlink" title="组件："></a>组件：</h3><p>1父组件：新增任务、浏览任务； 2子组件：单个任务的item。</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="初始实现："><a href="#初始实现：" class="headerlink" title="初始实现："></a>初始实现：</h3><p>一开始是没有使用Redux来存储数据，主要用于父子组件传值来实现功能。</p>
+<h4 id="父组件向子组件传值：父组件的属性"><a href="#父组件向子组件传值：父组件的属性" class="headerlink" title="父组件向子组件传值：父组件的属性"></a>父组件向子组件传值：父组件的属性</h4><p>父组件通过属性的方式向子组件传递参数</p>
+<p>子组件通过props的形式接收父组件传递的参数</p>
+<h4 id="子组件向父组件传值：通过调用父组件的方法改变数据"><a href="#子组件向父组件传值：通过调用父组件的方法改变数据" class="headerlink" title="子组件向父组件传值：通过调用父组件的方法改变数据"></a>子组件向父组件传值：通过调用父组件的方法改变数据</h4><p>父组件将方法传递给子组件，子组件调用该方法，需要传的值作为输入参数</p>
+<h3 id="Redux实现功能："><a href="#Redux实现功能：" class="headerlink" title="Redux实现功能："></a>Redux实现功能：</h3><h4 id="1-Store的创建"><a href="#1-Store的创建" class="headerlink" title="1 Store的创建"></a>1 Store的创建</h4><ul>
+<li>1 创建reducer，把reducer传递给创建store的函数：<ul>
+<li>输入为state和action，返回为NewState </li>
+<li>有一个default值</li>
+</ul>
+</li>
+<li>2 创建store，使用reducer作为参数</li>
+</ul>
+<h4 id="2-组件发送需要改变state的action"><a href="#2-组件发送需要改变state的action" class="headerlink" title="2 组件发送需要改变state的action"></a>2 组件发送需要改变state的action</h4><ul>
+<li><p>1 方法内现写action要做什么的那句话(对象)</p>
+</li>
+<li><p>2 将action传递给store</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">store.dispatch(action);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3 store不操作，将action传递给reducer</p>
+</li>
+<li><p>4 在reducer中，判断action+操作</p>
+<ul>
+<li>reducer中判断type</li>
+<li>深拷贝原来的state为newState，更新newState</li>
+<li>返回newState给store</li>
+</ul>
+</li>
+<li><p>5 store接受后会替换之前的state</p>
+</li>
+</ul>
+<h4 id="3-组件监听state的改变"><a href="#3-组件监听state的改变" class="headerlink" title="3 组件监听state的改变"></a>3 组件监听state的改变</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 组件去订阅store.subscribe</span></span><br><span class="line">store.subscribe(<span class="keyword">this</span>.hanleStoreChange);</span><br><span class="line"><span class="comment">// 2. store同步：感知到变化的时候，调用store.getState()重新取数据，再用setState更新组件内容</span></span><br><span class="line">hanleStoreChange()&#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(store.getState());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Swift/" rel="tag"># Swift</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/16/😊React+Redux - 知识点/" rel="next" title="React+Redux+AntD - 0 极简事项.md">
+                <i class="fa fa-chevron-left"></i> React+Redux+AntD - 0 极简事项.md
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/17/Untitled/" rel="prev" title>
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/irisHeader.jpeg" alt="IRIS">
+            
+              <p class="site-author-name" itemprop="name">IRIS</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/irispierce" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:wangyusi007@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目介绍"><span class="nav-number">1.</span> <span class="nav-text">项目介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目优化"><span class="nav-number">1.1.</span> <span class="nav-text">项目优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-React本身的性能优化方法："><span class="nav-number">1.2.</span> <span class="nav-text">1 React本身的性能优化方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-性能优化："><span class="nav-number">1.3.</span> <span class="nav-text">2 性能优化：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#渲染优化："><span class="nav-number">1.3.1.</span> <span class="nav-text">渲染优化：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#异步优化："><span class="nav-number">1.3.2.</span> <span class="nav-text">异步优化：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-维护性优化，方便测试和找BUG："><span class="nav-number">1.4.</span> <span class="nav-text">3 维护性优化，方便测试和找BUG：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目对比"><span class="nav-number">1.5.</span> <span class="nav-text">项目对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点"><span class="nav-number">1.6.</span> <span class="nav-text">知识点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需求分析"><span class="nav-number">2.</span> <span class="nav-text">需求分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#功能："><span class="nav-number">2.1.</span> <span class="nav-text">功能：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件："><span class="nav-number">2.2.</span> <span class="nav-text">组件：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤"><span class="nav-number">3.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始实现："><span class="nav-number">3.1.</span> <span class="nav-text">初始实现：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#父组件向子组件传值：父组件的属性"><span class="nav-number">3.1.1.</span> <span class="nav-text">父组件向子组件传值：父组件的属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#子组件向父组件传值：通过调用父组件的方法改变数据"><span class="nav-number">3.1.2.</span> <span class="nav-text">子组件向父组件传值：通过调用父组件的方法改变数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redux实现功能："><span class="nav-number">3.2.</span> <span class="nav-text">Redux实现功能：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Store的创建"><span class="nav-number">3.2.1.</span> <span class="nav-text">1 Store的创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-组件发送需要改变state的action"><span class="nav-number">3.2.2.</span> <span class="nav-text">2 组件发送需要改变state的action</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-组件监听state的改变"><span class="nav-number">3.2.3.</span> <span class="nav-text">3 组件监听state的改变</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">IRIS</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">74.7k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'K56V1wrSmQT1Y57HAlTWMY6m-gzGzoHsz',
+        appKey: '1KvpI6T94PESCJ3yikky6J1P',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("K56V1wrSmQT1Y57HAlTWMY6m-gzGzoHsz", "1KvpI6T94PESCJ3yikky6J1P");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

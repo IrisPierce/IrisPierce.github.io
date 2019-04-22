@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="两种数据结构：链表和数组。 数组占据随机访问的优势，却有需要连续内存的缺点。 链表具有可不连续存储的优势，但访问查找是线性的。 散列表和链表、跳表的混合使用，是为了结合数组和链表的优势，规避它们的不足。 我们可以得出数据结构和算法的重要性排行榜：连续空间 &amp;gt; 时间 &amp;gt; 碎片空间。 王者荣耀2亿用户，如何实现动态更新排行榜前100名（具体代码）？ 我说的是分文件  然后小根堆实现动态更新">
+<meta name="description" content="两种基础的数据结构：链表和数组。 数组占据随机访问的优势，却有需要连续内存的缺点。 链表具有可不连续存储的优势，但访问查找是线性的。 散列表和链表、跳表的混合使用，是为了结合数组和链表的优势，规避它们的不足。 我们可以得出数据结构和算法的重要性排行榜：连续空间 &amp;gt; 时间 &amp;gt; 碎片空间。  数组：连续的内存空间和相同类型的数据。访问时间O(1)，插入删除为了保证连续时间为O(n)。">
 <meta name="keywords" content="Java,数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构 -">
 <meta property="og:url" content="http://yoursite.com/2017/01/05/数据结构 - /index.html">
 <meta property="og:site_name" content="IRIS&#39;s BLOG">
-<meta property="og:description" content="两种数据结构：链表和数组。 数组占据随机访问的优势，却有需要连续内存的缺点。 链表具有可不连续存储的优势，但访问查找是线性的。 散列表和链表、跳表的混合使用，是为了结合数组和链表的优势，规避它们的不足。 我们可以得出数据结构和算法的重要性排行榜：连续空间 &amp;gt; 时间 &amp;gt; 碎片空间。 王者荣耀2亿用户，如何实现动态更新排行榜前100名（具体代码）？ 我说的是分文件  然后小根堆实现动态更新">
+<meta property="og:description" content="两种基础的数据结构：链表和数组。 数组占据随机访问的优势，却有需要连续内存的缺点。 链表具有可不连续存储的优势，但访问查找是线性的。 散列表和链表、跳表的混合使用，是为了结合数组和链表的优势，规避它们的不足。 我们可以得出数据结构和算法的重要性排行榜：连续空间 &amp;gt; 时间 &amp;gt; 碎片空间。  数组：连续的内存空间和相同类型的数据。访问时间O(1)，插入删除为了保证连续时间为O(n)。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-29T07:53:05.608Z">
+<meta property="og:updated_time" content="2019-04-20T06:49:07.397Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构 -">
-<meta name="twitter:description" content="两种数据结构：链表和数组。 数组占据随机访问的优势，却有需要连续内存的缺点。 链表具有可不连续存储的优势，但访问查找是线性的。 散列表和链表、跳表的混合使用，是为了结合数组和链表的优势，规避它们的不足。 我们可以得出数据结构和算法的重要性排行榜：连续空间 &amp;gt; 时间 &amp;gt; 碎片空间。 王者荣耀2亿用户，如何实现动态更新排行榜前100名（具体代码）？ 我说的是分文件  然后小根堆实现动态更新">
+<meta name="twitter:description" content="两种基础的数据结构：链表和数组。 数组占据随机访问的优势，却有需要连续内存的缺点。 链表具有可不连续存储的优势，但访问查找是线性的。 散列表和链表、跳表的混合使用，是为了结合数组和链表的优势，规避它们的不足。 我们可以得出数据结构和算法的重要性排行榜：连续空间 &amp;gt; 时间 &amp;gt; 碎片空间。  数组：连续的内存空间和相同类型的数据。访问时间O(1)，插入删除为了保证连续时间为O(n)。">
 
 
 
@@ -399,7 +399,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  750
+                  205
                 </span>
               
 
@@ -415,7 +415,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  1
                 </span>
               
             </div>
@@ -436,41 +436,17 @@
       
 
       
-        <p>两种数据结构：链表和数组。</p>
+        <p>两种基础的数据结构：链表和数组。</p>
 <p>数组占据随机访问的优势，却有需要连续内存的缺点。</p>
 <p>链表具有可不连续存储的优势，但访问查找是线性的。</p>
 <p>散列表和链表、跳表的混合使用，是为了结合数组和链表的优势，规避它们的不足。</p>
 <p>我们可以得出数据结构和算法的重要性排行榜：连续空间 &gt; 时间 &gt; 碎片空间。</p>
+<ul>
+<li>数组：连续的内存空间和相同类型的数据。访问时间O(1)，插入删除为了保证连续时间为O(n)。</li>
+<li></li>
+</ul>
 <p>王者荣耀2亿用户，如何实现动态更新排行榜前100名（具体代码）？</p>
 <p>我说的是分文件  然后小根堆实现动态更新</p>
-<p>2.进程线程（还有有关操作系统的 我忘了</p>
-<p>3.数据库查询 然后连接查询</p>
-<p>8.链表讲一下 什么单向链表双向链表循环链表 链表适合快排吗为什么</p>
-<ol>
-<li><p>四次挥手 time_wait</p>
-</li>
-<li><p>客户端当被告知服务端接收窗口大小为0后的行为，如果服务端的接收窗口又变大了呢？</p>
-</li>
-<li>拥塞控制</li>
-</ol>
-<p><a href="https://www.cnblogs.com/logsharing/p/8448446.html" target="_blank" rel="noopener">https://www.cnblogs.com/logsharing/p/8448446.html</a></p>
-<ul>
-<li>get参数通过url传递，post参数放在request body中</li>
-<li>get参数是有长度限制的，而post没有</li>
-<li>get参数直接暴露在url中，较为不安全，不能传递敏感信息</li>
-<li>get请求只能进行url编码，而post支持多种编码方式</li>
-<li>get请求浏览器会主动cache</li>
-<li>get请求参数会被完整保留在浏览历史记录里，而post中的参数不会被保留</li>
-<li>get和post本质上就是TCP链接，并无差别。但是由于HTTP的规定和浏览器/服务器的限制，导致他们在应用过程中体现出一些不同</li>
-<li>get产生一个TCP数据包，post产生两个TCP数据包</li>
-</ul>
-<p>总结：</p>
-<ol>
-<li>对于GET方式的请求，浏览器会把http header和data一并发送出去，服务器响应200（返回数据）；而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。（据研究，在网络环境好的情况下，发一次包的时间和发两次包的时间差别基本可以无视。而在网络环境差的情况下，两次包的TCP在验证数据包完整性上，有非常大的优点。）</li>
-<li>对于get和post的区别，get传递数据如同是写在脸上，post传递数据如同放在肚子里，脸上不能放太多东西，也不能放隐私东西，肚子里就无所谓啦~（一个面试官给我说的巧记妙招~）</li>
-</ol>
-<p>浏览器输入 <a href="http://www.qq.com" target="_blank" rel="noopener">www.qq.com</a> 发生了什么; 第二次访问与第一次有什么区别吗，长连接和短连接，四次挥手，客户端先发和服务端先发FIN有什么区别，一般是哪端先发，原因，哪端先发好？time_wait持续时间？2MSL? 没有time_wait有什么问题</p>
-<p>http 与 https 区别，ssl 的过程</p>
 
       
     </div>
@@ -503,8 +479,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/05/❤️算法 - 1 海量数据/" rel="next" title="算法 - 1 海量数据">
-                <i class="fa fa-chevron-left"></i> 算法 - 1 海量数据
+              <a href="/2017/01/05/算法 - 2 动态规划/" rel="next" title="算法 - 2 动态规划">
+                <i class="fa fa-chevron-left"></i> 算法 - 2 动态规划
               </a>
             
           </div>
@@ -513,8 +489,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/05/数据结构 -  3 堆与优先队列/" rel="prev" title="数据结构 -">
-                数据结构 - <i class="fa fa-chevron-right"></i>
+              <a href="/2017/01/05/❤️算法 - 1 海量数据/" rel="prev" title="算法 - 1 海量数据">
+                算法 - 1 海量数据 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -588,7 +564,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">66</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -599,7 +575,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -610,7 +586,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -684,7 +660,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">49.5k</span>
+    <span title="Site words total count">74.7k</span>
   
 </div>
 

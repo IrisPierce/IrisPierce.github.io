@@ -1367,7 +1367,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/26/✨iOS基础/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/18/前端基础学习/React - 5 Redux 高级/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -1386,7 +1386,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/26/✨iOS基础/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2019/04/18/前端基础学习/React - 5 Redux 高级/" itemprop="url">React - 4 Redux高级</a></h1>
         
 
         <div class="post-meta">
@@ -1400,318 +1400,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-26T23:04:04+08:00">
-                2019-03-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/26/✨iOS基础/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/26/✨iOS基础/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/03/26/✨iOS基础/" class="leancloud_visitors" data-flag-title>
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  3.7k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  14
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="RunLoop"><a href="#RunLoop" class="headerlink" title="RunLoop"></a>RunLoop</h2><p>runloop是一个<strong>事件循环对象</strong>。</p>
-<p>do {</p>
-<p>//接受消息-&gt;等待-&gt;处理</p>
-<p>}while(message != quit)</p>
-<ul>
-<li>概念：事件循环对象，在循环过程中处理各种事件（点击、刷新等），从而保持程序持续运行；在没有事件处理的时候，会进入睡眠模式，从而节省CPU资源，提高程序性能。</li>
-<li>为什么需要：一个线程只能执行一个任务，执行完就会退出，如果我们需要一种机制，让线程能随时处理时间但并不退出，那么 RunLoop 就是这样的一个机制。Runloop是事件接收和分发机制的一个实现。</li>
-<li>Runloop 和线程是绑定在一起的。每个线程（包括主线程）都有一个对应的 Runloop 对象。我们并不能自己创建 Runloop 对象，但是可以获取到系统提供的 Runloop 对象。</li>
-</ul>
-<h2 id="是否接触TableView渲染性能相关的东西？"><a href="#是否接触TableView渲染性能相关的东西？" class="headerlink" title="是否接触TableView渲染性能相关的东西？"></a>是否接触TableView渲染性能相关的东西？</h2><ul>
-<li><p>cell的数目，配置tableview数据</p>
-<p>重用单元格的形式，数据成千上万行，最终渲染个数为屏幕上显示的数目。</p>
-<p>往下拉的时候，最上面的cell到最下面来，放置重复渲染，提高手机性能。</p>
-</li>
-<li><p>刷新页面的两种方法</p>
-<ul>
-<li>无动画效果：tableView.reloadData()，就是相当于执行 cell for row的方法，将结果取出来，再更新视图</li>
-<li>将刷新语句放在View.beginUpdates()、tableView.endUpdates()中间，可以提高app的性能</li>
-</ul>
-</li>
-</ul>
-<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><p>触摸屏幕、晃动设备、通过遥控设施控制设备。对应的事件类型有以下三种：</p>
-<ol>
-<li>触屏事件（Touch Event）</li>
-<li>运动事件（Motion Event）</li>
-<li>远端控制事件（Remote-Control Event）</li>
-</ol>
-<h3 id="响应者链"><a href="#响应者链" class="headerlink" title="响应者链"></a>响应者链</h3><p>当发生事件响应时，必须知道由谁来响应事件。在 iOS 中，由响应者链来对事件进行响应。</p>
-<p>所有事件响应的类都是 UIResponder 的子类，响应者链是一个由不同对象组成的层次结构，其中的每个对象将依次获得响应事件消息的机会。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">First Responser --&gt; The Window --&gt; The Application --&gt; nil（丢弃）</span><br></pre></td></tr></table></figure>
-<p>我们可以通过 <code>[responder nextResponder]</code> 找到当前 responder 的下一个 responder，持续这个过程到最后会找到 UIApplication 对象。</p>
-<p>通常情况下，我们在 First Responder （一般也就是用户当前触控的 View ）这里就会响应请求，进入下面的事件分发机制。</p>
-<h3 id="事件分发"><a href="#事件分发" class="headerlink" title="事件分发"></a>事件分发</h3><p>第一响应者（First responder）指的是当前接受触摸的响应者对象（通常是一个 UIView 对象），即表示当前该对象正在与用户交互，它是响应者链的开端。响应者链和事件分发的使命都是找出第一响应者。</p>
-<ul>
-<li>iOS 系统检测到手指触摸 (Touch) 操作时会将其打包成一个 UIEvent 对象，并放入当前活动 Application 的事件队列，</li>
-<li>单例的 UIApplication 会从事件队列中取出触摸事件并传递给单例的 UIWindow 来处理，</li>
-<li>UIWindow 对象首先会使用 <code>hitTest:withEvent:</code>方法寻找此次 Touch 操作初始点所在的视图(View)，即需要将触摸事件传递给其处理的视图，这个过程称之为 hit-test view。</li>
-</ul>
-<h2 id="内存管理机制：ARC自动引用计数-MRC"><a href="#内存管理机制：ARC自动引用计数-MRC" class="headerlink" title="内存管理机制：ARC自动引用计数\MRC"></a>内存管理机制：ARC自动引用计数\MRC</h2><p>创建的时候为1，使用的时候+1，不需要的时候-1，为0的时候系统知道其不需要了，则release。</p>
-<h2 id="class和struct"><a href="#class和struct" class="headerlink" title="class和struct"></a>class和struct</h2><h3 id="相同点"><a href="#相同点" class="headerlink" title="相同点"></a>相同点</h3><ul>
-<li>可以定义存储属性</li>
-<li>能够定义方法</li>
-<li>通过下标操作访问实例所包含的值</li>
-<li>通过扩展来增加默认实现功能</li>
-</ul>
-<h3 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h3><ul>
-<li>类可以继承</li>
-<li>类型转换允许在运行时检查和解释一个类实例的类型</li>
-<li>析构器允许一个类实例释放任何它所被分配的资源</li>
-<li>引用计数允许一个类的多次引用</li>
-<li>class是引用类型，struct是值类型</li>
-<li>struct会自动生成一个初始化所有属性的构造器</li>
-</ul>
-<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><p>谈及 iOS 中的多线程，一般说的是 pthread，NSthread，GCD，NSOperation 这四种, 用的最多也最方便的就是 GCD 了。</p>
-<p><strong>四、线程安全问题</strong></p>
-<p>当多个线程访问同一块资源时，很容易引发数据错乱和数据安全问题。就好比几个人在同一时修改同一个表格，造成数据的错乱。</p>
-<p>解决多线程安全问题的方法</p>
-<ul>
-<li>方法一：互斥锁（同步锁）</li>
-</ul>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`@synchronized(锁对象) &#123;``    ``<span class="comment">// 需要锁定的代码``&#125;`</span></span><br></pre></td></tr></table></figure>
-<p>加了互斥做的代码，当新线程访问时，如果发现其他线程正在执行锁定的代码，新线程就会进入休眠。</p>
-<ul>
-<li>方法二：自旋锁</li>
-</ul>
-<p>加了自旋锁，当新线程访问代码时，如果发现有其他线程正在锁定代码，新线程会用死循环的方式，一直等待锁定的代码执行完成。相当于不停尝试执行代码，比较消耗性能。</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g1gml59deej30yg0gv0yd.jpg" alt="3873004-d66485790959dcf5.png"></p>
-<h2 id="GCD-中两个重要重要概念-——-队列-amp-任务"><a href="#GCD-中两个重要重要概念-——-队列-amp-任务" class="headerlink" title="GCD 中两个重要重要概念 —— 队列 &amp; 任务"></a>GCD 中两个重要重要概念 —— 队列 &amp; 任务</h2><p>队列是一种特殊的线性表，采用FIFO（先进先出）的原则，队列的主要作用是用来存放任务。</p>
-<p>GCD会自动将队列中的任务取出，放到对应的线程中执行。</p>
-<p>串行队列（Serial Dispatch Queue）: 让任务一个接着一个地执行（一个任务执行完毕后，再执行下一个任务</p>
-<p>并发队列（Concurrent Dispatch Queue）: 可以让多个任务并发（同时）执行（自动开启多个线程同时执行任务）, 并发功能只有在异步（dispatch_async）函数下才有效</p>
-<p><strong>队列执行任务的方式：</strong></p>
-<ul>
-<li>同步：在当前线程中执行，当前代码不执行完，就不能够执行下一条代码。<strong>会阻塞当前线程。</strong></li>
-<li><p>异步：在另一条线程中执行（不用等待当前代码执行完，就能够执行下一条），<strong>不会阻塞当前线程。</strong></p>
-</li>
-<li><p>主队列 (串行)</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let mainQueue = DispatchQueue.main</span><br></pre></td></tr></table></figure>
-<ul>
-<li>全局队列 (并发)</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let globalQueue = DispatchQueue.global()</span><br></pre></td></tr></table></figure>
-<p><strong>全局队列默认是并发队列，在不进行第三方框架或者大型的商业应用开发，全局队列基本够用。</strong></p>
-<ul>
-<li>主队列 <code>dispatch_main_queue();</code> 串行 ,更新UI</li>
-<li>全局队列 <code>dispatch_global_queue();</code> 并行,四个优先级: <code>background</code>,<code>low</code>,<code>default</code>,<code>high</code></li>
-<li>自定义队列 <code>dispatch_queue_t queue;</code> 可以自定义是并行: <code>DISPATCH_QUEUE_CONCURRENT</code> 或者串行 <code>DISPATCH_QUEUE_SERIAL</code></li>
-</ul>
-<p><strong>同步不开异步开，串行开1条，并行开多条。</strong></p>
-<p>队列中的任务同步执行，队列就不具有开启线程的能力， 队列中的任务异步执行，队列就具有开启线程的能力。<br><strong>（同步和异步执行决定的是否有开启线程的能力）</strong></p>
-<p>如果队列具 <strong>有开启线程的能力 (队列任务异步执行) </strong> 且队列是 <strong>串行队列</strong> ，那么将会 <strong>开启 1 条线程</strong> 。<br>如果队列具 <strong>有开启线程的能力 (队列任务异步执行) </strong> 且队列是 <strong>并发队列</strong> ，那么将会 <strong>开启 多 条线程</strong> 。开启线程的条数由 GCD 决定。</p>
-<h3 id="2-1-全局队列"><a href="#2-1-全局队列" class="headerlink" title="2.1 全局队列"></a>2.1 <strong>全局队列</strong></h3><p>全局队列是获取的，不是程序员创建的。<br>为了方便 GCD 的使用，apple 默认为我们提供的。<br>全局队列默认是并发队列，在不是进行第三方框架或者大型的商业应用开发，全局队列基本够用。</p>
-<p><strong>全局 ( 并发 ) 队列异步执行 ：</strong></p>
-<p>并发队列异步（不阻塞当前线程）执行（队列就具有开启线程的能力）， 队列会开启多条线程。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">任务异步执行不会阻塞当前线程， </span><br><span class="line">   befor 在最前， </span><br><span class="line">   after 在任意位置，</span><br><span class="line">   task 执行顺序不确定 —— 并发执行（index可以确认）。</span><br><span class="line">   task 并发执行 —— 并发执行（number可以确认）。</span><br><span class="line"></span><br><span class="line">异步开线程 number 可以确定开启了多条线程</span><br><span class="line">   开的线程数由 GCD 决定。 可以看到线程的 number 有重复，是 GCD 对线程进行了复用。</span><br></pre></td></tr></table></figure>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">async</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().async: befor"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">    <span class="comment">// 全局队列进行 10次异步</span></span><br><span class="line">    <span class="keyword">for</span> index <span class="keyword">in</span> <span class="number">0</span>..&lt;<span class="number">10</span> &#123;</span><br><span class="line">        <span class="type">DispatchQueue</span>.global().async &#123;</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().async: task:(taskIndex:\(index)"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().async: after"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">打印：</span><br></pre></td></tr></table></figure>
-<p><strong>全局 ( 并发 ) 队列同步执行 ：</strong></p>
-<p>并发队列同步（阻塞当前线程）执行（队列就不具有开启线程的能力）， 队列不会开启线程（代码都在主线程中执行）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">任务同步执行会阻塞当前线程， </span><br><span class="line">     befor 在最前， </span><br><span class="line">     after 在最后，</span><br><span class="line">     task 执行顺序确定 —— 阻塞。</span><br><span class="line">同步没有开启线程 number 可以确定没有开启多条线程。所有的代码都在 主线程中执行。</span><br></pre></td></tr></table></figure>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sync</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().sync: befor"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">    <span class="keyword">for</span> index <span class="keyword">in</span> <span class="number">0</span>..&lt;<span class="number">10</span> &#123;</span><br><span class="line">        <span class="type">DispatchQueue</span>.global().sync &#123;</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().sync: task:(taskIndex:\(index))"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"DispatchQueue.global().sync: after"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">打印： </span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: befor &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">0</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">1</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">2</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">3</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">4</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">5</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">6</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">7</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">8</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: task:(taskIndex:<span class="number">9</span>) &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.global().sync: after &lt;<span class="type">NSThread</span>: <span class="number">0x60800007fa80</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2-2-主队列"><a href="#2-2-主队列" class="headerlink" title="2.2 主队列"></a>2.2 主队列</h3><p>主队列是获取的，不是程序员创建的，apple 默认为我们提供的。<br> （app 开发中，所有的 UI 更新操作都应该在主线程中进行）</p>
-<p><strong>主队列(串行)异步执行</strong></p>
-<p>主队列异步（不会阻塞当前线程）执行（队列就具有开启线程的能力）， 队列会开启线程（<strong>开启的线程就是主线程</strong>）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; 有朋友问我，异步会开启线程， 主队列异步就不会开启线程。 </span><br><span class="line">&gt; 我当时还信以为真。认为自己错误，说特殊情况特殊处理。 其实说白了就是学艺不精。</span><br><span class="line">&gt; 由于主队列是我们获取的，不是我们创建的，在某种意识中会认为主线程不是在主队列中创建的。（认为一开始就存在的。）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; 任务异步执行不会阻塞当前线程， </span><br><span class="line"> befor 在最前， </span><br><span class="line"> after 在第二，</span><br><span class="line"> task 执行顺序确定 —— 串行执行（index可以确认）。</span><br><span class="line"></span><br><span class="line">同步没有开启线程 number 可以确定没有开启多条线程。所有的代码都在 主线程中执行。</span><br></pre></td></tr></table></figure>
-<p><strong>主队列异步的操作主要用在更新 UI 操作中。</strong> 具体参考  项目开发中 GCD 代码使用。</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">async</span><span class="params">()</span></span> &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"DispatchQueue.main.async: befor"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">        <span class="keyword">for</span> index <span class="keyword">in</span> <span class="number">0</span>..&lt;<span class="number">10</span> &#123;</span><br><span class="line">            <span class="type">DispatchQueue</span>.main.async &#123;</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"DispatchQueue.main.async: task:(taskIndex:\(index)"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"DispatchQueue.main.async: after"</span>, <span class="type">Thread</span>.current)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">打印： </span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: befor &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: after &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">0</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">1</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">2</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">3</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">4</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">5</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">6</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">7</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">8</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br><span class="line"><span class="type">DispatchQueue</span>.main.async: task:(taskIndex:<span class="number">9</span> &lt;<span class="type">NSThread</span>: <span class="number">0x60800006ddc0</span>&gt;&#123;number = <span class="number">1</span>, name = main&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>主队列(串行)同步执行</strong></p>
-<p>执行的效果就俩字 <strong>死锁</strong></p>
-<p>主线程同步，在 Swift 中，编译阶段就报错，在 oc  中是在运行的时候才能发现。体现的主要是界面的 “假死”。</p>
-<h1 id="UITableView"><a href="#UITableView" class="headerlink" title="UITableView"></a>UITableView</h1><p>要实现Tableview必须要签订2个协议</p>
-<p>UITableViewDelegate:数据视图的普通协议,作用是:处理数据视图事件.<br>UITableViewDataSource:数据视图的数据代理协议,作用是:处理视图的数据代理.</p>
-<p>实现签订的协议的2个协议方法：<br>返回数字，每个section有多少个row</p>
-<p>返回cell，cell就是TableView显示时候的格子内容，根据indexPath和数据决定;</p>
-<h2 id="观察者设计模式、KVO"><a href="#观察者设计模式、KVO" class="headerlink" title="观察者设计模式、KVO"></a>观察者设计模式、KVO</h2><h4 id="设计模式——观察者设计模式"><a href="#设计模式——观察者设计模式" class="headerlink" title="设计模式——观察者设计模式"></a>设计模式——观察者设计模式</h4><p>A对B的变化感兴趣，就注册为B的观察者，当B发生变化时通知A，告知B发生了变化。</p>
-<p>指定一个被观察对象(例如 A 类)，当对象某个属性(例如 A 中的字符串 name)发生更改时，对象会获得通知，并作出相应处理；</p>
-<p>在 MVC 设计架构下的项目，KVO 机制很适合实现 mode 模型和 view 视图之间的通讯。比如label中的对象为 num=0 ，我们按下按钮之后对象的num++，则label改变。</p>
-<h4 id="设计模式——通知机制"><a href="#设计模式——通知机制" class="headerlink" title="设计模式——通知机制"></a>设计模式——通知机制</h4><p>当用户从后台进入，从非活跃的状态进入活跃状态的时候，系统自动发送“becomeActive”通知，如果有注册监听者（观察者），则执行回调方法。【天气预报需要用】</p>
-<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><h3 id="浏览器进行一次网络请求都需要哪些步骤？"><a href="#浏览器进行一次网络请求都需要哪些步骤？" class="headerlink" title="浏览器进行一次网络请求都需要哪些步骤？"></a>浏览器进行一次网络请求都需要哪些步骤？</h3><ul>
-<li>1、<strong>域名解析</strong>：<ul>
-<li>浏览器查找域名的 IP 地址、</li>
-<li>没找到后发送给 DNS 服务器（本地host，电信），让它解析为 IP 地址</li>
-</ul>
-</li>
-<li><strong>2、TCP的三次握手</strong></li>
-<li>3、建立TCP连接后发起HTTP请求，浏览器向 web 服务器发送一个 HTTP 请求<ul>
-<li><strong>HTTP请求格式</strong>：是请求方法（GET/POST/DELETE/PUT/HEAD）、URI路径、HTTP版本号。</li>
-<li><strong>3. 2  服务器响应HTTP请求</strong>：状态行、响应头、空行、消息体。</li>
-</ul>
-</li>
-<li>4、<strong>浏览器解析html代码，并请求html代码中的资源</strong><ul>
-<li>服务器的永久重定向响应：“<a href="https://www.google.com/”" target="_blank" rel="noopener">https://www.google.com/”</a> 而非“<a href="http://google.com/”。" target="_blank" rel="noopener">http://google.com/”。</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h3><p>第三次握手是为了防止失效的连接请求到达服务器，让服务器错误打开连接。客户端发送的连接请求如果<strong>在网络中滞留</strong>，那么就会隔很长一段时间才能收到服务器端发回的连接确认。客户端等待一个超时重传时间之后，就会<strong>重新请求连接</strong>。但是这个滞留的连接请求最后还是会到达服务器，如果不进行三次握手，那么<strong>服务器就会打开两个连接</strong>。如果有第三次握手，客户端会忽略服务器之后发送的对滞留连接请求的连接确认，不进行第三次握手，因此就不会再次打开连接。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/23/数据可视化/数据可视化 - 经典的图表分析/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/23/数据可视化/数据可视化 - 经典的图表分析/" itemprop="url">数据可视化 - 经典的图表分析</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-23T13:17:42+08:00">
-                2019-03-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-18T13:17:42+08:00">
+                2019-04-18
               </time>
             
 
@@ -1733,8 +1423,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据可视化/" itemprop="url" rel="index">
-                    <span itemprop="name">数据可视化</span>
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
                   </a>
                 </span>
 
@@ -1751,8 +1441,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/23/数据可视化/数据可视化 - 经典的图表分析/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/23/数据可视化/数据可视化 - 经典的图表分析/" itemprop="commentCount"></span>
+                <a href="/2019/04/18/前端基础学习/React - 5 Redux 高级/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/18/前端基础学习/React - 5 Redux 高级/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1760,7 +1450,7 @@
 
           
           
-             <span id="/2019/03/23/数据可视化/数据可视化 - 经典的图表分析/" class="leancloud_visitors" data-flag-title="数据可视化 - 经典的图表分析">
+             <span id="/2019/04/18/前端基础学习/React - 5 Redux 高级/" class="leancloud_visitors" data-flag-title="React - 4 Redux高级">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1785,7 +1475,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.1k
+                  1.3k
                 </span>
               
 
@@ -1801,7 +1491,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  5
                 </span>
               
             </div>
@@ -1824,71 +1514,48 @@
       
         
           
-            <h2 id="柱状图-Bar-Chart-比较"><a href="#柱状图-Bar-Chart-比较" class="headerlink" title="柱状图 Bar Chart - 比较"></a>柱状图 Bar Chart - 比较</h2><p>其中一个轴表示需要对比的分类维度，另一个轴代表相应的数值。</p>
-<p>柱状图描述的是分类数据，回答的是每一个分类中“有多少？”这个问题。 </p>
-<h3 id="类别"><a href="#类别" class="headerlink" title="类别"></a>类别</h3><ul>
-<li>纵向柱状图：&lt;12条数据，类别最好使用不同颜色表示</li>
-<li>横向柱状图：&lt;30条数据</li>
+            <h3 id="UI组件和容器组件无状态组件"><a href="#UI组件和容器组件无状态组件" class="headerlink" title="UI组件和容器组件无状态组件"></a>UI组件和容器组件无状态组件</h3><ul>
+<li>普通组件：</li>
+<li>UI组件：UI负责渲染</li>
+<li>容器组件：负责逻辑</li>
+<li>无状态组件：当普通组件只有render函数的时候，可以使用无状态组件替换该组件。<ul>
+<li>普通组件的性能比不上无状态组件的性能高 。无状态组件就是一个函数；普通组件是JS的类，类生成的对象里面还有生命周期函数，执行的时候既要执行函数，又要执行render。</li>
+<li>如何使用：一般UI组件只负责页面渲染，不负责逻辑，可以定义为一个无状态组件</li>
 </ul>
-<h3 id="适合场景-类别对比"><a href="#适合场景-类别对比" class="headerlink" title="适合场景 - 类别对比"></a>适合场景 - 类别对比</h3><p>适合应用到分类数据对比。</p>
-<h3 id="不适合场景"><a href="#不适合场景" class="headerlink" title="不适合场景"></a>不适合场景</h3><ul>
-<li>分类太多不适合使用纵向柱状图。</li>
-<li>不适合表示趋势</li>
-</ul>
-<h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h3><ul>
-<li>柱状图适合多个类别的<strong>大小、数值对比</strong></li>
-<li>折线图用于连续数值(时间)或有序分类的<strong>变化趋势</strong></li>
-<li><p>饼图展示分类<strong>占比情况</strong></p>
-</li>
-<li><p>南丁格尔玫瑰图通过<strong>半径比较</strong>，柱状图通过<strong>矩形长度比较</strong></p>
 </li>
 </ul>
-<h2 id="折线图-Line-chart-趋势"><a href="#折线图-Line-chart-趋势" class="headerlink" title="折线图 Line chart - 趋势"></a>折线图 Line chart - 趋势</h2><p>显示数据在一个连续的时间间隔或者时间跨度上的变化，它的特点是反映事物随时间或有序类别而变化的趋势。</p>
-<h3 id="适合的场景"><a href="#适合的场景" class="headerlink" title="适合的场景"></a>适合的场景</h3><p>例子：<strong>有序的因变量，比如：时间。</strong></p>
-<p>折线图可以很好地表现数据递减、增减的速率、增减的规律、峰值等特征。</p>
-<h3 id="不适合的场景"><a href="#不适合的场景" class="headerlink" title="不适合的场景"></a>不适合的场景</h3><p>当水平轴的数据类型为无序的分类或者垂直轴的数据类型为连续时间时，不适合使用折线图。</p>
-<p>当折线的条数过多时不建议将多条线绘制在一张图上，可以控制仅显示一条线来解决这个问题。</p>
-<h3 id="对比-折线图和面积图"><a href="#对比-折线图和面积图" class="headerlink" title="对比 - 折线图和面积图"></a>对比 - 折线图和面积图</h3><ul>
-<li>折线图和面积图都可以表示一段时间（或者有序分类）的趋势，相比之下面积图的表现力更强一些</li>
-<li>面积图还可以表示数据的上下限，例如可以表示温度的最小值、最大值</li>
-<li>层叠面积图：河流图，清晰的反应每个数值所占百分比随时间或类别变化的趋势线</li>
-</ul>
-<h2 id="饼图-经常被滥用"><a href="#饼图-经常被滥用" class="headerlink" title="饼图 - 经常被滥用"></a>饼图 - 经常被滥用</h2><p>优点：</p>
+<h3 id="ajax数据请求"><a href="#ajax数据请求" class="headerlink" title="ajax数据请求"></a>ajax数据请求</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span>;</span><br><span class="line"><span class="keyword">import</span> MockAdapter <span class="keyword">from</span> <span class="string">'axios-mock-adapter'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置模拟调试器实例</span></span><br><span class="line"><span class="keyword">const</span> mock = <span class="keyword">new</span> MockAdapter(axios);</span><br><span class="line">mock.onGet(<span class="string">'/list.json'</span>).reply(<span class="number">200</span>, &#123;</span><br><span class="line">    list:[<span class="string">"iris"</span>,<span class="string">"jay"</span>,<span class="string">"gd"</span>]</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//生命周期函数 mount完成时</span></span><br><span class="line">componentDidMount()&#123;</span><br><span class="line">    axios.get(<span class="string">'/list.json'</span>).then(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">// 获取模拟调试器上的mock本地数据</span></span><br><span class="line">        <span class="keyword">const</span> data =res.data.list;</span><br><span class="line">        <span class="comment">// 创建ation，传入data；将action传给store</span></span><br><span class="line">        <span class="keyword">const</span> action = initListAction(data);</span><br><span class="line">        <span class="built_in">console</span>.log(action);</span><br><span class="line">        store.dispatch(action);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Redux-thunk中间件实现ajax数据请求"><a href="#Redux-thunk中间件实现ajax数据请求" class="headerlink" title="Redux-thunk中间件实现ajax数据请求"></a>Redux-thunk中间件实现ajax数据请求</h3><p>配置Redux-thunk：同时使用两个中间件：thunk+devtools(调试工具)</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使得store既支持window下的devtools，调式stor；同时引入了Redux-thunk</span></span><br><span class="line"><span class="comment">//高级配置：若存在该方法，则调用，否则使得其为一个compose函数</span></span><br><span class="line"><span class="keyword">const</span> composeEnhancers = <span class="built_in">window</span>.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?</span><br><span class="line">        <span class="built_in">window</span>.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__(&#123;</span><br><span class="line">        &#125;) : compose;</span><br><span class="line"><span class="comment">// 上述的变量存储一下，顺便将中间件[redux]通过applyMiddleware执行一下，传入进去</span></span><br><span class="line"><span class="keyword">const</span> enhancer = composeEnhancers(</span><br><span class="line">    applyMiddleware(thunk),</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> store = createStore(reducer,</span><br><span class="line">    enhancer</span><br><span class="line">    <span class="comment">// applyMiddleware(thunk)</span></span><br><span class="line">    );</span><br></pre></td></tr></table></figure>
+<p>把异步操作的代码从组件中移除，移除到action中去。之前actionCreator 里面的任意一个creator一个都是函数，该函数返回的内容是一个对象。</p>
+<p>使用redux-thunk后，你的action可以是一个函数了。正常来说是return一个对象，使用redux-thunk后，return的结果可以为一个<strong>函数</strong>。<strong>函数中可以做异步操作</strong>。</p>
+<p>使用redux-thunk后，action不仅可以是一个action对象（JS对象）了，还可以是一个函数。</p>
+<p>构建了一个action，为一个函数，调用dispatch，该action会被自动执行。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ./store/actionCreator.JS</span></span><br><span class="line"><span class="comment">// 构建了一个action，返回函数，函数的参数是dispatch，函数内进行异步操作，获取ajax请求，创建action，dispatch action到store，更新store</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> getTodoList = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">//return一个函数，在函数中执行异步ajax操作</span></span><br><span class="line">    <span class="keyword">return</span> <span class="function">(<span class="params">dispatch</span>) =&gt;</span> &#123;</span><br><span class="line">        axios.get(<span class="string">'/list.json'</span>).then(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">            <span class="comment">// 获取模拟调试器上的mock本地数据</span></span><br><span class="line">            <span class="keyword">const</span> data =res.data.list;</span><br><span class="line">            <span class="comment">// 创建ation，传入data；将action传给store</span></span><br><span class="line">            <span class="keyword">const</span> action = initListAction(data);</span><br><span class="line">            dispatch(action);</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// TodoList.js </span></span><br><span class="line"><span class="comment">// 生命周期函数内，创建action函数，dispatch后执行该函数</span></span><br><span class="line">    componentDidMount()&#123;</span><br><span class="line">        <span class="keyword">const</span> action = getTodoList();</span><br><span class="line">        store.dispatch(action);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>原因：</p>
+<p>把异步函数放在生命周期函数中去做，该生命周期函数会越来越复杂且多，组件会越来越大。</p>
+<p>好处1：应该把复杂的业务逻辑和异步函数拆分到一个地方去管理。借助redux-thunk，放在actionCreator去管理。</p>
+<p>好处2：放在actionCreator的时候，自动化测试时，测试getTodoList方法，比测试生命周期函数要简单的多。</p>
+<h3 id="Redux中间件"><a href="#Redux中间件" class="headerlink" title="Redux中间件"></a>Redux中间件</h3><p><img src="../../../../Library/Application Support/typora-user-images/image-20190419101024985.png" alt="image-20190419101024985"></p>
+<p>action和store之间。</p>
+<p>对store的dispatch方法的封装、升级。根据参数不同，执行不同的操作。</p>
 <ul>
-<li>显示部分到整体的关系</li>
-<li>熟悉的形状</li>
+<li>原始：接收对象后，将对象直接传递给store。</li>
+<li>升级后：传递对象和之前一样；传递函数，不会直接传递，而是先执行，执行完后，若需要调用store，该函数内再调用store。</li>
+<li>例子：<ul>
+<li>redux-logger中间件，在传递过程中，将action打印。</li>
+<li>redux-thunk异步问题：将异步放在actionCreator中</li>
+<li>redux-saga异步问题：将异步单独放在文件中</li>
 </ul>
-<p>缺点：</p>
-<ul>
-<li>难以阅读，因为它更容易区分长度差异而不是角度差异</li>
-<li>它很容易被滥用</li>
+</li>
 </ul>
-<p>因为人类大脑可以更容易地比较长度而不是角度。</p>
-<h3 id="适合的场景-1"><a href="#适合的场景-1" class="headerlink" title="适合的场景"></a>适合的场景</h3><p>例子1: <strong>展示 2 个分类的占比情况。</strong></p>
-<p>例子2：<strong>多个但不超过 9 个分类的占比情况。</strong></p>
-<h3 id="不适合的场景-1"><a href="#不适合的场景-1" class="headerlink" title="不适合的场景"></a>不适合的场景</h3><p>例子1：<strong>分类过多的场景。</strong>推荐使用<a href="https://antvis.github.io/vis/doc/chart/details/bar.html" target="_blank" rel="noopener">横向柱状图</a>。</p>
-<p>例子2: <strong>分类占比差别不明显的场景</strong> </p>
-<h3 id="对比-饼图和南丁格尔玫瑰图"><a href="#对比-饼图和南丁格尔玫瑰图" class="headerlink" title="对比 - 饼图和南丁格尔玫瑰图"></a>对比 - 饼图和南丁格尔玫瑰图</h3><ul>
-<li>饼图通过<strong>弧度的大小</strong>来对比数据。</li>
-<li>南丁格尔图通过<strong>半径的大小</strong>来对比数据。</li>
-</ul>
-<h2 id="直方图-Histogram-分布"><a href="#直方图-Histogram-分布" class="headerlink" title="直方图 Histogram - 分布"></a>直方图 Histogram - 分布</h2><p>形状类似柱状图却有着与柱状图完全不同的含义。直方图牵涉统计学的概念，首先要对数据进行分组，然后统计每个分组内数据元的数量。</p>
-<p>首先要对数据进行分组，然后统计每个分组内数据元的数量。 在平面直角坐标系中，横轴标出每个组的端点，纵轴表示频数，每个矩形的高代表对应的频数，称这样的统计图为频数分布直方图。</p>
-<h3 id="类别-1"><a href="#类别-1" class="headerlink" title="类别"></a>类别</h3><ul>
-<li>非标准的直方图：纵轴表示数量</li>
-<li>频数分布直方图：纵轴为频数</li>
-</ul>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g1cn0rwr1wj31f20ikq79.jpg" alt="image-20190323125610693"></p>
-<h3 id="适合的场景-数据分布"><a href="#适合的场景-数据分布" class="headerlink" title="适合的场景 - 数据分布"></a>适合的场景 - 数据分布</h3><ul>
-<li>用于表示分布情况</li>
-<li>用于观察异常或孤立数据</li>
-</ul>
-<h3 id="不适合的场景-2"><a href="#不适合的场景-2" class="headerlink" title="不适合的场景"></a>不适合的场景</h3><p>抽取的样本数量过小，将会产生较大误差，可信度低，也就失去了统计的意义。因此，样本数不应少于 50 个。</p>
-<h3 id="直方图与柱状图对比"><a href="#直方图与柱状图对比" class="headerlink" title="直方图与柱状图对比"></a>直方图与柱状图对比</h3><ul>
-<li>柱状图是以矩形的长度表示每一组的频数或数量，其宽度(表示类别)则是固定的，利于<strong>较小的数据集分析</strong>。</li>
-<li>直方图是以矩形的长度表示每一组的频数或数量，宽度则表示各组的组距，因此其高度与宽度均有意义，利于展示<strong>大量数据集的统计结果</strong>。</li>
-<li>由于分组数据具有连续性，直方图的各矩形通常是<strong>连续</strong>排列，而柱状图则是<strong>分开</strong>排列。</li>
-</ul>
+<h3 id="✨使用React-Redux重写TodoList"><a href="#✨使用React-Redux重写TodoList" class="headerlink" title="✨使用React-Redux重写TodoList"></a>✨使用React-Redux重写TodoList</h3><p>安装：yarn add react-redux</p>
+<h4 id="提供："><a href="#提供：" class="headerlink" title="提供："></a>提供：</h4><p>Provider组件：核心组件，把store提供给每一个内部组件，也叫提供器</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Provider &#125; <span class="keyword">from</span> <span class="string">'react-redux'</span>;</span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// DOM返回APP组件，组件内容是一个Provider</span></span><br><span class="line"><span class="comment">// Provider 关联store后，将store提供给其内部的所有的组件</span></span><br><span class="line"><span class="keyword">const</span> App = (</span><br><span class="line">  &lt;Provider store=&#123;store&#125;&gt;</span><br><span class="line">    &lt;TodoList /&gt;</span><br><span class="line">  &lt;<span class="regexp">/Provider&gt;</span></span><br><span class="line"><span class="regexp">);</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">ReactDOM.render(App, document.getElementById('root'));</span></span><br></pre></td></tr></table></figure>
+<h4 id="连接："><a href="#连接：" class="headerlink" title="连接："></a>连接：</h4><p>connect方法，前两个参数为连接的规则，最后的参数为本组件TodoList。</p>
+<p>mapStateToProps：store里的数据、和组件里的数据关系关联</p>
+<p>mapDispatchToProps：组件里props如何对store里的数据做修改、和store里的dispatch方法做关联。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//把store里的数据，映射到组件，变成组件里的props,将store里的inputValue，赋值给props的inputValue</span></span><br><span class="line"><span class="keyword">const</span> mapStateToProps = <span class="function">(<span class="params">state</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    inputValue: state.inputValue</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将store.dispatch 方法，挂载到 props</span></span><br><span class="line"><span class="keyword">const</span> mapDispatchToProps = <span class="function">(<span class="params">dispatch</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    changeInputValue(e) &#123;</span><br><span class="line">      <span class="keyword">const</span> action = &#123;</span><br><span class="line">        type: <span class="string">'change_input_value'</span>,</span><br><span class="line">        value: e.target.value</span><br><span class="line">      &#125;;</span><br><span class="line">      dispatch(action)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 谁和谁连接：本组件TodoList和store做连接</span></span><br><span class="line"><span class="comment">// 怎么做链接：规则在mapStateToProps中，把store里的数据，映射到组件，变成组件里的props</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// TodoList和store关联，store的数据映射到组件的props上；想修改store，通过store的props。</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> connect(mapStateToProps, mapDispatchToProps)(TodoList);</span><br><span class="line"><span class="comment">// 实际上：todoList是一个UI组件，connect把UI组件和业务逻辑（数据、派发）结合，返回的结果为一个容器组件。</span></span><br><span class="line"><span class="comment">// 导出的内容就是connect的执行结果：容器组件</span></span><br></pre></td></tr></table></figure>
 <p>### </p>
 
           
@@ -1938,7 +1605,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/23/前端基础学习/数据可视化 - D3使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/18/😺浏览器+前端知识/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -1957,7 +1624,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/23/前端基础学习/数据可视化 - D3使用/" itemprop="url">数据可视化 - 经典的图表分析</a></h1>
+                <a class="post-title-link" href="/2019/04/18/😺浏览器+前端知识/" itemprop="url">浏览器+前端知识</a></h1>
         
 
         <div class="post-meta">
@@ -1971,8 +1638,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-23T13:17:42+08:00">
-                2019-03-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-18T13:17:42+08:00">
+                2019-04-18
               </time>
             
 
@@ -1994,8 +1661,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据可视化/" itemprop="url" rel="index">
-                    <span itemprop="name">数据可视化</span>
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
                   </a>
                 </span>
 
@@ -2012,8 +1679,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/23/前端基础学习/数据可视化 - D3使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/23/前端基础学习/数据可视化 - D3使用/" itemprop="commentCount"></span>
+                <a href="/2019/04/18/😺浏览器+前端知识/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/18/😺浏览器+前端知识/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -2021,7 +1688,7 @@
 
           
           
-             <span id="/2019/03/23/前端基础学习/数据可视化 - D3使用/" class="leancloud_visitors" data-flag-title="数据可视化 - 经典的图表分析">
+             <span id="/2019/04/18/😺浏览器+前端知识/" class="leancloud_visitors" data-flag-title="浏览器+前端知识">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -2046,7 +1713,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  7
+                  2.9k
                 </span>
               
 
@@ -2062,7 +1729,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  10
                 </span>
               
             </div>
@@ -2085,7 +1752,126 @@
       
         
           
-            <h2 id="柱状图-Bar-Chart-比较"><a href="#柱状图-Bar-Chart-比较" class="headerlink" title="柱状图 Bar Chart - 比较"></a>柱状图 Bar Chart - 比较</h2>
+            <h1 id="浏览器多进程到JS单线程，JS运行机制最全面的一次梳理"><a href="#浏览器多进程到JS单线程，JS运行机制最全面的一次梳理" class="headerlink" title="浏览器多进程到JS单线程，JS运行机制最全面的一次梳理"></a>浏览器多进程到JS单线程，JS运行机制最全面的一次梳理</h1><p><strong>浏览器内核进程——渲染引擎</strong>：负责取得网页的内容(html,xml和图像等)，整理讯息(例如假如css)，以及计算网页的显示方式，然后输出到显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不同。所有网页浏览器、电子邮件客户端以及它需要编辑、显示网络内容的应用程序都需要内核。</p>
+<p><strong>JS引擎线程——JS引擎</strong>：解析和执行JavaScript来实现网页的动态效果。</p>
+<p>http和浏览器的工作原理和内部机制要巩固一下，特别是涉及到性能、进程线程、同步异步什么的</p>
+<h2 id="浏览器是多进程的"><a href="#浏览器是多进程的" class="headerlink" title="浏览器是多进程的"></a>浏览器是多进程的</h2><h3 id="1-浏览器都包含哪些进程？"><a href="#1-浏览器都包含哪些进程？" class="headerlink" title="1 浏览器都包含哪些进程？"></a>1 浏览器都包含哪些进程？</h3><ol>
+<li>Browser进程：浏览器的主进程（负责协调、主控），只有一个。作用有<ul>
+<li>负责浏览器界面显示，与用户交互。如前进，后退等</li>
+<li>负责各个页面的管理，创建和销毁其他进程</li>
+<li>将Renderer进程得到的内存中的Bitmap，绘制到用户界面上</li>
+<li>网络资源的管理，下载等</li>
+</ul>
+</li>
+<li>第三方插件进程：每种类型的插件对应一个进程，仅当使用该插件时才创建</li>
+<li>GPU进程：最多一个，用于3D绘制等</li>
+<li><strong>浏览器渲染进程（浏览器内核）</strong>（Renderer进程，内部是多线程的）：默认每个Tab页面一个进程，互不影响。主要作用为<ul>
+<li>页面渲染，脚本执行，事件处理等</li>
+</ul>
+</li>
+</ol>
+<p>重点：<strong>在浏览器中打开一个网页相当于新起了一个进程（进程内有自己的多线程）</strong></p>
+<p>优点：1避免单个page crash影响整个浏览器；2避免第三方插件crash影响整个浏览器；3方便使用沙盒模型隔离插件等进程，提高浏览器稳定性</p>
+<h3 id="2-重点：浏览器内核（渲染进程）"><a href="#2-重点：浏览器内核（渲染进程）" class="headerlink" title="2 重点：浏览器内核（渲染进程）"></a>2 重点：浏览器内核（渲染进程）</h3><p>对于普通的前端操作来说，最终要的是<strong>渲染进程</strong>，<strong>浏览器的渲染进程是多线程的</strong></p>
+<p>可以这样理解，页面的渲染，JS的执行，事件的循环，都在这个进程内进行。</p>
+<ol>
+<li>GUI渲染线程<ul>
+<li>负责渲染浏览器界面，解析HTML，CSS，构建DOM树和RenderObject树，布局和绘制等。</li>
+<li>当界面需要重绘（Repaint）或由操作引发回流(reflow)时，该线程就会执行</li>
+<li>注意，<strong>GUI渲染线程与JS引擎线程是互斥的</strong>，当JS引擎执行时GUI线程会被挂起（相当于被冻结了），GUI更新会被保存在一个队列中<strong>等到JS引擎空闲时</strong>立即被执行。</li>
+</ul>
+</li>
+<li>JS引擎线程<ul>
+<li>也称为JS内核，负责处理Javascript脚本程序。（例如V8引擎）</li>
+<li>JS引擎线程负责解析Javascript脚本，运行代码。</li>
+<li>JS引擎一直等待着任务队列中任务的到来，然后加以处理，一个Tab页（renderer进程）中无论什么时候都只有一个JS线程在运行JS程序</li>
+<li>同样注意，<strong>GUI渲染线程与JS引擎线程是互斥的</strong>，所以如果JS执行的时间过长，这样就会造成页面的渲染不连贯，导致页面渲染加载阻塞。</li>
+</ul>
+</li>
+<li>事件触发线程<ul>
+<li>归属于浏览器而不是JS引擎，用来控制事件循环（可以理解，JS引擎自己都忙不过来，需要浏览器另开线程协助）</li>
+<li>当JS引擎执行代码块如setTimeOut时（也可来自浏览器内核的其他线程,如鼠标点击、AJAX异步请求等），会将对应任务添加到事件线程中</li>
+<li>当对应的事件符合触发条件被触发时，该线程会把事件添加到待处理队列的队尾，等待JS引擎的处理</li>
+<li>注意，由于JS的单线程关系，所以这些待处理队列中的事件都得排队等待JS引擎处理（当JS引擎空闲时才会去执行）</li>
+</ul>
+</li>
+<li>定时触发器线程<ul>
+<li>传说中的<code>setInterval</code>与<code>setTimeout</code>所在线程</li>
+<li>浏览器定时计数器并不是由JavaScript引擎计数的,（因为JavaScript引擎是单线程的, 如果处于阻塞线程状态就会影响记计时的准确）</li>
+<li>因此通过单独线程来计时并触发定时（计时完毕后，添加到事件队列中，等待JS引擎空闲后执行）</li>
+<li>注意，W3C在HTML标准中规定，规定要求setTimeout中低于4ms的时间间隔算为4ms。</li>
+</ul>
+</li>
+<li>异步http请求线程<ul>
+<li>在XMLHttpRequest在连接后是通过浏览器新开一个线程请求</li>
+<li>将检测到状态变更时，如果设置有回调函数，异步线程就<strong>产生状态变更事件</strong>，将这个回调再放入事件队列中。再由JavaScript引擎执行。</li>
+</ul>
+</li>
+</ol>
+<h2 id="浏览器渲染流程"><a href="#浏览器渲染流程" class="headerlink" title="浏览器渲染流程"></a>浏览器渲染流程</h2><ol>
+<li>解析html建立dom树</li>
+<li>解析css构建render树（将CSS代码解析成树形的数据结构，然后结合DOM合并成render树）</li>
+<li>布局render树（Layout/reflow），负责各元素尺寸、位置的计算</li>
+<li>绘制render树（paint），绘制页面像素信息</li>
+<li>浏览器会将各层的信息发送给GPU，GPU会将各层合成（composite），显示在屏幕上。</li>
+</ol>
+<h3 id="从Event-Loop谈JS的运行机制"><a href="#从Event-Loop谈JS的运行机制" class="headerlink" title="从Event Loop谈JS的运行机制"></a>从Event Loop谈JS的运行机制</h3><p>为什么JS引擎是单线程的？1.只需要运行JS脚本；2多线程的复杂性，譬如多线程操作一般要加锁。因此最初设计时选择了单线程。</p>
+<p>属于浏览器页面初次渲染完毕后的事情，JS引擎的一些运行机制分析。</p>
+<p>JS引擎是单线程:1 JS引擎线程；2事件触发线程；3定时触发器线程</p>
+<h3 id="事件循环机制"><a href="#事件循环机制" class="headerlink" title="事件循环机制"></a>事件循环机制</h3><ul>
+<li>JS分为同步任务和异步任务</li>
+<li>同步任务都在主线程上执行，形成一个<code>执行栈</code></li>
+<li>主线程之外，<strong>事件触发线程</strong>管理着一个<code>任务队列</code>，只要异步任务有了运行结果，就在<code>任务队列</code>之中放置一个事件。</li>
+<li>一旦<code>执行栈</code>中的所有同步任务执行完毕（此时JS引擎空闲），系统就会读取<code>任务队列</code>，将可运行的异步任务添加到可执行栈中，开始执行。</li>
+</ul>
+<p><img src="../../../Library/Application Support/typora-user-images/image-20190420141404129.png" alt="image-20190420141404129"></p>
+<ul>
+<li>主线程运行时会产生执行栈， 栈中的代码调用某些api时，它们会在事件队列中添加各种事件（当满足触发条件后，如ajax请求完毕）</li>
+<li>而栈中的代码执行完毕，就会读取事件队列中的事件，去执行那些回调</li>
+<li>（如此循环；注意，总是要等待栈中的代码执行完毕后才会去读取事件队列中的事件）</li>
+</ul>
+<h3 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h3><p>调用<code>setTimeout</code>后，是如何等待特定时间后才添加到事件队列中的？</p>
+<p>是由<strong>定时器线程</strong>控制（因为JS引擎自己都忙不过来，根本无暇分身）</p>
+<p>为什么要单独的定时器线程？因为JavaScript引擎是单线程的, 如果处于阻塞线程状态就会影响记计时的准确，因此很有必要单独开一个线程用来计时。</p>
+<p>什么时候会用到定时器线程？<strong>当使用setTimeout或setInterval时</strong>，它需要定时器线程计时，计时完成后就会将特定的事件推入事件队列中。</p>
+<h2 id="前端工程"><a href="#前端工程" class="headerlink" title="前端工程"></a>前端工程</h2><h3 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h3><p><strong>作用：</strong>webpack会将不同类型的静态资源，打包成一个JS，在HTML引用该JS的时候，其可以正常运行。</p>
+<p><strong>好处：</strong>希望零碎的JS打包在一起，减少HTTP请求；使用模块依赖，更新某一模块的时候只需要改一次即可。</p>
+<p>开发APP的时候，是一整个JS加载到浏览器中来渲染。可以以该JS文件作为入口。</p>
+<p>entry：入口为src/index.js；出口为文件名bundle.js和路径；module的rules</p>
+<p>webpack会将不同类型的静态资源（index.js文件及其所依赖的Vue、App等），打包成一个JS（完整的bundle.js），在HTML引用该JS的时候，其可以正常运行（且打包出来的是可以在浏览器中直接运行的JS代码）。</p>
+<h3 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h3><p>XSS 全称 Cross Site Scripting ，跨站脚本攻击。</p>
+<p>转义：是让用户的输入不要变成程序，输入的什么就让它输出成什么。</p>
+<p>CSP：内容安全策略，Content Security Policy：定义页面上哪一些内容是可被信任的，哪一些内容是不被信任的。比较灵活。</p>
+<h3 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h3><p>CSRF： Cross Site Request Foggy，即跨站请求攻击。从别的网站发起一个请求到我们的网站的。</p>
+<p>当一个用户登录我们的网站后，在 Cookies 中会存放用户的身份凭证。在大部分时候，就是一个 SessionId 。当用户下次访问我们的网站的时候，我们用这个凭证识别出用户是谁，有没有登录态。</p>
+<p>攻击者盗用了你的身份，以你的名义发送恶意请求。CSRF能够做的事情包括：以你名义发送邮件，发消息，盗取你的账号，甚至于购买商品，虚拟货币转账……造成的问题包括：个人隐私泄露以及财产安全。</p>
+<p>POST\GET请求：如果这个地址是一个发表文章、发布微博甚至转账之类的链接，那用户就在不知情的情况下进行了一些操作。这也是比较严重的安全问题。</p>
+<p>判断来源：比较简单，主要是判断<code>referer</code>这个头，如果不是自己的网站，就返回错误。</p>
+<p>加 token ：即同样的随机 token，在 cookies 中放一份，在表单中再放一份。这样第三方网站就无法获取到这个 token 是什么。</p>
+<p>验证码：每次的用户提交都需要用户在表单中填写一个图片上的随机字符串，</p>
+<h3 id="项目上线"><a href="#项目上线" class="headerlink" title="项目上线"></a>项目上线</h3><p>npm run build</p>
+<h3 id="前端的目的"><a href="#前端的目的" class="headerlink" title="前端的目的"></a>前端的目的</h3><p>搭建前端工程</p>
+<p>网络优化</p>
+<p>API定制</p>
+<p>nodejs层</p>
+<p><strong>html14.一个页面上有大量的图片（大型电商网站），加载很慢，你有哪些方法优化这些图片的加载，给用户更好的体验。</strong></p>
+<ul>
+<li>图片懒加载，在页面上的未可视区域可以添加一个滚动条事件，判断图片位置与浏览器顶端的距离与页面的距离，如果前者小于后者，优先加载。</li>
+<li>如果为幻灯片、相册等，可以使用图片预加载技术，将当前展示图片的前一张和后一张优先下载。</li>
+<li>如果图片为css图片，可以使用CSSsprite，SVGsprite，Iconfont、Base64等技术。</li>
+<li>如果图片过大，可以使用特殊编码的图片，加载时会先加载一张压缩的特别厉害的缩略图，以提高用户体验。</li>
+<li>如果图片展示区域小于图片的真实大小，则因在服务器端根据业务需要先行进行图片压缩，图片压缩后大小与展示一致。 </li>
+</ul>
+<p><strong>JS12.（设计题）想实现一个对页面某个节点的拖曳？如何做？（使用原生JS）</strong></p>
+<p>回答出概念即可，下面是几个要点</p>
+<ul>
+<li>给需要拖拽的节点绑定mousedown, mousemove, mouseup事件</li>
+<li>mousedown事件触发后，开始拖拽</li>
+<li>mousemove时，需要通过event.clientX和clientY获取拖拽位置，并实时更新位置</li>
+<li>mouseup时，拖拽结束</li>
+<li>需要注意浏览器边界的情况</li>
+</ul>
+
           
         
       
@@ -2133,7 +1919,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/08/iOS基础/IOS12+Swift4+Xcode10开发 - /">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/17/未命名/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -2152,7 +1938,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/08/iOS基础/IOS12+Swift4+Xcode10开发 - /" itemprop="url">IOS12+Swift4+Xcode10开发 -  5 任务清单APP</a></h1>
+                <a class="post-title-link" href="/2019/04/17/未命名/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -2166,8 +1952,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-08T10:19:57+08:00">
-                2019-03-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-17T16:52:39+08:00">
+                2019-04-17
               </time>
             
 
@@ -2177,28 +1963,6 @@
           </span>
 
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/APP/" itemprop="url" rel="index">
-                    <span itemprop="name">APP</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -2207,8 +1971,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/08/iOS基础/IOS12+Swift4+Xcode10开发 - /#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/08/iOS基础/IOS12+Swift4+Xcode10开发 - /" itemprop="commentCount"></span>
+                <a href="/2019/04/17/未命名/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/17/未命名/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -2216,7 +1980,7 @@
 
           
           
-             <span id="/2019/03/08/iOS基础/IOS12+Swift4+Xcode10开发 - /" class="leancloud_visitors" data-flag-title="IOS12+Swift4+Xcode10开发 -  5 任务清单APP">
+             <span id="/2019/04/17/未命名/" class="leancloud_visitors" data-flag-title>
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -2241,7 +2005,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  46
+                  39
                 </span>
               
 
@@ -2279,18 +2043,13 @@
 
       
         
-          <h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>TableViewController</p>
-<p>增加任务</p>
-<p>删除任务</p>
-<p>修改任务</p>
-<h4 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h4><h3 id="遇到的困难"><a href="#遇到的困难" class="headerlink" title="遇到的困难"></a>遇到的困难</h3><h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/03/08/iOS基础/IOS12+Swift4+Xcode10开发 - /#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <p><img src="/Users/iris/Library/Application Support/typora-user-images/image-20190417164720007.png" alt="image-20190417164720007"></p>
+<p><img src="/Users/iris/Library/Application Support/typora-user-images/image-20190417164727414.png" alt="image-20190417164727414"></p>
+<p>1.退化为1个视图的情况，要比汪老师文章的方法要好。</p>
+<p>2.对于每个视图展示其DSC、GONG、SC的结果。</p>
+
+          
         
       
     </div>
@@ -2337,7 +2096,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/07/👀IOS12+Swift4+Xcode10开发 - 4 元气天气APP/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/17/Untitled/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -2356,7 +2115,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/07/👀IOS12+Swift4+Xcode10开发 - 4 元气天气APP/" itemprop="url">IOS12+Swift4+Xcode10开发 - 4 元气天气APP</a></h1>
+                <a class="post-title-link" href="/2019/04/17/Untitled/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -2370,8 +2129,181 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-07T10:19:57+08:00">
-                2019-03-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-17T12:53:55+08:00">
+                2019-04-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/17/Untitled/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/17/Untitled/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/04/17/Untitled/" class="leancloud_visitors" data-flag-title>
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  0
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/16/😊React+Redux+AntD - 0 极简事项/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/16/😊React+Redux+AntD - 0 极简事项/" itemprop="url">React+Redux+AntD - 0 极简事项.md</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-16T20:19:57+08:00">
+                2019-04-16
               </time>
             
 
@@ -2411,8 +2343,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/07/👀IOS12+Swift4+Xcode10开发 - 4 元气天气APP/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/07/👀IOS12+Swift4+Xcode10开发 - 4 元气天气APP/" itemprop="commentCount"></span>
+                <a href="/2019/04/16/😊React+Redux+AntD - 0 极简事项/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/16/😊React+Redux+AntD - 0 极简事项/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -2420,7 +2352,7 @@
 
           
           
-             <span id="/2019/03/07/👀IOS12+Swift4+Xcode10开发 - 4 元气天气APP/" class="leancloud_visitors" data-flag-title="IOS12+Swift4+Xcode10开发 - 4 元气天气APP">
+             <span id="/2019/04/16/😊React+Redux+AntD - 0 极简事项/" class="leancloud_visitors" data-flag-title="React+Redux+AntD - 0 极简事项.md">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -2445,7 +2377,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.3k
+                  1.6k
                 </span>
               
 
@@ -2461,7 +2393,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  8
+                  5
                 </span>
               
             </div>
@@ -2483,45 +2415,82 @@
 
       
         
-          <h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g10d6rxw4qg30af0l8k77.gif" alt="app5"></p>
-<h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>让用户查看当地天气、查询异地天气的时看到正能量文字，元气满满的开始新的一天。</p>
-<p>本程序共分为三个页面：欢迎页面，天气预览界面，城市天气查询界面。</p>
-<h4 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h4><p>天气预览界面：定位天气展示【1 获取当前经纬度位置 2 根据位置获取天气、城市信息 3将信息展示在视图】</p>
-<p>城市天气查询界面：用户查询天气【1展示当前城市 2输入框输入查询城市的名称 3按下查询按钮-获取名称至页面1，销毁页面2 】</p>
-<h4 id="采用了MVC模式"><a href="#采用了MVC模式" class="headerlink" title="采用了MVC模式"></a>采用了MVC模式</h4><p>model部分负责数据，我们构建天气类，属性包括：温度、城市、condition，以及计算属性——icon、words，他们需要根据condition属性来确定。比如晴天对于icon为小太阳、文字对于“天晴是你的心情”。</p>
-<p>controller负责两个页面中的业务逻辑：从model中取数据，然后返回给view。</p>
-<p>最终在view上展示所需天气及其文字信息。</p>
-<h3 id="遇到的困难"><a href="#遇到的困难" class="headerlink" title="遇到的困难"></a>遇到的困难</h3><h4 id="页面跳转传值"><a href="#页面跳转传值" class="headerlink" title="页面跳转传值"></a>页面跳转传值</h4><p>页面跳转传值部分。【功能：按页面1右上角按钮，跳转到页面二，页面二展示<strong>当前city</strong>；用户输入<strong>目标city</strong>，按查询后跳转回页面一，展示查询city的天气信息】</p>
-<p>segue导航正向传值较容易，3步骤。1在prepare函数部分获取segue的identifier【转换箭头】，2使用as!强制转化，实例化该segue的destination页面vc，3使用实例化的vc进行传值。这样就可以在下一个页面使用本页面中的“所在城市”的信息了。</p>
-<p>而反向传值就不同。如果采用control+drag方式，从页面二的button到页面一加上转换箭头，这样只会再重新生成新的页面一，定位到本地天气；而不是预想的回到原先页面，重新展示所搜索城市的信息。</p>
-<p>所以需要自定义protocol，使用delegate实现导航的反向传值。</p>
-<ul>
-<li>在页面二需要：3个步骤来自定义协议portocol，实现【按下查找城市按钮，获取输入的city值】的功能。</li>
+          <h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p>阿里交叉面的面试官介绍了技术框架React+Redux+AntD，使用新技术把自己的iOS极简事项改写为前端版本。</p>
+<p><img src="../../../Library/Application Support/typora-user-images/image-20190417170435185.png" alt="image-20190417170435185"></p>
+<p>### </p>
+<h3 id="项目优化"><a href="#项目优化" class="headerlink" title="项目优化"></a>项目优化</h3><p>其实项目本身比较简单，我自己就从优化的方面去进行了思考。</p>
+<h3 id="1-React本身的性能优化方法："><a href="#1-React本身的性能优化方法：" class="headerlink" title="1 React本身的性能优化方法："></a>1 React本身的性能优化方法：</h3><ul>
+<li>使用虚拟DOM。减少生成真实DOM时间，且DOM对象比对加快。</li>
+<li>虚拟DOM的比对。同层比对+使用key值比对，提升虚拟DOM比对速度</li>
+<li>react16，setState性能提升机制，使用异步函数：多次数据改变结合成一次来做，降低虚拟DOM频率</li>
 </ul>
-<p>1自定义协议，安排协议中的方法（获取输入的city，传给页面一），2 声明协议属于页面二中的delegate变量 3规定在哪里触发协议中的事件。</p>
-<ul>
-<li>在页面一种需要：3个步骤来实现协议，实现【获取页面二中city的值，并展示于本页面】的功能。</li>
+<h3 id="2-性能优化："><a href="#2-性能优化：" class="headerlink" title="2 性能优化："></a>2 性能优化：</h3><h4 id="渲染优化："><a href="#渲染优化：" class="headerlink" title="渲染优化："></a>渲染优化：</h4><ul>
+<li>1 作用域修改放在constructor构造函数内，保证作用域绑定操作只执行一次 + 避免子组件的无谓渲染。</li>
 </ul>
-<p>1遵守协议 2 实现协议中的方法（获取city值，根据值获取温度对象的所有信息，展示与本页面）3 第二个页面vc的事件函数委托delegate给self实现。</p>
-<h4 id="获取当前位置的天气"><a href="#获取当前位置的天气" class="headerlink" title="获取当前位置的天气"></a>获取当前位置的天气</h4><p>1 委托本页面，实现定位协议中的请求位置的方法，获得经纬度。（难点）</p>
-<p>2 根据经纬度信息，使用Alamofire请求API来获取天气数据；</p>
-<p>3 利用SwiftJSON解析生成数据；</p>
-<p>4 给weather对象赋值；</p>
-<p>5 再使用weather对象中的天气、文字信息更新页面。</p>
-<hr>
-<p><strong>✨使用了定位协议CLLocationManagerDelegate的方法。</strong></p>
-<p><strong>1 遵守定位协议 2 实例化定位管理器CLLocationManager 3 实现协议中的方法（获取当前的经纬度）4locationManager委托本页面</strong></p>
-<p><strong>当manager请求位置的时候，则系统自动调用manager方法，在该方法里获得经纬度。</strong></p>
-<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><h4 id="protocol-delegate：类似java中的接口与实现"><a href="#protocol-delegate：类似java中的接口与实现" class="headerlink" title="protocol-delegate：类似java中的接口与实现"></a>protocol-delegate：类似java中的接口与实现</h4><p>协议——工具间，协议中的方法——工具，实例化的对象——老板，本页面self——打工仔，委托——老板让打工仔干活</p>
-<h4 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h4><p>model中的计算属性——compute属性 某个属性需要根据另一个属性来确定，我们定义其为计算属性</p>
-<p>如根据天气情况属性——晴天，得到对应的icon和words：icon为小太阳、wors为“天晴是你的心情”。</p>
-<h4 id="第三方库的CocoaPods安装的使用"><a href="#第三方库的CocoaPods安装的使用" class="headerlink" title="第三方库的CocoaPods安装的使用"></a>第三方库的CocoaPods安装的使用</h4><p>Alamofire：完成http请求天气数据</p>
-<p>SwiftJSON：解析、生成数据</p>
-<h4 id="extension代码优化"><a href="#extension代码优化" class="headerlink" title="extension代码优化"></a>extension代码优化</h4><p>目的：提高代码可读性。为日后重构代码打下了良好的基础。</p>
-<p>场景：1 私有的辅助函数 ；2 遵守协议（实现某个协议的方法放到一个 extension 中）；3 模型（Model用结构体， 使用extension 将 Model 的 属性 和 基于属性的计算计算属性分离 ）</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.handleClick = <span class="keyword">this</span>.handleClick.bind(<span class="keyword">this</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>2 借助生命周期函数：shouldComponentUpdate，提高react组件性能，避免无谓的组件render渲染。</li>
+</ul>
+<h4 id="异步优化："><a href="#异步优化：" class="headerlink" title="异步优化："></a>异步优化：</h4><ul>
+<li><p>3 发送<strong>ajax请求，放在componentDidMount</strong></p>
+<ul>
+<li>原因：ajax只需要请求1次，需要在渲染前获取数据。场景：使用ajax异步请求的方式，从我的一个接口上，请求一个远程的todolist数据，将远程数据加载到本地，渲染到页面上。</li>
+</ul>
+</li>
+<li><p>4 <strong>Redux-thunk</strong>中间件实现ajax数据请求。</p>
+<ul>
+<li><p>把异步操作的代码从组件中移除，移除到action中去。使用redux-thunk后，action不仅可以是一个action对象（JS对象）了，还可以是一个函数。</p>
+</li>
+<li><p>原因：</p>
+<p>把异步函数放在生命周期函数中去做，该生命周期函数会越来越复杂且多，组件会越来越大。</p>
+<p>好处1：应该把复杂的业务逻辑和异步函数拆分到一个地方去管理。借助redux-thunk，放在actionCreator去管理。</p>
+<p>好处2：放在actionCreator的时候，自动化测试时，测试getTodoList方法，比测试生命周期函数要简单的多。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>异步组件react-loadable</strong>：一个动态导入加载组件的高阶组件。页面异步，分割成多个js文件。按需加载 （懒加载）</p>
+<ul>
+<li>loadable.js：loader：本页面。loading：加载时候显示的内容。</li>
+<li>App.js，from修改loadable.js，使用withRouter，让detail有能力获取Rounter的所有参数和内容，即可以获取id。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-维护性优化，方便测试和找BUG："><a href="#3-维护性优化，方便测试和找BUG：" class="headerlink" title="3 维护性优化，方便测试和找BUG："></a>3 维护性优化，方便测试和找BUG：</h3><ul>
+<li>React是函数式编程，使用前端自动化测试：只需要给函数一个数值，查看输出是否符合预期。</li>
+<li>propTypes:组件要接受外部传过来的值，进行类型校验。验证传值。DefaultProps:若父组件未向子组件传值，定义属性默认值。设置默认值</li>
+<li>ActionTypes的拆分：action判断的时候，若常量写错了会报异常，字符串不会报异常。方便找出bug。</li>
+<li>使用actionCreators统一创建action：自动化测试，有利于代码维护，不然每一个绑定事件的函数都要写一个生成的action，不利于大型项目的维护。</li>
+<li>使用UI组件和容器组件，分离UI操作和逻辑操作。</li>
+<li>无状态组件：当普通组件只有render函数的时候，可以使用无状态组件替换该组件。<ul>
+<li>普通组件的性能比不上无状态组件的性能高 。无状态组件就是一个函数；普通组件是JS的类，类生成的对象里面还有生命周期函数，执行的时候既要执行函数，又要执行render。</li>
+</ul>
+</li>
+<li><strong>React-Redux</strong>重写TodoList：<ul>
+<li>Provider组件：核心组件，把store提供给每一个内部组件，也叫提供器</li>
+<li>连接： connect方法，前两个参数为连接的规则，最后的参数为本组件TodoList。</li>
+<li>结果=》todoList是一个UI组件，connect把UI组件和业务逻辑（数据、派发）结合，返回的结果为一个容器组件。</li>
+</ul>
+</li>
+</ul>
+<h3 id="项目对比"><a href="#项目对比" class="headerlink" title="项目对比"></a>项目对比</h3><p>目标相同：展现UI，监听用户。js单线程。ios主队列=刷新页面。</p>
+<p>UI设计：</p>
+<ul>
+<li>storyboard和纯代码（snp布局）实现</li>
+<li>react组件化来实现</li>
+</ul>
+<p>传值：</p>
+<ul>
+<li>前端是属性传值、子组件调用父组件方法传值。</li>
+<li>iOS使用segue正向传值，自定义protocal-delegate反向传值</li>
+</ul>
+<p>耗时操作：HTTP等放在异步操作。</p>
+<p>✨需要优化性能：</p>
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><p>Redux：数据层框架。将组件中的数据放在一个公用存储区域去存储，组件改变数据，其他组件会感知Redux的改变，再去取数据更新组件。</p>
+<p>AntD：统一中台项目的前端 UI 设计，减少设计成本(大型前端项目可能不适用，适合管理系统)</p>
+<p>React：构建用户界面的JS库。用于构建UI， 是 MVC 中的 V（视图）。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/03/07/👀IOS12+Swift4+Xcode10开发 - 4 元气天气APP/#more" rel="contents">
+            <a class="btn" href="/2019/04/16/😊React+Redux+AntD - 0 极简事项/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -2563,7 +2532,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2611,7 +2580,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">66</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2622,7 +2591,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2633,7 +2602,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2707,7 +2676,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">49.5k</span>
+    <span title="Site words total count">74.7k</span>
   
 </div>
 

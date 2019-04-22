@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="IRIS&#39;s BLOG">
 <meta property="og:description" content="LRU 缓存淘汰策略内存管理的一种页面置换算法。LRU全称是Least Recently Used,即最近最久未使用的意思，最久未使用的数据，下次被访问的可能最小，我们需要删除它。 链表实现维护一个有序单链表，靠近尾部是最早访问，头部为最新访问。当有新数据被访问，我们从头开始遍历链表：  若此数据之前已有，从原来的位置删除，再将数据放在头结点； 若之前没有：缓存未满，直接放在头部；缓存已满，删除尾">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-12T16:19:10.437Z">
+<meta property="og:updated_time" content="2019-04-20T06:46:49.989Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构 - 2 链表">
 <meta name="twitter:description" content="LRU 缓存淘汰策略内存管理的一种页面置换算法。LRU全称是Least Recently Used,即最近最久未使用的意思，最久未使用的数据，下次被访问的可能最小，我们需要删除它。 链表实现维护一个有序单链表，靠近尾部是最早访问，头部为最新访问。当有新数据被访问，我们从头开始遍历链表：  若此数据之前已有，从原来的位置删除，再将数据放在头结点； 若之前没有：缓存未满，直接放在头部；缓存已满，删除尾">
@@ -399,7 +399,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  482
+                  488
                 </span>
               
 
@@ -443,10 +443,10 @@
 <li>若之前没有：缓存未满，直接放在头部；缓存已满，删除尾部数据，将其放在头部。</li>
 </ul>
 <p>时间复杂度：时间复杂度为 O(n)，需要遍历。</p>
+<p>LRU缓存淘汰算法</p>
 <h3 id="散列表实现"><a href="#散列表实现" class="headerlink" title="散列表实现"></a>散列表实现</h3><p>1.上面所讲的几个散列表和链表组合的例子里，我们都是使用双向链表。如果把双向链表改成单链表，还能否正常工作？为什么呢？<br>2.假设猎聘网有10万名猎头，每个猎头可以通过做任务（比如发布职位）来积累积分，然后通过积分来下载简历。假设你是猎聘网的一名工程师，如何在内存中存储这10万个猎头的ID和积分信息，让它能够支持这样几个操作：<br>1）根据猎头ID查收查找、删除、更新这个猎头的积分信息；<br>2）查找积分在某个区间的猎头ID列表；<br>3）查找按照积分从小到大排名在第x位到第y位之间的猎头ID列表。</p>
 <p>以积分排序构建一个跳表，再以猎头 ID 构建一个散列表。</p>
 <p>1）ID 在散列表中所以可以 O(1) 查找到这个猎头；<br>2）积分以跳表存储，跳表支持区间查询；<br>3）这点根据目前学习的知识暂时无法实现，老师文中也提到了。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -489,8 +489,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/05/❤️算法 - 0 排序/" rel="prev" title="算法 - 0 排序">
-                算法 - 0 排序 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/23/存档/简历/" rel="prev" title="我的简历V1">
+                我的简历V1 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -573,7 +573,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">66</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -584,7 +584,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -595,7 +595,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -685,7 +685,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">49.5k</span>
+    <span title="Site words total count">74.7k</span>
   
 </div>
 
