@@ -289,6 +289,422 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/数据结构 - 二分查找/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/05/数据结构 - 二分查找/" itemprop="url">数据结构 -  二分查找</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T13:17:42+08:00">
+                2018-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/05/数据结构 - 二分查找/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/数据结构 - 二分查找/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/01/05/数据结构 - 二分查找/" class="leancloud_visitors" data-flag-title="数据结构 -  二分查找">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  327
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>针对有序数据集合的查找算法</p>
+<p>1000 万个整数数据，每个数据占 8 个字节，如何设计数据结构和算法，快速判断某个整数是否出现在这 1000 万数据中？</p>
+<p>该功能不要占用太多的内存空间，最多不要超过 100MB。</p>
+<h3 id="二分思想"><a href="#二分思想" class="headerlink" title="二分思想"></a>二分思想</h3><p>O(logn) 惊人的查找速度</p>
+<h3 id="二分查找的递归与非递归实现"><a href="#二分查找的递归与非递归实现" class="headerlink" title="二分查找的递归与非递归实现"></a>二分查找的递归与非递归实现</h3><p>最简单的情况就是有序数组中不存在重复元素。</p>
+<ol>
+<li><p>循环条件：low&lt;=high</p>
+</li>
+<li><p>mid取值：</p>
+<p>low 和 high 比较大的话，mid=(low+high)/2和可能会溢出。</p>
+<p>改进方式1为，mid=low+(high-low)/2</p>
+<p>改进方式2为，除以 2 操作转化成位运算 mid = low+((high-low)&gt;&gt;1)</p>
+</li>
+<li><p>low和high更新</p>
+<p>low=mid+1，high=mid-1</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 循环二分查找</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">search</span><span class="params">(arr, n, value)</span>:</span></span><br><span class="line">    low = <span class="number">0</span></span><br><span class="line">    high = n - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> low &lt;= high:</span><br><span class="line">        mid = int((high + low) / <span class="number">2</span>)</span><br><span class="line">        <span class="keyword">if</span> arr[mid] == value:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> arr[mid] &lt; value:</span><br><span class="line">            low = mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            high = mid - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 递归二分查找</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Binarysearch</span><span class="params">(arr, low, high, value)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> low &gt; high:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">    <span class="comment"># 位操作，防止溢出</span></span><br><span class="line">    mid = low + ((high - low) &gt;&gt; <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">if</span> arr[mid] == value:</span><br><span class="line">        <span class="keyword">return</span> mid</span><br><span class="line">    <span class="keyword">elif</span> arr[mid] &lt; value:</span><br><span class="line">        <span class="keyword">return</span> Binarysearch(arr, mid + <span class="number">1</span>, high, value)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> Binarysearch(arr, low, mid - <span class="number">1</span>, value)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line">n = len(a)</span><br><span class="line">value = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(search(a, n, value))</span><br><span class="line">print(Binarysearch(a, <span class="number">0</span>, n - <span class="number">1</span>, value))</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/数据结构 -  5 图/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/05/数据结构 -  5 图/" itemprop="url">数据结构 -  数组</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T13:17:42+08:00">
+                2018-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/05/数据结构 -  5 图/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/数据结构 -  5 图/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/01/05/数据结构 -  5 图/" class="leancloud_visitors" data-flag-title="数据结构 -  数组">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  88
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>有向图</p>
+<p>带权图</p>
+<h3 id="邻接矩阵存储方法"><a href="#邻接矩阵存储方法" class="headerlink" title="邻接矩阵存储方法"></a>邻接矩阵存储方法</h3><p>存储费空间，使用方便</p>
+<h3 id="领结表存储方法"><a href="#领结表存储方法" class="headerlink" title="领结表存储方法"></a>领结表存储方法</h3><p>节省空间、使用耗时</p>
+<h3 id="如何存储微博、微信等社交网络中的好友关系？"><a href="#如何存储微博、微信等社交网络中的好友关系？" class="headerlink" title="如何存储微博、微信等社交网络中的好友关系？"></a>如何存储微博、微信等社交网络中的好友关系？</h3><p>判断用户A是否关注用户B</p>
+<p>判断用户A是否是用户B的粉丝</p>
+<p>邻接表</p>
+<p>逆邻接表</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/数据结构 - 2 链表/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -495,7 +911,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/数据结构 -  2 堆栈/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/数据可视化/数据可视化 - 可视化基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -514,7 +930,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/05/数据结构 -  2 堆栈/" itemprop="url">数据结构 -  数组</a></h1>
+                <a class="post-title-link" href="/2018/01/05/数据可视化/数据可视化 - 可视化基础/" itemprop="url">数据可视化 - 可视化基础</a></h1>
         
 
         <div class="post-meta">
@@ -551,8 +967,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
+                  <a href="/categories/数据可视化/" itemprop="url" rel="index">
+                    <span itemprop="name">数据可视化</span>
                   </a>
                 </span>
 
@@ -569,8 +985,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/01/05/数据结构 -  2 堆栈/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/数据结构 -  2 堆栈/" itemprop="commentCount"></span>
+                <a href="/2018/01/05/数据可视化/数据可视化 - 可视化基础/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/数据可视化/数据可视化 - 可视化基础/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -578,7 +994,7 @@
 
           
           
-             <span id="/2018/01/05/数据结构 -  2 堆栈/" class="leancloud_visitors" data-flag-title="数据结构 -  数组">
+             <span id="/2018/01/05/数据可视化/数据可视化 - 可视化基础/" class="leancloud_visitors" data-flag-title="数据可视化 - 可视化基础">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -603,7 +1019,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  225
+                  1.2k
                 </span>
               
 
@@ -619,7 +1035,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -642,13 +1058,40 @@
       
         
           
-            <h1 id="08-栈：如何实现浏览器的前进和后退功能？"><a href="#08-栈：如何实现浏览器的前进和后退功能？" class="headerlink" title="08 | 栈：如何实现浏览器的前进和后退功能？"></a>08 | 栈：如何实现浏览器的前进和后退功能？</h1><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g1e825e40tj30lc05iwg5.jpg" alt="image-20190324214941336"></p>
-<p>abc顺序浏览页面，回退返回a页面，前进返回b页面。</p>
-<p>若此时在进入新的页面d，则无法再回到页面c，需要清空第二个栈。</p>
-<p>ps.内存中的堆栈和数据结构堆栈不是一个概念，可以说内存中的堆栈是真实存在的物理区，数据结构中的堆栈是抽象的数据存储结构。</p>
-<h1 id="09-队列：队列在线程池等有限资源池中的应用"><a href="#09-队列：队列在线程池等有限资源池中的应用" class="headerlink" title="09 | 队列：队列在线程池等有限资源池中的应用"></a>09 | 队列：队列在线程池等有限资源池中的应用</h1><p>线程池没有空闲线程时，新的任务请求线程资源时，线程池该如何处理？</p>
-<p>第一种是非阻塞的处理方式，直接拒绝任务请求；另一种是阻塞的处理方式，将请求排队，等到有空闲线程时，取出排队的请求继续处理。</p>
-
+            <p>有些人认为可视化只是把计算分析的结果图形化。</p>
+<p>实则不然，可视化是人类认识、分析复杂数据的重要途径。</p>
+<h1 id="数据可视分析"><a href="#数据可视分析" class="headerlink" title="数据可视分析"></a>数据可视分析</h1><h2 id="数据可视化的挑战"><a href="#数据可视化的挑战" class="headerlink" title="数据可视化的挑战"></a>数据可视化的挑战</h2><p>计算能力有限、感知和认知的局限、显示能力的局限</p>
+<h3 id="大数据可视化"><a href="#大数据可视化" class="headerlink" title="大数据可视化"></a>大数据可视化</h3><h3 id="以人为中心的探索式可视分析-关注"><a href="#以人为中心的探索式可视分析-关注" class="headerlink" title="以人为中心的探索式可视分析(关注)"></a>以人为中心的探索式可视分析(关注)</h3><h2 id="可视化框架"><a href="#可视化框架" class="headerlink" title="可视化框架"></a>可视化框架</h2><h3 id="可视化循环模型"><a href="#可视化循环模型" class="headerlink" title="可视化循环模型"></a>可视化循环模型</h3><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g16rj54xzwj30zo0iadi8.jpg" alt="image-20190318105853130"></p>
+<h3 id="可视分析流程"><a href="#可视分析流程" class="headerlink" title="可视分析流程"></a>可视分析流程</h3><p>数据转化、可视映射、视图转化</p>
+<p>原数据-&gt;转化后的数据-&gt;可视结构-&gt;视图</p>
+<p>如：我们选择线性投影将30维的原数据降为5维度的转化数据，再使用平行坐标视觉映射转为可视结构，然而数据有相互遮挡，则选择PCP方法视图转化至视图上。最后呈现热力图式的平行坐标。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g16qrifmtjj31ee0lc4az.jpg" alt="image-20190318103214651"></p>
+<h2 id="基本图表"><a href="#基本图表" class="headerlink" title="基本图表"></a>基本图表</h2><h3 id="原始数据"><a href="#原始数据" class="headerlink" title="原始数据"></a>原始数据</h3><p>数据轨迹、柱状图（x轴为类别型，主要用于统计值）、直方图（x轴为数据型，主要用于频率）、饼图(比例)、散点图与散点图矩阵(属性对的关系、热力图(颜色编码二维数据值的大小)</p>
+<h3 id="统计值标绘制"><a href="#统计值标绘制" class="headerlink" title="统计值标绘制"></a>统计值标绘制</h3><p>盒须图，上面最大值、下面最小值、盒子表示数据大致范围25-75%</p>
+<h3 id="多视图协调关联"><a href="#多视图协调关联" class="headerlink" title="多视图协调关联"></a>多视图协调关联</h3><p>选择后高亮</p>
+<h2 id="交互技术"><a href="#交互技术" class="headerlink" title="交互技术"></a>交互技术</h2><h3 id="选择-selection"><a href="#选择-selection" class="headerlink" title="选择 selection"></a>选择 selection</h3><p>数据过多视觉混乱：堆叠区域和对象放大<br>选择后展示提示信息：字符串在有限空间排列，不选择的时候隐藏，选择后展开</p>
+<h3 id="导航-navigation"><a href="#导航-navigation" class="headerlink" title="导航 navigation"></a>导航 navigation</h3><p>人眼观察到区域可见空间有限<br>缩放<br>平移<br>旋转</p>
+<h3 id="重配-reconfigure"><a href="#重配-reconfigure" class="headerlink" title="重配 reconfigure"></a>重配 reconfigure</h3><p>提供观察数据的不同视角<br>重组视图<br>重排列</p>
+<h3 id="编码-encode"><a href="#编码-encode" class="headerlink" title="编码 encode"></a>编码 encode</h3><p>颜色编码、大小、方向、字体、性状</p>
+<h3 id="抽象-abstraction"><a href="#抽象-abstraction" class="headerlink" title="抽象 abstraction"></a>抽象 abstraction</h3><p>不同等级的信息，交互控制获得更多或更少的细节</p>
+<h3 id="过滤-filter"><a href="#过滤-filter" class="headerlink" title="过滤 filter"></a>过滤 filter</h3><p>设置约束条件进行信息查询<br>eg.选定价格房型，地图上出现复合房子<br>动态过滤：滑动框、按钮、组合框，过滤条件之间不相关</p>
+<h3 id="关联-connection"><a href="#关联-connection" class="headerlink" title="关联 connection"></a>关联 connection</h3><p>高亮显示对象之间关系<br>链接与刷动 刷选对象，其余都可高亮</p>
+<h3 id="概览-细节-overview-details"><a href="#概览-细节-overview-details" class="headerlink" title="概览+细节 overview+details"></a>概览+细节 overview+details</h3><p>谷歌地图右下角全局，主页面当前区域</p>
+<h3 id="焦点-上下文-focus-context"><a href="#焦点-上下文-focus-context" class="headerlink" title="焦点+上下文 focus+context"></a>焦点+上下文 focus+context</h3><h1 id="高维数据可视化"><a href="#高维数据可视化" class="headerlink" title="高维数据可视化"></a>高维数据可视化</h1><p>高维多元数据——独立属性、相关数据</p>
+<p>可视分析——维度太高，难以提取可理解的维度关联信息。高于10维的数据</p>
+<h2 id="空间映射法"><a href="#空间映射法" class="headerlink" title="空间映射法"></a>空间映射法</h2><h3 id="散点图与散点图矩阵"><a href="#散点图与散点图矩阵" class="headerlink" title="散点图与散点图矩阵"></a>散点图与散点图矩阵</h3><h3 id="平行坐标"><a href="#平行坐标" class="headerlink" title="平行坐标"></a>平行坐标</h3><h3 id="降维-重要"><a href="#降维-重要" class="headerlink" title="降维(重要)"></a>降维(重要)</h3><p>线性方法和非线性方法，将高维数据投影project或嵌入embed至低维空间(通常为2、3维)，并尽量在低维空间保持多元空间中的关系和特征。</p>
+<p>最后展示的方法一般为散点图。</p>
+<h4 id="主元分析-PCA-无监督"><a href="#主元分析-PCA-无监督" class="headerlink" title="主元分析 PCA(无监督)"></a>主元分析 PCA(无监督)</h4><p>减少维度，保持数据集方差贡献最大的特征。（在低维空间找一个观察角度，以便最大限度观察多维数据的差异。）</p>
+<p>第一个新坐标轴选择的是原始数据中方差最大的方向，第二个新坐标轴选择的是与第一个新坐标轴正交且方差次大的方向。</p>
+<p>通过计算数据矩阵的协方差矩阵，然后得到协方差矩阵的特征值及特征向量，选择特征值最大（也即包含方差最大）的N个特征所对应的特征向量组成的矩阵，我们就可以将数据矩阵转换到新的空间当中，实现数据特征的降维（N维）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">去除平均值</span><br><span class="line">计算协方差矩阵</span><br><span class="line">计算协方差矩阵的特征值和特征向量</span><br><span class="line">将特征值排序</span><br><span class="line">保留前N个最大的特征值对应的特征向量</span><br><span class="line">将数据转换到上面得到的N个特征向量构建的新空间中（实现了特征压缩）</span><br></pre></td></tr></table></figure>
+<h4 id="线性判别分析-LDA-有监督"><a href="#线性判别分析-LDA-有监督" class="headerlink" title="线性判别分析 LDA(有监督)"></a>线性判别分析 LDA(有监督)</h4><p>也叫Fisher线性判别。</p>
+<p><strong>抽取分类信息和压缩特征空间维数</strong>，投影后保证模式样本在新的子空间有<strong>最大的类间距离</strong>和<strong>最小的类内距离</strong>，即模式在该空间中有最佳的可分离性。</p>
+<p>优化目标J最大，获得最优投影向量w：使用矩阵分解，得到特征值最大的特征矩阵的第一行。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g170j48070j30b8046t90.jpg" alt="image-20190318161015272"></p>
+<h4 id="多维尺度分析-MDS-multimensioanal-scaling"><a href="#多维尺度分析-MDS-multimensioanal-scaling" class="headerlink" title="多维尺度分析 MDS multimensioanal scaling"></a>多维尺度分析 MDS multimensioanal scaling</h4><p>### </p>
+<h2 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h2><p>星状图</p>
+<h2 id="基于像素的可视化方法"><a href="#基于像素的可视化方法" class="headerlink" title="基于像素的可视化方法"></a>基于像素的可视化方法</h2>
           
         
       
@@ -958,7 +1401,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/数据结构 -  5 图/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/数据结构 -  2 堆栈/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="IRIS">
@@ -977,7 +1420,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/05/数据结构 -  5 图/" itemprop="url">数据结构 -  数组</a></h1>
+                <a class="post-title-link" href="/2018/01/05/数据结构 -  2 堆栈/" itemprop="url">数据结构 -  数组</a></h1>
         
 
         <div class="post-meta">
@@ -1032,8 +1475,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/01/05/数据结构 -  5 图/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/数据结构 -  5 图/" itemprop="commentCount"></span>
+                <a href="/2018/01/05/数据结构 -  2 堆栈/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/数据结构 -  2 堆栈/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1041,7 +1484,7 @@
 
           
           
-             <span id="/2018/01/05/数据结构 -  5 图/" class="leancloud_visitors" data-flag-title="数据结构 -  数组">
+             <span id="/2018/01/05/数据结构 -  2 堆栈/" class="leancloud_visitors" data-flag-title="数据结构 -  数组">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1066,7 +1509,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  88
+                  225
                 </span>
               
 
@@ -1105,539 +1548,13 @@
       
         
           
-            <p>有向图</p>
-<p>带权图</p>
-<h3 id="邻接矩阵存储方法"><a href="#邻接矩阵存储方法" class="headerlink" title="邻接矩阵存储方法"></a>邻接矩阵存储方法</h3><p>存储费空间，使用方便</p>
-<h3 id="领结表存储方法"><a href="#领结表存储方法" class="headerlink" title="领结表存储方法"></a>领结表存储方法</h3><p>节省空间、使用耗时</p>
-<h3 id="如何存储微博、微信等社交网络中的好友关系？"><a href="#如何存储微博、微信等社交网络中的好友关系？" class="headerlink" title="如何存储微博、微信等社交网络中的好友关系？"></a>如何存储微博、微信等社交网络中的好友关系？</h3><p>判断用户A是否关注用户B</p>
-<p>判断用户A是否是用户B的粉丝</p>
-<p>邻接表</p>
-<p>逆邻接表</p>
+            <h1 id="08-栈：如何实现浏览器的前进和后退功能？"><a href="#08-栈：如何实现浏览器的前进和后退功能？" class="headerlink" title="08 | 栈：如何实现浏览器的前进和后退功能？"></a>08 | 栈：如何实现浏览器的前进和后退功能？</h1><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g1e825e40tj30lc05iwg5.jpg" alt="image-20190324214941336"></p>
+<p>abc顺序浏览页面，回退返回a页面，前进返回b页面。</p>
+<p>若此时在进入新的页面d，则无法再回到页面c，需要清空第二个栈。</p>
+<p>ps.内存中的堆栈和数据结构堆栈不是一个概念，可以说内存中的堆栈是真实存在的物理区，数据结构中的堆栈是抽象的数据存储结构。</p>
+<h1 id="09-队列：队列在线程池等有限资源池中的应用"><a href="#09-队列：队列在线程池等有限资源池中的应用" class="headerlink" title="09 | 队列：队列在线程池等有限资源池中的应用"></a>09 | 队列：队列在线程池等有限资源池中的应用</h1><p>线程池没有空闲线程时，新的任务请求线程资源时，线程池该如何处理？</p>
+<p>第一种是非阻塞的处理方式，直接拒绝任务请求；另一种是阻塞的处理方式，将请求排队，等到有空闲线程时，取出排队的请求继续处理。</p>
 
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/❤️算法 - 0 排序/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/05/❤️算法 - 0 排序/" itemprop="url">算法 - 0 排序</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T13:17:42+08:00">
-                2018-01-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/01/05/❤️算法 - 0 排序/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/05/❤️算法 - 0 排序/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/01/05/❤️算法 - 0 排序/" class="leancloud_visitors" data-flag-title="算法 - 0 排序">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1.5k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  5
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="O-n-2-排序算法-3"><a href="#O-n-2-排序算法-3" class="headerlink" title="O(n^2)排序算法 3"></a>O(n^2)排序算法 3</h1><ul>
-<li>冒泡排序</li>
-<li>插入排序</li>
-<li>选择排序</li>
-</ul>
-<p>选择排序不稳定，相同元素可能会变化，因此这三种不选择选择排序。</p>
-<p>代码中，把执行一个赋值语句的时间粗略地计为单位时间。冒泡排序需要 3 个赋值操作<code>temp存储临时变量</code>，而插入排序只需要 1 个 <code>a[j]=a[j+1]移动数据</code>。时间比值：1：7。</p>
-<p>最优方法：插入排序。</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g10g0wcas2j31mo0u07tq.jpg" alt="image-20190312234718950"></p>
-<h1 id="O-nlogn-排序算法-3"><a href="#O-nlogn-排序算法-3" class="headerlink" title="O(nlogn) 排序算法 3"></a>O(nlogn) 排序算法 3</h1><h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><ul>
-<li><p>方法：利用了分治思想，用递归代码来实现归并排序。先分，再合。</p>
-</li>
-<li><p>时间复杂度： T(n)=Cn+nlog2n。非常稳定，所有情况都是O(nlogn)。</p>
-</li>
-<li>空间复杂度：不是原地排序算法，每次合并操作都需要申请额外的内存空间，但在合并完成之后，临时空间释放。 O(n)。</li>
-<li>处理过程：是由下到上的，先处理子问题，然后再合并。</li>
-</ul>
-<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>方法：利用主元分区，每次分为左边小区，右边大区。直至区内只有一个元素之后，排序完成。</p>
-<p>时间复杂度：分区每次右边都没有元素。就从 O(nlogn) 退化成了 O(n2)。</p>
-<p>处理过程：是由上到下的，先分区，然后再处理子问题。</p>
-<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><h3 id="10-亿个搜索关键词的日志文件，Top-10-最热门的搜索关键词"><a href="#10-亿个搜索关键词的日志文件，Top-10-最热门的搜索关键词" class="headerlink" title="10 亿个搜索关键词的日志文件，Top 10 最热门的搜索关键词"></a>10 亿个搜索关键词的日志文件，Top 10 最热门的搜索关键词</h3><p>用户搜索的关键词，有很多可能都是重复的，散列表先记录次数。</p>
-<p>用堆求 Top K 的方法，建立一个大小为 10 的小顶堆，遍历散列表，依次取出次数，若次数多&gt;顶堆，则删除顶堆。遍历完成后得到top10。</p>
-<p>然而10亿太大了。</p>
-<p>哈希之后，将 10 亿条搜索关键词先通过哈希算法分到10个文件。在进行上述步骤，然后得到10x10个关键字。租后排序得到top10。</p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>10 个接口访问日志文件，每个日志文件大小约 300MB，日志都是按照时间戳从小到大排序的</p>
-<p>将这 10 个较小的日志文件，合并为 1 个日志文件，合并之后也是从小到大排序。</p>
-<p>机器内存只有 1GB，你有什么好的解决思路，能“快速”地将这10 个日志文件合并吗？</p>
-<p>每次从各个文件中取一条数据，在内存中根据数据时间戳构建一个最小堆，然后每次把最小值给写入新文件，同时将最小值来自的那个文件再出来一个数据，加入到最小堆中。这个空间复杂度为常数，但没能很好利用1g内存，而且磁盘单个读取比较慢，所以考虑每次读取一批数据，没了再从磁盘中取，时间复杂度还是一样O(n)。</p>
-<h1 id="线性排序-3"><a href="#线性排序-3" class="headerlink" title="线性排序 3"></a>线性排序 3</h1><h2 id="桶排序（Bucket-sort）"><a href="#桶排序（Bucket-sort）" class="headerlink" title="桶排序（Bucket sort）"></a>桶排序（Bucket sort）</h2><h3 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h3><ul>
-<li>容易划分为m个桶，且天然有序</li>
-<li>分布均匀，若分布不均匀全在一个桶里会退化为log（n/m log(n/m)) = log(n logn)</li>
-<li>外部排序。数据大，内存有限，无法将数据全部加载到内存，存放于外部磁盘中。</li>
-</ul>
-<h3 id="10GB数据，如何按照订单金额排序？"><a href="#10GB数据，如何按照订单金额排序？" class="headerlink" title="10GB数据，如何按照订单金额排序？"></a>10GB数据，如何按照订单金额排序？</h3><ul>
-<li><p>扫描一遍文件，看订单金额所处的数据范围。假设经过扫描之后我们得到，订单金额最小是 1 元，最大是 1…</p>
-</li>
-<li><p>将所有订单根据金额划分到 100 个桶里，第一个桶我们存储金额在 1 元到 1000 元之内，第二个1001-2000，类推。每个桶按照范围命名。</p>
-</li>
-<li>理想状态均匀分布，则划分为100个100M文件。按文件编号，依次将文件放入内存快排，在写入同一个文件。</li>
-<li>若部分文件很大，无法写入内存，继续划分，直到对所有文件都可读入内存为止，再依次快排。</li>
-</ul>
-<h2 id="计数排序（Counting-sort）"><a href="#计数排序（Counting-sort）" class="headerlink" title="计数排序（Counting sort）"></a>计数排序（Counting sort）</h2><h3 id="要求：-1"><a href="#要求：-1" class="headerlink" title="要求："></a>要求：</h3><ul>
-<li>数据量大，数据区间小</li>
-<li>非负整数。若为不符合该条件，则转化即可。</li>
-</ul>
-<h3 id="如何根据年龄给-100-万用户排序？"><a href="#如何根据年龄给-100-万用户排序？" class="headerlink" title="如何根据年龄给 100 万用户排序？"></a>如何根据年龄给 100 万用户排序？</h3><p>年龄的范围最小 1 岁，最大不超过 120 岁；</p>
-<p>遍历这 100 万用户，根据年龄将其划分到这 120 个桶里；</p>
-<p>依次顺序遍历这 120 个桶中的元素。</p>
-<h3 id="高考查分系统，省内50万名考生，分数范围为900-0。"><a href="#高考查分系统，省内50万名考生，分数范围为900-0。" class="headerlink" title="高考查分系统，省内50万名考生，分数范围为900-0。"></a>高考查分系统，省内50万名考生，分数范围为900-0。</h3><p>数据范围小，我们划分为901个桶，桶内为分数相同的学生。</p>
-<p>此时不需要在排序，而是只需要依次输出到数组即可，只需一次扫描操作，时间复杂度O(n)。</p>
-<p>ps. 若考生分数有小数点后一位，则需要所有分数乘10，转为整数，再放进9010个桶内。</p>
-<h2 id="基数排序（Radix-sort）"><a href="#基数排序（Radix-sort）" class="headerlink" title="基数排序（Radix sort）"></a>基数排序（Radix sort）</h2><h3 id="要求：-2"><a href="#要求：-2" class="headerlink" title="要求："></a>要求：</h3><ul>
-<li>数据可以分割出独立的“位”来比较，位之间有递进的关系（高位优先）</li>
-<li>每一位的数据范围不能太大，要可以用线性排序算法来排序</li>
-</ul>
-<h3 id="10万个11位电话号码排序（等长）"><a href="#10万个11位电话号码排序（等长）" class="headerlink" title="10万个11位电话号码排序（等长）"></a>10万个11位电话号码排序（等长）</h3><ul>
-<li>规律：比较两个号码a、b，若前几位a已经大于b，则后面不用看。</li>
-<li>方法：先按照最后一位排序，再按照倒数第二位，以此类推。最后按照第一位来排序。11排序之后，手机号码有序。</li>
-<li>时间复杂度：按照每一位排序，数字只有0-10，可以使用桶排序，时间复杂度可以做到 O(n)。排序的数据有 k 位，时间为O(k*n)。k不大的时候，近似为O(n)。</li>
-</ul>
-<h3 id="排序牛津字典中的20-万个英文单词（非等长1-45）"><a href="#排序牛津字典中的20-万个英文单词（非等长1-45）" class="headerlink" title="排序牛津字典中的20 万个英文单词（非等长1-45）"></a>排序牛津字典中的20 万个英文单词（非等长1-45）</h3><ul>
-<li>解决非等长：把所有的单词补齐到相同长度，位数不够的可以在后面补“0”。根据ASCII 值，所有字母都大于“0”，所以补“0”不会影响排序。</li>
-<li>接着使用基数排序</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/19/前端基础学习/JavaScript - 1 基础语法 /">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/02/19/前端基础学习/JavaScript - 1 基础语法 /" itemprop="url">JavaScript - 1 基础语法</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-19T16:00:57+08:00">
-                2017-02-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/02/19/前端基础学习/JavaScript - 1 基础语法 /#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/02/19/前端基础学习/JavaScript - 1 基础语法 /" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/02/19/前端基础学习/JavaScript - 1 基础语法 /" class="leancloud_visitors" data-flag-title="JavaScript - 1 基础语法">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1.7k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  7
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="第一章-入门"><a href="#第一章-入门" class="headerlink" title="第一章 入门"></a>第一章 入门</h2><p>本章节主要讲解如何在HTML文件中添加JavaScript代码，掌握必备的基础语法，为以后来章学习打下基础。</p>
-<h2 id="第二章-请和我互动"><a href="#第二章-请和我互动" class="headerlink" title="第二章 请和我互动"></a>第二章 请和我互动</h2><p>本章节主要讲解如何向网页中输入内容，如何与浏览器窗口进行交互，通过简单的对象方法就可以轻松实现。</p>
-<h3 id="JavaScript-警告（alert-消息对话框）"><a href="#JavaScript-警告（alert-消息对话框）" class="headerlink" title="JavaScript-警告（alert 消息对话框）"></a>JavaScript-警告（alert 消息对话框）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=utf-8"</span> /&gt;</span><br><span class="line">&lt;title&gt;alert&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">  &lt;script type="text/</span>javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">  function rec()&#123;</span></span><br><span class="line"><span class="string">    var mychar="</span>I love JavaScript<span class="string">";</span></span><br><span class="line"><span class="string">    alert(mychar);</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  &lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">    &lt;input name="</span>button<span class="string">" type="</span>button<span class="string">" onClick="</span>rec()<span class="string">" value="</span>点击我，弹出对话框<span class="string">" /&gt;</span></span><br><span class="line"><span class="string">&lt;/body&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="JavaScript-确认（confirm-消息对话框）"><a href="#JavaScript-确认（confirm-消息对话框）" class="headerlink" title="JavaScript-确认（confirm 消息对话框）"></a>JavaScript-确认（confirm 消息对话框）</h3><p>confirm 消息对话框通常用于允许用户做选择的动作，如：“你对吗？”等。弹出对话框(包括一个确定按钮和一个取消按钮)。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">rec</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> mymessage= confirm(<span class="string">"你是女士吗？"</span>);</span><br><span class="line">    <span class="keyword">if</span>(mymessage==<span class="literal">true</span>)</span><br><span class="line">    &#123;</span><br><span class="line">    	<span class="built_in">document</span>.write(<span class="string">"你是女士!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">document</span>.write(<span class="string">"你是男士!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="JavaScript-提问（prompt-消息对话框）"><a href="#JavaScript-提问（prompt-消息对话框）" class="headerlink" title="JavaScript-提问（prompt 消息对话框）"></a>JavaScript-提问（prompt 消息对话框）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">rec</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">var</span> score; <span class="comment">//score变量，用来存储用户输入的成绩值。</span></span><br><span class="line">score = prompt(<span class="string">"同学输入成绩"</span>,<span class="literal">null</span>) ;</span><br><span class="line"><span class="keyword">if</span>(score&gt;=<span class="number">90</span>)</span><br><span class="line">&#123;</span><br><span class="line">   <span class="built_in">document</span>.write(<span class="string">"你很棒!"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(score&gt;=<span class="number">70</span>)</span><br><span class="line">   &#123;</span><br><span class="line">   <span class="built_in">document</span>.write(<span class="string">"不错吆!"</span>);</span><br><span class="line">&#125;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">      <span class="built_in">document</span>.write(<span class="string">"要努力了!"</span>);</span><br><span class="line">&#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g19lihfmz4j30os098jry.jpg" alt="image-20190320214721347"></p>
-<h3 id="JavaScript-打开新窗口（window-open）"><a href="#JavaScript-打开新窗口（window-open）" class="headerlink" title="JavaScript-打开新窗口（window.open）"></a>JavaScript-打开新窗口（window.open）</h3><p>open() 方法可以查找一个已经存在或者新建的浏览器窗口。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.open([URL], [窗口名称], [参数字符串])</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Wopen</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.open(<span class="string">'http://www.imooc.com'</span>,<span class="string">'_blank'</span>,<span class="string">'width=600,height=400,top=100,left=0'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="JavaScript-关闭窗口（window-close）"><a href="#JavaScript-关闭窗口（window-close）" class="headerlink" title="JavaScript-关闭窗口（window.close）"></a>JavaScript-关闭窗口（window.close）</h3><p><strong>用法：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.close();   //关闭本窗口</span><br></pre></td></tr></table></figure>
-<p>或</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;窗口对象&gt;.close();   //关闭指定的窗口</span><br></pre></td></tr></table></figure>
-<p>例如:关闭新建的窗口。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">   <span class="keyword">var</span> mywin=<span class="built_in">window</span>.open(<span class="string">"http://www.imooc.com"</span>);</span><br><span class="line">   mywin.close()</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="综合练习"><a href="#综合练习" class="headerlink" title="综合练习"></a>综合练习</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">openWindow</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 1.新窗口打开时弹出确认框，是否打开</span></span><br><span class="line">    <span class="keyword">var</span> msg_confirm = confirm(<span class="string">"是否打开窗口？"</span>)</span><br><span class="line">    <span class="keyword">if</span>(msg_confirm==<span class="literal">true</span>)&#123;</span><br><span class="line">        <span class="comment">// 2.通过输入对话框，确定打开的网址，默认为 http：//www.imooc.com/</span></span><br><span class="line">        <span class="keyword">var</span> msg_url = <span class="string">"http://www.imooc.com/"</span></span><br><span class="line">        <span class="keyword">var</span> msg_prompt = prompt(<span class="string">"输入网址"</span>,msg_url)</span><br><span class="line">        <span class="comment">//3.打开的窗口要求，宽400像素，高500像素，无菜单栏、无工具栏。</span></span><br><span class="line">        <span class="built_in">window</span>.open(msg_url,<span class="string">"_blank"</span>,<span class="string">'width=400,height=500'</span>)</span><br><span class="line">     &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="第3章-你也有控制权-DOM操作"><a href="#第3章-你也有控制权-DOM操作" class="headerlink" title="第3章 你也有控制权(DOM操作)"></a>第3章 你也有控制权(DOM操作)</h2><p>如何用JavaScript去操作HTML元素和CSS样式，实现简单的动态操作。</p>
-<h3 id="认识DOM"><a href="#认识DOM" class="headerlink" title="认识DOM"></a>认识DOM</h3><p>文档对象模型DOM（Document Object Model）定义访问和处理HTML文档的标准方法。DOM 将HTML文档呈现为带有元素、属性和文本的树结构（节点树）。</p>
-<p><strong>先来看看下面代码:</strong></p>
-<p><strong><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g19mgjr6g7j30lu0bo756.jpg" alt="img"></strong></p>
-<p><img src="../../../Library/Application Support/typora-user-images/image-20190320221603283.png" alt="image-20190320221603283"></p>
-<p><strong>HTML文档可以说由节点构成的集合，三种常见的DOM节点:</strong></p>
-<p><strong>1. 元素节点：</strong>上图中<html>、<body>、<p>等都是元素节点，即标签。</p>
-<p><strong>2. 文本节点:</strong>向用户展示的内容，如<li>…</li>中的JavaScript、DOM、CSS等文本。</p>
-<p><strong>3. 属性节点:</strong>元素属性，如<a>标签的链接属性href=”<a href="http://www.imooc.com&quot;。" target="_blank" rel="noopener">http://www.imooc.com&quot;。</a></a></p>
-<p><strong>看下面代码:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;http://www.imooc.com&quot;&gt;JavaScript DOM&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g19mfrj0rqj31d60kkwhv.jpg" alt="image-20190320221918744"></p>
-<h3 id="通过ID获取元素"><a href="#通过ID获取元素" class="headerlink" title="通过ID获取元素"></a>通过ID获取元素</h3><p>学过HTML/CSS样式，都知道，网页由标签将信息组织起来，而标签的id属性值是唯一的，就像是每人有一个身份证号一样，只要通过身份证号就可以找到相对应的人。那么在网页中，我们通过id先找到标签，然后进行操作。</p>
-<p><strong>语法:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(“id”)</span><br></pre></td></tr></table></figure>
-<p><strong>结果:</strong>null或[object HTMLParagraphElement]</p>
-<p><strong>注:获取的元素是一个对象，如想对元素进行操作，我们要通过它的属性或方法。</strong></p>
-<h3 id="innerHTML-属性：获取替换内容"><a href="#innerHTML-属性：获取替换内容" class="headerlink" title="innerHTML 属性：获取替换内容"></a>innerHTML 属性：获取替换内容</h3><p>innerHTML 属性用于获取或替换 HTML 元素的内容。</p>
-<p><strong>语法:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.innerHTML</span><br></pre></td></tr></table></figure>
-<p><strong>注意:</strong></p>
-<p>1.Object是获取的元素对象，如通过document.getElementById(“ID”)获取的元素。</p>
-<p>2.注意书写，innerHTML区分大小写。</p>
-<p><strong>我们通过id=”con”获取<p> 元素，并将元素的内容输出和改变元素内容，代码和结果如下:</p></strong></p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g19mq9t51vj31d80q0jz7.jpg" alt="image-20190320222925367"></p>
-<h3 id="改变-HTML-样式"><a href="#改变-HTML-样式" class="headerlink" title="改变 HTML 样式"></a>改变 HTML 样式</h3><p>HTML DOM 允许 JavaScript 改变 HTML 元素的样式。如何改变 HTML 元素的样式呢？</p>
-<p><strong>语法:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.style.property=new style;</span><br></pre></td></tr></table></figure>
-<p><strong>注意:</strong>Object是获取的元素对象，如通过document.getElementById(“id”)获取的元素。</p>
-<p><strong>基本属性表（property）:</strong></p>
-<p><strong><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g19mtly02ej30dh06ddg3.jpg" alt="img"></strong></p>
-<p><strong>注意:</strong>该表只是一小部分CSS样式属性，其它样式也可以通过该方法设置和修改。</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g19n17zhu9j31hy0lijwo.jpg" alt="image-20190320223956456"></p>
-<h3 id="显示和隐藏（display属性）"><a href="#显示和隐藏（display属性）" class="headerlink" title="显示和隐藏（display属性）"></a>显示和隐藏（display属性）</h3><p>网页中经常会看到显示和隐藏的效果，可通过display属性来设置。</p>
-<p><strong>语法：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.style.display = value</span><br></pre></td></tr></table></figure>
-<p><strong>注意:</strong>Object是获取的元素对象，如通过document.getElementById(“id”)获取的元素。</p>
-<p><strong>value取值:</strong></p>
-<p><strong><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g19n1uu55pj30bf02nglm.jpg" alt="img"></strong></p>
-<p><strong>看看下面代码:</strong></p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g19n4icwazj31i40lmq8e.jpg" alt="image-20190320224306526"></p>
-<h3 id="控制类名（className-属性）"><a href="#控制类名（className-属性）" class="headerlink" title="控制类名（className 属性）"></a>控制类名（className 属性）</h3><p>className 属性设置或返回元素的class 属性。</p>
-<p><strong>语法：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">object.className = classname</span><br></pre></td></tr></table></figure>
-<p><strong>作用:</strong></p>
-<ol>
-<li>获取元素的class 属性</li>
-<li>为网页内的某个元素指定一个css样式来更改该元素的外观</li>
-</ol>
-<p><strong>看看下面代码，获得 <p> 元素的 class 属性和改变className：</p></strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	      <span class="keyword">var</span> p1 = <span class="built_in">document</span>.getElementById(<span class="string">"p1"</span>);</span><br><span class="line">	      p1.className = <span class="string">"one"</span></span><br><span class="line">	   &#125;</span><br><span class="line">	   <span class="function"><span class="keyword">function</span> <span class="title">modify</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	      <span class="keyword">var</span> p2 = <span class="built_in">document</span>.getElementById(<span class="string">"p2"</span>);</span><br><span class="line">	      p2.className = <span class="string">"two"</span></span><br><span class="line">	   &#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g1a7aq4lvkj31ey0lswj9.jpg" alt="image-20190321102104257"></p>
-<h3 id="综合练习-1"><a href="#综合练习-1" class="headerlink" title="综合练习"></a>综合练习</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=<span class="string">"Content-Type"</span> Content=<span class="string">"text/html; charset=utf-8"</span> /&gt;</span><br><span class="line">&lt;title&gt;javascript&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">&lt;style type="text/</span>css<span class="string">"&gt;</span></span><br><span class="line"><span class="string">body&#123;font-size:12px;&#125;</span></span><br><span class="line"><span class="string">#txt&#123;</span></span><br><span class="line"><span class="string">    height:400px;</span></span><br><span class="line"><span class="string">    width:600px;</span></span><br><span class="line"><span class="string">	border:#333 solid 1px;</span></span><br><span class="line"><span class="string">	padding:5px;&#125;</span></span><br><span class="line"><span class="string">p&#123;</span></span><br><span class="line"><span class="string">	line-height:18px;</span></span><br><span class="line"><span class="string">	text-indent:2em;&#125;</span></span><br><span class="line"><span class="string">&lt;/style&gt;</span></span><br><span class="line"><span class="string">&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">  &lt;h2 id="</span>con<span class="string">"&gt;JavaScript课程&lt;/H2&gt;</span></span><br><span class="line"><span class="string">  &lt;div id="</span>txt<span class="string">"&gt; </span></span><br><span class="line"><span class="string">     &lt;h5&gt;JavaScript为网页添加动态效果并实现与用户交互的功能。&lt;/h5&gt;</span></span><br><span class="line"><span class="string">        &lt;p&gt;1. JavaScript入门篇，让不懂JS的你，快速了解JS。&lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p&gt;2. JavaScript进阶篇，让你掌握JS的基础语法、函数、数组、事件、内置对象、BOM浏览器、DOM操作。&lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p&gt;3. 学完以上两门基础课后，在深入学习JavaScript的变量作用域、事件、对象、运动、cookie、正则表达式、ajax等课程。&lt;/p&gt;</span></span><br><span class="line"><span class="string">  &lt;/div&gt;</span></span><br><span class="line"><span class="string">  &lt;form&gt;</span></span><br><span class="line"><span class="string">  &lt;!--当点击相应按钮，执行相应操作，为按钮添加相应事件--&gt;</span></span><br><span class="line"><span class="string">    &lt;input type="</span>button<span class="string">" value="</span>改变颜色<span class="string">" onClick = "</span>colorChange()<span class="string">"&gt;  </span></span><br><span class="line"><span class="string">    &lt;input type="</span>button<span class="string">" value="</span>改变宽高<span class="string">" onClick="</span>sizeChange()<span class="string">"&gt;</span></span><br><span class="line"><span class="string">    &lt;input type="</span>button<span class="string">" value="</span>隐藏内容<span class="string">" onClick="</span>hide()<span class="string">"&gt;</span></span><br><span class="line"><span class="string">    &lt;input type="</span>button<span class="string">" value="</span>显示内容<span class="string">" onClick="</span>display()<span class="string">"&gt;</span></span><br><span class="line"><span class="string">    &lt;input type="</span>button<span class="string">" value="</span>取消设置<span class="string">" onClick="</span>cancel()<span class="string">"&gt;</span></span><br><span class="line"><span class="string">  &lt;/form&gt;</span></span><br><span class="line"><span class="string">  &lt;script type="</span>text/javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">//定义"</span>改变颜色<span class="string">"的函数</span></span><br><span class="line"><span class="string">    function colorChange()&#123;</span></span><br><span class="line"><span class="string">        var obj = document.getElementById("</span>txt<span class="string">");</span></span><br><span class="line"><span class="string">        obj.style.color = "</span>red<span class="string">";</span></span><br><span class="line"><span class="string">        obj.style.backgroundColor = "</span>gray<span class="string">";</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//定义"</span>改变宽高<span class="string">"的函数</span></span><br><span class="line"><span class="string">    function sizeChange()&#123;</span></span><br><span class="line"><span class="string">        var obj = document.getElementById("</span>txt<span class="string">");</span></span><br><span class="line"><span class="string">        obj.style.height = "</span><span class="number">300</span>px<span class="string">";</span></span><br><span class="line"><span class="string">        obj.style.width = "</span><span class="number">300</span>px<span class="string">";</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//定义"</span>隐藏内容<span class="string">"的函数</span></span><br><span class="line"><span class="string">    function hide()&#123;</span></span><br><span class="line"><span class="string">        var obj = document.getElementById("</span>txt<span class="string">");</span></span><br><span class="line"><span class="string">        obj.style.display = "</span>none<span class="string">";</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//定义"</span>显示内容<span class="string">"的函数</span></span><br><span class="line"><span class="string">    function display()&#123;</span></span><br><span class="line"><span class="string">        var obj = document.getElementById("</span>txt<span class="string">");</span></span><br><span class="line"><span class="string">        obj.style.display = "</span>block<span class="string">";</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//定义"</span>取消设置<span class="string">"的函数</span></span><br><span class="line"><span class="string">    function cancel()&#123;</span></span><br><span class="line"><span class="string">        var message = confirm("</span>是否还原？<span class="string">")</span></span><br><span class="line"><span class="string">        if(message==true)&#123;</span></span><br><span class="line"><span class="string">            txt.removeAttribute('style');</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/body&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
-</body></html></p>
           
         
       
@@ -2140,6 +2057,271 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/19/前端基础学习/JavaScript - 1 基础语法 /">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IRIS">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/irisHeader.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IRIS's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/02/19/前端基础学习/JavaScript - 1 基础语法 /" itemprop="url">JavaScript - 1 基础语法</a></h1>
+        
+
+        <div class="post-meta">
+            
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-19T16:00:57+08:00">
+                2017-02-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/19/前端基础学习/JavaScript - 1 基础语法 /#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/02/19/前端基础学习/JavaScript - 1 基础语法 /" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/02/19/前端基础学习/JavaScript - 1 基础语法 /" class="leancloud_visitors" data-flag-title="JavaScript - 1 基础语法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.7k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="第一章-入门"><a href="#第一章-入门" class="headerlink" title="第一章 入门"></a>第一章 入门</h2><p>本章节主要讲解如何在HTML文件中添加JavaScript代码，掌握必备的基础语法，为以后来章学习打下基础。</p>
+<h2 id="第二章-请和我互动"><a href="#第二章-请和我互动" class="headerlink" title="第二章 请和我互动"></a>第二章 请和我互动</h2><p>本章节主要讲解如何向网页中输入内容，如何与浏览器窗口进行交互，通过简单的对象方法就可以轻松实现。</p>
+<h3 id="JavaScript-警告（alert-消息对话框）"><a href="#JavaScript-警告（alert-消息对话框）" class="headerlink" title="JavaScript-警告（alert 消息对话框）"></a>JavaScript-警告（alert 消息对话框）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=utf-8"</span> /&gt;</span><br><span class="line">&lt;title&gt;alert&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">  &lt;script type="text/</span>javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">  function rec()&#123;</span></span><br><span class="line"><span class="string">    var mychar="</span>I love JavaScript<span class="string">";</span></span><br><span class="line"><span class="string">    alert(mychar);</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  &lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">    &lt;input name="</span>button<span class="string">" type="</span>button<span class="string">" onClick="</span>rec()<span class="string">" value="</span>点击我，弹出对话框<span class="string">" /&gt;</span></span><br><span class="line"><span class="string">&lt;/body&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript-确认（confirm-消息对话框）"><a href="#JavaScript-确认（confirm-消息对话框）" class="headerlink" title="JavaScript-确认（confirm 消息对话框）"></a>JavaScript-确认（confirm 消息对话框）</h3><p>confirm 消息对话框通常用于允许用户做选择的动作，如：“你对吗？”等。弹出对话框(包括一个确定按钮和一个取消按钮)。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">rec</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> mymessage= confirm(<span class="string">"你是女士吗？"</span>);</span><br><span class="line">    <span class="keyword">if</span>(mymessage==<span class="literal">true</span>)</span><br><span class="line">    &#123;</span><br><span class="line">    	<span class="built_in">document</span>.write(<span class="string">"你是女士!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">document</span>.write(<span class="string">"你是男士!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript-提问（prompt-消息对话框）"><a href="#JavaScript-提问（prompt-消息对话框）" class="headerlink" title="JavaScript-提问（prompt 消息对话框）"></a>JavaScript-提问（prompt 消息对话框）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">rec</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">var</span> score; <span class="comment">//score变量，用来存储用户输入的成绩值。</span></span><br><span class="line">score = prompt(<span class="string">"同学输入成绩"</span>,<span class="literal">null</span>) ;</span><br><span class="line"><span class="keyword">if</span>(score&gt;=<span class="number">90</span>)</span><br><span class="line">&#123;</span><br><span class="line">   <span class="built_in">document</span>.write(<span class="string">"你很棒!"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(score&gt;=<span class="number">70</span>)</span><br><span class="line">   &#123;</span><br><span class="line">   <span class="built_in">document</span>.write(<span class="string">"不错吆!"</span>);</span><br><span class="line">&#125;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">      <span class="built_in">document</span>.write(<span class="string">"要努力了!"</span>);</span><br><span class="line">&#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g19lihfmz4j30os098jry.jpg" alt="image-20190320214721347"></p>
+<h3 id="JavaScript-打开新窗口（window-open）"><a href="#JavaScript-打开新窗口（window-open）" class="headerlink" title="JavaScript-打开新窗口（window.open）"></a>JavaScript-打开新窗口（window.open）</h3><p>open() 方法可以查找一个已经存在或者新建的浏览器窗口。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.open([URL], [窗口名称], [参数字符串])</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Wopen</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.open(<span class="string">'http://www.imooc.com'</span>,<span class="string">'_blank'</span>,<span class="string">'width=600,height=400,top=100,left=0'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript-关闭窗口（window-close）"><a href="#JavaScript-关闭窗口（window-close）" class="headerlink" title="JavaScript-关闭窗口（window.close）"></a>JavaScript-关闭窗口（window.close）</h3><p><strong>用法：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.close();   //关闭本窗口</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;窗口对象&gt;.close();   //关闭指定的窗口</span><br></pre></td></tr></table></figure>
+<p>例如:关闭新建的窗口。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">   <span class="keyword">var</span> mywin=<span class="built_in">window</span>.open(<span class="string">"http://www.imooc.com"</span>);</span><br><span class="line">   mywin.close()</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="综合练习"><a href="#综合练习" class="headerlink" title="综合练习"></a>综合练习</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">openWindow</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 1.新窗口打开时弹出确认框，是否打开</span></span><br><span class="line">    <span class="keyword">var</span> msg_confirm = confirm(<span class="string">"是否打开窗口？"</span>)</span><br><span class="line">    <span class="keyword">if</span>(msg_confirm==<span class="literal">true</span>)&#123;</span><br><span class="line">        <span class="comment">// 2.通过输入对话框，确定打开的网址，默认为 http：//www.imooc.com/</span></span><br><span class="line">        <span class="keyword">var</span> msg_url = <span class="string">"http://www.imooc.com/"</span></span><br><span class="line">        <span class="keyword">var</span> msg_prompt = prompt(<span class="string">"输入网址"</span>,msg_url)</span><br><span class="line">        <span class="comment">//3.打开的窗口要求，宽400像素，高500像素，无菜单栏、无工具栏。</span></span><br><span class="line">        <span class="built_in">window</span>.open(msg_url,<span class="string">"_blank"</span>,<span class="string">'width=400,height=500'</span>)</span><br><span class="line">     &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第3章-你也有控制权-DOM操作"><a href="#第3章-你也有控制权-DOM操作" class="headerlink" title="第3章 你也有控制权(DOM操作)"></a>第3章 你也有控制权(DOM操作)</h2><p>如何用JavaScript去操作HTML元素和CSS样式，实现简单的动态操作。</p>
+<h3 id="认识DOM"><a href="#认识DOM" class="headerlink" title="认识DOM"></a>认识DOM</h3><p>文档对象模型DOM（Document Object Model）定义访问和处理HTML文档的标准方法。DOM 将HTML文档呈现为带有元素、属性和文本的树结构（节点树）。</p>
+<p><strong>先来看看下面代码:</strong></p>
+<p><strong><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g19mgjr6g7j30lu0bo756.jpg" alt="img"></strong></p>
+<p><img src="../../../Library/Application Support/typora-user-images/image-20190320221603283.png" alt="image-20190320221603283"></p>
+<p><strong>HTML文档可以说由节点构成的集合，三种常见的DOM节点:</strong></p>
+<p><strong>1. 元素节点：</strong>上图中<html>、<body>、<p>等都是元素节点，即标签。</p>
+<p><strong>2. 文本节点:</strong>向用户展示的内容，如<li>…</li>中的JavaScript、DOM、CSS等文本。</p>
+<p><strong>3. 属性节点:</strong>元素属性，如<a>标签的链接属性href=”<a href="http://www.imooc.com&quot;。" target="_blank" rel="noopener">http://www.imooc.com&quot;。</a></a></p>
+<p><strong>看下面代码:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;http://www.imooc.com&quot;&gt;JavaScript DOM&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g19mfrj0rqj31d60kkwhv.jpg" alt="image-20190320221918744"></p>
+<h3 id="通过ID获取元素"><a href="#通过ID获取元素" class="headerlink" title="通过ID获取元素"></a>通过ID获取元素</h3><p>学过HTML/CSS样式，都知道，网页由标签将信息组织起来，而标签的id属性值是唯一的，就像是每人有一个身份证号一样，只要通过身份证号就可以找到相对应的人。那么在网页中，我们通过id先找到标签，然后进行操作。</p>
+<p><strong>语法:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(“id”)</span><br></pre></td></tr></table></figure>
+<p><strong>结果:</strong>null或[object HTMLParagraphElement]</p>
+<p><strong>注:获取的元素是一个对象，如想对元素进行操作，我们要通过它的属性或方法。</strong></p>
+<h3 id="innerHTML-属性：获取替换内容"><a href="#innerHTML-属性：获取替换内容" class="headerlink" title="innerHTML 属性：获取替换内容"></a>innerHTML 属性：获取替换内容</h3><p>innerHTML 属性用于获取或替换 HTML 元素的内容。</p>
+<p><strong>语法:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.innerHTML</span><br></pre></td></tr></table></figure>
+<p><strong>注意:</strong></p>
+<p>1.Object是获取的元素对象，如通过document.getElementById(“ID”)获取的元素。</p>
+<p>2.注意书写，innerHTML区分大小写。</p>
+<p><strong>我们通过id=”con”获取<p> 元素，并将元素的内容输出和改变元素内容，代码和结果如下:</p></strong></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g19mq9t51vj31d80q0jz7.jpg" alt="image-20190320222925367"></p>
+<h3 id="改变-HTML-样式"><a href="#改变-HTML-样式" class="headerlink" title="改变 HTML 样式"></a>改变 HTML 样式</h3><p>HTML DOM 允许 JavaScript 改变 HTML 元素的样式。如何改变 HTML 元素的样式呢？</p>
+<p><strong>语法:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.style.property=new style;</span><br></pre></td></tr></table></figure>
+<p><strong>注意:</strong>Object是获取的元素对象，如通过document.getElementById(“id”)获取的元素。</p>
+<p><strong>基本属性表（property）:</strong></p>
+<p><strong><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g19mtly02ej30dh06ddg3.jpg" alt="img"></strong></p>
+<p><strong>注意:</strong>该表只是一小部分CSS样式属性，其它样式也可以通过该方法设置和修改。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g19n17zhu9j31hy0lijwo.jpg" alt="image-20190320223956456"></p>
+<h3 id="显示和隐藏（display属性）"><a href="#显示和隐藏（display属性）" class="headerlink" title="显示和隐藏（display属性）"></a>显示和隐藏（display属性）</h3><p>网页中经常会看到显示和隐藏的效果，可通过display属性来设置。</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.style.display = value</span><br></pre></td></tr></table></figure>
+<p><strong>注意:</strong>Object是获取的元素对象，如通过document.getElementById(“id”)获取的元素。</p>
+<p><strong>value取值:</strong></p>
+<p><strong><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g19n1uu55pj30bf02nglm.jpg" alt="img"></strong></p>
+<p><strong>看看下面代码:</strong></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g19n4icwazj31i40lmq8e.jpg" alt="image-20190320224306526"></p>
+<h3 id="控制类名（className-属性）"><a href="#控制类名（className-属性）" class="headerlink" title="控制类名（className 属性）"></a>控制类名（className 属性）</h3><p>className 属性设置或返回元素的class 属性。</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">object.className = classname</span><br></pre></td></tr></table></figure>
+<p><strong>作用:</strong></p>
+<ol>
+<li>获取元素的class 属性</li>
+<li>为网页内的某个元素指定一个css样式来更改该元素的外观</li>
+</ol>
+<p><strong>看看下面代码，获得 <p> 元素的 class 属性和改变className：</p></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	      <span class="keyword">var</span> p1 = <span class="built_in">document</span>.getElementById(<span class="string">"p1"</span>);</span><br><span class="line">	      p1.className = <span class="string">"one"</span></span><br><span class="line">	   &#125;</span><br><span class="line">	   <span class="function"><span class="keyword">function</span> <span class="title">modify</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	      <span class="keyword">var</span> p2 = <span class="built_in">document</span>.getElementById(<span class="string">"p2"</span>);</span><br><span class="line">	      p2.className = <span class="string">"two"</span></span><br><span class="line">	   &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g1a7aq4lvkj31ey0lswj9.jpg" alt="image-20190321102104257"></p>
+<h3 id="综合练习-1"><a href="#综合练习-1" class="headerlink" title="综合练习"></a>综合练习</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=<span class="string">"Content-Type"</span> Content=<span class="string">"text/html; charset=utf-8"</span> /&gt;</span><br><span class="line">&lt;title&gt;javascript&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">&lt;style type="text/</span>css<span class="string">"&gt;</span></span><br><span class="line"><span class="string">body&#123;font-size:12px;&#125;</span></span><br><span class="line"><span class="string">#txt&#123;</span></span><br><span class="line"><span class="string">    height:400px;</span></span><br><span class="line"><span class="string">    width:600px;</span></span><br><span class="line"><span class="string">	border:#333 solid 1px;</span></span><br><span class="line"><span class="string">	padding:5px;&#125;</span></span><br><span class="line"><span class="string">p&#123;</span></span><br><span class="line"><span class="string">	line-height:18px;</span></span><br><span class="line"><span class="string">	text-indent:2em;&#125;</span></span><br><span class="line"><span class="string">&lt;/style&gt;</span></span><br><span class="line"><span class="string">&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">  &lt;h2 id="</span>con<span class="string">"&gt;JavaScript课程&lt;/H2&gt;</span></span><br><span class="line"><span class="string">  &lt;div id="</span>txt<span class="string">"&gt; </span></span><br><span class="line"><span class="string">     &lt;h5&gt;JavaScript为网页添加动态效果并实现与用户交互的功能。&lt;/h5&gt;</span></span><br><span class="line"><span class="string">        &lt;p&gt;1. JavaScript入门篇，让不懂JS的你，快速了解JS。&lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p&gt;2. JavaScript进阶篇，让你掌握JS的基础语法、函数、数组、事件、内置对象、BOM浏览器、DOM操作。&lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p&gt;3. 学完以上两门基础课后，在深入学习JavaScript的变量作用域、事件、对象、运动、cookie、正则表达式、ajax等课程。&lt;/p&gt;</span></span><br><span class="line"><span class="string">  &lt;/div&gt;</span></span><br><span class="line"><span class="string">  &lt;form&gt;</span></span><br><span class="line"><span class="string">  &lt;!--当点击相应按钮，执行相应操作，为按钮添加相应事件--&gt;</span></span><br><span class="line"><span class="string">    &lt;input type="</span>button<span class="string">" value="</span>改变颜色<span class="string">" onClick = "</span>colorChange()<span class="string">"&gt;  </span></span><br><span class="line"><span class="string">    &lt;input type="</span>button<span class="string">" value="</span>改变宽高<span class="string">" onClick="</span>sizeChange()<span class="string">"&gt;</span></span><br><span class="line"><span class="string">    &lt;input type="</span>button<span class="string">" value="</span>隐藏内容<span class="string">" onClick="</span>hide()<span class="string">"&gt;</span></span><br><span class="line"><span class="string">    &lt;input type="</span>button<span class="string">" value="</span>显示内容<span class="string">" onClick="</span>display()<span class="string">"&gt;</span></span><br><span class="line"><span class="string">    &lt;input type="</span>button<span class="string">" value="</span>取消设置<span class="string">" onClick="</span>cancel()<span class="string">"&gt;</span></span><br><span class="line"><span class="string">  &lt;/form&gt;</span></span><br><span class="line"><span class="string">  &lt;script type="</span>text/javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">//定义"</span>改变颜色<span class="string">"的函数</span></span><br><span class="line"><span class="string">    function colorChange()&#123;</span></span><br><span class="line"><span class="string">        var obj = document.getElementById("</span>txt<span class="string">");</span></span><br><span class="line"><span class="string">        obj.style.color = "</span>red<span class="string">";</span></span><br><span class="line"><span class="string">        obj.style.backgroundColor = "</span>gray<span class="string">";</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//定义"</span>改变宽高<span class="string">"的函数</span></span><br><span class="line"><span class="string">    function sizeChange()&#123;</span></span><br><span class="line"><span class="string">        var obj = document.getElementById("</span>txt<span class="string">");</span></span><br><span class="line"><span class="string">        obj.style.height = "</span><span class="number">300</span>px<span class="string">";</span></span><br><span class="line"><span class="string">        obj.style.width = "</span><span class="number">300</span>px<span class="string">";</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//定义"</span>隐藏内容<span class="string">"的函数</span></span><br><span class="line"><span class="string">    function hide()&#123;</span></span><br><span class="line"><span class="string">        var obj = document.getElementById("</span>txt<span class="string">");</span></span><br><span class="line"><span class="string">        obj.style.display = "</span>none<span class="string">";</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//定义"</span>显示内容<span class="string">"的函数</span></span><br><span class="line"><span class="string">    function display()&#123;</span></span><br><span class="line"><span class="string">        var obj = document.getElementById("</span>txt<span class="string">");</span></span><br><span class="line"><span class="string">        obj.style.display = "</span>block<span class="string">";</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//定义"</span>取消设置<span class="string">"的函数</span></span><br><span class="line"><span class="string">    function cancel()&#123;</span></span><br><span class="line"><span class="string">        var message = confirm("</span>是否还原？<span class="string">")</span></span><br><span class="line"><span class="string">        if(message==true)&#123;</span></span><br><span class="line"><span class="string">            txt.removeAttribute('style');</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/body&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+</body></html></p>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/19/前端基础学习/JavaScript - 3 ES6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2343,209 +2525,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/05/❤️算法 - 0 排序实现/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IRIS">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/irisHeader.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IRIS's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/01/05/❤️算法 - 0 排序实现/" itemprop="url">算法 - 0 排序实现</a></h1>
-        
-
-        <div class="post-meta">
-            
-
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-05T13:17:42+08:00">
-                2017-01-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/01/05/❤️算法 - 0 排序实现/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/01/05/❤️算法 - 0 排序实现/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/01/05/❤️算法 - 0 排序实现/" class="leancloud_visitors" data-flag-title="算法 - 0 排序实现">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  582
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>时间复杂度：O(nlogn)，最差情况为O(n^2)</p>
-<p>空间复杂度：O(1)，没有使用额外空间</p>
-<p>稳定性：不稳定</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 一、算法导论实现</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quickSort</span><span class="params">(array, l, r)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> l &gt;= r:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    mid = partition(array, l, r)</span><br><span class="line">    quickSort(array, l, mid - <span class="number">1</span>)</span><br><span class="line">    quickSort(array, mid + <span class="number">1</span>, r)</span><br><span class="line"></span><br><span class="line"><span class="string">"""在划分partition的过程中排序，使用小区游标i+循环游标j，将比key小的值j与i在的位置交换，直至分区后交换r与i+1的值，返回i+1的中心位置。"""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">partition</span><span class="params">(array, l, r)</span>:</span></span><br><span class="line">    <span class="comment"># 1.选择主元</span></span><br><span class="line">    key = array[r]</span><br><span class="line">    <span class="comment"># 2.找到小区，使用小区最后一个元素i，游标j</span></span><br><span class="line">    i = l - <span class="number">1</span></span><br><span class="line">    j = l</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(l, r):</span><br><span class="line">        <span class="comment"># 2.1 j循环+1，找到小于key的元素时候，i后移动，并将找到的arr[j]与arr[i]换位置</span></span><br><span class="line">        <span class="keyword">if</span> array[j] &lt; key:</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">            array[i], array[j] = array[j], array[i]</span><br><span class="line">    <span class="comment"># 3.游标j循环后，i为小区的最后一个元素，将r与i+1换位置，则分割完成</span></span><br><span class="line">    array[i + <span class="number">1</span>], array[r] = array[r], array[i + <span class="number">1</span>]</span><br><span class="line">    <span class="keyword">return</span> i + <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    nums = [<span class="number">6</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">9</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">10</span>, <span class="number">8</span>, <span class="number">-1</span>]</span><br><span class="line">    quickSort(nums, <span class="number">0</span>, len(nums) - <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">print</span> nums</span><br></pre></td></tr></table></figure>
-<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>时间复杂度：O(nlogn)，最好最优平均</p>
-<p>空间复杂度：O(n)，每次归并的时候需要开辟临时空间 2倍数组长度的空间</p>
-<p>稳定排序</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mergeSort</span><span class="params">(array)</span>:</span></span><br><span class="line">    <span class="comment"># 1.划分小于等于1，则返回自己</span></span><br><span class="line">    <span class="keyword">if</span> len(array) &lt;= <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> array</span><br><span class="line">    <span class="comment"># 2.大于1，继续划分为左右，mid为中位index。返回为merge排序后的结果。</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        mid = len(array) / <span class="number">2</span></span><br><span class="line">        <span class="keyword">print</span> mid</span><br><span class="line">        left = mergeSort(array[:mid])</span><br><span class="line">        right = mergeSort(array[mid:])</span><br><span class="line">        <span class="comment"># 返回排序后的left+right</span></span><br><span class="line">        <span class="keyword">return</span> merge(left, right)</span><br><span class="line"></span><br><span class="line"><span class="string">"""在merge的过程中排序，输入为left，right数组，使用i、j循环俩数组，返回排序好的合并数组result。"""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge</span><span class="params">(left, right)</span>:</span></span><br><span class="line">    <span class="comment"># 1.临时存储空间</span></span><br><span class="line">    result = []</span><br><span class="line">    <span class="comment"># 2.left的下标i，right的下标j</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    j = <span class="number">0</span></span><br><span class="line">    <span class="comment"># 2.循环left和right，将小的存入result，i或j+1，直至i、j有一个分完</span></span><br><span class="line">    <span class="keyword">while</span> i &lt; len(left) <span class="keyword">and</span> j &lt; len(right):</span><br><span class="line">        <span class="keyword">if</span> left[i] &lt;= right[j]:</span><br><span class="line">            result.append(left[i])</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            result.append(right[j])</span><br><span class="line">            j += <span class="number">1</span></span><br><span class="line">    <span class="comment"># 3.将未循环完的剩余left或right数组的数字直接与result连接</span></span><br><span class="line">    result += left[i:]</span><br><span class="line">    result += right[j:]</span><br><span class="line">    <span class="comment"># 4.返回merge结果</span></span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    array = [<span class="number">9</span>, <span class="number">6</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">0</span>, <span class="number">4</span>]</span><br><span class="line">    result = mergeSort(array)</span><br><span class="line">    <span class="keyword">print</span> result</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2598,7 +2577,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">64</span>
+                  <span class="site-state-item-count">65</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2694,7 +2673,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">75.4k</span>
+    <span title="Site words total count">75.9k</span>
   
 </div>
 
