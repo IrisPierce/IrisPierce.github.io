@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="IRIS&#39;s BLOG">
 <meta property="og:description" content="项目目录搭建1 安装：yarn add styled-components  styled-components 的好处：样式引入不建议使用css，防止耦合。使用第三方模块，管理样式。 2 搜索：reset.css : https://meyerweb.com/eric/tools/css/reset/ reset.css 的好处：不同浏览器内核对于标签默认样式设置不同，margin10或者8，需">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-03T09:00:22.108Z">
+<meta property="og:updated_time" content="2019-05-06T02:26:47.237Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React - 4 Redux高级">
 <meta name="twitter:description" content="项目目录搭建1 安装：yarn add styled-components  styled-components 的好处：样式引入不建议使用css，防止耦合。使用第三方模块，管理样式。 2 搜索：reset.css : https://meyerweb.com/eric/tools/css/reset/ reset.css 的好处：不同浏览器内核对于标签默认样式设置不同，margin10或者8，需">
@@ -441,6 +441,7 @@
 <p>2 搜索：reset.css : <a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank" rel="noopener">https://meyerweb.com/eric/tools/css/reset/</a></p>
 <p>reset.css 的好处：不同浏览器内核对于标签默认样式设置不同，margin10或者8，需要将默认标签进行统一。防止不同浏览器的默认效果不同。</p>
 <p>3 新建：style.js管理全局css代码</p>
+<a id="more"></a>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createGlobalStyle &#125; <span class="keyword">from</span> <span class="string">'styled-components'</span>; </span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> GlobalStyle = createGlobalStyle<span class="string">`</span></span><br><span class="line"><span class="string">  html, body, div, span, applet, object, iframe,</span></span><br><span class="line"><span class="string">  h1, h2, h3, h4, h5, h6, p, blockquote, pre,</span></span><br><span class="line"><span class="string">  a, abbr, acronym, address, big, cite, code,</span></span><br><span class="line"><span class="string">  del, dfn, em, img, ins, kbd, q, s, samp,</span></span><br><span class="line"><span class="string">  small, strike, strong, sub, sup, tt, var,</span></span><br><span class="line"><span class="string">  b, u, i, center,</span></span><br><span class="line"><span class="string">  dl, dt, dd, ol, ul, li,</span></span><br><span class="line"><span class="string">  fieldset, form, label, legend,</span></span><br><span class="line"><span class="string">  table, caption, tbody, tfoot, thead, tr, th, td,</span></span><br><span class="line"><span class="string">  article, aside, canvas, details, embed, </span></span><br><span class="line"><span class="string">  figure, figcaption, footer, header, hgroup, </span></span><br><span class="line"><span class="string">  menu, nav, output, ruby, section, summary,</span></span><br><span class="line"><span class="string">  time, mark, audio, video &#123;</span></span><br><span class="line"><span class="string">    margin: 0;</span></span><br><span class="line"><span class="string">    padding: 0;</span></span><br><span class="line"><span class="string">    border: 0;</span></span><br><span class="line"><span class="string">    font-size: 100%;</span></span><br><span class="line"><span class="string">    font: inherit;</span></span><br><span class="line"><span class="string">    vertical-align: baseline;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  /* HTML5 display-role reset for older browsers */</span></span><br><span class="line"><span class="string">  article, aside, details, figcaption, figure, </span></span><br><span class="line"><span class="string">  footer, header, hgroup, menu, nav, section &#123;</span></span><br><span class="line"><span class="string">    display: block;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  body &#123;</span></span><br><span class="line"><span class="string">    line-height: 1;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  ol, ul &#123;</span></span><br><span class="line"><span class="string">    list-style: none;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  blockquote, q &#123;</span></span><br><span class="line"><span class="string">    quotes: none;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  blockquote:before, blockquote:after,</span></span><br><span class="line"><span class="string">  q:before, q:after &#123;</span></span><br><span class="line"><span class="string">    content: '';</span></span><br><span class="line"><span class="string">    content: none;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  table &#123;</span></span><br><span class="line"><span class="string">    border-collapse: collapse;</span></span><br><span class="line"><span class="string">    border-spacing: 0;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span>;</span><br></pre></td></tr></table></figure>
 <h3 id="完成Header组件布局"><a href="#完成Header组件布局" class="headerlink" title="完成Header组件布局"></a>完成Header组件布局</h3><p>header头部页面是多个页面公用的，则放在公关文件夹去管理</p>
 <p>styled-components：</p>
@@ -480,7 +481,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/16/😊React+Redux+AntD - 0 极简事项/" rel="next" title="React+Redux+AntD - 0 极简事项.md">
+              <a href="/2019/04/16/前端基础学习/😊React+Redux - 知识点/" rel="next" title="React+Redux+AntD - 0 极简事项.md">
                 <i class="fa fa-chevron-left"></i> React+Redux+AntD - 0 极简事项.md
               </a>
             
@@ -574,7 +575,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-count">64</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -585,7 +586,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -596,7 +597,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -686,7 +687,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">75.9k</span>
+    <span title="Site words total count">72.2k</span>
   
 </div>
 

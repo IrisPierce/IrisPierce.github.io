@@ -86,7 +86,7 @@
 <meta property="og:description" content="UI组件和容器组件无状态组件 普通组件： UI组件：UI负责渲染 容器组件：负责逻辑 无状态组件：当普通组件只有render函数的时候，可以使用无状态组件替换该组件。 普通组件的性能比不上无状态组件的性能高 。无状态组件就是一个函数；普通组件是JS的类，类生成的对象里面还有生命周期函数，执行的时候既要执行函数，又要执行render。 如何使用：一般UI组件只负责页面渲染，不负责逻辑，可以定义为一个">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/Library/Application%20Support/typora-user-images/image-20190419101024985.png">
-<meta property="og:updated_time" content="2019-05-06T01:40:12.209Z">
+<meta property="og:updated_time" content="2019-05-06T02:26:51.335Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React - 4 Redux高级">
 <meta name="twitter:description" content="UI组件和容器组件无状态组件 普通组件： UI组件：UI负责渲染 容器组件：负责逻辑 无状态组件：当普通组件只有render函数的时候，可以使用无状态组件替换该组件。 普通组件的性能比不上无状态组件的性能高 。无状态组件就是一个函数；普通组件是JS的类，类生成的对象里面还有生命周期函数，执行的时候既要执行函数，又要执行render。 如何使用：一般UI组件只负责页面渲染，不负责逻辑，可以定义为一个">
@@ -448,6 +448,7 @@
 </ul>
 </li>
 </ul>
+<a id="more"></a>
 <h3 id="ajax数据请求"><a href="#ajax数据请求" class="headerlink" title="ajax数据请求"></a>ajax数据请求</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span>;</span><br><span class="line"><span class="keyword">import</span> MockAdapter <span class="keyword">from</span> <span class="string">'axios-mock-adapter'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置模拟调试器实例</span></span><br><span class="line"><span class="keyword">const</span> mock = <span class="keyword">new</span> MockAdapter(axios);</span><br><span class="line">mock.onGet(<span class="string">'/list.json'</span>).reply(<span class="number">200</span>, &#123;</span><br><span class="line">    list:[<span class="string">"iris"</span>,<span class="string">"jay"</span>,<span class="string">"gd"</span>]</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//生命周期函数 mount完成时</span></span><br><span class="line">componentDidMount()&#123;</span><br><span class="line">    axios.get(<span class="string">'/list.json'</span>).then(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">// 获取模拟调试器上的mock本地数据</span></span><br><span class="line">        <span class="keyword">const</span> data =res.data.list;</span><br><span class="line">        <span class="comment">// 创建ation，传入data；将action传给store</span></span><br><span class="line">        <span class="keyword">const</span> action = initListAction(data);</span><br><span class="line">        <span class="built_in">console</span>.log(action);</span><br><span class="line">        store.dispatch(action);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="Redux-thunk中间件实现ajax数据请求"><a href="#Redux-thunk中间件实现ajax数据请求" class="headerlink" title="Redux-thunk中间件实现ajax数据请求"></a>Redux-thunk中间件实现ajax数据请求</h3><p>配置Redux-thunk：同时使用两个中间件：thunk+devtools(调试工具)</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使得store既支持window下的devtools，调式stor；同时引入了Redux-thunk</span></span><br><span class="line"><span class="comment">//高级配置：若存在该方法，则调用，否则使得其为一个compose函数</span></span><br><span class="line"><span class="keyword">const</span> composeEnhancers = <span class="built_in">window</span>.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?</span><br><span class="line">        <span class="built_in">window</span>.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__(&#123;</span><br><span class="line">        &#125;) : compose;</span><br><span class="line"><span class="comment">// 上述的变量存储一下，顺便将中间件[redux]通过applyMiddleware执行一下，传入进去</span></span><br><span class="line"><span class="keyword">const</span> enhancer = composeEnhancers(</span><br><span class="line">    applyMiddleware(thunk),</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> store = createStore(reducer,</span><br><span class="line">    enhancer</span><br><span class="line">    <span class="comment">// applyMiddleware(thunk)</span></span><br><span class="line">    );</span><br></pre></td></tr></table></figure>
@@ -605,7 +606,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-count">64</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -616,7 +617,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -627,7 +628,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -717,7 +718,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">75.9k</span>
+    <span title="Site words total count">72.2k</span>
   
 </div>
 

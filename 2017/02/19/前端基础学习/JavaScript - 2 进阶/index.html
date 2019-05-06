@@ -87,7 +87,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2017/Library/Application%20Support/typora-user-images/image-20190421165005752.png">
 <meta property="og:image" content="http://yoursite.com/2017/Library/Application%20Support/typora-user-images/image-20190421171830966.png">
-<meta property="og:updated_time" content="2019-04-22T07:34:37.548Z">
+<meta property="og:updated_time" content="2019-05-06T02:25:58.434Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript - 1 基础语法">
 <meta name="twitter:description" content="原型链创建对象有几种方法123456789// 1.字面量对象方式var o1=&amp;#123;name:&apos;o1&apos;&amp;#125;;var 02=new Object&amp;#123;name:&apos;o2&apos;&amp;#125;;// 2.通过构造函数var M=function(name)&amp;#123;this.name=name&amp;#125;;var o3=new M(&apos;o3&apos;);// 3.Onject.createvar">
@@ -440,6 +440,7 @@
 
       
         <h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><h3 id="创建对象有几种方法"><a href="#创建对象有几种方法" class="headerlink" title="创建对象有几种方法"></a>创建对象有几种方法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.字面量对象方式</span></span><br><span class="line"><span class="keyword">var</span> o1=&#123;<span class="attr">name</span>:<span class="string">'o1'</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> <span class="number">02</span>=<span class="keyword">new</span> <span class="built_in">Object</span>&#123;<span class="attr">name</span>:<span class="string">'o2'</span>&#125;;</span><br><span class="line"><span class="comment">// 2.通过构造函数</span></span><br><span class="line"><span class="keyword">var</span> M=<span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;<span class="keyword">this</span>.name=name&#125;;</span><br><span class="line"><span class="keyword">var</span> o3=<span class="keyword">new</span> M(<span class="string">'o3'</span>);</span><br><span class="line"><span class="comment">// 3.Onject.create</span></span><br><span class="line"><span class="keyword">var</span> p=&#123;<span class="attr">name</span>:<span class="string">'p'</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> o4=<span class="built_in">Object</span>.create(p);</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="原型、构造函数、实例、原型链"><a href="#原型、构造函数、实例、原型链" class="headerlink" title="原型、构造函数、实例、原型链"></a>原型、构造函数、实例、原型链</h3><h4 id="原型、构造函数、实例"><a href="#原型、构造函数、实例" class="headerlink" title="原型、构造函数、实例"></a>原型、构造函数、实例</h4><p><img src="../../../../Library/Application Support/typora-user-images/image-20190421165005752.png" alt="image-20190421165005752"></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// M是构造函数，o3是 实例</span></span><br><span class="line"><span class="keyword">var</span> M=<span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;<span class="keyword">this</span>.name=name&#125;;</span><br><span class="line"><span class="keyword">var</span> o3=<span class="keyword">new</span> M(<span class="string">'o3'</span>);</span><br><span class="line"></span><br><span class="line">M.prototype.constructor===M 	<span class="comment">//true</span></span><br><span class="line">o3.__proto__==M.prototype			<span class="comment">//true</span></span><br><span class="line">M.__proto__==Fuction.prototype <span class="comment">//true,M为Fuction构造函数的实例，原型对象相同</span></span><br></pre></td></tr></table></figure>
 <h4 id="原型对象和原型链的作用"><a href="#原型对象和原型链的作用" class="headerlink" title="原型对象和原型链的作用"></a>原型对象和原型链的作用</h4><p>原型对象作用：构造函数中增加了很多属性和方法，实例可以共用。多个实例的时候，想使用这个方法的时候，不能每个实例都取拷贝一份。可以考虑存在一个共同的地方——原型对象。</p>
@@ -522,8 +523,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/19/前端基础学习/前端基础 - 1 HTML/" rel="next" title="前端基础 - 1 HTML">
-                <i class="fa fa-chevron-left"></i> 前端基础 - 1 HTML
+              <a href="/2017/02/19/前端基础学习/JavaScript - 3 ES6/" rel="next" title="JavaScript - 1 基础语法">
+                <i class="fa fa-chevron-left"></i> JavaScript - 1 基础语法
               </a>
             
           </div>
@@ -532,8 +533,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/19/前端基础学习/JavaScript - 1 基础语法 /" rel="prev" title="JavaScript - 1 基础语法">
-                JavaScript - 1 基础语法 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/05/数据可视化/数据可视化 - 可视化基础/" rel="prev" title="数据可视化 - 可视化基础">
+                数据可视化 - 可视化基础 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -616,7 +617,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-count">64</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -627,7 +628,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -638,7 +639,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -728,7 +729,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">75.9k</span>
+    <span title="Site words total count">72.2k</span>
   
 </div>
 

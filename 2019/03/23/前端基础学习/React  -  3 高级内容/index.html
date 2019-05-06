@@ -77,19 +77,19 @@
 
 
 
-<meta name="description" content="React高级propTypes和DefaultPropspropTypes:组件要接受外部传过来的值，进行类型校验。验证传值 DefaultProps:若父组件未向子组件传值，定义属性默认值。设置默认值 https://reactjs.org/docs/typechecking-with-proptypes.html 12345678910111213import PropTypes from">
+<meta name="description" content="React高级propTypes和DefaultPropspropTypes:组件要接受外部传过来的值，进行类型校验。验证传值 DefaultProps:若父组件未向子组件传值，定义属性默认值。设置默认值 https://reactjs.org/docs/typechecking-with-proptypes.html">
 <meta name="keywords" content="React">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React - 3 高级内容">
 <meta property="og:url" content="http://yoursite.com/2019/03/23/前端基础学习/React  -  3 高级内容/index.html">
 <meta property="og:site_name" content="IRIS&#39;s BLOG">
-<meta property="og:description" content="React高级propTypes和DefaultPropspropTypes:组件要接受外部传过来的值，进行类型校验。验证传值 DefaultProps:若父组件未向子组件传值，定义属性默认值。设置默认值 https://reactjs.org/docs/typechecking-with-proptypes.html 12345678910111213import PropTypes from">
+<meta property="og:description" content="React高级propTypes和DefaultPropspropTypes:组件要接受外部传过来的值，进行类型校验。验证传值 DefaultProps:若父组件未向子组件传值，定义属性默认值。设置默认值 https://reactjs.org/docs/typechecking-with-proptypes.html">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/Library/Application%20Support/typora-user-images/image-20190416215418582.png">
-<meta property="og:updated_time" content="2019-04-17T11:15:14.803Z">
+<meta property="og:updated_time" content="2019-05-06T02:26:29.800Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React - 3 高级内容">
-<meta name="twitter:description" content="React高级propTypes和DefaultPropspropTypes:组件要接受外部传过来的值，进行类型校验。验证传值 DefaultProps:若父组件未向子组件传值，定义属性默认值。设置默认值 https://reactjs.org/docs/typechecking-with-proptypes.html 12345678910111213import PropTypes from">
+<meta name="twitter:description" content="React高级propTypes和DefaultPropspropTypes:组件要接受外部传过来的值，进行类型校验。验证传值 DefaultProps:若父组件未向子组件传值，定义属性默认值。设置默认值 https://reactjs.org/docs/typechecking-with-proptypes.html">
 <meta name="twitter:image" content="http://yoursite.com/2019/Library/Application%20Support/typora-user-images/image-20190416215418582.png">
 
 
@@ -441,6 +441,7 @@
         <h2 id="React高级"><a href="#React高级" class="headerlink" title="React高级"></a>React高级</h2><h3 id="propTypes和DefaultProps"><a href="#propTypes和DefaultProps" class="headerlink" title="propTypes和DefaultProps"></a>propTypes和DefaultProps</h3><p>propTypes:组件要接受外部传过来的值，进行类型校验。验证传值</p>
 <p>DefaultProps:若父组件未向子组件传值，定义属性默认值。设置默认值</p>
 <p><a href="https://reactjs.org/docs/typechecking-with-proptypes.html" target="_blank" rel="noopener">https://reactjs.org/docs/typechecking-with-proptypes.html</a></p>
+<a id="more"></a>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">'prop-types'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 组件要接受外部传过来的值，进行类型校验。验证传值</span></span><br><span class="line">TodoItem.propTypes = &#123;</span><br><span class="line">    test: PropTypes.string.isRequired,</span><br><span class="line">    content: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),</span><br><span class="line">    deleteItem: PropTypes.func,</span><br><span class="line">    index: PropTypes.number</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 若父组件未向子组件传值，定义属性默认值。设置默认值</span></span><br><span class="line">TodoItem.defaultProps = &#123;</span><br><span class="line">    test: <span class="string">'-'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="props、state、render函数关系"><a href="#props、state、render函数关系" class="headerlink" title="props、state、render函数关系"></a>props、state、render函数关系</h3><p><strong>当组件的state或者props发生改变的时候，render函数就会重新执行</strong></p>
 <p>当父组件的render函数被运行时，他的子组件的render都被重新运行一次</p>
@@ -528,8 +529,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/18/😺浏览器+前端知识/" rel="next" title="浏览器+前端知识">
-                <i class="fa fa-chevron-left"></i> 浏览器+前端知识
+              <a href="/2019/03/23/前端基础学习/React - 1 基础和TodoList/" rel="next" title="React - 基础和TodoList">
+                <i class="fa fa-chevron-left"></i> React - 基础和TodoList
               </a>
             
           </div>
@@ -538,8 +539,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/23/前端基础学习/React - 1 基础和TodoList/" rel="prev" title="React - 基础和TodoList">
-                React - 基础和TodoList <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/23/数据可视化/数据可视化 - 经典的图表分析/" rel="prev" title="数据可视化 - 经典的图表分析">
+                数据可视化 - 经典的图表分析 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -622,7 +623,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-count">64</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -633,7 +634,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -644,7 +645,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -734,7 +735,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">75.9k</span>
+    <span title="Site words total count">72.2k</span>
   
 </div>
 
